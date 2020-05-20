@@ -1,0 +1,2 @@
+Socket layer for Socket via WiFi driver
+ - connects via Driver_WiFi0
