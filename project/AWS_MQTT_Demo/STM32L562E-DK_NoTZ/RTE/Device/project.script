@@ -1,0 +1,4 @@
+load STM32L562QEIxQ 
+project name STCubeGenerated 
+project toolchain "MDK-ARM V5" 
+project path "D:\Test\AWS_SDK\mdk\MQTT_Demo\STM32L562E-DK\AWS_MQTT_Demo\RTE\Device\STM32L562QEIxQ\" 
