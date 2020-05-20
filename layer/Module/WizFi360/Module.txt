@@ -1,0 +1,3 @@
+Module layer for WizFi360-EVB (ARDUINO - USART):
+ - Driver_WiFi0
+ - connects via Driver_USARTx
