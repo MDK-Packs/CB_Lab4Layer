@@ -1,0 +1,31 @@
+AWS MQTT Demo for NUCLEO-L552ZE-Q Board with WiFi Module
+
+This demo application connects to AWS IoT through MQTT,
+subscribes to topics and publishes messages.
+
+It requires an active and properly configured thing (AWS IoT Console)
+with Client Private Key stored in persistent storage in the secure enclave
+(see project aws_key_provisioning).
+
+1. Configure AWS connections settings in iot_config.h:
+ - IOT_DEMO_SERVER:      Remote Host
+ - IOT_DEMO_ROOT_CA:     Trusted Server Root Certificate
+ - IOT_DEMO_CLIENT_CERT: Client Certificate
+ - IOT_DEMO_PRIVATE_KEY: Leave empty (Client Private Key is in the secure enclave)
+ - IOT_DEMO_IDENTIFIER:  Thing Identifier
+
+2. Configure WiFi connection settings in network.c:
+ - SSID:          network identifier
+ - PASSWORD:      network password
+ - SECURITY_TYPE: network security
+
+3. Select target:
+ - NUCLEO-L552ZE ESP8266:  ESP8266 WiFi Module
+ - NUCLEO-L552ZE WizFi360: WizFi360 WiFi Module
+ - NUCLEO-L552ZE ISM43362: ISM43362 WiFi Module
+
+4. Build the application
+
+5. Connect the on board ST-Link Debugger via USB
+
+6. Run the application and observe the messages in the Debug (printf) window

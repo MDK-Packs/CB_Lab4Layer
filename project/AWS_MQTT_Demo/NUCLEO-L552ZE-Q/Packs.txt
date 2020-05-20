@@ -1,0 +1,14 @@
+Required packs
+--------------
+
+Public available packs (install from Pack Installer):
+ - ARM::CMSIS                 5.7.0
+ - ARM::CMSIS-Driver          2.6.0
+ - ARM::TFM                   2.0.0
+ - ARM::mbedCrypto            3.0.1
+ - ARM::mbedTLS               1.6.1
+ - Keil::ARM_Compiler         1.6.3
+ - Keil::STM32L5xx_DFP        1.2.0
+ - Keil::STM32L5_TFM-PF       1.0.0
+ - MDK-Packs::IoT_Socket      1.2.0
+ - MDK-Packs::AWS_IoT_Device  2.0.0-beta
