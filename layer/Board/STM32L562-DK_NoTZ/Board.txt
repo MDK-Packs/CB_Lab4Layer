@@ -1,0 +1,15 @@
+Board layer for STM32L562-DK with TrustZone disabled:
+ - Stack (MSP): 1 kB
+ - Heap: 64 kB
+ - System Clock: 110 MHz
+ - ICACHE: enabled
+ - Driver_SPI3
+ - Driver_USART6 (LPUART1)
+ - Arduino:
+ -- SPI_A_CS (SPI1)
+ -- IO_D9 (Input)
+ - RTX:
+ -- Dynamic Memory size: 24 kB
+ -- Thread Stack size: 3 kB
+ - STDOUT: retarget to ITM
+ 
