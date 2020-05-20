@@ -1,0 +1,18 @@
+Tools:
+ - MDK 5.30
+ - CMSIS-Build 0.9.0 (beta)
+
+uVision import .cprj:
+ - Dsecure="TZ-disabled" ignored!!!
+ - <file category="other" name="x.script"/> is imported as ASM regardless of "other"!!!
+ - default <TargetName>Target 1</TargetName>
+ - <pCCUsed> instead of <pArmCC>
+ - <OutputDirectory> prefixed with cprj name
+ - <ListingPath> prefixed with cprj name
+ - C preprocessor symbols definitions enclosed with quotes (ex: X="a")
+ - C Misc controls added: -Wno-documentation ... -Wno-unused-macros -xc
+ - Linker controls added: --entry=Reset_Handler --info summarysizes ...
+ - Cgroup="STM32Cube Framework" taken from package name="STM32H7xx_DFP" regardless that project uses STM32L5xx_DFP
+
+cbuildgen extract:
+ - wrong package for CMSIS-Driver (Module.clayer)!!!
