@@ -1,0 +1,77 @@
+How to create the Demo
+----------------------
+
+uVision:
+ - create new project
+ - select device STM32L552ZETxQ
+ - launch STM32CubeMX from RTE
+
+STM32CubeMX:
+ - TrustZone not activated
+ - Pinout & Configuration
+ -- System Core
+ --- GPIO
+ ---- GPIO Pins
+ ----- PD15: mode: Input, label: ISM43362_DATARDY
+ ----- PD14: mode: Output, Output level: High, label: ISM43362_SPI_NSS, Maximum output speed: Very High
+ --- NVIC
+ ---- NVIC
+ ---- System service call via SWI instruction: Preemption Priority = 6
+ ---- Pendable request for system service: Preemption Priority = 7
+ ---- Time base: System tick timer: Preemption Priority = 7
+ ---- Code generation
+ ----- System service call via SWI instruction: disable Generate IRQ handler
+ ----- Pendable request for system service: disable Generate IRQ handler
+ ----- Time base: System tick timer: disable Generate IRQ handler
+ ----- Time base: System tick timer: disable Call HAL handler
+ --- ICACHE
+ ---- Mode: 2-ways set associative cache
+ -- Connectivity
+ --- USART3
+ ---- Mode: Asynchronous
+ ---- NVIC Settings
+ ----- USART3 global interrupt: enabled
+ ---- GPIO Settings
+ ----- PD8: USART3_TX, Maximum output speed: Very High
+ ----- PD9: USART3_RX, Maximum output speed: Very High
+ --- SPI1
+ ---- Mode: Full-Duplex Master
+ ---- Parameter Settings
+ ----- Prescaler: 4
+ ---- NVIC Settings
+ ----- SPI1 global interrupt: enabled
+ ---- DMA Settings
+ ----- SPI1_RX (default settings)
+ ----- SPI1_TX (default settings)
+ ---- GPIO Settings
+ ---- SPI1_MOSI: PA7, Maximum output speed: Very High
+ ---- SPI1_MISO: PA6, Maximum output speed: Very High
+ ---- SPI1_SCK: PA5, Maximum output speed: Very High
+ - Clock Configuration
+ -- System Clock Mux: PLLCLK
+ -- PLL N: x55
+ - Project Manager
+ -- Advanced Settings
+ --- USART3: enable Not Generate Function Call
+ --- SPI1: enable Not Generate Function Call
+ - Generate Code
+ - Close
+ - go back to uVision
+
+uVision:
+ - configure memory layout (ROM/RAM and stack/heap)
+ - select required components in RTE
+ - configure components
+ -- WiFi_ESP8266_Config.h, WiFi_WizFi360_Config
+ --- Serial Driver Number: 6
+ --- Thread Stack size: 1536
+ -- WiFi_ISM43362_Config.h
+ --- Serial Driver Number: 3
+ --- Asynchronous tread polling interval: 100ms
+ -- WiFi_ISM43362_HW.c
+ --- add includes: stdint.h, stm32l5xx_hal.h, main.h
+ --- WiFi_ISM43362_Pin_SSN
+ ---- HAL_GPIO_WritePin(ISM43362_SPI_NSS_GPIO_Port, ISM43362_SPI_NSS_Pin, ssn ? GPIO_PIN_RESET : GPIO_PIN_SET);
+ --- WiFi_ISM43362_Pin_DATARDY
+ ---- return (HAL_GPIO_ReadPin(ISM43362_DATARDY_GPIO_Port, ISM43362_DATARDY_Pin) == GPIO_PIN_SET);
+ - add user modules
