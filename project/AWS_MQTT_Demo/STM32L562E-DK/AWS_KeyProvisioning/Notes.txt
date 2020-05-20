@@ -1,0 +1,35 @@
+How to create the application
+-----------------------------
+
+uVision:
+ - create new project
+ - select device STM32L562QEIxQ
+ - launch STM32CubeMX from RTE
+
+STM32CubeMX:
+ - TrustZone not activated
+ - Pinout & Configuration
+ -- System Core
+ --- NVIC
+ ---- NVIC
+ ---- System service call via SWI instruction: Preemption Priority = 6
+ ---- Pendable request for system service: Preemption Priority = 7
+ ---- Time base: System tick timer: Preemption Priority = 7
+ ---- Code generation
+ ----- System service call via SWI instruction: disable Generate IRQ handler
+ ----- Pendable request for system service: disable Generate IRQ handler
+ ----- Time base: System tick timer: disable Generate IRQ handler
+ ----- Time base: System tick timer: disable Call HAL handler
+ --- ICACHE
+ ---- Mode: 2-ways set associative cache
+ - Clock Configuration
+ -- System Clock Mux: PLLCLK
+ -- PLL N: x55
+ - Generate Code
+ - Close
+ - go back to uVision
+
+uVision:
+ - configure memory layout (ROM/RAM and stack/heap)
+ - select required components in RTE
+ - add user modules
