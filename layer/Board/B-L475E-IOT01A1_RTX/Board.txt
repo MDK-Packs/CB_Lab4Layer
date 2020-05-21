@@ -1,0 +1,13 @@
+Board layer for B-L475E-IOT01A1 with RTX:
+ - Stack (MSP): 2 kB
+ - Heap: 64 kB
+ - System Clock: 80 MHz
+ - Driver_SPI3
+ - Driver_USART1
+ - Driver_USART3
+ - Driver_WiFi0 via SPI3
+ - RTX:
+ -- Dynamic Memory size: 24 kB
+ -- Thread Stack size: 3 kB
+ - STDOUT: retarget to ITM
+ 
