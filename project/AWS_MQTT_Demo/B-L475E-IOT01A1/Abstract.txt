@@ -1,0 +1,28 @@
+AWS MQTT Demo for ST B-L475E-IOT01A1 Discovery kit
+
+This demo application connects to AWS IoT through MQTT,
+subscribes to topics and publishes messages.
+
+It requires an active and properly configured thing (AWS IoT Console).
+
+1. Configure AWS connections settings in iot_config.h:
+ - IOT_DEMO_SERVER:      Remote Host
+ - IOT_DEMO_ROOT_CA:     Trusted Server Root Certificate
+ - IOT_DEMO_CLIENT_CERT: Client Certificate
+ - IOT_DEMO_PRIVATE_KEY: Client Private Key
+ - IOT_DEMO_IDENTIFIER:  Thing Identifier
+
+2. Configure WiFi connection settings in network.c:
+ - SSID:          network identifier
+ - PASSWORD:      network password
+ - SECURITY_TYPE: network security
+
+3. Select target:
+ - STM32L4 IoT RTX5:     uses CMSIS:RTOS2:Keil RTX5
+ - STM32L4 IoT FreeRTOS: uses CMSIS:RTOS2:FreeRTOS
+
+4. Build the application
+
+5. Connect the on board ST-Link Debugger via USB
+
+6. Run the application and observe the messages in the Debug (printf) window
