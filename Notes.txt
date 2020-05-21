@@ -16,3 +16,4 @@ uVision import .cprj:
 
 cbuildgen extract:
  - wrong package for CMSIS-Driver (Module.clayer)!!!
+ - wrong package for CMSIS-FreeRTOS (Board.clayer)!!!
