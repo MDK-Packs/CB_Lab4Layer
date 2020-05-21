@@ -11,8 +11,8 @@
 
 /* ---------------------------------------------------------------------------*/
 
-int32_t network_connect (void);
-extern int demo(void);
+extern int32_t network_connect (void);
+extern int demo (void);
 
 const osThreadAttr_t app_main_attr = {
   .stack_size = 4096U
