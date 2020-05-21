@@ -115,6 +115,9 @@ int main(void)
   /* Initialize CMSIS-RTOS2 */
   osKernelInitialize ();
 
+  /* Initialize the TFM NS interface */
+  tfm_ns_interface_init();
+
   /* Create application main thread */
   osThreadNew(app_main, NULL, &app_main_attr);
 

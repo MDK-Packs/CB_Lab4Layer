@@ -6,7 +6,6 @@
 #include <string.h>
 #include "cmsis_os2.h"
 #include "key_provisioning.h"
-#include "tfm_ns_interface.h"
 
 #include "iot_config.h"
 
@@ -24,9 +23,6 @@ void app_main (void *argument) {
 
   /* Startup delay */
   osDelay(1000U);
-
-  /* Initialize the TFM NS interface */
-  tfm_ns_interface_init();
 
   printf("AWS IoT Key Provisioning \r\n");
 
