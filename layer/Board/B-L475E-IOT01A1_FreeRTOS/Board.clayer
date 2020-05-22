@@ -76,7 +76,6 @@
       <file category="sourceC" layer="Board" name="./RTE/Security/entropy_hardware_poll.c"/>
     </group>
     <group name="STM32CubeMX">
-      <file category="other" layer="Board" name="./RTE/Device/project.script"/>
       <file category="other" layer="Board" name="./RTE/Device/STM32L475VGTx/STCubeGenerated/STCubeGenerated.ioc"/>
     </group>
   </files>

@@ -74,7 +74,6 @@
       <file category="header" layer="Board" name="./RTE/Device/STM32L552ZETxQ/arduino.h"/>
     </group>
     <group name="STM32CubeMX">
-      <file category="other" layer="Board" name="./RTE/Device/project.script"/>
       <file category="other" layer="Board" name="./RTE/Device/STM32L552ZETxQ/STCubeGenerated/STCubeGenerated.ioc"/>
     </group>
   </files>

@@ -1,4 +1,0 @@
-load STM32L475VGTx 
-project name STCubeGenerated 
-project toolchain "MDK-ARM V5" 
-project path "D:\Development\Current\WiFi\B-L475E-IOT01A1 - Copy\RTE\Device\STM32L475VGTx\" 

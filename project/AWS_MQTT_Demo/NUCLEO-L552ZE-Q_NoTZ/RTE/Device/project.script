@@ -1,4 +1,0 @@
-load STM32L552ZETxQ 
-project name STCubeGenerated 
-project toolchain "MDK-ARM V5" 
-project path "D:\Test\AWS_SDK\mdk\MQTT_Demo\NUCLEO-L552ZE-Q\AWS_MQTT_Demo\RTE\Device\STM32L552ZETxQ\" 

@@ -439,11 +439,6 @@
           <GroupName>STM32CubeMX</GroupName>
           <Files>
             <File>
-              <FileName>project.script</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\RTE\Device\project.script</FilePath>
-            </File>
-            <File>
               <FileName>STCubeGenerated.ioc</FileName>
               <FileType>5</FileType>
               <FilePath>.\RTE\Device\STM32L562QEIxQ\STCubeGenerated\STCubeGenerated.ioc</FilePath>
@@ -926,11 +921,6 @@
           <GroupName>STM32CubeMX</GroupName>
           <Files>
             <File>
-              <FileName>project.script</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\RTE\Device\project.script</FilePath>
-            </File>
-            <File>
               <FileName>STCubeGenerated.ioc</FileName>
               <FileType>5</FileType>
               <FilePath>.\RTE\Device\STM32L562QEIxQ\STCubeGenerated\STCubeGenerated.ioc</FilePath>
@@ -1412,11 +1402,6 @@
         <Group>
           <GroupName>STM32CubeMX</GroupName>
           <Files>
-            <File>
-              <FileName>project.script</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\RTE\Device\project.script</FilePath>
-            </File>
             <File>
               <FileName>STCubeGenerated.ioc</FileName>
               <FileType>5</FileType>
@@ -2133,11 +2118,6 @@
         <LayAsnType>2</LayAsnType>
         <LayAsnName>.\Abstract.txt</LayAsnName>
         <LayAsnLayerName>Application</LayAsnLayerName>
-      </LayAsnItem>
-      <LayAsnItem>
-        <LayAsnType>2</LayAsnType>
-        <LayAsnName>.\RTE\Device\project.script</LayAsnName>
-        <LayAsnLayerName>Board</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>2</LayAsnType>
