@@ -1,0 +1,2 @@
+Module layer for WizFi360-EVB (ARDUINO - USART):
+ - connects via Driver_USARTx (default Driver_USART0)

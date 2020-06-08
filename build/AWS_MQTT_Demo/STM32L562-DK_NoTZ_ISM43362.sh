@@ -11,11 +11,9 @@ echo
 mkdir -p "${BOARD}_${MODULE}"
 pushd "${BOARD}_${MODULE}"
 cbuildgen compose aws_mqtt_demo.cprj \
- ../../../layer/Application/AWS_MQTT_Demo/Application.clayer \
- ../../../layer/Cloud/AWS/Cloud.clayer \
- ../../../layer/Socket/WiFi/Socket.clayer \
- ../../../layer/Board/${BOARD}/Board.clayer \
- ../../../layer/Module/${MODULE}/Module.clayer
+ ../../../layer/App/AWS_MQTT_Demo/App.clayer \
+ ../../../layer/Socket/WiFi_${MODULE}/Socket.clayer \
+ ../../../layer/Board/${BOARD}/Board.clayer
 popd
 
 echo

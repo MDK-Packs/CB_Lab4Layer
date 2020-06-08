@@ -1,3 +1,0 @@
-Module layer for ESP8266 WiFi Shield (ARDUINO - USART):
- - Driver_WiFi0
- - connects via Driver_USARTx

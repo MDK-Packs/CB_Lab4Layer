@@ -1252,19 +1252,10 @@
         <LayPrjMark>1</LayPrjMark>
       </Layer>
       <Layer>
-        <LayName>Application</LayName>
+        <LayName>App</LayName>
         <LayDesc>Application layer (AWS MQTT Demo)</LayDesc>
         <LayKeys>AWS, MQTT</LayKeys>
         <LayCat>Cloud, IoT</LayCat>
-        <LayLic>MIT</LayLic>
-        <LayTarg>0</LayTarg>
-        <LayPrjMark>0</LayPrjMark>
-      </Layer>
-      <Layer>
-        <LayName>Cloud</LayName>
-        <LayDesc>Cloud layer for AWS</LayDesc>
-        <LayKeys>Cloud, AWS</LayKeys>
-        <LayCat>Cloud, AWS</LayCat>
         <LayLic>MIT</LayLic>
         <LayTarg>0</LayTarg>
         <LayPrjMark>0</LayPrjMark>
@@ -1274,15 +1265,6 @@
         <LayDesc>Socket layer (WiFi)</LayDesc>
         <LayKeys>Socket, WiFi</LayKeys>
         <LayCat>Socket</LayCat>
-        <LayLic>Apache 2.0</LayLic>
-        <LayTarg>0</LayTarg>
-        <LayPrjMark>0</LayPrjMark>
-      </Layer>
-      <Layer>
-        <LayName>Module</LayName>
-        <LayDesc>Module layer for WiFi (Board Extension)</LayDesc>
-        <LayKeys>Module, WiFi</LayKeys>
-        <LayCat>Module, WiFi</LayCat>
         <LayLic>Apache 2.0</LayLic>
         <LayTarg>0</LayTarg>
         <LayPrjMark>0</LayPrjMark>
@@ -1366,12 +1348,12 @@
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
         <LayAsnName>Keil::CMSIS Driver:WiFi:ESP8266</LayAsnName>
-        <LayAsnLayerName>Module</LayAsnLayerName>
+        <LayAsnLayerName>Socket</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
         <LayAsnName>Keil::CMSIS Driver:WiFi:WizFi360</LayAsnName>
-        <LayAsnLayerName>Module</LayAsnLayerName>
+        <LayAsnLayerName>Socket</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>2</LayAsnType>
@@ -1396,17 +1378,17 @@
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
         <LayAsnName>MDK-Packs::IoT Utility:AWS:Common</LayAsnName>
-        <LayAsnLayerName>Cloud</LayAsnLayerName>
+        <LayAsnLayerName>App</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
         <LayAsnName>MDK-Packs::IoT Utility:AWS:MQTT</LayAsnName>
-        <LayAsnLayerName>Cloud</LayAsnLayerName>
+        <LayAsnLayerName>App</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
         <LayAsnName>MDK-Packs::IoT Utility:AWS:Platform</LayAsnName>
-        <LayAsnLayerName>Cloud</LayAsnLayerName>
+        <LayAsnLayerName>App</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
@@ -1416,12 +1398,12 @@
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
         <LayAsnName>MDK-Packs::IoT Client:AWS</LayAsnName>
-        <LayAsnLayerName>Cloud</LayAsnLayerName>
+        <LayAsnLayerName>App</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
         <LayAsnName>ARM::Security:mbed TLS</LayAsnName>
-        <LayAsnLayerName>Cloud</LayAsnLayerName>
+        <LayAsnLayerName>App</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>2</LayAsnType>
@@ -1431,22 +1413,22 @@
       <LayAsnItem>
         <LayAsnType>2</LayAsnType>
         <LayAsnName>.\aws_main.c</LayAsnName>
-        <LayAsnLayerName>Application</LayAsnLayerName>
+        <LayAsnLayerName>App</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>2</LayAsnType>
         <LayAsnName>.\iot_demo.c</LayAsnName>
-        <LayAsnLayerName>Application</LayAsnLayerName>
+        <LayAsnLayerName>App</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>2</LayAsnType>
         <LayAsnName>.\iot_demo_mqtt.c</LayAsnName>
-        <LayAsnLayerName>Application</LayAsnLayerName>
+        <LayAsnLayerName>App</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>2</LayAsnType>
         <LayAsnName>.\iot_demo_logging.h</LayAsnName>
-        <LayAsnLayerName>Application</LayAsnLayerName>
+        <LayAsnLayerName>App</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>2</LayAsnType>
@@ -1456,7 +1438,7 @@
       <LayAsnItem>
         <LayAsnType>2</LayAsnType>
         <LayAsnName>.\Abstract.txt</LayAsnName>
-        <LayAsnLayerName>Application</LayAsnLayerName>
+        <LayAsnLayerName>App</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>2</LayAsnType>
