@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'aws_mqtt_demo' 
- * Target:  'NUCLEO-L552ZE WizFi360' 
+ * Target:  'NUCLEO-L552ZE-Q ESP8266' 
  */
 
 #ifndef PRE_INCLUDE_GLOBAL_H

@@ -22,7 +22,7 @@
   </DaveTm>
 
   <Target>
-    <TargetName>NUCLEO-L552ZE</TargetName>
+    <TargetName>NUCLEO-L552ZE-Q</TargetName>
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>

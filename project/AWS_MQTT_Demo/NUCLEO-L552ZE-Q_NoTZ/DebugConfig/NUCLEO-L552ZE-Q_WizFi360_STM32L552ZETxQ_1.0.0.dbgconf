@@ -1,5 +1,5 @@
 // File: STM32F552xx_562xx.dbgconf
-// Version: 1.0.0
+// Version: 1.0.1
 // Note: refer to STM32L552xx STM32L562xx reference manual (RM0410)
 //       refer to STM32L552xx STM32L562xx datasheets
 
@@ -72,5 +72,10 @@ TraceD0_Pin  = 0x00020009;
 TraceD1_Pin  = 0x0002000A;
 TraceD2_Pin  = 0x00040005;
 TraceD3_Pin  = 0x0002000C;
+
+// <h> Flash Download Options
+//   <o.0> Option Byte Loading      <i> Launch the Option Byte Loading after a Flash Download by setting the OBL_LAUNCH bit (causes a reset)
+// </h>
+DoOptionByteLoading = 0x00000000;
 
 // <<< end of configuration section >>>

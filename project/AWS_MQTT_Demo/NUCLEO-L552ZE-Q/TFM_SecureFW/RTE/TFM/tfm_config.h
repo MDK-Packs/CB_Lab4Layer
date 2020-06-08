@@ -46,7 +46,6 @@
 //------------- <<< end of configuration section >>> ---------------------------
 
 #define ITS_CREATE_FLASH_LAYOUT
-//#define ITS_RAM_FS
 
 #define TFM_CRYPTO_ENGINE_BUF_SIZE (0x4000)
 

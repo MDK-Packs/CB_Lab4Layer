@@ -20,9 +20,9 @@ with Client Private Key stored in persistent storage in the secure enclave
  - SECURITY_TYPE: network security
 
 3. Select target:
- - NUCLEO-L552ZE ESP8266:  ESP8266 WiFi Module
- - NUCLEO-L552ZE WizFi360: WizFi360 WiFi Module
- - NUCLEO-L552ZE ISM43362: ISM43362 WiFi Module
+ - NUCLEO-L552ZE-Q ESP8266:  ESP8266 WiFi Module
+ - NUCLEO-L552ZE-Q WizFi360: WizFi360 WiFi Module
+ - NUCLEO-L552ZE-Q ISM43362: ISM43362 WiFi Module
 
 4. Build the application
 

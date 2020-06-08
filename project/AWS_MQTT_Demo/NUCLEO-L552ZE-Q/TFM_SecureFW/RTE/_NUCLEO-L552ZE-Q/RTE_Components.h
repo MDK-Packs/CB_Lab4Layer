@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'tfm_secure_fw' 
- * Target:  'NUCLEO_L552ZE' 
+ * Target:  'NUCLEO-L552ZE-Q' 
  */
 
 #ifndef RTE_COMPONENTS_H

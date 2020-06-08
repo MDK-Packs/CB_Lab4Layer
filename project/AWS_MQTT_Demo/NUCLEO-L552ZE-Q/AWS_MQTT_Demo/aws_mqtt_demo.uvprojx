@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>NUCLEO-L552ZE ESP8266</TargetName>
+      <TargetName>NUCLEO-L552ZE-Q ESP8266</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>6140000::V6.14::ARMCLANG</pCCUsed>
@@ -492,7 +492,7 @@
       </Groups>
     </Target>
     <Target>
-      <TargetName>NUCLEO-L552ZE WizFi360</TargetName>
+      <TargetName>NUCLEO-L552ZE-Q WizFi360</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>6140000::V6.14::ARMCLANG</pCCUsed>
@@ -1460,7 +1460,7 @@
       </Groups>
     </Target>
     <Target>
-      <TargetName>NUCLEO-L552ZE ISM43362</TargetName>
+      <TargetName>NUCLEO-L552ZE-Q ISM43362</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>6140000::V6.14::ARMCLANG</pCCUsed>
@@ -1950,59 +1950,59 @@
     <gpdscs>
       <gpdsc name="RTE\Device\STM32L552ZETxQ\FrameworkCubeMX.gpdsc">
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </gpdsc>
     </gpdscs>
     <apis>
       <api Capiversion="2.3.0" Cclass="CMSIS Driver" Cgroup="SPI" exclusive="0">
-        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0-dev1"/>
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </api>
       <api Capiversion="2.4.0" Cclass="CMSIS Driver" Cgroup="USART" exclusive="0">
-        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0-dev1"/>
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </api>
       <api Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" exclusive="0" isTargetSpecific="1">
-        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0-dev1"/>
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </api>
       <api Capiversion="2.1.3" Cclass="CMSIS" Cgroup="RTOS2" exclusive="1">
-        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0-dev1"/>
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </api>
       <api Capiversion="1.1.0" Cclass="Device" Cgroup="STM32Cube Framework" exclusive="1">
-        <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.1.1-dev1"/>
+        <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </api>
       <api Capiversion="1.2.0" Cclass="IoT Utility" Cgroup="Socket" exclusive="1">
-        <package license="LICENSE.txt" name="IoT_Socket" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/IoT_Socket/" vendor="MDK-Packs" version="1.2.0-dev0"/>
+        <package license="LICENSE.txt" name="IoT_Socket" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/IoT_Socket/" vendor="MDK-Packs" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </api>
     </apis>
@@ -2010,227 +2010,227 @@
       <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="5.4.0" condition="ARMv6_7_8-M Device">
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Capiversion="2.1.3" Cclass="CMSIS" Cgroup="RTOS2" Csub="Keil RTX5" Cvariant="Library_NS" Cvendor="ARM" Cversion="5.5.2" condition="RTOS2 RTX5 NS">
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0">
         <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="TFM" Cgroup="API" Cvariant="SFN" Cvendor="ARM" Cversion="1.0.0" condition="TFM API">
-        <package name="TFM" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="2.0.0-rc0"/>
+        <package name="TFM" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="2.0.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="I/O" Csub="STDOUT" Cvariant="ITM" Cvendor="Keil" Cversion="1.2.0" condition="ARMCC Cortex-M with ITM">
         <package name="ARM_Compiler" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="1.6.3"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Capiversion="2.1.0" Cclass="CMSIS Driver" Cgroup="SPI" Cvendor="Keil" Cversion="1.0.0" condition="STM32L5 CMSIS_Driver SPI">
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Capiversion="2.1.0" Cclass="CMSIS Driver" Cgroup="USART" Cvendor="Keil" Cversion="1.0.0" condition="STM32L5 CMSIS_Driver USART">
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="ESP8266" Cvariant="UART" Cvendor="Keil" Cversion="1.3.0" condition="CMSIS Core with RTOS2 and USART Driver" isTargetSpecific="1">
         <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
         </targetInfos>
       </component>
       <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="ISM43362" Cvariant="SPI" Cvendor="Keil" Cversion="1.8.0" condition="CMSIS Core with RTOS2 and SPI Driver" isTargetSpecific="1">
         <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
         </targetInfos>
       </component>
       <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="WizFi360" Cvariant="UART" Cvendor="Keil" Cversion="1.4.0" condition="CMSIS Core with RTOS2 and USART Driver" isTargetSpecific="1">
         <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Common" Cvendor="Keil" Cversion="1.0.0" condition="STM32L5 HAL Common">
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Cortex" Cvendor="Keil" Cversion="1.0.2" condition="STM32L5 HAL">
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="DMA" Cvendor="Keil" Cversion="1.0.2" condition="STM32L5 HAL">
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Flash" Cvendor="Keil" Cversion="1.0.2" condition="STM32L5 HAL">
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="GPIO" Cvendor="Keil" Cversion="1.0.2" condition="STM32L5 HAL">
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="ICACHE" Cvendor="Keil" Cversion="1.0.2" condition="STM32L5 HAL DMA">
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="IRDA" Cvendor="Keil" Cversion="1.0.2" condition="STM32L5 HAL DMA">
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="PWR" Cvendor="Keil" Cversion="1.0.2" condition="STM32L5 HAL">
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RCC" Cvendor="Keil" Cversion="1.0.2" condition="STM32L5 HAL GPIO Flash">
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="SPI" Cvendor="Keil" Cversion="1.0.2" condition="STM32L5 HAL DMA">
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Smartcard" Cvendor="Keil" Cversion="1.0.2" condition="STM32L5 HAL DMA">
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="UART" Cvendor="Keil" Cversion="1.0.2" condition="STM32L5 HAL DMA">
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="USART" Cvendor="Keil" Cversion="1.0.2" condition="STM32L5 HAL DMA">
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.2" condition="STM32L5 CMSIS">
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="IoT Client" Cgroup="AWS" Cvendor="MDK-Packs" Cversion="4.0.0" condition="AWS IoT Client">
         <package license="LICENSE" name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="IoT Utility" Cgroup="AWS" Csub="Common" Cvendor="MDK-Packs" Cversion="1.1.0" condition="AWS Base">
         <package license="LICENSE" name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="IoT Utility" Cgroup="AWS" Csub="MQTT" Cvendor="MDK-Packs" Cversion="2.1.0" condition="AWS MQTT">
         <package license="LICENSE" name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="IoT Utility" Cgroup="AWS" Csub="Platform" Cvariant="CMSIS-RTOS2 mbedTLS" Cvendor="MDK-Packs" Cversion="1.0.0" Pre_Include_Global_h="#define IOT_SYSTEM_TYPES_FILE &quot;iot_platform_types_cmsis.h&quot;&#xD;&#xA;        #define MBEDTLS_CONFIG_FILE &quot;iot_config_mbedtls.h&quot;" condition="AWS Platform [CMSIS-RTOS2 mbedTLS]">
         <package license="LICENSE" name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
       <component Capiversion="1.2.0" Cclass="IoT Utility" Cgroup="Socket" Csub="WiFi" Cvendor="MDK-Packs" Cversion="1.0.0" condition="WiFi Driver Socket">
         <package license="LICENSE.txt" name="IoT_Socket" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/IoT_Socket/" vendor="MDK-Packs" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </component>
     </components>
@@ -2240,9 +2240,9 @@
         <component Capiversion="2.1.3" Cclass="CMSIS" Cgroup="RTOS2" Csub="Keil RTX5" Cvariant="Library_NS" Cvendor="ARM" Cversion="5.5.2" condition="RTOS2 RTX5 NS"/>
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="CMSIS\RTOS2\RTX\Config\RTX_Config.h" version="5.5.1">
@@ -2250,9 +2250,9 @@
         <component Capiversion="2.1.3" Cclass="CMSIS" Cgroup="RTOS2" Csub="Keil RTX5" Cvariant="Library_NS" Cvendor="ARM" Cversion="5.5.2" condition="RTOS2 RTX5 NS"/>
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="WiFi\ESP8266\Config\WiFi_ESP8266_Config.h" version="1.0.0">
@@ -2260,7 +2260,7 @@
         <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="ESP8266" Cvariant="UART" Cvendor="Keil" Cversion="1.3.0" condition="CMSIS Core with RTOS2 and USART Driver"/>
         <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="WiFi\ISM43362\Config\WiFi_ISM43362_Config.h" version="1.1.0">
@@ -2268,7 +2268,7 @@
         <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="ISM43362" Cvariant="SPI" Cvendor="Keil" Cversion="1.8.0" condition="CMSIS Core with RTOS2 and SPI Driver"/>
         <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" name="WiFi\ISM43362\Config\WiFi_ISM43362_HW.c" version="1.0.0">
@@ -2276,7 +2276,7 @@
         <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="ISM43362" Cvariant="SPI" Cvendor="Keil" Cversion="1.8.0" condition="CMSIS Core with RTOS2 and SPI Driver"/>
         <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="WiFi\WizFi360\Config\WiFi_WizFi360_Config.h" version="1.0.0">
@@ -2284,7 +2284,7 @@
         <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="WizFi360" Cvariant="UART" Cvendor="Keil" Cversion="1.4.0" condition="CMSIS Core with RTOS2 and USART Driver"/>
         <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" condition="STM32L552 ARMCC" name="Drivers\CMSIS\Device\ST\STM32L5xx\Source\Templates\arm\startup_stm32l552xx.s" version="1.0.2">
@@ -2292,9 +2292,9 @@
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.2" condition="STM32L5 CMSIS"/>
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </file>
       <file attr="config" category="linkerScript" condition="STM32L552xE isNonSecure ARMCC" name="Drivers\CMSIS\Device\ST\STM32L5xx\Source\Templates\arm\linker\stm32l552xe_flash_ns.sct" version="1.0.2">
@@ -2302,9 +2302,9 @@
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.2" condition="STM32L5 CMSIS"/>
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="Drivers\Config\stm32l5xx_hal_conf.h" version="1.0.0">
@@ -2312,9 +2312,9 @@
         <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Common" Cvendor="Keil" Cversion="1.0.0" condition="STM32L5 HAL Common"/>
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" condition="isNonSecure" name="Drivers\CMSIS\Device\ST\STM32L5xx\Source\Templates\system_stm32l5xx_ns.c" version="1.0.2">
@@ -2322,9 +2322,9 @@
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.2" condition="STM32L5 CMSIS"/>
         <package name="STM32L5xx_DFP" schemaVersion="1.6.0" url="http://www.keil.com/pack/" vendor="Keil" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="config\iot_config.h" version="1.0.0">
@@ -2332,9 +2332,9 @@
         <component Cclass="IoT Client" Cgroup="AWS" Cvendor="MDK-Packs" Cversion="4.0.0" condition="AWS IoT Client"/>
         <package license="LICENSE" name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="third_party\mbedtls\mbedtls\config\iot_config_mbedtls.h" version="2.17.0">
@@ -2342,9 +2342,9 @@
         <component Cclass="IoT Utility" Cgroup="AWS" Csub="Platform" Cvariant="CMSIS-RTOS2 mbedTLS" Cvendor="MDK-Packs" Cversion="1.0.0" Pre_Include_Global_h="#define IOT_SYSTEM_TYPES_FILE &quot;iot_platform_types_cmsis.h&quot;&#xD;&#xA;        #define MBEDTLS_CONFIG_FILE &quot;iot_config_mbedtls.h&quot;" condition="AWS Platform [CMSIS-RTOS2 mbedTLS]"/>
         <package license="LICENSE" name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.17.0">
@@ -2352,29 +2352,29 @@
         <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0"/>
         <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="rte\config\non_secure\tfm_config.h" version="1.0.0">
         <instance index="0">RTE\TFM\tfm_config.h</instance>
         <component Cclass="TFM" Cgroup="API" Cvariant="SFN" Cvendor="ARM" Cversion="1.0.0" condition="TFM API"/>
-        <package name="TFM" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="2.0.0-rc0"/>
+        <package name="TFM" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="2.0.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" name="rte\config\tfm_config_rte.h" version="1.0.0">
         <instance index="0">RTE\TFM\tfm_config_rte.h</instance>
         <component Cclass="TFM" Cgroup="API" Cvariant="SFN" Cvendor="ARM" Cversion="1.0.0" condition="TFM API"/>
-        <package name="TFM" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="2.0.0-rc0"/>
+        <package name="TFM" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="2.0.0"/>
         <targetInfos>
-          <targetInfo name="NUCLEO-L552ZE ESP8266"/>
-          <targetInfo name="NUCLEO-L552ZE ISM43362"/>
-          <targetInfo name="NUCLEO-L552ZE WizFi360"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ESP8266"/>
+          <targetInfo name="NUCLEO-L552ZE-Q ISM43362"/>
+          <targetInfo name="NUCLEO-L552ZE-Q WizFi360"/>
         </targetInfos>
       </file>
     </files>

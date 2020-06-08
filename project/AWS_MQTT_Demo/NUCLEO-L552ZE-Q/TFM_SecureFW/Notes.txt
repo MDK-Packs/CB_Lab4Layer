@@ -4,6 +4,7 @@ How to create the TF-M Secure Firmware
 uVision:
  - create new project
  - select device STM32L552ZETxQ
+ - set target name NUCLEO-L552ZE-Q
  - launch STM32CubeMX from RTE
 
 STM32CubeMX:
@@ -48,8 +49,9 @@ uVision:
  --- select CMSIS Driver:USART:Custom
  -- update TFM configuration: tfm_config.h
  --- define ITS_CREATE_FLASH_LAYOUT (create initial flash layout for ITS)
+ --- define TFM_CRYPTO_ENGINE_BUF_SIZE (0x4000)
  -- update TFM flash layout configuration: flash_layout.h
- --- ITS_MAX_ASSET_SIZE=2048, ITS_NUM_ASSETS=8
+ --- ITS_MAX_ASSET_SIZE=2048, ITS_NUM_ASSETS=4
  -- add Flash Driver (taken from STM32Cube)
  -- add USART Driver (output redirected to ST UART HAL)
  --- user code template: empty implementation + Send (HAL_UART_Transmit)
@@ -70,7 +72,7 @@ uVision:
      --import_cmse_lib_out="Objects/tfm_secure_fw_CMSE_Lib.o"
      --predefine="-include tfm_config.h"
      --predefine="-include tfm_config_rte.h"
-     --predefine="-IRTE/_NUCLEO_L552ZE/"
+     --predefine="-IRTE/_NUCLEO-L552ZE-Q/"
      --predefine="-IRTE/TFM_Platform/STM32L552ZETxQ/"
      --diag_suppress=L6312,L6314,L6329
  -- select Debug adapter: ST-Link Debugger

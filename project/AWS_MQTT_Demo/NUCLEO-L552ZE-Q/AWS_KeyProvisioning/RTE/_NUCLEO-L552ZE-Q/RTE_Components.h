@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'aws_key_provisioning' 
- * Target:  'NUCLEO-L552ZE' 
+ * Target:  'NUCLEO-L552ZE-Q' 
  */
 
 #ifndef RTE_COMPONENTS_H

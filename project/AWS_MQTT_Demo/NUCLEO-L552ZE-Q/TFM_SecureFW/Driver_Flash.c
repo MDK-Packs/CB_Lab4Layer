@@ -34,6 +34,7 @@
 #define CHECK_ERASE
 #define CHECK_WRITE
 */
+#define FLASH_MANAGE_ICACHE
 
 /* Driver version */
 #define ARM_FLASH_DRV_VERSION   ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0)
@@ -311,6 +312,10 @@ static int32_t ARM_Flash_ProgramData(uint32_t addr,
 
     ARM_FLASH0_STATUS.busy = DRIVER_STATUS_IDLE;
     HAL_FLASH_Lock();
+#ifdef FLASH_MANAGE_ICACHE
+    if (READ_BIT(ICACHE->CR, ICACHE_CR_EN) != 0U)
+        HAL_ICACHE_Invalidate();
+#endif
     /* compare data written */
 #ifdef CHECK_WRITE
     if ((err == HAL_OK) && memcmp(dest,data,cnt)){
@@ -364,6 +369,10 @@ static int32_t ARM_Flash_EraseSector(uint32_t addr)
     err = HAL_FLASHEx_Erase(&EraseInit, &pageError);
     ARM_FLASH0_STATUS.busy = DRIVER_STATUS_IDLE;
     HAL_FLASH_Lock();
+#ifdef FLASH_MANAGE_ICACHE
+    if (READ_BIT(ICACHE->CR, ICACHE_CR_EN) != 0U)
+        HAL_ICACHE_Invalidate();
+#endif
 #ifdef DEBUG_FLASH_ACCESS
     if (err != HAL_OK)
       printf("erase failed \r\n");

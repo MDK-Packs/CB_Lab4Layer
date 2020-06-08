@@ -22,7 +22,7 @@
   </DaveTm>
 
   <Target>
-    <TargetName>NUCLEO-L552ZE ESP8266</TargetName>
+    <TargetName>NUCLEO-L552ZE-Q ESP8266</TargetName>
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>
@@ -207,7 +207,7 @@
   </Target>
 
   <Target>
-    <TargetName>NUCLEO-L552ZE WizFi360</TargetName>
+    <TargetName>NUCLEO-L552ZE-Q WizFi360</TargetName>
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>
@@ -392,7 +392,7 @@
   </Target>
 
   <Target>
-    <TargetName>NUCLEO-L552ZE ISM43362</TargetName>
+    <TargetName>NUCLEO-L552ZE-Q ISM43362</TargetName>
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>

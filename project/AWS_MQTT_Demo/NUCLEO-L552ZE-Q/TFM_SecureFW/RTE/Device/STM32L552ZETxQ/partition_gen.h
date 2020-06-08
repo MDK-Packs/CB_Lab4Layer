@@ -295,7 +295,7 @@
 //   <o.30> DMA1_Channel2_IRQn  <0=> Secure state <1=> Non-Secure state
 //   <o.31> DMA1_Channel3_IRQn  <0=> Secure state <1=> Non-Secure state
 */
-#define NVIC_INIT_ITNS0_VAL      0x00000000
+#define NVIC_INIT_ITNS0_VAL      0xFFFFFFFF
 
 /*
 //   </e>
@@ -341,7 +341,7 @@
 //   <o.30> USART2_IRQn         <0=> Secure state <1=> Non-Secure state
 //   <o.31> USART3_IRQn         <0=> Secure state <1=> Non-Secure state
 */
-#define NVIC_INIT_ITNS1_VAL      0x00000000
+#define NVIC_INIT_ITNS1_VAL      0xFFFFFFFF
 
 /*
 //   </e>
@@ -386,7 +386,7 @@
 //   <o.30> RNG_IRQn            <0=> Secure state <1=> Non-Secure state
 //   <o.31> FPU_IRQn            <0=> Secure state <1=> Non-Secure state
 */
-#define NVIC_INIT_ITNS2_VAL      0x00000004
+#define NVIC_INIT_ITNS2_VAL      0xFFFFFFFF
 
 /*
 //   </e>
@@ -411,7 +411,7 @@
 //   <o.10> UCPD1_IRQn          <0=> Secure state <1=> Non-Secure state
 //   <o.11> ICACHE_IRQn         <0=> Secure state <1=> Non-Secure state
 */
-#define NVIC_INIT_ITNS3_VAL      0x00000000
+#define NVIC_INIT_ITNS3_VAL      0x00000FFF
 
 /*
 //   </e>
