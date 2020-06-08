@@ -28,7 +28,7 @@
 
 extern ARM_DRIVER_WIFI Driver_WiFi0;
 
-int32_t network_connect (void) {
+int32_t socket_startup (void) {
   ARM_WIFI_CONFIG_t config;
 
   printf("Connecting to WiFi ...\r\n");

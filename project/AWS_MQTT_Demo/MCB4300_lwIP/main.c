@@ -24,11 +24,9 @@
 
 int main (void) {
 
-  // System Initialization
-  SystemCoreClockUpdate();
-
+  SystemCoreClockUpdate();                      // System Initialization
   osKernelInitialize();                         // Initialize CMSIS-RTOS
-  osThreadNew(app_main, NULL, &app_main_attr);  // Create application main thread
+  app_initialize();                             // Initialize application
   osKernelStart();                              // Start thread execution
   for (;;) {}
 }

@@ -131,8 +131,8 @@ int main(void)
   /* Initialize CMSIS-RTOS2 */
   osKernelInitialize ();
 
-  /* Create application main thread */
-  osThreadNew(app_main, NULL, &app_main_attr);
+  /* Initialize application */
+  app_initialize();
 
   /* Start thread execution */
   osKernelStart();

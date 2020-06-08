@@ -17,19 +17,45 @@
  * -------------------------------------------------------------------------- */
 
 #include "cmsis_os2.h"
-#include "rl_net.h"
+#include "ethernetif.h"
+#include "lwip/tcpip.h"
+#include "lwip/dhcp.h"
 
-int32_t network_connect (void) {
-  uint32_t addr;
+static struct netif netif;
 
-  netInitialize();
+static void eth0_thread (void *argument) {
+  uint32_t ms,sys_old = 0U;
+
+  while (1) {
+    ethernetif_poll (&netif);
+    ms = sys_now () - sys_old;
+    if (ms >= 500U) {
+      sys_old += ms;
+      ethernetif_check_link (&netif);
+    }
+    osThreadYield ();
+  }
+}
+
+static void lwip_add_eth (void *arg) {
+  // Add network interface
+  netif_add(&netif, NULL, NULL, NULL, NULL, &ethernetif_init, &tcpip_input);
+
+  // Register default interface
+  netif_set_default(&netif);
+  netif_set_up(&netif);
+  dhcp_start (&netif);
+
+  osThreadNew(eth0_thread, NULL, NULL);
+}
+
+int32_t socket_startup (void) {
+
+  tcpip_init (lwip_add_eth, NULL);
 
   do {
-   osDelay(500U);
-   netIF_GetOption(NET_IF_CLASS_ETH | 0,
-                   netIF_OptionIP4_Address,
-                   (uint8_t *)&addr, sizeof (addr));
-  } while (addr == 0U);
+    osDelay (500U);
+  } while (netif.ip_addr.addr == IPADDR_ANY);
 
   return 0;
 }

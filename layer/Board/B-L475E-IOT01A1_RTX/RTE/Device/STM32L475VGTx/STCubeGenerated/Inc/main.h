@@ -74,7 +74,7 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+extern void app_initialize (void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
@@ -88,10 +88,6 @@ void Error_Handler(void);
 #define ISM43362_DATARDY_GPIO_Port GPIOE
 #define ISM43362_DATARDY_EXTI_IRQn EXTI1_IRQn
 /* USER CODE BEGIN Private defines */
-extern void app_main (void *arg);
-
-extern const osThreadAttr_t app_main_attr;
-
 extern RNG_HandleTypeDef hrng;
 /* USER CODE END Private defines */
 

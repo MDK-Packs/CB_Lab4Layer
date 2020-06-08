@@ -38,7 +38,7 @@
 
   <files>
     <group name="Source Code">
-      <file category="sourceC" layer="Socket" name="./network.c"/>
+      <file category="sourceC" layer="Socket" name="./socket_startup.c"/>
     </group>
   </files>
 </cprj>

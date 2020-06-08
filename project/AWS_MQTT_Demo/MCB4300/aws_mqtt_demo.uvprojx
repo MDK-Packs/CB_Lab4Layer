@@ -389,11 +389,6 @@
               <FilePath>.\aws_main.c</FilePath>
             </File>
             <File>
-              <FileName>network.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\network.c</FilePath>
-            </File>
-            <File>
               <FileName>iot_demo.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\iot_demo.c</FilePath>
@@ -407,6 +402,11 @@
               <FileName>iot_demo_logging.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\iot_demo_logging.h</FilePath>
+            </File>
+            <File>
+              <FileName>socket_startup.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\socket_startup.c</FilePath>
             </File>
             <File>
               <FileName>main.c</FileName>
@@ -875,7 +875,7 @@
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>2</LayAsnType>
-        <LayAsnName>.\network.c</LayAsnName>
+        <LayAsnName>.\socket_startup.c</LayAsnName>
         <LayAsnLayerName>Socket</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>

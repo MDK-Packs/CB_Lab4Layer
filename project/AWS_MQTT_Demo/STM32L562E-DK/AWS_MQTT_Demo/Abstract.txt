@@ -14,7 +14,7 @@ with Client Private Key stored in persistent storage in the secure enclave
  - IOT_DEMO_PRIVATE_KEY: Leave empty (Client Private Key is in the secure enclave)
  - IOT_DEMO_IDENTIFIER:  Thing Identifier
 
-2. Configure WiFi connection settings in network.c:
+2. Configure WiFi connection settings in socket_startup.c:
  - SSID:          network identifier
  - PASSWORD:      network password
  - SECURITY_TYPE: network security

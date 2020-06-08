@@ -20,10 +20,6 @@
 #ifndef MAIN_H__
 #define MAIN_H__
 
-#include "cmsis_os2.h"
-
-extern const osThreadAttr_t app_main_attr;
-
-extern void app_main (void *arg);
+extern void app_initialize (void);
 
 #endif

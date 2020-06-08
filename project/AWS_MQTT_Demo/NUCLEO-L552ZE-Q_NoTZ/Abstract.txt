@@ -12,7 +12,7 @@ It requires an active and properly configured thing (AWS IoT Console).
  - IOT_DEMO_PRIVATE_KEY: Client Private Key
  - IOT_DEMO_IDENTIFIER:  Thing Identifier
 
-2. Configure WiFi connection settings in network.c:
+2. Configure WiFi connection settings in socket_startup.c:
  - SSID:          network identifier
  - PASSWORD:      network password
  - SECURITY_TYPE: network security

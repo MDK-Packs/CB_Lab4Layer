@@ -174,7 +174,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   osKernelInitialize ();                        /* Initialize CMSIS-RTOS2 */
-  osThreadNew(app_main, NULL, &app_main_attr);  /* Create application main thread */
+  app_initialize();                             /* Initialize application */
   osKernelStart();                              /* Start thread execution */
 
   /* USER CODE END 2 */
