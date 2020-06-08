@@ -49,7 +49,7 @@
  * IMAGE_SECONDARY, SCRATCH is used as a temporary storage during image
  * swapping.
  */
-#define FLASH_AREA_BL2_OFFSET      (REGION_IMAGE_BL_START - REGION_FLASH_S_START)
+#define FLASH_AREA_BL2_OFFSET      (REGION_IMAGE_BL2_START - REGION_FLASH_S_START)
 #define FLASH_AREA_BL2_SIZE        (REGION_IMAGE_BL2_SIZE)
 
 #if !defined(MCUBOOT_IMAGE_NUMBER) || (MCUBOOT_IMAGE_NUMBER == 1)
@@ -141,7 +141,7 @@
 /* Specifies the smallest flash programmable unit in bytes */
 #define SST_FLASH_PROGRAM_UNIT  (0x8)
 /* The maximum asset size to be stored in the SST area */
-#define SST_MAX_ASSET_SIZE      (512)
+#define SST_MAX_ASSET_SIZE      (2048)
 /* The maximum number of assets to be stored in the SST area */
 #define SST_NUM_ASSETS          (10)
 

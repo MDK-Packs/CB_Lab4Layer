@@ -344,9 +344,6 @@ LR_CODE S_CODE_START {
     ER_TFM_DATA +0 {
         * (+RW +ZI)
     }
-    ER_TFM_DATA_NO_INIT +0 UNINIT {
-        its_flash_info_internal.o (+ZI)
-    }
 
     /**** PSA RoT DATA start here */
     /*
