@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'aws_mqtt_demo' 
- * Target:  'STM32L562-DK WizFi360' 
+ * Target:  'STM32L562E-DK ESP8266' 
  */
 
 #ifndef RTE_COMPONENTS_H
@@ -35,8 +35,8 @@
         #define RTE_Drivers_USART4              /* Driver USART4 */
         #define RTE_Drivers_USART5              /* Driver USART5 */
         #define RTE_Drivers_USART6              /* Driver USART6 */
-/*  Keil::CMSIS Driver:WiFi:WizFi360:UART:1.4.0 */
-#define RTE_Drivers_WiFi_WIZFI360_UART   /* Driver WiFi WIZFI360 (UART) */
+/*  Keil::CMSIS Driver:WiFi:ESP8266:UART:1.3.0 */
+#define RTE_Drivers_WiFi_ESP8266_UART   /* Driver WiFi ESP8266 (UART) */
 /*  Keil::Device:STM32Cube Framework:STM32CubeMX:1.1.0 */
 #define RTE_DEVICE_FRAMEWORK_CUBE_MX
 /*  Keil::Device:STM32Cube HAL:Common:1.0.0 */

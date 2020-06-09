@@ -22,7 +22,7 @@
   </DaveTm>
 
   <Target>
-    <TargetName>STM32L562-DK ESP8266</TargetName>
+    <TargetName>STM32L562E-DK ESP8266</TargetName>
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>
@@ -207,7 +207,7 @@
   </Target>
 
   <Target>
-    <TargetName>STM32L562-DK WizFi360</TargetName>
+    <TargetName>STM32L562E-DK WizFi360</TargetName>
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>
@@ -392,7 +392,7 @@
   </Target>
 
   <Target>
-    <TargetName>STM32L562-DK ISM43362</TargetName>
+    <TargetName>STM32L562E-DK ISM43362</TargetName>
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>

@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'aws_mqtt_demo' 
- * Target:  'STM32L562-DK ISM43362' 
+ * Target:  'STM32L562E-DK ESP8266' 
  */
 
 #ifndef PRE_INCLUDE_GLOBAL_H

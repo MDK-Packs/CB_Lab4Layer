@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'aws_mqtt_demo' 
- * Target:  'STM32L562-DK ESP8266' 
+ * Target:  'STM32L562E-DK WizFi360' 
  */
 
 #ifndef RTE_COMPONENTS_H
@@ -16,14 +16,11 @@
  */
 #define CMSIS_device_header "stm32l5xx.h"
 
-/*  ARM::CMSIS:RTOS2:Keil RTX5:Library_NS:5.5.2 */
+/*  ARM::CMSIS:RTOS2:Keil RTX5:Library:5.5.2 */
 #define RTE_CMSIS_RTOS2                 /* CMSIS-RTOS2 */
         #define RTE_CMSIS_RTOS2_RTX5            /* CMSIS-RTOS2 Keil RTX5 */
-        #define RTE_CMSIS_RTOS2_RTX5_ARMV8M_NS  /* CMSIS-RTOS2 Keil RTX5 Armv8-M Non-secure domain */
 /*  ARM::Security:mbed TLS:2.17.0 */
 #define RTE_Security_mbedTLS            /* Security mbed TLS */
-/*  ARM::TFM:API:SFN:1.0.0 */
-#define RTE_TFM_API_SFN                 /* TF-M API SFN */
 /*  Keil.ARM Compiler::Compiler:I/O:STDOUT:ITM:1.2.0 */
 #define RTE_Compiler_IO_STDOUT          /* Compiler I/O: STDOUT */
           #define RTE_Compiler_IO_STDOUT_ITM      /* Compiler I/O: STDOUT ITM */
@@ -38,8 +35,8 @@
         #define RTE_Drivers_USART4              /* Driver USART4 */
         #define RTE_Drivers_USART5              /* Driver USART5 */
         #define RTE_Drivers_USART6              /* Driver USART6 */
-/*  Keil::CMSIS Driver:WiFi:ESP8266:UART:1.3.0 */
-#define RTE_Drivers_WiFi_ESP8266_UART   /* Driver WiFi ESP8266 (UART) */
+/*  Keil::CMSIS Driver:WiFi:WizFi360:UART:1.4.0 */
+#define RTE_Drivers_WiFi_WIZFI360_UART   /* Driver WiFi WIZFI360 (UART) */
 /*  Keil::Device:STM32Cube Framework:STM32CubeMX:1.1.0 */
 #define RTE_DEVICE_FRAMEWORK_CUBE_MX
 /*  Keil::Device:STM32Cube HAL:Common:1.0.0 */

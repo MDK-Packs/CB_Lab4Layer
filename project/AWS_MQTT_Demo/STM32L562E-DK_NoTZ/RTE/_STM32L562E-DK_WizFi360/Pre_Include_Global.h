@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'aws_mqtt_demo' 
- * Target:  'STM32L562-DK WizFi360' 
+ * Target:  'STM32L562E-DK WizFi360' 
  */
 
 #ifndef PRE_INCLUDE_GLOBAL_H

@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'aws_mqtt_demo' 
- * Target:  'STM32L562-DK ISM43362' 
+ * Target:  'STM32L562E-DK WizFi360' 
  */
 
 #ifndef RTE_COMPONENTS_H
@@ -38,8 +38,8 @@
         #define RTE_Drivers_USART4              /* Driver USART4 */
         #define RTE_Drivers_USART5              /* Driver USART5 */
         #define RTE_Drivers_USART6              /* Driver USART6 */
-/*  Keil::CMSIS Driver:WiFi:ISM43362:SPI:1.8.0 */
-#define RTE_Drivers_WiFi_ISM43362_SPI   /* Driver WiFi ISM43362 (SPI) */
+/*  Keil::CMSIS Driver:WiFi:WizFi360:UART:1.4.0 */
+#define RTE_Drivers_WiFi_WIZFI360_UART   /* Driver WiFi WIZFI360 (UART) */
 /*  Keil::Device:STM32Cube Framework:STM32CubeMX:1.1.0 */
 #define RTE_DEVICE_FRAMEWORK_CUBE_MX
 /*  Keil::Device:STM32Cube HAL:Common:1.0.0 */
