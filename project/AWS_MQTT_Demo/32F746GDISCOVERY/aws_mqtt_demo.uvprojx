@@ -337,7 +337,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>RunDemo=RunMqttDemo IOT_MQTT_RESPONSE_WAIT_MS=10000 IOT_NETWORK_MBEDTLS_POLL_TIMEOUT_MS=10000</Define>
+              <Define></Define>
               <Undefine></Undefine>
               <IncludePath></IncludePath>
             </VariousControls>
@@ -370,7 +370,7 @@
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20010000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>.\aws_mqtt_demo.sct</ScatterFile>
+            <ScatterFile>.\stm32f746.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -392,6 +392,57 @@
               <FileName>iot_demo.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\iot_demo.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>2</IncludeInBuild>
+                  <AlwaysBuild>2</AlwaysBuild>
+                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define>RunDemo=RunMqttDemo</Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
             </File>
             <File>
               <FileName>iot_demo_mqtt.c</FileName>
@@ -814,7 +865,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>RunDemo=RunMqttDemo IOT_MQTT_RESPONSE_WAIT_MS=10000 IOT_NETWORK_MBEDTLS_POLL_TIMEOUT_MS=10000</Define>
+              <Define></Define>
               <Undefine></Undefine>
               <IncludePath></IncludePath>
             </VariousControls>
@@ -847,7 +898,7 @@
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20010000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>.\aws_mqtt_demo.sct</ScatterFile>
+            <ScatterFile>.\stm32f746.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -869,6 +920,57 @@
               <FileName>iot_demo.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\iot_demo.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>2</IncludeInBuild>
+                  <AlwaysBuild>2</AlwaysBuild>
+                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define>RunDemo=RunMqttDemo</Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
             </File>
             <File>
               <FileName>iot_demo_mqtt.c</FileName>
@@ -1137,15 +1239,31 @@
       <component Cclass="IoT Utility" Cgroup="AWS" Csub="MQTT" Cvendor="MDK-Packs" Cversion="2.1.0" condition="AWS MQTT">
         <package license="LICENSE" name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
         <targetInfos>
-          <targetInfo name="STM32F746G-D ESP8266"/>
-          <targetInfo name="STM32F746G-D WizFi360"/>
+          <targetInfo name="STM32F746G-D ESP8266">
+            <c>
+              <Define>IOT_MQTT_RESPONSE_WAIT_MS=10000</Define>
+            </c>
+          </targetInfo>
+          <targetInfo name="STM32F746G-D WizFi360">
+            <c>
+              <Define>IOT_MQTT_RESPONSE_WAIT_MS=10000</Define>
+            </c>
+          </targetInfo>
         </targetInfos>
       </component>
       <component Cclass="IoT Utility" Cgroup="AWS" Csub="Platform" Cvariant="CMSIS-RTOS2 mbedTLS" Cvendor="MDK-Packs" Cversion="1.0.0" Pre_Include_Global_h="#define IOT_SYSTEM_TYPES_FILE &quot;iot_platform_types_cmsis.h&quot;&#xD;&#xA;        #define MBEDTLS_CONFIG_FILE &quot;iot_config_mbedtls.h&quot;" condition="AWS Platform [CMSIS-RTOS2 mbedTLS]">
         <package license="LICENSE" name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
         <targetInfos>
-          <targetInfo name="STM32F746G-D ESP8266"/>
-          <targetInfo name="STM32F746G-D WizFi360"/>
+          <targetInfo name="STM32F746G-D ESP8266">
+            <c>
+              <Define>IOT_NETWORK_MBEDTLS_POLL_TIMEOUT_MS=10000</Define>
+            </c>
+          </targetInfo>
+          <targetInfo name="STM32F746G-D WizFi360">
+            <c>
+              <Define>IOT_NETWORK_MBEDTLS_POLL_TIMEOUT_MS=10000</Define>
+            </c>
+          </targetInfo>
         </targetInfos>
       </component>
       <component Capiversion="1.2.0" Cclass="IoT Utility" Cgroup="Socket" Csub="WiFi" Cvendor="MDK-Packs" Cversion="1.0.0" condition="WiFi Driver Socket">
