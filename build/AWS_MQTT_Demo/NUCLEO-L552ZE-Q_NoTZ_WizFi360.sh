@@ -20,7 +20,7 @@ echo
 echo "Manually update project"
 echo " - RTE/IoT_Client/iot_config.h"
 echo "     AWS connection settings (see Abstract.txt)"
-echo " - network.c"
+echo " - socket_startup.c"
 echo "     WiFi connection settings (see Abstract.txt)"
 echo " - RTE/CMSIS_Driver/WiFi_WizFi360_Config.h"
 echo "     Connect to Driver_USART3"
