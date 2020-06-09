@@ -6,6 +6,7 @@ Board layer for B-L475E-IOT01A1 with RTX:
  - Driver_USART1
  - Driver_USART3
  - Driver_WiFi0 via SPI3
+ - mbedTLS Entropy
  - RTX:
  -- Dynamic Memory size: 24 kB
  -- Thread Stack size: 3 kB

@@ -3,6 +3,7 @@ Board layer for 32F746GDISCOVERY with RTX:
  - Heap: 64 kB
  - System Clock: 216 MHz
  - Driver_USART6
+ - mbedTLS Entropy
  - RTX:
  -- Dynamic Memory size: 24 kB
  -- Thread Stack size: 3 kB
