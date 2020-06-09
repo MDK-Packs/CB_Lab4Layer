@@ -1,4 +1,4 @@
-Board layer for STM32L562-DK with TrustZone disabled:
+Board layer for STM32L562E-DK with TrustZone disabled:
  - Stack (MSP): 1 kB
  - Heap: 64 kB
  - System Clock: 110 MHz

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-BOARD=STM32L562-DK_NoTZ
-MODULE=ISM43362
+BOARD=STM32L562E-DK_NoTZ
+MODULE=WizFi360
 
 echo "Generate project AWS_MQTT_Demo"
 echo "  Board:  "$BOARD
@@ -22,8 +22,8 @@ echo " - RTE/IoT_Client/iot_config.h"
 echo "     AWS connection settings (see Abstract.txt)"
 echo " - socket_startup.c"
 echo "     WiFi connection settings (see Abstract.txt)"
-echo " - RTE/CMSIS_Driver/WiFi_ISM43362_Config.h"
-echo "     Connect to Driver_SPI3"
+echo " - RTE/CMSIS_Driver/WiFi_WizFi360_Config.h"
+echo "     Connect to Driver_USART6"
 echo
 echo "Build project (optional)"
 echo "  cbuild.sh aws_mqtt_demo.cprj"

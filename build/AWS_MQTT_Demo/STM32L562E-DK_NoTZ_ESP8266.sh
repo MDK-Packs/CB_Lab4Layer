@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BOARD=STM32L562-DK_NoTZ
+BOARD=STM32L562E-DK_NoTZ
 MODULE=ESP8266
 
 echo "Generate project AWS_MQTT_Demo"
