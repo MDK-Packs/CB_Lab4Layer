@@ -55,15 +55,12 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+extern void app_initialize (void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
 /* USER CODE BEGIN Private defines */
-extern void app_main (void *arg);
 
-extern uint64_t app_main_stk[];
-extern const osThreadAttr_t app_main_attr;
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
