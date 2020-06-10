@@ -384,9 +384,9 @@
           <GroupName>Source Code</GroupName>
           <Files>
             <File>
-              <FileName>aws_main.c</FileName>
+              <FileName>app_main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\aws_main.c</FilePath>
+              <FilePath>.\app_main.c</FilePath>
             </File>
             <File>
               <FileName>iot_config.h</FileName>
