@@ -1,5 +1,5 @@
-/*---------------------------------------------------------------------------
- * Copyright (c) 2020 Arm Limited. All rights reserved.
+/* -----------------------------------------------------------------------------
+ * Copyright (c) 2020 Arm Limited (or its affiliates). All rights reserved.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -14,8 +14,7 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- *
- *---------------------------------------------------------------------------*/
+ * -------------------------------------------------------------------------- */
 
 #include "RTE_Components.h"
 #include  CMSIS_device_header
