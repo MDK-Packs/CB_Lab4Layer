@@ -1645,6 +1645,15 @@
         <LayPrjMark>0</LayPrjMark>
       </Layer>
       <Layer>
+        <LayName>RTOS</LayName>
+        <LayDesc>RTOS layer</LayDesc>
+        <LayKeys>RTOS</LayKeys>
+        <LayCat>RTOS</LayCat>
+        <LayLic>Apache 2.0</LayLic>
+        <LayTarg>0</LayTarg>
+        <LayPrjMark>0</LayPrjMark>
+      </Layer>
+      <Layer>
         <LayName>Board</LayName>
         <LayDesc>Board layer for B-L475E-IOT01A</LayDesc>
         <LayKeys>Board, B-L475E-IOT01A</LayKeys>
@@ -1713,41 +1722,6 @@
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
         <LayAsnName>ARM::CMSIS:CORE</LayAsnName>
-        <LayAsnLayerName>Board</LayAsnLayerName>
-      </LayAsnItem>
-      <LayAsnItem>
-        <LayAsnType>1</LayAsnType>
-        <LayAsnName>ARM::CMSIS:RTOS2:Keil RTX5</LayAsnName>
-        <LayAsnLayerName>Board</LayAsnLayerName>
-      </LayAsnItem>
-      <LayAsnItem>
-        <LayAsnType>1</LayAsnType>
-        <LayAsnName>ARM::CMSIS:RTOS2:FreeRTOS</LayAsnName>
-        <LayAsnLayerName>Board</LayAsnLayerName>
-      </LayAsnItem>
-      <LayAsnItem>
-        <LayAsnType>1</LayAsnType>
-        <LayAsnName>ARM.FreeRTOS::RTOS:Config</LayAsnName>
-        <LayAsnLayerName>Board</LayAsnLayerName>
-      </LayAsnItem>
-      <LayAsnItem>
-        <LayAsnType>1</LayAsnType>
-        <LayAsnName>ARM.FreeRTOS::RTOS:Core</LayAsnName>
-        <LayAsnLayerName>Board</LayAsnLayerName>
-      </LayAsnItem>
-      <LayAsnItem>
-        <LayAsnType>1</LayAsnType>
-        <LayAsnName>ARM.FreeRTOS::RTOS:Event Groups</LayAsnName>
-        <LayAsnLayerName>Board</LayAsnLayerName>
-      </LayAsnItem>
-      <LayAsnItem>
-        <LayAsnType>1</LayAsnType>
-        <LayAsnName>ARM.FreeRTOS::RTOS:Heap</LayAsnName>
-        <LayAsnLayerName>Board</LayAsnLayerName>
-      </LayAsnItem>
-      <LayAsnItem>
-        <LayAsnType>1</LayAsnType>
-        <LayAsnName>ARM.FreeRTOS::RTOS:Timers</LayAsnName>
         <LayAsnLayerName>Board</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
@@ -1849,6 +1823,41 @@
         <LayAsnType>2</LayAsnType>
         <LayAsnName>.\RTE\Device\STM32L475VGTx\STCubeGenerated\STCubeGenerated.ioc</LayAsnName>
         <LayAsnLayerName>Board</LayAsnLayerName>
+      </LayAsnItem>
+      <LayAsnItem>
+        <LayAsnType>1</LayAsnType>
+        <LayAsnName>ARM::CMSIS:RTOS2:Keil RTX5</LayAsnName>
+        <LayAsnLayerName>RTOS</LayAsnLayerName>
+      </LayAsnItem>
+      <LayAsnItem>
+        <LayAsnType>1</LayAsnType>
+        <LayAsnName>ARM::CMSIS:RTOS2:FreeRTOS</LayAsnName>
+        <LayAsnLayerName>RTOS</LayAsnLayerName>
+      </LayAsnItem>
+      <LayAsnItem>
+        <LayAsnType>1</LayAsnType>
+        <LayAsnName>ARM.FreeRTOS::RTOS:Config</LayAsnName>
+        <LayAsnLayerName>RTOS</LayAsnLayerName>
+      </LayAsnItem>
+      <LayAsnItem>
+        <LayAsnType>1</LayAsnType>
+        <LayAsnName>ARM.FreeRTOS::RTOS:Core</LayAsnName>
+        <LayAsnLayerName>RTOS</LayAsnLayerName>
+      </LayAsnItem>
+      <LayAsnItem>
+        <LayAsnType>1</LayAsnType>
+        <LayAsnName>ARM.FreeRTOS::RTOS:Event Groups</LayAsnName>
+        <LayAsnLayerName>RTOS</LayAsnLayerName>
+      </LayAsnItem>
+      <LayAsnItem>
+        <LayAsnType>1</LayAsnType>
+        <LayAsnName>ARM.FreeRTOS::RTOS:Heap</LayAsnName>
+        <LayAsnLayerName>RTOS</LayAsnLayerName>
+      </LayAsnItem>
+      <LayAsnItem>
+        <LayAsnType>1</LayAsnType>
+        <LayAsnName>ARM.FreeRTOS::RTOS:Timers</LayAsnName>
+        <LayAsnLayerName>RTOS</LayAsnLayerName>
       </LayAsnItem>
     </LayAssign>
   </LayerInfo>

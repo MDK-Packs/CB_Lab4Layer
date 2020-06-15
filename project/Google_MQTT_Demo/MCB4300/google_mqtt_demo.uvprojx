@@ -720,7 +720,7 @@
         <LayUrl>https://www.keil.com</LayUrl>
         <LayKeys>Google, MQTT</LayKeys>
         <LayCat>Cloud, IoT</LayCat>
-        <LayLic>MIT, BSD 3-Clause, Apache 2.0</LayLic>
+        <LayLic>EPL 1.0, BSD 3-Clause, Apache 2.0</LayLic>
         <LayTarg>0</LayTarg>
         <LayPrjMark>1</LayPrjMark>
       </Layer>
@@ -729,7 +729,7 @@
         <LayDesc>Application layer (Google MQTT Demo)</LayDesc>
         <LayKeys>Google, MQTT</LayKeys>
         <LayCat>Cloud, IoT</LayCat>
-        <LayLic>MIT</LayLic>
+        <LayLic>EPL 1.0, Apache 2.0</LayLic>
         <LayTarg>0</LayTarg>
         <LayPrjMark>0</LayPrjMark>
       </Layer>
@@ -738,6 +738,15 @@
         <LayDesc>Socket layer (Network)</LayDesc>
         <LayKeys>Socket, Network</LayKeys>
         <LayCat>Socket</LayCat>
+        <LayLic>Apache 2.0</LayLic>
+        <LayTarg>0</LayTarg>
+        <LayPrjMark>0</LayPrjMark>
+      </Layer>
+      <Layer>
+        <LayName>RTOS</LayName>
+        <LayDesc>RTOS layer (RTX)</LayDesc>
+        <LayKeys>RTOS, RTX</LayKeys>
+        <LayCat>RTOS</LayCat>
         <LayLic>Apache 2.0</LayLic>
         <LayTarg>0</LayTarg>
         <LayPrjMark>0</LayPrjMark>
@@ -771,7 +780,7 @@
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
         <LayAsnName>ARM::CMSIS:RTOS2:Keil RTX5</LayAsnName>
-        <LayAsnLayerName>Board</LayAsnLayerName>
+        <LayAsnLayerName>RTOS</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
