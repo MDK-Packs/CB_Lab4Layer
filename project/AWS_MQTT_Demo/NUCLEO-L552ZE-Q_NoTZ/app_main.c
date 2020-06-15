@@ -37,7 +37,7 @@ static void app_main (void *argument) {
   printf("AWS IoT Demo\r\n");
 
   status = socket_startup();
-  if (status != -1) {
+  if (status == 0) {
     demo();
   }
 }
