@@ -1,0 +1,10 @@
+Paho MQTT Demo for ST B-L475E-IOT01A Discovery kit
+
+This demo application connects to Eclipse test server through MQTT,
+subscribes to topics and publishes messages.
+
+1. Build the application
+
+2. Connect the on board ST-Link Debugger via USB
+
+3. Run the application and observe the messages in the Debug (printf) window
