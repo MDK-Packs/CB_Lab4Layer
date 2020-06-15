@@ -46,6 +46,7 @@
     <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="I/O" Csub="STDOUT" Cvariant="ITM" Cvendor="Keil" layer="Board"/>
     <component Cclass="CMSIS Driver" Cgroup="Ethernet MAC" Cvendor="Keil" layer="Board"/>
     <component Cclass="CMSIS Driver" Cgroup="Ethernet PHY" Csub="DP83848C" Cvendor="Keil" layer="Board"/>
+    <component Cclass="CMSIS Driver" Cgroup="MCI" Cvendor="Keil" layer="Board"/>
     <component Cclass="Device" Cgroup="SCU" Cvendor="Keil" layer="Board"/>
     <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" layer="Board">
       <file attr="config" category="source" name="Device/Source/ARM/startup_LPC43xx.s" version="1.0.0"/>

@@ -761,7 +761,7 @@
 
 // <e> SD/MMC Interface [Driver_MCI0]
 // <i> Configuration settings for Driver_MCI0 in component ::Drivers:MCI
-#define RTE_SDMMC                       0
+#define RTE_SDMMC                       1
 
 //   <h> SD/MMC Peripheral Bus
 //     <o> SD_CLK Pin <0=>PC_0 <1=>CLK0 <2=>CLK2
@@ -782,7 +782,7 @@
   #error "Invalid SD_CLK Pin Configuration!"
 #endif
 //     <o> SD_CMD Pin <0=>P1_6 <1=>PC_10
-#define   RTE_SD_CMD_PORT_ID            0
+#define   RTE_SD_CMD_PORT_ID            1
 #if      (RTE_SD_CMD_PORT_ID == 0)
   #define RTE_SD_CMD_PORT               1
   #define RTE_SD_CMD_PIN                6
@@ -795,7 +795,7 @@
   #error "Invalid SD_CMD Pin Configuration!"
 #endif
 //     <o> SD_DAT0 Pin <0=>P1_9 <1=>PC_4
-#define   RTE_SD_DAT0_PORT_ID           0
+#define   RTE_SD_DAT0_PORT_ID           1
 #if      (RTE_SD_DAT0_PORT_ID == 0)
   #define RTE_SD_DAT0_PORT              1
   #define RTE_SD_DAT0_PIN               9
@@ -808,9 +808,9 @@
   #error "Invalid SD_DAT0 Pin Configuration!"
 #endif
 //     <e> SD_DAT[1 .. 3]
-#define   RTE_SDMMC_BUS_WIDTH_4         0
+#define   RTE_SDMMC_BUS_WIDTH_4         1
 //       <o> SD_DAT1 Pin <0=>P1_10 <1=>PC_5
-#define   RTE_SD_DAT1_PORT_ID           0
+#define   RTE_SD_DAT1_PORT_ID           1
 #if      (RTE_SD_DAT1_PORT_ID == 0)
   #define RTE_SD_DAT1_PORT              1
   #define RTE_SD_DAT1_PIN               10
@@ -823,7 +823,7 @@
   #error "Invalid SD_DAT1 Pin Configuration!"
 #endif
 //       <o> SD_DAT2 Pin <0=>P1_11 <1=>PC_6
-#define   RTE_SD_DAT2_PORT_ID           0
+#define   RTE_SD_DAT2_PORT_ID           1
 #if      (RTE_SD_DAT2_PORT_ID == 0)
   #define RTE_SD_DAT2_PORT              1
   #define RTE_SD_DAT2_PIN               11
@@ -836,7 +836,7 @@
   #error "Invalid SD_DAT2 Pin Configuration!"
 #endif
 //       <o> SD_DAT3 Pin <0=>P1_12 <1=>PC_7
-#define   RTE_SD_DAT3_PORT_ID           0
+#define   RTE_SD_DAT3_PORT_ID           1
 #if      (RTE_SD_DAT3_PORT_ID == 0)
   #define RTE_SD_DAT3_PORT              1
   #define RTE_SD_DAT3_PIN               12
@@ -892,7 +892,7 @@
 
 //   <o> SD_CD (Card Detect) Pin <0=>Not used <1=>P1_13 <2=>PC_8
 //   <i> Configure Pin if exists
-#define   RTE_SD_CD_PORT_ID             0
+#define   RTE_SD_CD_PORT_ID             2
 #if      (RTE_SD_CD_PORT_ID == 0)
   #define RTE_SD_CD_PIN_EN              0
 #elif    (RTE_SD_CD_PORT_ID == 1)

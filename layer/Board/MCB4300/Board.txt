@@ -4,8 +4,8 @@ Board layer for MCB4300 with RTX:
  - System Clock: 180 MHz
  - Driver_ETH_MAC0
  - Driver_ETH_PHY0
+ - Driver_MCI0
  - RTX:
  -- Dynamic Memory size: 24 kB
  -- Thread Stack size: 3 kB
  - STDOUT: retarget to ITM
- 
