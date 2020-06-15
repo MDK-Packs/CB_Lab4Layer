@@ -9,8 +9,6 @@ Use STM32CubeProgrammer to program the following Option Bytes:
  - SECWM1_PSTRT=0, SECWM1_PEND=127, SECWM2_PSTRT=0x60, SECWM2_PEND=0x7F
    secure bank1 / non-secure bank2 (last 64kB secure)
 
-Pack requirements are listed in Packs.txt
-
 Workspace contains the following projects:
  - tfm_secure_fw: TF-M Firmware running on the secure side
  - aws_key_provisioning: AWS Key provisioning application (non-secure side)
