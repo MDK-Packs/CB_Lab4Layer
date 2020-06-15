@@ -8,8 +8,4 @@ Board layer for NUCLEO-L552ZE-Q with TrustZone disabled:
  - Arduino:
  -- SPI_A_CS (SPI1)
  -- IO_D9 (Input)
- - RTX:
- -- Dynamic Memory size: 24 kB
- -- Thread Stack size: 3 kB
  - STDOUT: retarget to ITM
- 
