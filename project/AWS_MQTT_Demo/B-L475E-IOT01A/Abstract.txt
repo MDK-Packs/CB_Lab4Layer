@@ -1,4 +1,4 @@
-AWS MQTT Demo for ST B-L475E-IOT01A1 Discovery kit
+AWS MQTT Demo for ST B-L475E-IOT01A Discovery kit
 
 This demo application connects to AWS IoT through MQTT,
 subscribes to topics and publishes messages.
@@ -18,8 +18,8 @@ It requires an active and properly configured thing (AWS IoT Console).
  - SECURITY_TYPE: network security
 
 3. Select target:
- - STM32L4 IoT RTX5:     uses CMSIS:RTOS2:Keil RTX5
- - STM32L4 IoT FreeRTOS: uses CMSIS:RTOS2:FreeRTOS
+ - B-L475E-IOT01A RTX:      uses CMSIS:RTOS2:Keil RTX5
+ - B-L475E-IOT01A FreeRTOS: uses CMSIS:RTOS2:FreeRTOS
 
 4. Build the application
 

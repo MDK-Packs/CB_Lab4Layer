@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>STM32L4 IoT RTX5</TargetName>
+      <TargetName>B-L475E-IOT0A RTX</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>6140000::V6.14::ARMCLANG</pCCUsed>
@@ -16,7 +16,7 @@
         <TargetCommonOption>
           <Device>STM32L475VGTx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32L4xx_DFP.2.3.0</PackID>
+          <PackID>Keil.STM32L4xx_DFP.2.4.0</PackID>
           <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00018000) IRAM2(0x10000000,0x00008000) IROM(0x08000000,0x00100000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -676,7 +676,7 @@
       </Groups>
     </Target>
     <Target>
-      <TargetName>STM32L4 IoT FreeRTOS</TargetName>
+      <TargetName>B-L475E-IOT0A FreeRTOS</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>6140000::V6.14::ARMCLANG</pCCUsed>
@@ -685,7 +685,7 @@
         <TargetCommonOption>
           <Device>STM32L475VGTx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32L4xx_DFP.2.3.0</PackID>
+          <PackID>Keil.STM32L4xx_DFP.2.4.0</PackID>
           <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00018000) IRAM2(0x10000000,0x00008000) IROM(0x08000000,0x00100000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -1281,8 +1281,8 @@
     <gpdscs>
       <gpdsc name="RTE\Device\STM32L475VGTx\FrameworkCubeMX.gpdsc">
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </gpdsc>
     </gpdscs>
@@ -1290,36 +1290,36 @@
       <api Capiversion="2.2.0" Cclass="CMSIS Driver" Cgroup="SPI" exclusive="0">
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.3.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </api>
       <api Capiversion="1.0.0" Cclass="CMSIS Driver" Cgroup="WiFi" exclusive="0">
         <package name="CMSIS-Extension" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="ARM" version="1.0.0-test0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </api>
       <api Capiversion="2.1.2" Cclass="CMSIS" Cgroup="RTOS2" exclusive="1" isTargetSpecific="1">
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.2.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </api>
       <api Capiversion="1.1.0" Cclass="Device" Cgroup="STM32Cube Framework" exclusive="1">
         <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </api>
       <api Capiversion="1.0.0" Cclass="IoT Utility" Cgroup="Socket" exclusive="1">
         <package name="IoT_Socket" schemaVersion="1.4" url="https://github.com/MDK-Packs/pack/" vendor="MDK-Packs" version="1.0.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </api>
     </apis>
@@ -1327,173 +1327,173 @@
       <component Cbundle="FreeRTOS" Cclass="RTOS" Cgroup="Config" Cvariant="CMSIS RTOS2" Cvendor="ARM" Cversion="10.3.1" condition="FreeRTOS Config CMSIS RTOS2" isTargetSpecific="1">
         <package license="License/license.txt" name="CMSIS-FreeRTOS" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="ARM" version="10.3.1"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
         </targetInfos>
       </component>
       <component Cbundle="FreeRTOS" Cclass="RTOS" Cgroup="Core" Cvariant="Cortex-M" Cvendor="ARM" Cversion="10.3.1" condition="FreeRTOS Core CM" isTargetSpecific="1">
         <package license="License/license.txt" name="CMSIS-FreeRTOS" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="ARM" version="10.3.1"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
         </targetInfos>
       </component>
       <component Cbundle="FreeRTOS" Cclass="RTOS" Cgroup="Event Groups" Cvendor="ARM" Cversion="10.3.1" condition="FreeRTOS Event Groups" isTargetSpecific="1">
         <package license="License/license.txt" name="CMSIS-FreeRTOS" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="ARM" version="10.3.1"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
         </targetInfos>
       </component>
       <component Cbundle="FreeRTOS" Cclass="RTOS" Cgroup="Heap" Cvariant="Heap_4" Cvendor="ARM" Cversion="10.3.1" condition="FreeRTOS Heap" isTargetSpecific="1">
         <package license="License/license.txt" name="CMSIS-FreeRTOS" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="ARM" version="10.3.1"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
         </targetInfos>
       </component>
       <component Cbundle="FreeRTOS" Cclass="RTOS" Cgroup="Timers" Cvendor="ARM" Cversion="10.3.1" condition="FreeRTOS Timers" isTargetSpecific="1">
         <package license="License/license.txt" name="CMSIS-FreeRTOS" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="ARM" version="10.3.1"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
         </targetInfos>
       </component>
       <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="5.4.0" condition="ARMv6_7_8-M Device">
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
       <component Capiversion="2.1.3" Cclass="CMSIS" Cgroup="RTOS2" Csub="FreeRTOS" Cvariant="Cortex-M" Cvendor="ARM" Cversion="10.3.1" condition="CMSIS RTOS2 FreeRTOS CortexM" isTargetSpecific="1">
         <package license="License/license.txt" name="CMSIS-FreeRTOS" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="ARM" version="10.3.1"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
         </targetInfos>
       </component>
       <component Capiversion="2.1.3" Cclass="CMSIS" Cgroup="RTOS2" Csub="Keil RTX5" Cvariant="Library" Cvendor="ARM" Cversion="5.5.2" condition="RTOS2 RTX5" isTargetSpecific="1">
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
       <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0">
         <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
       <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="I/O" Csub="STDOUT" Cvariant="ITM" Cvendor="Keil" Cversion="1.2.0" condition="ARMCC Cortex-M with ITM">
         <package name="ARM_Compiler" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="1.6.3"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
       <component Capiversion="2.1.0" Cclass="CMSIS Driver" Cgroup="SPI" Cvendor="Keil" Cversion="1.2.0" condition="STM32L4 CMSIS_Driver SPI">
-        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
+        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
       <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="ISM43362" Cvariant="SPI" Cvendor="Keil" Cversion="1.8.0" condition="CMSIS Core with RTOS2 and SPI Driver">
         <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Common" Cvendor="Keil" Cversion="1.11.0" condition="STM32L4 HAL Common">
-        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Common" Cvendor="Keil" Cversion="1.11.1" condition="STM32L4 HAL Common">
+        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Cortex" Cvendor="Keil" Cversion="1.11.0" condition="STM32L4 HAL">
-        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Cortex" Cvendor="Keil" Cversion="1.11.1" condition="STM32L4 HAL">
+        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="DMA" Cvendor="Keil" Cversion="1.11.0" condition="STM32L4 HAL">
-        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="DMA" Cvendor="Keil" Cversion="1.11.1" condition="STM32L4 HAL">
+        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="GPIO" Cvendor="Keil" Cversion="1.11.0" condition="STM32L4 HAL">
-        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="GPIO" Cvendor="Keil" Cversion="1.11.1" condition="STM32L4 HAL">
+        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="PWR" Cvendor="Keil" Cversion="1.11.0" condition="STM32L4 HAL">
-        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="PWR" Cvendor="Keil" Cversion="1.11.1" condition="STM32L4 HAL">
+        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RCC" Cvendor="Keil" Cversion="1.11.0" condition="STM32L4 HAL GPIO">
-        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RCC" Cvendor="Keil" Cversion="1.11.1" condition="STM32L4 HAL GPIO">
+        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RNG" Cvendor="Keil" Cversion="1.11.0" condition="STM32L4 HAL">
-        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RNG" Cvendor="Keil" Cversion="1.11.1" condition="STM32L4 HAL">
+        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="SPI" Cvendor="Keil" Cversion="1.11.0" condition="STM32L4 HAL DMA">
-        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="SPI" Cvendor="Keil" Cversion="1.11.1" condition="STM32L4 HAL DMA">
+        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="UART" Cvendor="Keil" Cversion="1.11.0" condition="STM32L4 HAL DMA">
-        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="UART" Cvendor="Keil" Cversion="1.11.1" condition="STM32L4 HAL DMA">
+        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.3.1" condition="STM32L4 CMSIS">
-        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
+        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
       <component Cclass="IoT Client" Cgroup="AWS" Cvendor="MDK-Packs" Cversion="4.0.0" condition="AWS IoT Client">
         <package license="LICENSE" name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
       <component Cclass="IoT Utility" Cgroup="AWS" Csub="Common" Cvendor="MDK-Packs" Cversion="1.1.0" condition="AWS Base">
         <package license="LICENSE" name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
       <component Cclass="IoT Utility" Cgroup="AWS" Csub="MQTT" Cvendor="MDK-Packs" Cversion="2.1.0" condition="AWS MQTT">
         <package license="LICENSE" name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS">
+          <targetInfo name="B-L475E-IOT0A FreeRTOS">
             <c>
               <Define>IOT_MQTT_RESPONSE_WAIT_MS=10000</Define>
             </c>
           </targetInfo>
-          <targetInfo name="STM32L4 IoT RTX5">
+          <targetInfo name="B-L475E-IOT0A RTX">
             <c>
               <Define>IOT_MQTT_RESPONSE_WAIT_MS=10000</Define>
             </c>
@@ -1503,12 +1503,12 @@
       <component Cclass="IoT Utility" Cgroup="AWS" Csub="Platform" Cvariant="CMSIS-RTOS2 mbedTLS" Cvendor="MDK-Packs" Cversion="1.0.0" Pre_Include_Global_h="#define IOT_SYSTEM_TYPES_FILE &quot;iot_platform_types_cmsis.h&quot;&#xD;&#xA;        #define MBEDTLS_CONFIG_FILE &quot;iot_config_mbedtls.h&quot;" condition="AWS Platform [CMSIS-RTOS2 mbedTLS]">
         <package license="LICENSE" name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS">
+          <targetInfo name="B-L475E-IOT0A FreeRTOS">
             <c>
               <Define>IOT_NETWORK_MBEDTLS_POLL_TIMEOUT_MS=10000</Define>
             </c>
           </targetInfo>
-          <targetInfo name="STM32L4 IoT RTX5">
+          <targetInfo name="B-L475E-IOT0A RTX">
             <c>
               <Define>IOT_NETWORK_MBEDTLS_POLL_TIMEOUT_MS=10000</Define>
             </c>
@@ -1518,8 +1518,8 @@
       <component Capiversion="1.2.0" Cclass="IoT Utility" Cgroup="Socket" Csub="WiFi" Cvendor="MDK-Packs" Cversion="1.0.0" condition="WiFi Driver Socket">
         <package license="LICENSE.txt" name="IoT_Socket" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/IoT_Socket/" vendor="MDK-Packs" version="1.2.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </component>
     </components>
@@ -1529,7 +1529,7 @@
         <component Capiversion="2.1.3" Cclass="CMSIS" Cgroup="RTOS2" Csub="Keil RTX5" Cvariant="Library" Cvendor="ARM" Cversion="5.5.2" condition="RTOS2 RTX5"/>
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="CMSIS\RTOS2\RTX\Config\RTX_Config.h" version="5.5.1">
@@ -1537,7 +1537,7 @@
         <component Capiversion="2.1.3" Cclass="CMSIS" Cgroup="RTOS2" Csub="Keil RTX5" Cvariant="Library" Cvendor="ARM" Cversion="5.5.2" condition="RTOS2 RTX5"/>
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="WiFi\ISM43362\Config\WiFi_ISM43362_Config.h" version="1.1.0">
@@ -1545,8 +1545,8 @@
         <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="ISM43362" Cvariant="SPI" Cvendor="Keil" Cversion="1.8.0" condition="CMSIS Core with RTOS2 and SPI Driver"/>
         <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" name="WiFi\ISM43362\Config\WiFi_ISM43362_HW.c" version="1.0.0">
@@ -1554,26 +1554,26 @@
         <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="ISM43362" Cvariant="SPI" Cvendor="Keil" Cversion="1.8.0" condition="CMSIS Core with RTOS2 and SPI Driver"/>
         <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" condition="STM32L475 ARMCC" name="Drivers\CMSIS\Device\ST\STM32L4xx\Source\Templates\arm\startup_stm32l475xx.s" version="1.3.1">
         <instance index="0">RTE\Device\STM32L475VGTx\startup_stm32l475xx.s</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.3.1" condition="STM32L4 CMSIS"/>
-        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
+        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" name="Drivers\CMSIS\Device\ST\STM32L4xx\Source\Templates\system_stm32l4xx.c" version="1.3.1">
         <instance index="0">RTE\Device\STM32L475VGTx\system_stm32l4xx.c</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.3.1" condition="STM32L4 CMSIS"/>
-        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.3.0"/>
+        <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.0"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="config\iot_config.h" version="1.0.0">
@@ -1581,8 +1581,8 @@
         <component Cclass="IoT Client" Cgroup="AWS" Cvendor="MDK-Packs" Cversion="4.0.0" condition="AWS IoT Client"/>
         <package license="LICENSE" name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="third_party\mbedtls\mbedtls\config\iot_config_mbedtls.h" version="2.17.0">
@@ -1590,8 +1590,8 @@
         <component Cclass="IoT Utility" Cgroup="AWS" Csub="Platform" Cvariant="CMSIS-RTOS2 mbedTLS" Cvendor="MDK-Packs" Cversion="1.0.0" Pre_Include_Global_h="#define IOT_SYSTEM_TYPES_FILE &quot;iot_platform_types_cmsis.h&quot;&#xD;&#xA;        #define MBEDTLS_CONFIG_FILE &quot;iot_config_mbedtls.h&quot;" condition="AWS Platform [CMSIS-RTOS2 mbedTLS]"/>
         <package license="LICENSE" name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" condition="CoreM" name="CMSIS\RTOS2\FreeRTOS\Config\ARMCM\FreeRTOSConfig.h" version="10.2.0">
@@ -1599,7 +1599,7 @@
         <component Cbundle="FreeRTOS" Cclass="RTOS" Cgroup="Config" Cvariant="CMSIS RTOS2" Cvendor="ARM" Cversion="10.3.1" condition="FreeRTOS Config CMSIS RTOS2"/>
         <package license="License/license.txt" name="CMSIS-FreeRTOS" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="ARM" version="10.3.1"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.17.0">
@@ -1607,8 +1607,8 @@
         <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0"/>
         <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
         <targetInfos>
-          <targetInfo name="STM32L4 IoT FreeRTOS"/>
-          <targetInfo name="STM32L4 IoT RTX5"/>
+          <targetInfo name="B-L475E-IOT0A FreeRTOS"/>
+          <targetInfo name="B-L475E-IOT0A RTX"/>
         </targetInfos>
       </file>
     </files>
@@ -1646,8 +1646,8 @@
       </Layer>
       <Layer>
         <LayName>Board</LayName>
-        <LayDesc>Board layer for B-L475E-IOT01A1</LayDesc>
-        <LayKeys>Board, B-L475E-IOT01A1</LayKeys>
+        <LayDesc>Board layer for B-L475E-IOT01A</LayDesc>
+        <LayKeys>Board, B-L475E-IOT01A</LayKeys>
         <LayCat>Board</LayCat>
         <LayLic>BSD 3-Clause, Apache 2.0</LayLic>
         <LayTarg>1</LayTarg>

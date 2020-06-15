@@ -74,9 +74,4 @@ TraceD1_Pin  = 0x00040004;
 TraceD2_Pin  = 0x00040005;
 TraceD3_Pin  = 0x00040006;
 
-// <h> Flash Download Options
-//   <o.0> Option Byte Loading      <i> Launch the Option Byte Loading after a Flash Download by setting the OBL_LAUNCH bit (causes a reset)
-// </h>
-DoOptionByteLoading = 0x00000000;
-
 // <<< end of configuration section >>>

@@ -22,7 +22,7 @@
   </DaveTm>
 
   <Target>
-    <TargetName>STM32L4 IoT RTX5</TargetName>
+    <TargetName>B-L475E-IOT0A RTX</TargetName>
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>
@@ -227,7 +227,7 @@
   </Target>
 
   <Target>
-    <TargetName>STM32L4 IoT FreeRTOS</TargetName>
+    <TargetName>B-L475E-IOT0A FreeRTOS</TargetName>
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>
