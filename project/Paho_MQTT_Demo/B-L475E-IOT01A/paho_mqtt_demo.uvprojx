@@ -406,12 +406,12 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>mbedTLS Entropy</GroupName>
+          <GroupName>mbedTLS HW</GroupName>
           <Files>
             <File>
               <FileName>entropy_hardware_poll.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\RTE\Security\entropy_hardware_poll.c</FilePath>
+              <FilePath>.\mbedTLS_HW\Src\entropy_hardware_poll.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -922,7 +922,7 @@
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>2</LayAsnType>
-        <LayAsnName>.\RTE\Security\entropy_hardware_poll.c</LayAsnName>
+        <LayAsnName>.\mbedTLS_HW\Src\entropy_hardware_poll.c</LayAsnName>
         <LayAsnLayerName>Board</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
