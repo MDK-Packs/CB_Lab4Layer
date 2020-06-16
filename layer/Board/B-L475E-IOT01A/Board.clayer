@@ -62,8 +62,8 @@
   </components>
 
   <files>
-    <group name="mbedTLS Entropy">
-      <file category="sourceC" layer="Board" name="./RTE/Security/entropy_hardware_poll.c"/>
+    <group name="mbedTLS HW">
+      <file category="sourceC" layer="Board" name="./mbedTLS_HW/Src/entropy_hardware_poll.c"/>
     </group>
     <group name="STM32CubeMX">
       <file category="other" layer="Board" name="./RTE/Device/STM32L475VGTx/STCubeGenerated/STCubeGenerated.ioc"/>
