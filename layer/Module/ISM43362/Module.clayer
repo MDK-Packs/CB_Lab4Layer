@@ -4,17 +4,17 @@
   </created>
 
   <info isLayer="true">
-    <description>Module layer (WiFi shield)</description>
+    <description>Module layer for ISMART43362-E WiFi Shield (ARDUINO - SPI)</description>
     <category>Module, WiFi</category>
-    <keywords>Module, WiFi</keywords>
+    <keywords>Module, WiFi, ISM43362</keywords>
     <license>Apache 2.0</license>
   </info>
 
   <layers>
     <layer hasTarget="0" name="Module">
-      <description>Module layer (WiFi shield)</description>
+      <description>Module layer ISMART43362-E WiFi Shield (ARDUINO - SPI)</description>
       <category>Module, WiFi</category>
-      <keywords>Module, WiFi</keywords>
+      <keywords>Module, WiFi, ISM43362</keywords>
       <license>Apache 2.0</license>
     </layer>
   </layers>

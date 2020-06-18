@@ -1,3 +1,0 @@
-Socket layer for Socket via MW-Network
- - connects via Driver_ETH_MAC0
- - connects via Driver_ETH_PHY0

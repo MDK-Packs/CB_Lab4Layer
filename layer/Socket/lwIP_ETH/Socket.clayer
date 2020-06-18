@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <cprj schemaVersion="0.0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CPRJ.xsd">
   <created timestamp="2020-05-22T16:54:43" tool="cbuildgen 0.9.0">
-    <used file="aws_mqtt_demo.MCB4300.cprj" path="D:/Test/CB_Lab4Layer/project/AWS_MQTT_Demo/MCB4300_lwIP" timestamp="2020-05-22T16:43:38"/>
   </created>
 
   <info isLayer="true">
-    <description>Socket layer (Network)</description>
+    <description>Socket layer (lwIP Ethernet)</description>
     <category>Socket</category>
-    <keywords>Socket, Network</keywords>
+    <keywords>Socket, lwIP</keywords>
     <license>Apache 2.0</license>
   </info>
 
   <layers>
     <layer hasTarget="0" name="Socket">
-      <description>Socket layer (Network)</description>
+      <description>Socket layer (lwIP Ethernet)</description>
       <category>Socket</category>
-      <keywords>Socket, Network</keywords>
+      <keywords>Socket, lwIP</keywords>
       <license>Apache 2.0</license>
     </layer>
   </layers>

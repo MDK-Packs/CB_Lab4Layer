@@ -1,4 +1,0 @@
-RTOS layer with RTX:
- - Dynamic Memory size: 24 kB
- - Thread Stack size: 3 kB
- 

@@ -1,2 +1,0 @@
-Module layer for ISMART43362-E WiFi Shield (ARDUINO - SPI):
- - connects via Driver_SPIx (default Driver_SPI0)

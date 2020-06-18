@@ -4,17 +4,17 @@
   </created>
 
   <info isLayer="true">
-    <description>Socket layer (Network)</description>
+    <description>Socket layer (MW-Network Ethernet)</description>
     <category>Socket</category>
-    <keywords>Socket, Network</keywords>
+    <keywords>Socket, MW-Network</keywords>
     <license>Apache 2.0</license>
   </info>
 
   <layers>
     <layer hasTarget="0" name="Socket">
-      <description>Socket layer (Network)</description>
+      <description>Socket layer (MW-Network Ethernet)</description>
       <category>Socket</category>
-      <keywords>Socket, Network</keywords>
+      <keywords>Socket, MW-Network</keywords>
       <license>Apache 2.0</license>
     </layer>
   </layers>

@@ -19,9 +19,9 @@
       <license>EPL 1.0, Apache 2.0</license>
     </layer>
     <layer hasTarget="0" name="Socket">
-      <description>Socket layer (Network)</description>
+      <description>Socket layer (MW-Network Ethernet)</description>
       <category>Socket</category>
-      <keywords>Socket, Network</keywords>
+      <keywords>Socket, MW-Network</keywords>
       <license>Apache 2.0</license>
     </layer>
     <layer hasTarget="0" name="RTOS">

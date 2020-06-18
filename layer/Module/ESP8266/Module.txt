@@ -1,2 +1,0 @@
-Socket layer for ESP8266 WiFi Shield (ARDUINO - USART):
- - connects via Driver_USARTx (default Driver_USART0)

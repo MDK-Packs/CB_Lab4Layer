@@ -753,8 +753,8 @@
       </Layer>
       <Layer>
         <LayName>Socket</LayName>
-        <LayDesc>Socket layer (Network)</LayDesc>
-        <LayKeys>Socket, Network</LayKeys>
+        <LayDesc>Socket layer (lwIP Ethernet)</LayDesc>
+        <LayKeys>Socket, lwIP</LayKeys>
         <LayCat>Socket</LayCat>
         <LayLic>Apache 2.0</LayLic>
         <LayTarg>0</LayTarg>

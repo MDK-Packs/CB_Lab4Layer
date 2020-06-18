@@ -19,9 +19,9 @@
       <license>MIT</license>
     </layer>
     <layer hasTarget="0" name="Socket">
-      <description>Socket layer (Network)</description>
+      <description>Socket layer (lwIP Ethernet)</description>
       <category>Socket</category>
-      <keywords>Socket, Network</keywords>
+      <keywords>Socket, lwIP</keywords>
       <license>Apache 2.0</license>
     </layer>
     <layer hasTarget="0" name="RTOS">

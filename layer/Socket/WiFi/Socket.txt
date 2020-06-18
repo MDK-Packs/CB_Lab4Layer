@@ -1,2 +1,0 @@
-Socket layer for Socket via WiFi driver
- - connects via Driver_WiFix (default Driver_WiFi0)
