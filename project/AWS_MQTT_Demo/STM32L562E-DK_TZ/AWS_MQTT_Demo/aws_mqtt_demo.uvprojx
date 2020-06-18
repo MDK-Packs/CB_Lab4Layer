@@ -1937,6 +1937,15 @@
         <LayPrjMark>0</LayPrjMark>
       </Layer>
       <Layer>
+        <LayName>Module</LayName>
+        <LayDesc>Module layer (WiFi shield)</LayDesc>
+        <LayKeys>Module, WiFi</LayKeys>
+        <LayCat>Module, WiFi</LayCat>
+        <LayLic>Apache 2.0</LayLic>
+        <LayTarg>0</LayTarg>
+        <LayPrjMark>0</LayPrjMark>
+      </Layer>
+      <Layer>
         <LayName>Board</LayName>
         <LayDesc>Board layer for STM32L562-DK</LayDesc>
         <LayKeys>Board, STM32L562-DK</LayKeys>
@@ -2054,17 +2063,17 @@
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
         <LayAsnName>Keil::CMSIS Driver:WiFi:ESP8266</LayAsnName>
-        <LayAsnLayerName>Socket</LayAsnLayerName>
+        <LayAsnLayerName>Module</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
         <LayAsnName>Keil::CMSIS Driver:WiFi:ISM43362</LayAsnName>
-        <LayAsnLayerName>Socket</LayAsnLayerName>
+        <LayAsnLayerName>Module</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
         <LayAsnName>Keil::CMSIS Driver:WiFi:WizFi360</LayAsnName>
-        <LayAsnLayerName>Socket</LayAsnLayerName>
+        <LayAsnLayerName>Module</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>2</LayAsnType>
