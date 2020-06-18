@@ -207,7 +207,7 @@
 //  <i> Using TrustZone affects context handling.
 //  <i> Enable TrustZone when FreeRTOS runs on the Non-Secure side and calls functions from the Secure side.
 //  <i> Default: 1
-#define configENABLE_TRUSTZONE                1
+#define configENABLE_TRUSTZONE                0
 
 //  <o>Minimal secure stack size [words] <0-65535>
 //  <i> Stack for idle task Secure side context in words.
