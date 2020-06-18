@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\Board_IO</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -872,7 +872,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\Board_IO</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1405,7 +1405,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\Board_IO</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

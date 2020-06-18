@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>RunDemo=RunMqttDemo SECURE_PRIVATE_KEY IOT_MQTT_RESPONSE_WAIT_MS=10000 IOT_NETWORK_MBEDTLS_POLL_TIMEOUT_MS=10000</Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\Board_IO</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -824,7 +824,7 @@
               <MiscControls></MiscControls>
               <Define>RunDemo=RunMqttDemo SECURE_PRIVATE_KEY IOT_MQTT_RESPONSE_WAIT_MS=10000 IOT_NETWORK_MBEDTLS_POLL_TIMEOUT_MS=10000</Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\Board_IO</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1792,7 +1792,7 @@
               <MiscControls></MiscControls>
               <Define>RunDemo=RunMqttDemo SECURE_PRIVATE_KEY IOT_MQTT_RESPONSE_WAIT_MS=10000 IOT_NETWORK_MBEDTLS_POLL_TIMEOUT_MS=10000</Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\Board_IO</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
