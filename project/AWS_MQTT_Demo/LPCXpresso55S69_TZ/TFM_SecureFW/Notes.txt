@@ -1,0 +1,69 @@
+How to create the TF-M Secure Firmware
+--------------------------------------
+
+uVision:
+ - create TF-M Secure project (tfm_s)
+ -- select Device NXP LPC55S69JBD100:cm33_core0
+ -- set target name LPCXpresso55S69
+ -- Target Options - Target - Code Generation - Software Model: Secure Mode
+ -- Target Options - C/C++ - Warnings: AC5-like Warnings
+ -- Target Options - Asm - Assemble Options: armclang (GNU Syntax)
+ -- RTE
+ --- select TFM:Core (SFN variant)
+ --- select TFM:Secure Service:Crypto
+ --- select TFM:Secure Service:Internal Trusted Storage
+ --- select TFM Platform:* required components
+ --- select Security:mbed Crypto
+ --- select CMSIS Driver:Flash:Custom
+ --- select CMSIS Driver:USART:Custom
+ --- select Board Support:SDK Project Template:project_template variant:LPC55S69
+ --- select Device:SDK Drivers:iap1
+ --- resolve or manually select
+ ---- CMSIS:CORE
+ ---- Device:Startup and other required components
+ -- update TFM configuration: tfm_config.h
+ --- define ITS_CREATE_FLASH_LAYOUT (create initial flash layout for ITS)
+ --- define TFM_CRYPTO_ENGINE_BUF_SIZE (0x4000)
+ -- update TFM flash layout configuration: flash_layout.h
+ --- ITS_MAX_ASSET_SIZE=2048, ITS_NUM_ASSETS=4
+ -- add SystemInit.c module with SystemInitHook function (Board Clock and Pin configuration)
+ -- add Flash Driver (taken from NXP)
+ -- add USART Driver (output redirected to NXP USART HAL)
+ --- user code template
+ --- empty implementation + Initialize (HAL USART_Init) + Send (HAL USART_WriteBlocking)
+ --- name Driver_USART1 (add 1 index)
+ -- update Board Support:board.c
+ --- correct bug: change BOARD_DEBUG_UART_BASEADDR to BOARD_DEBUG_UART_INSTANCE
+ -- update Device:LPC55S69_cm33_Core0.s (startup file)
+ --- rename section .isr_vector to RESET
+ --- Vector table:
+ ---- change Image$$ARM_LIB_STACK$$ZI$$Limit to Image$$ARM_LIB_STACK_MSP$$ZI$$Limit
+ --- Reset Handler:
+ ---- remove MSPLIM setup
+ ---- remove unmask interrupts
+ ---- add switch to PSP
+ -- LPC55S69_cm33_Core0.s - Asm Misc Controls: -x assembler-with-cpp
+ -- setup linker:
+ --- scatter file: tfm_common_s.sct
+ --- options:
+     --import_cmse_lib_out="Objects/tfm_s_CMSE_Lib.o"
+     --predefine="-include tfm_config.h"
+     --predefine="-include tfm_config_rte.h"
+     --predefine="-IRTE/_LPCXpresso55S69/"
+     --predefine="-IRTE/TFM_Platform/LPC55S69JBD100_cm33_core0/"
+     --diag_suppress=L6312,L6314,L6329
+ -- select Debug adapter: CMSIS-DAP ARMv8M
+ -- update CMSIS_Zone generated files:
+ --- tz_confg.h/.c, tz_sau_nvic.c, tz_mpc_ppc.c
+ --- mem_layout.h
+
+MCUXpresso:
+ - create and update MCUXpresso project
+ -- open MCUXpresso, create .mex project based on uVision TF-M Secure project and update:
+ --- Pins:
+ ---- Route Pin#92: FLEXCOMM0, RXD_SDA_MOSI_DATA
+ ---- Route Pin#94: FLEXCOMM0, TXD_SCL_MISO_WS
+ --- Clock:
+ ---- called by initialization: BOARD_BootClockFROHF96M
+ ---- BOARD_BootClockFROHF96M:
+ ----- FXCOM0 clock = 12 MHz [FRO 12 MHz * 256 / 256]
