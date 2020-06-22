@@ -1,0 +1,27 @@
+Azure MQTT Demo for LPCXpresso55S69 Development Board with WiFi Module
+
+This demo application connects to Azure IoT Hub through MQTT,
+sends messages and checks for receive confirmation.
+
+It requires a registered device in the IoT hub (Azure portal).
+
+1. Configure IoT Hub connection string in iothub_ll_telemetry_sample_mdk.c:
+ - connectionString: Connection string - primary key
+
+2. Configure WiFi connection settings in socket_startup.c:
+ - SSID:          network identifier
+ - PASSWORD:      network password
+ - SECURITY_TYPE: network security
+
+3. Select target:
+ - LPCXpresso55S69 ESP8266:  ESP8266 WiFi Module
+ - LPCXpresso55S69 WizFi360: WizFi360 WiFi Module
+
+4. Build the application
+
+5. Connect the on board DAP-Link Debugger via USB
+
+6. Open a Terminal on PC and select the COM port of the DAP-Link Debugger
+   Configure baudrate = 115200
+
+7. Run the application and observe the messages in the Terminal
