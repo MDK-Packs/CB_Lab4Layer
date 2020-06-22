@@ -485,9 +485,9 @@
           <GroupName>MCUXpresso</GroupName>
           <Files>
             <File>
-              <FileName>aws_mqtt_demo.mex</FileName>
+              <FileName>LPCXpresso55S69.mex</FileName>
               <FileType>5</FileType>
-              <FilePath>.\aws_mqtt_demo.mex</FilePath>
+              <FilePath>.\LPCXpresso55S69.mex</FilePath>
             </File>
           </Files>
         </Group>
@@ -993,9 +993,9 @@
           <GroupName>MCUXpresso</GroupName>
           <Files>
             <File>
-              <FileName>aws_mqtt_demo.mex</FileName>
+              <FileName>LPCXpresso55S69.mex</FileName>
               <FileType>5</FileType>
-              <FilePath>.\aws_mqtt_demo.mex</FilePath>
+              <FilePath>.\LPCXpresso55S69.mex</FilePath>
             </File>
           </Files>
         </Group>
@@ -1800,7 +1800,7 @@
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>2</LayAsnType>
-        <LayAsnName>.\aws_mqtt_demo.mex</LayAsnName>
+        <LayAsnName>.\LPCXpresso55S69.mex</LayAsnName>
         <LayAsnLayerName>Board</LayAsnLayerName>
       </LayAsnItem>
     </LayAssign>

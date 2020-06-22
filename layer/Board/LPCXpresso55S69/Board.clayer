@@ -91,7 +91,7 @@
       <file category="header" layer="Board" name="./main.h"/>
     </group>
     <group name="MCUXpresso">
-      <file category="other" layer="Board" name="./aws_mqtt_demo.mex"/>
+      <file category="other" layer="Board" name="./LPCXpresso55S69.mex"/>
     </group>
   </files>
 </cprj>
