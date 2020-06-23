@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>azure_mqtt_demo</OutputName>
+          <OutputName>google_mqtt_demo</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -389,9 +389,19 @@
               <FilePath>.\app_main.c</FilePath>
             </File>
             <File>
-              <FileName>iothub_ll_telemetry_sample_mdk.c</FileName>
+              <FileName>demo.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\iothub_ll_telemetry_sample_mdk.c</FilePath>
+              <FilePath>.\demo.c</FilePath>
+            </File>
+            <File>
+              <FileName>pkey.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\pkey.h</FilePath>
+            </File>
+            <File>
+              <FileName>certificates.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\certificates.h</FilePath>
             </File>
             <File>
               <FileName>sntp.c</FileName>
@@ -521,7 +531,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>azure_mqtt_demo</OutputName>
+          <OutputName>google_mqtt_demo</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -861,9 +871,19 @@
               <FilePath>.\app_main.c</FilePath>
             </File>
             <File>
-              <FileName>iothub_ll_telemetry_sample_mdk.c</FileName>
+              <FileName>demo.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\iothub_ll_telemetry_sample_mdk.c</FilePath>
+              <FilePath>.\demo.c</FilePath>
+            </File>
+            <File>
+              <FileName>pkey.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\pkey.h</FilePath>
+            </File>
+            <File>
+              <FileName>certificates.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\certificates.h</FilePath>
             </File>
             <File>
               <FileName>sntp.c</FileName>
@@ -1110,30 +1130,22 @@
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
-      <component Cclass="IoT Client" Cgroup="Azure" Cvendor="MDK-Packs" Cversion="1.2.4" condition="Azure IoT Client">
-        <package license="LICENSE.txt" name="Azure_IoT" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/Azure_IoT/" vendor="MDK-Packs" version="1.0.2"/>
-        <targetInfos>
-          <targetInfo name="STM32F746G-D ESP8266">
-            <c>
-              <Define>DONT_USE_UPLOADTOBLOB</Define>
-            </c>
-          </targetInfo>
-          <targetInfo name="STM32F746G-D WizFi360">
-            <c>
-              <Define>DONT_USE_UPLOADTOBLOB</Define>
-            </c>
-          </targetInfo>
-        </targetInfos>
-      </component>
-      <component Cclass="IoT Utility" Cgroup="Azure" Csub="Common" Cvendor="MDK-Packs" Cversion="1.1.4" condition="Azure Common">
-        <package license="LICENSE.txt" name="Azure_IoT" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/Azure_IoT/" vendor="MDK-Packs" version="1.0.2"/>
+      <component Cclass="IoT Client" Cgroup="Google" Cvendor="MDK-Packs" Cversion="1.0.1" condition="Google IoT Client">
+        <package license="LICENSE.txt" name="Google_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/Google_IoT_Device/" vendor="MDK-Packs" version="1.0.2"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
-      <component Cclass="IoT Utility" Cgroup="Azure" Csub="MQTT" Cvendor="MDK-Packs" Cversion="1.1.4" condition="Azure MQTT">
-        <package license="LICENSE.txt" name="Azure_IoT" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/Azure_IoT/" vendor="MDK-Packs" version="1.0.2"/>
+      <component Cclass="IoT Client" Cgroup="MQTTClient-C" Cvendor="MDK-Packs" Cversion="1.1.0" condition="MQTTClient-C">
+        <package license="edl-v10.txt" name="Paho_MQTT" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/Paho_MQTT/" vendor="MDK-Packs" version="1.0.2"/>
+        <targetInfos>
+          <targetInfo name="STM32F746G-D ESP8266"/>
+          <targetInfo name="STM32F746G-D WizFi360"/>
+        </targetInfos>
+      </component>
+      <component Cclass="IoT Utility" Cgroup="MQTTPacket" Cvendor="MDK-Packs" Cversion="1.1.0" condition="Cortex-M Device">
+        <package license="edl-v10.txt" name="Paho_MQTT" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/Paho_MQTT/" vendor="MDK-Packs" version="1.0.2"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
@@ -1216,20 +1228,20 @@
     <Layers>
       <Layer>
         <LayName>&lt;Project Info&gt;</LayName>
-        <LayDesc>Azure MQTT Demo</LayDesc>
+        <LayDesc>Google MQTT Demo</LayDesc>
         <LayUrl>https://www.keil.com</LayUrl>
-        <LayKeys>Azure, MQTT</LayKeys>
+        <LayKeys>Google, MQTT</LayKeys>
         <LayCat>Cloud, IoT</LayCat>
-        <LayLic>MIT, BSD 3-Clause, Apache 2.0</LayLic>
+        <LayLic>EPL 1.0, BSD 3-Clause, Apache 2.0</LayLic>
         <LayTarg>0</LayTarg>
         <LayPrjMark>1</LayPrjMark>
       </Layer>
       <Layer>
         <LayName>App</LayName>
-        <LayDesc>Application layer (Azure MQTT Demo)</LayDesc>
-        <LayKeys>Azure, MQTT</LayKeys>
+        <LayDesc>Application layer (Google MQTT Demo)</LayDesc>
+        <LayKeys>Google, MQTT</LayKeys>
         <LayCat>Cloud, IoT</LayCat>
-        <LayLic>MIT</LayLic>
+        <LayLic>EPL 1.0, Apache 2.0</LayLic>
         <LayTarg>0</LayTarg>
         <LayPrjMark>0</LayPrjMark>
       </Layer>
@@ -1402,28 +1414,38 @@
         <LayAsnLayerName>Board</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
-        <LayAsnType>1</LayAsnType>
-        <LayAsnName>MDK-Packs::IoT Client:Azure</LayAsnName>
-        <LayAsnLayerName>App</LayAsnLayerName>
-      </LayAsnItem>
-      <LayAsnItem>
-        <LayAsnType>1</LayAsnType>
-        <LayAsnName>MDK-Packs::IoT Utility:Azure:Common</LayAsnName>
-        <LayAsnLayerName>App</LayAsnLayerName>
-      </LayAsnItem>
-      <LayAsnItem>
-        <LayAsnType>1</LayAsnType>
-        <LayAsnName>MDK-Packs::IoT Utility:Azure:MQTT</LayAsnName>
-        <LayAsnLayerName>App</LayAsnLayerName>
-      </LayAsnItem>
-      <LayAsnItem>
-        <LayAsnType>2</LayAsnType>
-        <LayAsnName>.\iothub_ll_telemetry_sample_mdk.c</LayAsnName>
-        <LayAsnLayerName>App</LayAsnLayerName>
-      </LayAsnItem>
-      <LayAsnItem>
         <LayAsnType>2</LayAsnType>
         <LayAsnName>.\sntp.c</LayAsnName>
+        <LayAsnLayerName>App</LayAsnLayerName>
+      </LayAsnItem>
+      <LayAsnItem>
+        <LayAsnType>1</LayAsnType>
+        <LayAsnName>MDK-Packs::IoT Client:Google</LayAsnName>
+        <LayAsnLayerName>App</LayAsnLayerName>
+      </LayAsnItem>
+      <LayAsnItem>
+        <LayAsnType>1</LayAsnType>
+        <LayAsnName>MDK-Packs::IoT Client:MQTTClient-C</LayAsnName>
+        <LayAsnLayerName>App</LayAsnLayerName>
+      </LayAsnItem>
+      <LayAsnItem>
+        <LayAsnType>1</LayAsnType>
+        <LayAsnName>MDK-Packs::IoT Utility:MQTTPacket</LayAsnName>
+        <LayAsnLayerName>App</LayAsnLayerName>
+      </LayAsnItem>
+      <LayAsnItem>
+        <LayAsnType>2</LayAsnType>
+        <LayAsnName>.\demo.c</LayAsnName>
+        <LayAsnLayerName>App</LayAsnLayerName>
+      </LayAsnItem>
+      <LayAsnItem>
+        <LayAsnType>2</LayAsnType>
+        <LayAsnName>.\pkey.h</LayAsnName>
+        <LayAsnLayerName>App</LayAsnLayerName>
+      </LayAsnItem>
+      <LayAsnItem>
+        <LayAsnType>2</LayAsnType>
+        <LayAsnName>.\certificates.h</LayAsnName>
         <LayAsnLayerName>App</LayAsnLayerName>
       </LayAsnItem>
     </LayAssign>
