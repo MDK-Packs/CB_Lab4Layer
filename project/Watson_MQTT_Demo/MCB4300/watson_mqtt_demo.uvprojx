@@ -518,49 +518,49 @@
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </component>
-      <component Cbundle="MDK-Pro" Cclass="File System" Cgroup="CORE" Cvariant="LFN" Cvendor="Keil" Cversion="6.13.6" condition="CMSIS Core with RTOS and File System I/O">
+      <component Cbundle="MDK-Plus" Cclass="File System" Cgroup="CORE" Cvariant="LFN" Cvendor="Keil" Cversion="6.13.6" condition="CMSIS Core with RTOS and File System I/O">
         <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </component>
-      <component Cbundle="MDK-Pro" Cclass="File System" Cgroup="Drive" Csub="Memory Card" Cvendor="Keil" Cversion="6.13.6" condition="File System and SD/MMC Driver" maxInstances="2">
+      <component Cbundle="MDK-Plus" Cclass="File System" Cgroup="Drive" Csub="Memory Card" Cvendor="Keil" Cversion="6.13.6" condition="File System and SD/MMC Driver" maxInstances="2">
         <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </component>
-      <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="CORE" Cvariant="IPv4 Release" Cvendor="Keil" Cversion="7.13.1" condition="CMSIS Core with RTOS">
+      <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="CORE" Cvariant="IPv4 Release" Cvendor="Keil" Cversion="7.13.1" condition="CMSIS Core with RTOS">
         <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </component>
-      <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Interface" Csub="ETH" Cvendor="Keil" Cversion="7.13.1" condition="Network Driver ETH" maxInstances="2">
+      <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Interface" Csub="ETH" Cvendor="Keil" Cversion="7.13.1" condition="Network Driver ETH" maxInstances="2">
         <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </component>
-      <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Service" Csub="DNS Client" Cvendor="Keil" Cversion="7.13.1" condition="Network UDP">
+      <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Service" Csub="DNS Client" Cvendor="Keil" Cversion="7.13.1" condition="Network UDP">
         <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </component>
-      <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Socket" Csub="BSD" Cvendor="Keil" Cversion="7.13.1" condition="Network UDP/TCP">
+      <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Socket" Csub="BSD" Cvendor="Keil" Cversion="7.13.1" condition="Network UDP/TCP">
         <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </component>
-      <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Socket" Csub="TCP" Cvendor="Keil" Cversion="7.13.1" condition="Network Interface">
+      <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Socket" Csub="TCP" Cvendor="Keil" Cversion="7.13.1" condition="Network Interface">
         <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </component>
-      <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Socket" Csub="UDP" Cvendor="Keil" Cversion="7.13.1" condition="Network Interface">
+      <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Socket" Csub="UDP" Cvendor="Keil" Cversion="7.13.1" condition="Network Interface">
         <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
@@ -670,7 +670,7 @@
       </file>
       <file attr="config" category="source" name="FileSystem\Config\FS_Config.c" version="6.3.0">
         <instance index="0">RTE\File_System\FS_Config.c</instance>
-        <component Cbundle="MDK-Pro" Cclass="File System" Cgroup="CORE" Cvariant="LFN" Cvendor="Keil" Cversion="6.13.6" condition="CMSIS Core with RTOS and File System I/O" isDefaultVariant="1"/>
+        <component Cbundle="MDK-Plus" Cclass="File System" Cgroup="CORE" Cvariant="LFN" Cvendor="Keil" Cversion="6.13.6" condition="CMSIS Core with RTOS and File System I/O"/>
         <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
@@ -678,7 +678,7 @@
       </file>
       <file attr="config" category="header" name="FileSystem\Config\FS_Config_MC.h" version="6.2.0">
         <instance index="0">RTE\File_System\FS_Config_MC_0.h</instance>
-        <component Cbundle="MDK-Pro" Cclass="File System" Cgroup="Drive" Csub="Memory Card" Cvendor="Keil" Cversion="6.13.6" condition="File System and SD/MMC Driver" maxInstances="2"/>
+        <component Cbundle="MDK-Plus" Cclass="File System" Cgroup="Drive" Csub="Memory Card" Cvendor="Keil" Cversion="6.13.6" condition="File System and SD/MMC Driver" maxInstances="2"/>
         <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
@@ -706,7 +706,7 @@
       </file>
       <file attr="config" category="source" name="Network\Config\Net_Config.c" version="7.1.0">
         <instance index="0">RTE\Network\Net_Config.c</instance>
-        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="CORE" Cvariant="IPv4 Release" Cvendor="Keil" Cversion="7.13.1" condition="CMSIS Core with RTOS"/>
+        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="CORE" Cvariant="IPv4 Release" Cvendor="Keil" Cversion="7.13.1" condition="CMSIS Core with RTOS" isDefaultVariant="1"/>
         <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
@@ -714,7 +714,7 @@
       </file>
       <file attr="config" category="header" name="Network\Config\Net_Config_BSD.h" version="5.0.0">
         <instance index="0">RTE\Network\Net_Config_BSD.h</instance>
-        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Socket" Csub="BSD" Cvendor="Keil" Cversion="7.13.1" condition="Network UDP/TCP"/>
+        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Socket" Csub="BSD" Cvendor="Keil" Cversion="7.13.1" condition="Network UDP/TCP"/>
         <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
@@ -722,7 +722,7 @@
       </file>
       <file attr="config" category="header" name="Network\Config\Net_Config_DNS_Client.h" version="5.0.0">
         <instance index="0">RTE\Network\Net_Config_DNS_Client.h</instance>
-        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Service" Csub="DNS Client" Cvendor="Keil" Cversion="7.13.1" condition="Network UDP"/>
+        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Service" Csub="DNS Client" Cvendor="Keil" Cversion="7.13.1" condition="Network UDP"/>
         <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
@@ -730,7 +730,7 @@
       </file>
       <file attr="config" category="header" name="Network\Config\Net_Config_ETH.h" version="7.2.0">
         <instance index="0">RTE\Network\Net_Config_ETH_0.h</instance>
-        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Interface" Csub="ETH" Cvendor="Keil" Cversion="7.13.1" condition="Network Driver ETH" maxInstances="2"/>
+        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Interface" Csub="ETH" Cvendor="Keil" Cversion="7.13.1" condition="Network Driver ETH" maxInstances="2"/>
         <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
@@ -738,7 +738,7 @@
       </file>
       <file attr="config" category="header" name="Network\Config\Net_Config_TCP.h" version="7.1.1">
         <instance index="0">RTE\Network\Net_Config_TCP.h</instance>
-        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Socket" Csub="TCP" Cvendor="Keil" Cversion="7.13.1" condition="Network Interface"/>
+        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Socket" Csub="TCP" Cvendor="Keil" Cversion="7.13.1" condition="Network Interface"/>
         <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
@@ -746,7 +746,7 @@
       </file>
       <file attr="config" category="header" name="Network\Config\Net_Config_UDP.h" version="5.1.0">
         <instance index="0">RTE\Network\Net_Config_UDP.h</instance>
-        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Socket" Csub="UDP" Cvendor="Keil" Cversion="7.13.1" condition="Network Interface"/>
+        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Socket" Csub="UDP" Cvendor="Keil" Cversion="7.13.1" condition="Network Interface"/>
         <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
@@ -865,32 +865,32 @@
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
-        <LayAsnName>Keil.MDK-Pro::Network:CORE</LayAsnName>
+        <LayAsnName>Keil.MDK-Plus::Network:CORE</LayAsnName>
         <LayAsnLayerName>Socket</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
-        <LayAsnName>Keil.MDK-Pro::Network:Interface:ETH</LayAsnName>
+        <LayAsnName>Keil.MDK-Plus::Network:Interface:ETH</LayAsnName>
         <LayAsnLayerName>Socket</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
-        <LayAsnName>Keil.MDK-Pro::Network:Service:DNS Client</LayAsnName>
+        <LayAsnName>Keil.MDK-Plus::Network:Service:DNS Client</LayAsnName>
         <LayAsnLayerName>Socket</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
-        <LayAsnName>Keil.MDK-Pro::Network:Socket:BSD</LayAsnName>
+        <LayAsnName>Keil.MDK-Plus::Network:Socket:BSD</LayAsnName>
         <LayAsnLayerName>Socket</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
-        <LayAsnName>Keil.MDK-Pro::Network:Socket:TCP</LayAsnName>
+        <LayAsnName>Keil.MDK-Plus::Network:Socket:TCP</LayAsnName>
         <LayAsnLayerName>Socket</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
-        <LayAsnName>Keil.MDK-Pro::Network:Socket:UDP</LayAsnName>
+        <LayAsnName>Keil.MDK-Plus::Network:Socket:UDP</LayAsnName>
         <LayAsnLayerName>Socket</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
@@ -910,12 +910,12 @@
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
-        <LayAsnName>Keil.MDK-Pro::File System:CORE</LayAsnName>
+        <LayAsnName>Keil.MDK-Plus::File System:CORE</LayAsnName>
         <LayAsnLayerName>App</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
-        <LayAsnName>Keil.MDK-Pro::File System:Drive:Memory Card</LayAsnName>
+        <LayAsnName>Keil.MDK-Plus::File System:Drive:Memory Card</LayAsnName>
         <LayAsnLayerName>App</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
