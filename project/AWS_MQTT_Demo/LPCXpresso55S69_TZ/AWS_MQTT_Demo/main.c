@@ -31,11 +31,11 @@ void     USART2_DeinitPins(void) { /* Not implemented */ }
 
 int main (void) {
 
-  SystemCoreClockUpdate();                      // System Initialization
-
   BOARD_InitBootPins();
   BOARD_InitBootClocks();
   BOARD_InitDebugConsole();
+
+  SystemCoreClockUpdate();
 
   osKernelInitialize();                         // Initialize CMSIS-RTOS
   tfm_ns_interface_init();                      // Initialize the TFM NS interface
