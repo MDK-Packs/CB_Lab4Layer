@@ -21,8 +21,25 @@ Output Projects are currently manually configured for MDK (uVision).  In future,
 
 The various projects are based on [__software packs that public available__](./Pack.md).
 
+## Layers for IoT Cloud Examples
 
-# Working with the Examples
+The following diagram shows the various layers that are used to compose the IoT Cloud examples.
+
+![Layers explained](Layers_explained.png)
+
+Layer        | Implements 
+:------------|:----------------
+Board        | Base setup of a evaluation board; it includes CMSIS-Drivers and typically uses the device SDK
+RTOS         | RTOS kernel used in the example application
+Socket       | IP (internet) communication; frequently a TCP/IP stack
+WiFi         | WiFi Shield used in the example; a separate layer to make it easy to change Arduino shields
+App          | Application example; for IoT Cloud examples it contains typically a Cloud SDK
+
+The examples are composed in a way that the device configuration is preserved and can be adopted to the
+requirements of a complex user application. It allows move this examples to bespoke hardware and extended
+it further with user code.
+
+## Working with the Examples
 
 The following steps describe how to generate working examples from the content of the `.\layer` directory.
 
