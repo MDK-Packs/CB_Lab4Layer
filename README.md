@@ -17,7 +17,8 @@ Directory    | Content Description
 
 __Note:__ this is work in progress and there are several gaps that we will close in the near future:
 
-Output Projects are currently manually configured for MDK (uVision).  In future, the Board pack should define the configuration of example projects as the board may have on-board debug adapters.
+Output projects are currently manually configured for MDK (uVision).  In future, the Board pack should define the debug configuration of example projects.
+Board may have on-board debug adapters and therefore the configuration depends on the target board that is used.
 
 The various projects are based on [__software packs that public available__](./Pack.md).
 
