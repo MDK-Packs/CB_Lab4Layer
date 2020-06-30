@@ -166,12 +166,12 @@ App=Paho_MQTT_Demo Board=STM32L562E-DK Module=ISM43362 Socket=WiFi RTOS=RTX
 App=Paho_MQTT_Demo Board=STM32L562E-DK Module=ISM43362 Socket=WiFi RTOS=FreeRTOS
 App=Paho_MQTT_Demo Board=STM32L562E-DK Module=WizFi360 Socket=WiFi RTOS=RTX
 App=Paho_MQTT_Demo Board=STM32L562E-DK Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
-#App=Watson_MQTT_Demo Board=32F746GDISCOVERY Module=ESP8266 Socket=WiFi RTOS=RTX
-#App=Watson_MQTT_Demo Board=32F746GDISCOVERY Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
+App=Watson_MQTT_Demo Board=32F746GDISCOVERY Module=ESP8266 Socket=WiFi RTOS=RTX
+App=Watson_MQTT_Demo Board=32F746GDISCOVERY Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 #App=Watson_MQTT_Demo Board=32F746GDISCOVERY Module=ISM43362 Socket=WiFi RTOS=RTX
 #App=Watson_MQTT_Demo Board=32F746GDISCOVERY Module=ISM43362 Socket=WiFi RTOS=FreeRTOS
-#App=Watson_MQTT_Demo Board=32F746GDISCOVERY Module=WizFi360 Socket=WiFi RTOS=RTX
-#App=Watson_MQTT_Demo Board=32F746GDISCOVERY Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
+App=Watson_MQTT_Demo Board=32F746GDISCOVERY Module=WizFi360 Socket=WiFi RTOS=RTX
+App=Watson_MQTT_Demo Board=32F746GDISCOVERY Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
 #App=Watson_MQTT_Demo Board=32F746GDISCOVERY Socket=MW-Network_ETH RTOS=RTX
 #App=Watson_MQTT_Demo Board=32F746GDISCOVERY Socket=MW-Network_ETH RTOS=FreeRTOS
 #App=Watson_MQTT_Demo Board=32F746GDISCOVERY Socket=lwIP_ETH RTOS=RTX
