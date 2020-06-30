@@ -58,6 +58,8 @@ extern void app_initialize (void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define MemoryCard_CD0_Pin GPIO_PIN_13
+#define MemoryCard_CD0_GPIO_Port GPIOC
 /* USER CODE BEGIN Private defines */
 extern RNG_HandleTypeDef hrng;
 /* USER CODE END Private defines */
