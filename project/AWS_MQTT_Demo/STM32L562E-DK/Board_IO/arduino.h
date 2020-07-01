@@ -19,19 +19,19 @@
 #include <stdint.h>
 
 /**
-  \fn          void ARDUINO_SPI_A_CS (uint32_t ss)
-  \brief       Drive SPI_A_CS Slave Select line.
-  \param[in]   ss
-                 - value = 0: not active
-                 - value = 1: active state
+  \fn          void ARDUINO_IO_D10_Set (uint32_t val)
+  \brief       Set IO D10 digital output.
+  \param[in]   val output value
+                 - 0
+                 - 1
   \return      none
 */
-void ARDUINO_SPI_A_CS (uint32_t ss);
+void ARDUINO_IO_D10_Set (uint32_t val);
 
 /**
   \fn          uint32_t ARDUINO_IO_D9_Get (void)
-  \brief       Get IO_D9 line state.
-  \return      IO_D9 line state
+  \brief       Get IO D9 digital input.
+  \return      input state
                  - 0
                  - 1
 */

@@ -60,8 +60,8 @@ extern void app_initialize (void);
 /* Private defines -----------------------------------------------------------*/
 #define ARDUINO_IO_D9_Pin GPIO_PIN_9
 #define ARDUINO_IO_D9_GPIO_Port GPIOB
-#define ARDUINO_SPI_A_CS_Pin GPIO_PIN_0
-#define ARDUINO_SPI_A_CS_GPIO_Port GPIOE
+#define ARDUINO_IO_D10_Pin GPIO_PIN_0
+#define ARDUINO_IO_D10_GPIO_Port GPIOE
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

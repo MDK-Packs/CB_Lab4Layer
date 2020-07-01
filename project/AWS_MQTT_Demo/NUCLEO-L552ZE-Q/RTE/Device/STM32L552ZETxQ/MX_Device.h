@@ -204,7 +204,7 @@
 #define MX_PD14_GPIOx                           GPIOD
 #define MX_PD14_PinState                        GPIO_PIN_SET
 #define MX_PD14_GPIO_PuPd                       GPIO_NOPULL
-#define MX_ARDUINO_SPI_A_CS                     PD14
+#define MX_ARDUINO_IO_D10                       PD14
 #define MX_PD14_GPIO_Pin                        GPIO_PIN_14
 #define MX_PD14_GPIO_ModeDefaultOutputPP        GPIO_MODE_OUTPUT_PP
 

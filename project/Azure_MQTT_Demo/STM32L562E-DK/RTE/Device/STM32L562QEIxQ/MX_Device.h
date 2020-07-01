@@ -210,7 +210,7 @@
 #define MX_PE0_GPIOx                            GPIOE
 #define MX_PE0_PinState                         GPIO_PIN_SET
 #define MX_PE0_GPIO_PuPd                        GPIO_NOPULL
-#define MX_ARDUINO_SPI_A_CS                     PE0
+#define MX_ARDUINO_IO_D10                       PE0
 #define MX_PE0_GPIO_Pin                         GPIO_PIN_0
 #define MX_PE0_GPIO_ModeDefaultOutputPP         GPIO_MODE_OUTPUT_PP
 

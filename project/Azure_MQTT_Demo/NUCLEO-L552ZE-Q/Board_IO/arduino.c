@@ -20,21 +20,21 @@
 #include "main.h"
 
 /**
-  \fn          void ARDUINO_SPI_A_CS (uint32_t ss)
-  \brief       Drive SPI_A_CS Slave Select line.
-  \param[in]   ss
-                 - value = 0: not active
-                 - value = 1: active state
+  \fn          void ARDUINO_IO_D10_Set (uint32_t val)
+  \brief       Set IO D10 digital output.
+  \param[in]   val output value
+                 - 0
+                 - 1
   \return      none
 */
-void ARDUINO_SPI_A_CS (uint32_t ss) {
-  HAL_GPIO_WritePin(ARDUINO_SPI_A_CS_GPIO_Port, ARDUINO_SPI_A_CS_Pin, ss ? GPIO_PIN_RESET : GPIO_PIN_SET);
+void ARDUINO_IO_D10_Set (uint32_t val) {
+  HAL_GPIO_WritePin(ARDUINO_IO_D10_GPIO_Port, ARDUINO_IO_D10_Pin, val ? GPIO_PIN_SET : GPIO_PIN_RESET);
 }
 
 /**
   \fn          uint32_t ARDUINO_IO_D9_Get (void)
-  \brief       Get IO_D9 line state.
-  \return      IO_D9 line state
+  \brief       Get IO D9 digital input.
+  \return      input state
                  - 0
                  - 1
 */

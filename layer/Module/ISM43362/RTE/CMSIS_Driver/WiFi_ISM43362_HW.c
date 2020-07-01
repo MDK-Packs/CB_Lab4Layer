@@ -80,7 +80,7 @@ void WiFi_ISM43362_Pin_RSTN (uint8_t rstn) {
 void WiFi_ISM43362_Pin_SSN (uint8_t ssn) {
   // Add code for driving Slave Select pin here
   // <code WiFi_ISM43362_Pin_SSN>
-  ARDUINO_SPI_A_CS(ssn);
+  ARDUINO_IO_D10_Set(ssn ? 0U : 1U);
   // </code>
 }
 

@@ -59,8 +59,8 @@ extern void app_initialize (void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define ARDUINO_SPI_A_CS_Pin GPIO_PIN_14
-#define ARDUINO_SPI_A_CS_GPIO_Port GPIOD
+#define ARDUINO_IO_D10_Pin GPIO_PIN_14
+#define ARDUINO_IO_D10_GPIO_Port GPIOD
 #define ARDUINO_IO_D9_Pin GPIO_PIN_15
 #define ARDUINO_IO_D9_GPIO_Port GPIOD
 /* USER CODE BEGIN Private defines */
