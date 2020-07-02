@@ -66,7 +66,7 @@
 
   <components>
     <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" layer="Board"/>
-    <component Cclass="CMSIS" Cgroup="RTOS2" Csub="Keil RTX5" Cvariant="Library" Cvendor="ARM" layer="RTOS">
+    <component Cclass="CMSIS" Cgroup="RTOS2" Csub="Keil RTX5" Cvariant="Source" Cvendor="ARM" layer="RTOS">
       <file attr="config" category="source" name="CMSIS/RTOS2/RTX/Config/RTX_Config.c" version="5.1.0"/>
       <file attr="config" category="header" name="CMSIS/RTOS2/RTX/Config/RTX_Config.h" version="5.5.1"/>
     </component>
