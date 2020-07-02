@@ -1,0 +1,5 @@
+*.bak
+**/Objects
+**/Listings
+**/*.uvgui.*
+**/*.uvguix.*
