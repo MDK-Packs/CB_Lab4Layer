@@ -224,9 +224,3 @@ App=Watson_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=RTX
 #App=Watson_MQTT_Demo Board=STM32L562E-DK Module=ISM43362 Socket=WiFi RTOS=FreeRTOS
 #App=Watson_MQTT_Demo Board=STM32L562E-DK Module=WizFi360 Socket=WiFi RTOS=RTX
 #App=Watson_MQTT_Demo Board=STM32L562E-DK Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
-#App=Watson_MQTT_Demo Board=Musca-S1 Module=ESP8266 Socket=WiFi RTOS=RTX
-#App=Watson_MQTT_Demo Board=Musca-S1 Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
-#App=Watson_MQTT_Demo Board=Musca-S1 Module=ISM43362 Socket=WiFi RTOS=RTX
-#App=Watson_MQTT_Demo Board=Musca-S1 Module=ISM43362 Socket=WiFi RTOS=FreeRTOS
-#App=Watson_MQTT_Demo Board=Musca-S1 Module=WizFi360 Socket=WiFi RTOS=RTX
-#App=Watson_MQTT_Demo Board=Musca-S1 Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
