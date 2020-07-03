@@ -452,13 +452,13 @@
         </targetInfos>
       </component>
       <component Capiversion="2.4.0" Cclass="CMSIS Driver" Cgroup="USART" Csub="Custom" Cvendor="ARM" Cversion="1.0.0" custom="1">
-        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.1-dev0"/>
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
           <targetInfo name="Musca-S1"/>
         </targetInfos>
       </component>
       <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="5.4.0" condition="ARMv6_7_8-M Device">
-        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.1-dev0"/>
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
           <targetInfo name="Musca-S1"/>
         </targetInfos>
@@ -513,114 +513,6 @@
       </component>
     </components>
     <files>
-      <file attr="config" category="sourceC" name="project_template\board.c" version="1.0.0">
-        <instance index="0" removed="1">RTE\Board_Support\LPC55S69JBD100_cm33_core0\board.c</instance>
-        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_uart_AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset_AND_utility.debug_console" isDefaultVariant="1"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="header" name="project_template\board.h" version="1.0.0">
-        <instance index="0" removed="1">RTE\Board_Support\LPC55S69JBD100_cm33_core0\board.h</instance>
-        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_uart_AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset_AND_utility.debug_console" isDefaultVariant="1"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="sourceC" name="project_template\clock_config.c" version="1.0.0">
-        <instance index="0" removed="1">RTE\Board_Support\LPC55S69JBD100_cm33_core0\clock_config.c</instance>
-        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_uart_AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset_AND_utility.debug_console" isDefaultVariant="1"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="header" name="project_template\clock_config.h" version="1.0.0">
-        <instance index="0" removed="1">RTE\Board_Support\LPC55S69JBD100_cm33_core0\clock_config.h</instance>
-        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_uart_AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset_AND_utility.debug_console" isDefaultVariant="1"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="sourceC" name="project_template\peripherals.c" version="1.0.0">
-        <instance index="0" removed="1">RTE\Board_Support\LPC55S69JBD100_cm33_core0\peripherals.c</instance>
-        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_uart_AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset_AND_utility.debug_console" isDefaultVariant="1"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="header" name="project_template\peripherals.h" version="1.0.0">
-        <instance index="0" removed="1">RTE\Board_Support\LPC55S69JBD100_cm33_core0\peripherals.h</instance>
-        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_uart_AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset_AND_utility.debug_console" isDefaultVariant="1"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="sourceC" name="project_template\pin_mux.c" version="1.0.0">
-        <instance index="0" removed="1">RTE\Board_Support\LPC55S69JBD100_cm33_core0\pin_mux.c</instance>
-        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_uart_AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset_AND_utility.debug_console" isDefaultVariant="1"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="header" name="project_template\pin_mux.h" version="1.0.0">
-        <instance index="0" removed="1">RTE\Board_Support\LPC55S69JBD100_cm33_core0\pin_mux.h</instance>
-        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_uart_AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset_AND_utility.debug_console" isDefaultVariant="1"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="header" condition="core_id.cm33_core0_AND_core_type.cm33" name="LPC55S69_cm33_core0.h" version="1.0.0">
-        <instance index="0" removed="1">RTE\Device\LPC55S69JBD100_cm33_core0\LPC55S69_cm33_core0.h</instance>
-        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="header" condition="core_id.cm33_core0_AND_core_type.cm33" name="LPC55S69_cm33_core0_features.h" version="1.0.0">
-        <instance index="0" removed="1">RTE\Device\LPC55S69JBD100_cm33_core0\LPC55S69_cm33_core0_features.h</instance>
-        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="linkerScript" condition="core_id.cm33_core0_AND_core_type.cm33_AND_mdk" name="arm\LPC55S69_cm33_core0_flash.scf" version="1.0.0">
-        <instance index="0" removed="1">RTE\Device\LPC55S69JBD100_cm33_core0\LPC55S69_cm33_core0_flash.scf</instance>
-        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="linkerScript" condition="core_id.cm33_core0_AND_core_type.cm33_AND_mdk" name="arm\LPC55S69_cm33_core0_flash_ns.scf" version="1.0.0">
-        <instance index="0" removed="1">RTE\Device\LPC55S69JBD100_cm33_core0\LPC55S69_cm33_core0_flash_ns.scf</instance>
-        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="linkerScript" condition="core_id.cm33_core0_AND_core_type.cm33_AND_mdk" name="arm\LPC55S69_cm33_core0_flash_s.scf" version="1.0.0">
-        <instance index="0" removed="1">RTE\Device\LPC55S69JBD100_cm33_core0\LPC55S69_cm33_core0_flash_s.scf</instance>
-        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="linkerScript" condition="core_id.cm33_core0_AND_core_type.cm33_AND_mdk" name="arm\LPC55S69_cm33_core0_ram.scf" version="1.0.0">
-        <instance index="0" removed="1">RTE\Device\LPC55S69JBD100_cm33_core0\LPC55S69_cm33_core0_ram.scf</instance>
-        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="header" condition="core_type.cm33" name="fsl_device_registers.h" version="1.0.0">
-        <instance index="0" removed="1">RTE\Device\LPC55S69JBD100_cm33_core0\fsl_device_registers.h</instance>
-        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="sourceAsm" condition="core_id.cm33_core0_AND_core_type.cm33_AND_mdk" name="arm\startup_LPC55S69_cm33_core0.s" version="1.0.0">
-        <instance index="0" removed="1">RTE\Device\LPC55S69JBD100_cm33_core0\startup_LPC55S69_cm33_core0.s</instance>
-        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="sourceC" condition="core_id.cm33_core0_AND_core_type.cm33" name="system_LPC55S69_cm33_core0.c" version="1.0.0">
-        <instance index="0" removed="1">RTE\Device\LPC55S69JBD100_cm33_core0\system_LPC55S69_cm33_core0.c</instance>
-        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="header" condition="core_id.cm33_core0_AND_core_type.cm33" name="system_LPC55S69_cm33_core0.h" version="1.0.0">
-        <instance index="0" removed="1">RTE\Device\LPC55S69JBD100_cm33_core0\system_LPC55S69_cm33_core0.h</instance>
-        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33"/>
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="11.0.0"/>
-        <targetInfos/>
-      </file>
       <file attr="config" category="header" name="CMSIS\Driver\Config\RTE_Device.h" version="1.2.0">
         <instance index="0">RTE\Device\Musca-S1_CM33-0\RTE_Device.h</instance>
         <component Cclass="Device" Cgroup="Startup" Cvariant="C Startup" Cvendor="ARM" Cversion="2.0.0" condition="Musca-S1 CMSIS"/>
@@ -708,48 +600,6 @@
         <targetInfos>
           <targetInfo name="Musca-S1"/>
         </targetInfos>
-      </file>
-      <file attr="config" category="header" name="lpc55s6x\partition\flash_layout.h" version="1.0.0">
-        <instance index="0" removed="1">RTE\TFM_Platform\LPC55S69JBD100_cm33_core0\flash_layout.h</instance>
-        <component Cclass="TFM Platform" Cgroup="Memory Map" Cvendor="Keil" Cversion="1.0.0" condition="TFM Platform LPC55S6x"/>
-        <package name="LPC55S6x_TFM-PF" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/LPC55S6x_TFM-PF/" vendor="Keil" version="1.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="header" name="lpc55s6x\partition\mem_layout.h" version="1.0.0">
-        <instance index="0" removed="1">RTE\TFM_Platform\LPC55S69JBD100_cm33_core0\mem_layout.h</instance>
-        <component Cclass="TFM Platform" Cgroup="Memory Map" Cvendor="Keil" Cversion="1.0.0" condition="TFM Platform LPC55S6x"/>
-        <package name="LPC55S6x_TFM-PF" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/LPC55S6x_TFM-PF/" vendor="Keil" version="1.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="header" name="lpc55s6x\partition\region_defs.h" version="1.0.0">
-        <instance index="0" removed="1">RTE\TFM_Platform\LPC55S69JBD100_cm33_core0\region_defs.h</instance>
-        <component Cclass="TFM Platform" Cgroup="Memory Map" Cvendor="Keil" Cversion="1.0.0" condition="TFM Platform LPC55S6x"/>
-        <package name="LPC55S6x_TFM-PF" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/LPC55S6x_TFM-PF/" vendor="Keil" version="1.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="source" name="lpc55s6x\tz_config.c" version="1.0.0">
-        <instance index="0" removed="1">RTE\TFM_Platform\LPC55S69JBD100_cm33_core0\tz_config.c</instance>
-        <component Capiversion="1.0.0" Cclass="TFM Platform" Cgroup="SPM HAL" Csub="Platform" Cvendor="Keil" Cversion="1.0.0" condition="TFM Platform SPM HAL LPC55S6x"/>
-        <package name="LPC55S6x_TFM-PF" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/LPC55S6x_TFM-PF/" vendor="Keil" version="1.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="header" name="lpc55s6x\tz_config.h" version="1.0.0">
-        <instance index="0" removed="1">RTE\TFM_Platform\LPC55S69JBD100_cm33_core0\tz_config.h</instance>
-        <component Capiversion="1.0.0" Cclass="TFM Platform" Cgroup="SPM HAL" Csub="Platform" Cvendor="Keil" Cversion="1.0.0" condition="TFM Platform SPM HAL LPC55S6x"/>
-        <package name="LPC55S6x_TFM-PF" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/LPC55S6x_TFM-PF/" vendor="Keil" version="1.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="source" name="lpc55s6x\tz_mpc_ppc.c" version="1.0.0">
-        <instance index="0" removed="1">RTE\TFM_Platform\LPC55S69JBD100_cm33_core0\tz_mpc_ppc.c</instance>
-        <component Capiversion="1.0.0" Cclass="TFM Platform" Cgroup="SPM HAL" Csub="Platform" Cvendor="Keil" Cversion="1.0.0" condition="TFM Platform SPM HAL LPC55S6x"/>
-        <package name="LPC55S6x_TFM-PF" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/LPC55S6x_TFM-PF/" vendor="Keil" version="1.0.0"/>
-        <targetInfos/>
-      </file>
-      <file attr="config" category="source" name="lpc55s6x\tz_sau_nvic.c" version="1.0.0">
-        <instance index="0" removed="1">RTE\TFM_Platform\LPC55S69JBD100_cm33_core0\tz_sau_nvic.c</instance>
-        <component Capiversion="1.0.0" Cclass="TFM Platform" Cgroup="SPM HAL" Csub="Platform" Cvendor="Keil" Cversion="1.0.0" condition="TFM Platform SPM HAL LPC55S6x"/>
-        <package name="LPC55S6x_TFM-PF" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/LPC55S6x_TFM-PF/" vendor="Keil" version="1.0.0"/>
-        <targetInfos/>
       </file>
       <file attr="config" category="header" name="TFM\partition\flash_layout.h" version="1.0.0">
         <instance index="0">RTE\TFM_Platform\Musca-S1_CM33-0\flash_layout.h</instance>
