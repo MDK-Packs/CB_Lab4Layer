@@ -16,22 +16,40 @@
  * limitations under the License.
  * -------------------------------------------------------------------------- */
 
-#include "RTE_Components.h"
-#include  CMSIS_device_header
-#include "cmsis_os2.h"
-#include "tfm_ns_interface.h"
-#include "main.h"
+#include <stdint.h>
+#include <string.h>
+#include <stdio.h>
 
-extern int stdout_init (void);
+#include "Driver_WiFi.h"
 
-int main (void)
-{
-  SystemCoreClockUpdate();
-  stdout_init();
+#define SSID            ""
+#define PASSWORD        ""
+#define SECURITY_TYPE   ARM_WIFI_SECURITY_WPA2
 
-  osKernelInitialize();                         // Initialize CMSIS-RTOS
-  tfm_ns_interface_init();                      // Initialize the TFM NS interface
-  app_initialize();                             // Initialize application
-  osKernelStart();                              // Start thread execution
-  for (;;) {}
+extern ARM_DRIVER_WIFI Driver_WiFi0;
+
+int32_t socket_startup (void) {
+  ARM_WIFI_CONFIG_t config;
+
+  printf("Connecting to WiFi ...\r\n");
+
+  Driver_WiFi0.Initialize  (NULL);
+  Driver_WiFi0.PowerControl(ARM_POWER_FULL);
+  
+  memset((void *)&config, 0, sizeof(config));
+
+  config.ssid     = SSID;
+  config.pass     = PASSWORD;
+  config.security = SECURITY_TYPE;
+  config.ch       = 0U;
+
+  Driver_WiFi0.Activate(0U, &config);
+
+  if (Driver_WiFi0.IsConnected() == 0U) {
+    printf("WiFi network connection failed!\r\n");
+    return (-1);
+  } else {
+    printf("WiFi network connection succeeded!\r\n");
+  }
+  return 0;
 }

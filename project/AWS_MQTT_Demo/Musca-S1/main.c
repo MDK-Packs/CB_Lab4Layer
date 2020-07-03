@@ -22,12 +22,12 @@
 #include "main.h"
 
 extern int stdout_init (void);
-  
+
 int main (void)
 {
   SystemCoreClockUpdate();
   stdout_init();
-  
+
   osKernelInitialize();                         // Initialize CMSIS-RTOS
   app_initialize();                             // Initialize application
   osKernelStart();                              // Start thread execution

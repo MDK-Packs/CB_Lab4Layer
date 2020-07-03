@@ -16,22 +16,9 @@
  * limitations under the License.
  * -------------------------------------------------------------------------- */
 
-#include "RTE_Components.h"
-#include  CMSIS_device_header
-#include "cmsis_os2.h"
-#include "tfm_ns_interface.h"
-#include "main.h"
+#ifndef MAIN_H__
+#define MAIN_H__
 
-extern int stdout_init (void);
+extern void app_initialize (void);
 
-int main (void)
-{
-  SystemCoreClockUpdate();
-  stdout_init();
-
-  osKernelInitialize();                         // Initialize CMSIS-RTOS
-  tfm_ns_interface_init();                      // Initialize the TFM NS interface
-  app_initialize();                             // Initialize application
-  osKernelStart();                              // Start thread execution
-  for (;;) {}
-}
+#endif
