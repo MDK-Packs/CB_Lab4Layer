@@ -1,5 +1,0 @@
-Board layer for Musca-S1:
- - Stack (MSP): 1 kB
- - Heap: 64 kB
- - System Clock: 50 MHz
- - Driver_USART0

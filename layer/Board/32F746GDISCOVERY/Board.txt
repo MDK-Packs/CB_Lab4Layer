@@ -1,8 +1,0 @@
-Board layer for 32F746GDISCOVERY:
- - Stack (MSP): 1 kB
- - Heap: 64 kB
- - System Clock: 216 MHz
- - Driver_USART6
- - Driver_MCI0
- - mbedTLS Entropy
- - STDOUT: retarget to ITM

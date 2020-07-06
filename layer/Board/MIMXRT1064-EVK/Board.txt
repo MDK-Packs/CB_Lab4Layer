@@ -1,9 +1,0 @@
-Board layer for MIMXRT1064-EVK:
- - Stack (MSP): 1 kB
- - Heap: 64 kB
- - System Clock: 600 MHz
- - Driver_USART3
- - Driver_ETH_MAC0
- - Driver_ETH_PHY0
- - Driver_MCI0
- - STDOUT: retarget to Debug Console

@@ -208,9 +208,34 @@ do
   fi  
 done
 
+#compose README.md
+cat layer.App.md > README.md
+echo >> README.md
+echo >> README.md
+if [ ! -z ${rtos} ]
+then
+  cat layer.RTOS.md >> README.md
+  echo >> README.md
+  echo >> README.md
+fi
+if [ ! -z ${socket} ]
+then
+  cat layer.Socket.md >> README.md
+  echo >> README.md
+  echo >> README.md
+fi
+if [ ! -z ${module} ]
+then
+  cat layer.Module.md >> README.md
+  echo >> README.md
+  echo >> README.md
+fi
+cat layer.Board.md >> README.md
+
 #remove layer meta files
 for item in ${layer[@]}
 do
+  rm -f "layer.${item}.md"
   rm -f "${item,,}_define"
   rm -f "${item,,}_configure.sh"
   rm -f "${item}.clayer"
