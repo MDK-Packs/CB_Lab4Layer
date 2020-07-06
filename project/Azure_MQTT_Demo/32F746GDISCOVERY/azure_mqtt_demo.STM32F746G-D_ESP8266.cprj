@@ -112,7 +112,7 @@
       <file category="sourceC" layer="Board" name="./mbedTLS_HW/Src/entropy_hardware_poll.c"/>
     </group>
     <group name="Documentation">
-      <file category="doc" layer="App" name="./Abstract.txt"/>
+      <file category="doc" layer="App" name="./README.md"/>
     </group>
     <group name="STM32CubeMX">
       <file category="other" layer="Board" name="./RTE/Device/STM32F746NGHx/STCubeGenerated/STCubeGenerated.ioc"/>

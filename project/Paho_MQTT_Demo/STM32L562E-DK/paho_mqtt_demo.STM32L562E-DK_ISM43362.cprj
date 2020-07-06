@@ -119,7 +119,7 @@
       <file category="header" layer="Board" name="./Board_IO/arduino.h"/>
     </group>
     <group name="Documentation">
-      <file category="doc" layer="App" name="./Abstract.txt"/>
+      <file category="doc" layer="App" name="./README.md"/>
     </group>
     <group name="STM32CubeMX">
       <file category="other" layer="Board" name="./RTE/Device/STM32L562QEIxQ/STCubeGenerated/STCubeGenerated.ioc"/>
