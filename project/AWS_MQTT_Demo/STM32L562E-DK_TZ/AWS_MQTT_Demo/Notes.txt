@@ -16,9 +16,9 @@ STM32CubeMX:
  ----- PE0: mode: Output, Output level: High, label: ISM43362_SPI_NSS, Maximum output speed: Very High
  --- NVIC
  ---- NVIC
- ---- System service call via SWI instruction: Preemption Priority = 6
- ---- Pendable request for system service: Preemption Priority = 7
- ---- Time base: System tick timer: Preemption Priority = 7
+ ----- System service call via SWI instruction: Preemption Priority = 6
+ ----- Pendable request for system service: Preemption Priority = 7
+ ----- Time base: System tick timer: Preemption Priority = 7
  ---- Code generation
  ----- System service call via SWI instruction: disable Generate IRQ handler
  ----- Pendable request for system service: disable Generate IRQ handler
@@ -46,14 +46,15 @@ STM32CubeMX:
  ----- SPI3_RX (default settings)
  ----- SPI3_TX (default settings)
  ---- GPIO Settings
- ---- SPI3_MOSI: PB5, Maximum output speed: Very High
- ---- SPI3_MISO: PB4, Maximum output speed: Very High
- ---- SPI3_SCK: PG9, Maximum output speed: Very High
+ ----- SPI3_MOSI: PB5, Maximum output speed: Very High
+ ----- SPI3_MISO: PB4, Maximum output speed: Very High
+ ----- SPI3_SCK: PG9, Maximum output speed: Very High
  - Clock Configuration
  -- System Clock Mux: PLLCLK
  -- PLL N: x55
  -- LPUART1 Clock Mux: HSI
  - Project Manager
+ -- Code Generator: Add necessary library files as reference
  -- Advanced Settings
  --- LPUART1: enable Not Generate Function Call
  --- SPI3: enable Not Generate Function Call
@@ -62,19 +63,68 @@ STM32CubeMX:
  - go back to uVision
 
 uVision:
- - configure memory layout (ROM/RAM and stack/heap)
- - select required components in RTE
+ - Target Options - Target - Code Generation - Software Model: Non-Secure Mode
+ - Target Options - C/C++ - Warnings: AC5-like Warnings
+ - RTE
+ -- select IoT Client:AWS
+ -- select IoT Utility:MQTT
+ -- select IoT Utility:Common
+ -- select Security:mbed TLS
+ -- select CMSIS-RTOS2:Keil RTX5 (Source_NS)
+ -- select TFM:API (SFN)
+ -- select Socket:WiFi
+ -- variant ESP8266 WiFi module via USART
+ --- select CMSIS Driver:WiFi:ESP8266
+ --- select CMSIS Driver:USART
+ --- resolve dependencies
+ -- variant WizFi360 WiFi module via USART
+ --- select CMSIS Driver:WiFi:WizFi360
+ --- select CMSIS Driver:USART
+ --- resolve dependencies
+ -- variant ISM43362 WiFi module via SPI
+ --- select CMSIS Driver:WiFi:ISM43362
+ --- select CMSIS Driver:SPI
+ --- resolve dependencies
+ -- select Compiler:I/O:STDOUT ITM
  - configure components
- -- WiFi_ESP8266_Config.h, WiFi_WizFi360_Config
- --- Serial Driver Number: 6
- --- Thread Stack size: 1536
- -- WiFi_ISM43362_Config.h
- --- Serial Driver Number: 3
- --- Asynchronous tread polling interval: 100ms
- -- WiFi_ISM43362_HW.c
- --- add includes: stdint.h, stm32l5xx_hal.h, main.h
- --- WiFi_ISM43362_Pin_SSN
- ---- HAL_GPIO_WritePin(ISM43362_SPI_NSS_GPIO_Port, ISM43362_SPI_NSS_Pin, ssn ? GPIO_PIN_RESET : GPIO_PIN_SET);
- --- WiFi_ISM43362_Pin_DATARDY
- ---- return (HAL_GPIO_ReadPin(ISM43362_DATARDY_GPIO_Port, ISM43362_DATARDY_Pin) == GPIO_PIN_SET);
- - add user modules
+ -- variant ESP8266 WiFi module
+ --- update WiFi_ESP8266_Config.h:
+ ---- Serial Driver Number: 6
+ -- variant WizFi360 WiFi module
+ --- update WiFi_WizFi360_Config.h:
+ ---- Serial Driver Number: 6
+ -- variant ISM43362 WiFi module
+ --- update WiFi_ISM43362_Config.h:
+ ---- Serial Driver Number: 3
+ --- update WiFi_ISM43362_HW.c:
+ ---- add includes: main.h
+ ---- WiFi_ISM43362_Pin_SSN()
+ ----- HAL_GPIO_WritePin(ISM43362_SPI_NSS_GPIO_Port, ISM43362_SPI_NSS_Pin, ssn ? GPIO_PIN_RESET : GPIO_PIN_SET);
+ ---- WiFi_ISM43362_Pin_DATARDY()
+ ----- return (HAL_GPIO_ReadPin(ISM43362_DATARDY_GPIO_Port, ISM43362_DATARDY_Pin) == GPIO_PIN_SET);
+ -- heap size
+ --- update startup_stm32l562xx.s:
+ ---- Heap_Size: 0x00010000
+ -- TFM configuration: tfm_config.h
+ --- enable Internal Trusted Storage
+ --- enable Crypto
+ - update main.h:
+ -- add includes: cmsis_os2.h, tfm_ns_interface.h
+ -- add prototype: extern void app_initialize (void);
+ - update main.c:
+ -- override default HAL_GetTick function (using osKernelGetTickCount)
+ -- add RTOS, TF-M and application startup to main() before infinite loop
+ --- osKernelInitialize(); tfm_ns_interface_init(); app_initialize(); osKernelStart();
+ - add app_main.c:
+ -- app_initialize(): creates application main thread
+ -- app_main: main thread calls socket_startup() and executes demo()
+ - add socket_startup.c:
+ -- socket_startup(): initializes WiFi and connects to AP
+ - add AWS demo modules:
+ -- iot_demo.c
+ -- iot_demo_mqtt.c
+ -- iot_demo_logging.h
+ - add TF-M CMSE library: tfm_secure_fw_CMSE_Lib.o
+ - configure memory layout based on TF-M partition configuration
+ - Target Options - C/C++ - Define: RunDemo=RunMqttDemo SECURE_PRIVATE_KEY
+ - select Debug adapter: ST-Link Debugger

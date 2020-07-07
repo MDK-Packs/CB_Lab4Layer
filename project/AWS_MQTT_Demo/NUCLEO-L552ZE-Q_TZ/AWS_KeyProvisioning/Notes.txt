@@ -12,9 +12,9 @@ STM32CubeMX:
  -- System Core
  --- NVIC
  ---- NVIC
- ---- System service call via SWI instruction: Preemption Priority = 6
- ---- Pendable request for system service: Preemption Priority = 7
- ---- Time base: System tick timer: Preemption Priority = 7
+ ----- System service call via SWI instruction: Preemption Priority = 6
+ ----- Pendable request for system service: Preemption Priority = 7
+ ----- Time base: System tick timer: Preemption Priority = 7
  ---- Code generation
  ----- System service call via SWI instruction: disable Generate IRQ handler
  ----- Pendable request for system service: disable Generate IRQ handler
@@ -25,11 +25,62 @@ STM32CubeMX:
  - Clock Configuration
  -- System Clock Mux: PLLCLK
  -- PLL N: x55
+ - Project Manager
+ -- Code Generator: Add necessary library files as reference
  - Generate Code
  - Close
  - go back to uVision
 
 uVision:
- - configure memory layout (ROM/RAM and stack/heap)
- - select required components in RTE
- - add user modules
+ - Target Options - Target - Code Generation - Software Model: Non-Secure Mode
+ - Target Options - C/C++ - Warnings: AC5-like Warnings
+ - RTE
+ -- select Security:mbed TLS
+ -- select CMSIS:CORE
+ -- select CMSIS-RTOS2:Keil RTX5 (Source_NS)
+ -- select TFM:API (SFN)
+ -- select Compiler:I/O:STDOUT ITM
+ -- resolve dependencies
+ - configure components
+ -- update mbed TLS configuration and enable:
+ --- MBEDTLS_REMOVE_ARC4_CIPHERSUITES
+ --- MBEDTLS_ECP_DP_SECP256R1_ENABLED
+ --- MBEDTLS_ECP_NIST_OPTIM
+ --- MBEDTLS_ECDSA_DETERMINISTIC
+ --- MBEDTLS_PKCS1_V15
+ --- MBEDTLS_ASN1_PARSE_C
+ --- MBEDTLS_ASN1_WRITE_C
+ --- MBEDTLS_BASE64_C
+ --- MBEDTLS_BIGNUM_C
+ --- MBEDTLS_ECDH_C
+ --- MBEDTLS_ECDSA_C
+ --- MBEDTLS_ECP_C
+ --- MBEDTLS_HMAC_DRBG_C
+ --- MBEDTLS_MD_C
+ --- MBEDTLS_OID_C
+ --- MBEDTLS_PEM_PARSE_C
+ --- MBEDTLS_PK_C
+ --- MBEDTLS_PK_PARSE_C
+ --- MBEDTLS_RSA_C
+ -- heap size
+ --- update startup_stm32l552xx.s:
+ ---- Heap_Size: 0x00010000
+ -- TFM configuration: tfm_config.h
+ --- enable Internal Trusted Storage
+ --- enable Crypto
+ - update main.h:
+ -- add includes: cmsis_os2.h, tfm_ns_interface.h
+ -- add prototype: extern void app_initialize (void);
+ - update main.c:
+ -- override default HAL_GetTick function (using osKernelGetTickCount)
+ -- add RTOS, TF-M and application startup to main() before infinite loop
+ --- osKernelInitialize(); tfm_ns_interface_init(); app_initialize(); osKernelStart();
+ - add app_main.c:
+ -- app_initialize(): creates application main thread
+ -- app_main: main thread executes xProvisionPrivateKey()
+ - add AWS key provisioning modules:
+ -- key_provisioning.c
+ -- key_provisioning.h
+ - add TF-M CMSE library: tfm_secure_fw_CMSE_Lib.o
+ - configure memory layout based on TF-M partition configuration
+ - select Debug adapter: ST-Link Debugger
