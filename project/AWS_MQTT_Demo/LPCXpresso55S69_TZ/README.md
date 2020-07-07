@@ -17,5 +17,5 @@ to the active non-secure application.
 AWS Key provisioning needs to executed before running the AWS Demo.
 
 How to configure, build and run the non-secure applications is described in:
-./AWS_KeyProvisioning/README.md
-./AWS_MQTT_Demo/README.md
+ - ./AWS_KeyProvisioning/README.md
+ - ./AWS_MQTT_Demo/README.md
