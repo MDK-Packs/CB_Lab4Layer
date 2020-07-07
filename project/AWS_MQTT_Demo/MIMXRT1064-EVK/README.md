@@ -95,10 +95,6 @@ The Board layer contains the following configured interface drivers:
  - RX: D0/UART_RX - GPIO_AD_B1_07 (K10)
  - TX: D1/UART_TX - GPIO_AD_B1_06 (J12)
 
-**CMSIS-Driver VIO** with the following board hardware mapping:
- - vioBUTTON0: USER_BUTTON (L6)
- - vioLED0:    USER_LED    (F14)
-
 **STDOUT** routed to Virtual COM port (baudrate = 115200)
 
 The board configuration can be modified using 
