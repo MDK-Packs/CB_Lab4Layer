@@ -70,6 +70,7 @@ uVision:
  -- select IoT Utility:MQTT
  -- select IoT Utility:Common
  -- select Security:mbed TLS
+ -- select CMSIS:CORE
  -- select CMSIS-RTOS2:Keil RTX5
  -- select Socket:WiFi
  -- variant ESP8266 WiFi module via USART
@@ -116,7 +117,7 @@ uVision:
  -- app_main: main thread calls socket_startup() and executes demo()
  - add socket_startup.c:
  -- socket_startup(): initializes WiFi and connects to AP
- - add AWS demo modules:
+ - add AWS demo modules (taken from the AWS_IoT_Device pack):
  -- iot_demo.c
  -- iot_demo_mqtt.c
  -- iot_demo_logging.h

@@ -70,8 +70,8 @@ uVision:
  -- select IoT Utility:MQTT
  -- select IoT Utility:Common
  -- select Security:mbed TLS
+ -- select CMSIS:CORE
  -- select CMSIS-RTOS2:Keil RTX5 (Source_NS)
- -- select TFM:API (SFN)
  -- select Socket:WiFi
  -- variant ESP8266 WiFi module via USART
  --- select CMSIS Driver:WiFi:ESP8266
@@ -86,6 +86,7 @@ uVision:
  --- select CMSIS Driver:SPI
  --- resolve dependencies
  -- select Compiler:I/O:STDOUT ITM
+ -- select TFM:API (SFN)
  - configure components
  -- variant ESP8266 WiFi module
  --- update WiFi_ESP8266_Config.h:
@@ -120,7 +121,7 @@ uVision:
  -- app_main: main thread calls socket_startup() and executes demo()
  - add socket_startup.c:
  -- socket_startup(): initializes WiFi and connects to AP
- - add AWS demo modules:
+ - add AWS demo modules (taken from the AWS_IoT_Device pack):
  -- iot_demo.c
  -- iot_demo_mqtt.c
  -- iot_demo_logging.h

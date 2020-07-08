@@ -2,7 +2,7 @@ How to create the TF-M Secure Firmware
 --------------------------------------
 
 uVision:
- - create new project
+ - create new project tfm_secure_fw
  - select device STM32L562QEIxQ
  - set target name STM32L562E-DK
  - launch STM32CubeMX from RTE
@@ -46,6 +46,7 @@ uVision:
  -- select Security:mbed Crypto
  -- select CMSIS Driver:Flash:Custom
  -- select CMSIS Driver:USART:Custom
+ -- select CMSIS:CORE
  - update TFM configuration: tfm_config.h
  -- define ITS_CREATE_FLASH_LAYOUT (create initial flash layout for ITS)
  -- define TFM_CRYPTO_ENGINE_BUF_SIZE (0x4000)
@@ -53,7 +54,17 @@ uVision:
  -- ITS_MAX_ASSET_SIZE=2048, ITS_NUM_ASSETS=4
  - add Flash Driver (taken from STM32Cube)
  - add USART Driver (output redirected to ST UART HAL)
- -- user code template: empty implementation + Send (HAL_UART_Transmit)
+ -- user code template (empty implementation)
+ -- add include headers:
+    #include "stm32l5xx_hal.h"
+    #include "main.h"
+ -- update Send function
+    int32_t ARM_USART_Send(const void *data, uint32_t num)
+    {
+        HAL_UART_Transmit(&huart1, (uint8_t *)data, num, 1000U);
+        return ARM_DRIVER_OK;
+    }
+ -- rename exported driver to Driver_USART1 (add 1 index)
  - update main.h:
  -- add: extern UART_HandleTypeDef hlpuart1;
  - update main.c:
@@ -64,7 +75,10 @@ uVision:
  -- Vector table:
  --- change __initial_sp to |Image$$ARM_LIB_STACK_MSP$$ZI$$Limit| and add IMPORT (Stack_Size=0)
  -- Reset Handler:
- --- add switch to PSP (before __main)
+ --- add switch to PSP before branching to __main
+     MRS     R0, control    ; Get control value
+     ORR     R0, R0, #2     ; Select switch to PSP
+     MSR     control, R0
  - setup linker:
  -- scatter file: tfm_common_s.sct
  -- options:

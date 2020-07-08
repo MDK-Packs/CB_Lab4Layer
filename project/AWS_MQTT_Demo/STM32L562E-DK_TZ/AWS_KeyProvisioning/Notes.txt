@@ -36,8 +36,8 @@ uVision:
  - Target Options - C/C++ - Warnings: AC5-like Warnings
  - RTE
  -- select Security:mbed TLS
- -- select CMSIS:CORE
  -- select CMSIS-RTOS2:Keil RTX5 (Source_NS)
+ -- select CMSIS:CORE
  -- select TFM:API (SFN)
  -- select Compiler:I/O:STDOUT ITM
  -- resolve dependencies
@@ -81,6 +81,7 @@ uVision:
  - add AWS key provisioning modules:
  -- key_provisioning.c
  -- key_provisioning.h
+ -- iot_config.h (private key)
  - add TF-M CMSE library: tfm_secure_fw_CMSE_Lib.o
  - configure memory layout based on TF-M partition configuration
  - select Debug adapter: ST-Link Debugger
