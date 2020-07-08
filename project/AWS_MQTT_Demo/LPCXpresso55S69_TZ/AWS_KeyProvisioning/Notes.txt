@@ -1,0 +1,93 @@
+How to create the application
+-----------------------------
+
+uVision:
+ - create new project
+ -- select device NXP LPC55S69JBD100:cm33_core0
+ -- Target Options - Target - Code Generation - Software Model: Non-Secure Mode
+ -- Target Options - C/C++ - Warnings: AC5-like Warnings
+ -- RTE
+ --- select Security:mbed TLS
+ --- select CMSIS-RTOS2:Keil RTX5 (Source_NS)
+ --- select CMSIS:CORE
+ --- select TFM:API (SFN)
+ --- select Board Support:SDK Project Template:project_template variant:LPC55S69
+ --- select Device:SDK Utilities:debug_console
+ --- select Device:SDK Utilities:serial_manager_uart
+ --- resolve dependencies
+ -- configure components
+ --- update mbed TLS configuration and enable:
+ ---- MBEDTLS_REMOVE_ARC4_CIPHERSUITES
+ ---- MBEDTLS_ECP_DP_SECP256R1_ENABLED
+ ---- MBEDTLS_ECP_NIST_OPTIM
+ ---- MBEDTLS_ECDSA_DETERMINISTIC
+ ---- MBEDTLS_PKCS1_V15
+ ---- MBEDTLS_ASN1_PARSE_C
+ ---- MBEDTLS_ASN1_WRITE_C
+ ---- MBEDTLS_BASE64_C
+ ---- MBEDTLS_BIGNUM_C
+ ---- MBEDTLS_ECDH_C
+ ---- MBEDTLS_ECDSA_C
+ ---- MBEDTLS_ECP_C
+ ---- MBEDTLS_HMAC_DRBG_C
+ ---- MBEDTLS_MD_C
+ ---- MBEDTLS_OID_C
+ ---- MBEDTLS_PEM_PARSE_C
+ ---- MBEDTLS_PK_C
+ ---- MBEDTLS_PK_PARSE_C
+ ---- MBEDTLS_RSA_C
+ --- TFM configuration: tfm_config.h
+ ---- enable Internal Trusted Storage
+ ---- enable Crypto
+ -- update Board Support:board.c
+ --- correct bug: change BOARD_DEBUG_UART_BASEADDR to BOARD_DEBUG_UART_INSTANCE
+ -- add main.h:
+    extern void app_initialize (void);
+ -- add main.c:
+ --- include headers:
+     #include "RTE_Components.h"
+     #include  CMSIS_device_header
+     #include "cmsis_os2.h"
+     #include "tfm_ns_interface.h"
+     #include "board.h"
+     #include "pin_mux.h"
+     #include "main.h"
+ --- main function:
+     int main (void) {
+       BOARD_InitBootPins();
+       BOARD_InitBootClocks();
+       BOARD_InitDebugConsole();
+       SystemCoreClockUpdate();
+       osKernelInitialize();
+       tfm_ns_interface_init();
+       app_initialize();
+       osKernelStart();
+       for (;;) {}
+     }
+ -- add app_main.c:
+ --- app_initialize(): creates application main thread
+ --- app_main: main thread executes xProvisionPrivateKey()
+ -- add AWS key provisioning modules:
+ --- key_provisioning.c
+ --- key_provisioning.h
+ --- iot_config.h (private key)
+ -- add TF-M CMSE library: tfm_secure_fw_CMSE_Lib.o
+ -- LPC55S69_cm33_Core0.s - Asm Misc Controls: -x assembler-with-cpp
+ -- fsl_debug_console.c - C/C++ Define: SDK_DEBUGCONSOLE_UART
+ -- setup linker:
+ --- scatter file: LPC55S69_cm33_core0_flash.scf
+ ---- heap size: 0x00010000
+ ---- configure memory layout based on TF-M partition configuration
+ -- select Debug adapter: CMSIS-DAP ARMv8M
+
+MCUXpresso:
+ - create and update MCUXpresso project
+ -- open MCUXpresso, create .mex project based on uVision project and update:
+ --- Pins:
+ ---- Route Pin#92: FLEXCOMM0, RXD_SDA_MOSI_DATA
+ ---- Route Pin#94: FLEXCOMM0, TXD_SCL_MISO_WS
+ --- Clock:
+ ---- called by initialization: BOARD_BootClockFROHF96M
+ ---- BOARD_BootClockFROHF96M:
+ ----- FXCOM0 clock = 48 MHz [fro_hf_div: 48 MHz * 256 / 256]
+ ----- FROHFDIV = 2 [48 MHz = 96 MHz /2 ]

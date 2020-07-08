@@ -2,36 +2,60 @@ How to create the TF-M Secure Firmware
 --------------------------------------
 
 uVision:
- - create TF-M Secure project (tfm_s)
- -- select Device NXP LPC55S69JBD100:cm33_core0
+ - create new project tfm_secure_fw
+ -- select device NXP LPC55S69JBD100:cm33_core0
  -- set target name LPCXpresso55S69
  -- Target Options - Target - Code Generation - Software Model: Secure Mode
  -- Target Options - C/C++ - Warnings: AC5-like Warnings
- -- Target Options - Asm - Assemble Options: armclang (GNU Syntax)
  -- RTE
- --- select TFM:Core (SFN variant)
+ --- select TFM:Core (SFN)
  --- select TFM:Secure Service:Crypto
  --- select TFM:Secure Service:Internal Trusted Storage
  --- select TFM Platform:* required components
  --- select Security:mbed Crypto
  --- select CMSIS Driver:Flash:Custom
  --- select CMSIS Driver:USART:Custom
+ --- select CMSIS:CORE
  --- select Board Support:SDK Project Template:project_template variant:LPC55S69
  --- select Device:SDK Drivers:iap1
- --- resolve or manually select
- ---- CMSIS:CORE
- ---- Device:Startup and other required components
+ --- resolve dependencies
  -- update TFM configuration: tfm_config.h
  --- define ITS_CREATE_FLASH_LAYOUT (create initial flash layout for ITS)
  --- define TFM_CRYPTO_ENGINE_BUF_SIZE (0x4000)
  -- update TFM flash layout configuration: flash_layout.h
  --- ITS_MAX_ASSET_SIZE=2048, ITS_NUM_ASSETS=4
  -- add SystemInit.c module with SystemInitHook function (Board Clock and Pin configuration)
+    void SystemInitHook (void) {
+      CLOCK_AttachClk(BOARD_DEBUG_UART_CLK_ATTACH);
+      BOARD_InitPins();
+      BOARD_InitBootClocks();
+    }
  -- add Flash Driver (taken from NXP)
  -- add USART Driver (output redirected to NXP USART HAL)
- --- user code template
- --- empty implementation + Initialize (HAL USART_Init) + Send (HAL USART_WriteBlocking)
- --- name Driver_USART1 (add 1 index)
+ --- user code template (empty implementation)
+ --- add include headers:
+     #include "fsl_usart.h"
+ --- update Initialize function
+     int32_t ARM_USART_Initialize(ARM_USART_SignalEvent_t cb_event)
+     {
+         usart_config_t config;
+         USART_GetDefaultConfig(&config);
+         config.baudRate_Bps    = 115200U;
+         config.parityMode      = kUSART_ParityDisabled;
+         config.stopBitCount    = kUSART_OneStopBit;
+         config.bitCountPerChar = kUSART_8BitsPerChar;
+         config.enableRx        = false;
+         config.enableTx        = true;
+         USART_Init(USART0, &config, 12000000U);
+         return ARM_DRIVER_OK;
+     }
+ --- update Send function
+     int32_t ARM_USART_Send(const void *data, uint32_t num)
+     {
+         USART_WriteBlocking(USART0, data, num);
+         return ARM_DRIVER_OK;
+     }
+ --- rename exported driver to Driver_USART1 (add 1 index)
  -- update Board Support:board.c
  --- correct bug: change BOARD_DEBUG_UART_BASEADDR to BOARD_DEBUG_UART_INSTANCE
  -- update Device:LPC55S69_cm33_Core0.s (startup file)
@@ -39,14 +63,20 @@ uVision:
  --- Vector table:
  ---- change Image$$ARM_LIB_STACK$$ZI$$Limit to Image$$ARM_LIB_STACK_MSP$$ZI$$Limit
  --- Reset Handler:
- ---- remove MSPLIM setup
- ---- remove unmask interrupts
- ---- add switch to PSP
+ ---- remove MSPLIM setup:
+      ldr   r0, =Image$$ARM_LIB_STACK$$ZI$$Base
+      msr   msplim, r0
+ ---- remove unmask interrupts:
+      cpsie   i               /* Unmask interrupts */
+ ---- add switch to PSP before branching to __main
+      mrs   r0, control       /* Get control value */
+      orr   r0, r0, #2        /* Select switch to PSP */
+      msr   control, r0
  -- LPC55S69_cm33_Core0.s - Asm Misc Controls: -x assembler-with-cpp
  -- setup linker:
  --- scatter file: tfm_common_s.sct
  --- options:
-     --import_cmse_lib_out="Objects/tfm_s_CMSE_Lib.o"
+     --import_cmse_lib_out="Objects/tfm_secure_fw_CMSE_Lib.o"
      --predefine="-include tfm_config.h"
      --predefine="-include tfm_config_rte.h"
      --predefine="-IRTE/_LPCXpresso55S69/"
@@ -54,7 +84,7 @@ uVision:
      --diag_suppress=L6312,L6314,L6329
  -- select Debug adapter: CMSIS-DAP ARMv8M
  -- update CMSIS_Zone generated files:
- --- tz_confg.h/.c, tz_sau_nvic.c, tz_mpc_ppc.c
+ --- tz_sau_nvic.c, tz_mpc_ppc.c, (tz_confg.h/.c)
  --- mem_layout.h
 
 MCUXpresso:
