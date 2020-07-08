@@ -7,9 +7,9 @@ uVision:
  -- Target Options - C/C++ - Warnings: AC5-like Warnings
  -- RTE
  --- select IoT Client:AWS
- --- select IoT Utility:MQTT
- --- select IoT Utility:Common
- --- select IoT Utility:Platform
+ --- select IoT Utility:AWS:MQTT
+ --- select IoT Utility:AWS:Common
+ --- select IoT Utility:AWS:Platform
  --- select Security:mbed TLS
  --- select CMSIS-RTOS2:Keil RTX5
  --- select CMSIS:CORE
@@ -79,7 +79,7 @@ uVision:
  --- iot_demo_mqtt.c
  --- iot_demo_logging.h
  -- iot_demo.c - C/C++ Define: RunDemo=RunMqttDemo
- -- fsl_debug_console.c - C/C++ Define: SDK_DEBUGCONSOLE=1 __MCUXPRESSO
+ -- Device:fsl_debug_console.c - C/C++ Define: SDK_DEBUGCONSOLE=1 __MCUXPRESSO
  -- add retarget_stdio.c:
  --- stderr_putchar(): calling DbgConsole_SendDataReliable()
  --- stdout_putchar(): calling DbgConsole_SendDataReliable()

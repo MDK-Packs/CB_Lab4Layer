@@ -64,9 +64,9 @@ uVision:
  - Target Options - C/C++ - Warnings: AC5-like Warnings
  - RTE
  -- select IoT Client:AWS
- -- select IoT Utility:MQTT
- -- select IoT Utility:Common
- -- select IoT Utility:Platform
+ -- select IoT Utility:AWS:MQTT
+ -- select IoT Utility:AWS:Common
+ -- select IoT Utility:AWS:Platform
  -- select Security:mbed TLS
  -- select CMSIS-RTOS2:Keil RTX5 (Source_NS)
  -- select CMSIS:CORE
@@ -102,7 +102,7 @@ uVision:
  ---- WiFi_ISM43362_Pin_DATARDY()
  ----- return (HAL_GPIO_ReadPin(ISM43362_DATARDY_GPIO_Port, ISM43362_DATARDY_Pin) == GPIO_PIN_SET);
  -- heap size
- --- update startup_stm32l552xx.s:
+ --- update Device:startup_stm32l552xx.s:
  ---- Heap_Size: 0x00010000
  -- TFM configuration: tfm_config.h
  --- enable Internal Trusted Storage

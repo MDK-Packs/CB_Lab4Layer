@@ -63,7 +63,7 @@ uVision:
  --- MBEDTLS_PK_PARSE_C
  --- MBEDTLS_RSA_C
  -- heap size
- --- update startup_stm32l562xx.s:
+ --- update Device:startup_stm32l562xx.s:
  ---- Heap_Size: 0x00010000
  -- TFM configuration: tfm_config.h
  --- enable Internal Trusted Storage

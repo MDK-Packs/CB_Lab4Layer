@@ -72,7 +72,7 @@ uVision:
       mrs   r0, control       /* Get control value */
       orr   r0, r0, #2        /* Select switch to PSP */
       msr   control, r0
- -- LPC55S69_cm33_Core0.s - Asm Misc Controls: -x assembler-with-cpp
+ -- Device:LPC55S69_cm33_Core0.s - Asm Misc Controls: -x assembler-with-cpp
  -- setup linker:
  --- scatter file: tfm_common_s.sct
  --- options:

@@ -8,9 +8,9 @@ uVision:
  -- Target Options - C/C++ - Warnings: AC5-like Warnings
  -- RTE
  --- select IoT Client:AWS
- --- select IoT Utility:MQTT
- --- select IoT Utility:Common
- --- select IoT Utility:Platform
+ --- select IoT Utility:AWS:MQTT
+ --- select IoT Utility:AWS:Common
+ --- select IoT Utility:AWS:Platform
  --- select Security:mbed TLS
  --- select CMSIS-RTOS2:Keil RTX5 (Source_NS)
  --- select CMSIS:CORE
@@ -79,8 +79,8 @@ uVision:
  --- iot_demo_mqtt.c
  --- iot_demo_logging.h
  -- add TF-M CMSE library: tfm_secure_fw_CMSE_Lib.o
- -- fsl_debug_console.c - C/C++ Define: SDK_DEBUGCONSOLE_UART
- -- LPC55S69_cm33_Core0.s - Asm Misc Controls: -x assembler-with-cpp
+ -- Device:fsl_debug_console.c - C/C++ Define: SDK_DEBUGCONSOLE_UART
+ -- Device:LPC55S69_cm33_Core0.s - Asm Misc Controls: -x assembler-with-cpp
  -- setup linker:
  --- scatter file: LPC55S69_cm33_core0_flash.scf
  ---- heap size: 0x00010000
