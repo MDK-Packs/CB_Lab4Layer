@@ -69,9 +69,10 @@ uVision:
  -- select IoT Client:AWS
  -- select IoT Utility:MQTT
  -- select IoT Utility:Common
+ -- select IoT Utility:Platform
  -- select Security:mbed TLS
- -- select CMSIS:CORE
  -- select CMSIS-RTOS2:Keil RTX5
+ -- select CMSIS:CORE
  -- select Socket:WiFi
  -- variant ESP8266 WiFi module via USART
  --- select CMSIS Driver:WiFi:ESP8266
@@ -121,5 +122,5 @@ uVision:
  -- iot_demo.c
  -- iot_demo_mqtt.c
  -- iot_demo_logging.h
- - Target Options - C/C++ - Define: RunDemo=RunMqttDemo
+ - iot_demo.c - C/C++ Define: RunDemo=RunMqttDemo
  - select Debug adapter: ST-Link Debugger

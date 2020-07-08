@@ -72,8 +72,8 @@ uVision:
  --- key_provisioning.h
  --- iot_config.h (private key)
  -- add TF-M CMSE library: tfm_secure_fw_CMSE_Lib.o
- -- LPC55S69_cm33_Core0.s - Asm Misc Controls: -x assembler-with-cpp
  -- fsl_debug_console.c - C/C++ Define: SDK_DEBUGCONSOLE_UART
+ -- LPC55S69_cm33_Core0.s - Asm Misc Controls: -x assembler-with-cpp
  -- setup linker:
  --- scatter file: LPC55S69_cm33_core0_flash.scf
  ---- heap size: 0x00010000

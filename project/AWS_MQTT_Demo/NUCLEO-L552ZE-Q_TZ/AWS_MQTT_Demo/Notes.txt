@@ -66,9 +66,10 @@ uVision:
  -- select IoT Client:AWS
  -- select IoT Utility:MQTT
  -- select IoT Utility:Common
+ -- select IoT Utility:Platform
  -- select Security:mbed TLS
- -- select CMSIS:CORE
  -- select CMSIS-RTOS2:Keil RTX5 (Source_NS)
+ -- select CMSIS:CORE
  -- select Socket:WiFi
  -- variant ESP8266 WiFi module via USART
  --- select CMSIS Driver:WiFi:ESP8266

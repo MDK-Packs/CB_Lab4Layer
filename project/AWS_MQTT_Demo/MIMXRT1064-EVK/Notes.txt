@@ -3,8 +3,7 @@ How to create the Demo
 
 uVision:
  - create new project
- -- select device NXP LPC55S69JBD100:cm33_core0
- -- Target Options - Target - Code Generation - Software Model: TrustZone disabled
+ -- select device NXP MIMXRT1064DVL6A
  -- Target Options - C/C++ - Warnings: AC5-like Warnings
  -- RTE
  --- select IoT Client:AWS
@@ -17,27 +16,29 @@ uVision:
  --- select Socket:WiFi
  --- variant ESP8266 WiFi module via USART
  ---- select CMSIS Driver:WiFi:ESP8266
- ---- select CMSIS Driver:USART:flexcomm_usart_cmsis
+ ---- select CMSIS Driver:USART:lpuart_cmsis_edma
  ---- resolve dependencies
  --- variant WizFi360 WiFi module via USART
  ---- select CMSIS Driver:WiFi:WizFi360
- ---- select CMSIS Driver:USART:flexcomm_usart_cmsis
+ ---- select CMSIS Driver:USART:lpuart_cmsis_edma
  ---- resolve dependencies
- --- select Board Support:SDK Project Template:project_template variant:LPC55S69
+ --- select Board Support:SDK Project Template:project_template variant:evkmimxrt1064
  --- select Device:SDK Utilities:debug_console
  --- select Device:SDK Utilities:serial_manager_uart
  --- resolve dependencies
+ --- select Compiler:I/O:STDERR (User)
+ --- select Compiler:I/O:STDIN (User)
+ --- select Compiler:I/O:STDOUT (User)
  -- configure components
  --- variant ESP8266 WiFi module
  ---- update WiFi_ESP8266_Config.h:
- ----- Serial Driver Number: 2
+ ----- Serial Driver Number: 3
  --- variant WizFi360 WiFi module
  ---- update WiFi_WizFi360_Config.h:
- ----- Serial Driver Number: 2
+ ----- Serial Driver Number: 3
  --- RTE Device configuration: RTE_Device.h
-     #define RTE_USART2 1
- -- update Board Support:board.c
- --- correct bug: change BOARD_DEBUG_UART_BASEADDR to BOARD_DEBUG_UART_INSTANCE
+     #define RTE_USART3 1
+     #define RTE_USART3_DMA_EN 1
  -- add main.h:
     extern void app_initialize (void);
  -- add main.c:
@@ -45,13 +46,18 @@ uVision:
      #include "RTE_Components.h"
      #include  CMSIS_device_header
      #include "cmsis_os2.h"
+     #include "clock_config.h"
      #include "board.h"
      #include "pin_mux.h"
      #include "main.h"
- --- Callbacks for USART2 Driver
-     uint32_t USART2_GetFreq   (void) { return CLOCK_GetFlexCommClkFreq(2U); }
-     void     USART2_InitPins  (void) { /* Done in BOARD_InitBootPins function */ }
-     void     USART2_DeinitPins(void) { /* Not implemented */ }
+ --- Callbacks for LPUART1 Driver
+     uint32_t LPUART1_GetFreq   (void) { return BOARD_BOOTCLOCKRUN_UART_CLK_ROOT; }
+     void     LPUART1_InitPins  (void) { /* Done in BOARD_InitDEBUG_UART function */ }
+     void     LPUART1_DeinitPins(void) { /* Not implemented */ }
+ --- Callbacks for LPUART3 Driver
+     uint32_t LPUART3_GetFreq   (void) { return BOARD_BOOTCLOCKRUN_UART_CLK_ROOT; }
+     void     LPUART3_InitPins  (void) { /* Done in BOARD_InitARDUINO_UART function */ }
+     void     LPUART3_DeinitPins(void) { /* Not implemented */ }
  --- main function:
      int main (void) {
        BOARD_InitBootPins();
@@ -73,24 +79,25 @@ uVision:
  --- iot_demo_mqtt.c
  --- iot_demo_logging.h
  -- iot_demo.c - C/C++ Define: RunDemo=RunMqttDemo
- -- fsl_debug_console.c - C/C++ Define: SDK_DEBUGCONSOLE_UART
- -- LPC55S69_cm33_Core0.s - Asm Misc Controls: -x assembler-with-cpp
+ -- fsl_debug_console.c - C/C++ Define: SDK_DEBUGCONSOLE=1 __MCUXPRESSO
+ -- add retarget_stdio.c:
+ --- stderr_putchar(): calling DbgConsole_SendDataReliable()
+ --- stdout_putchar(): calling DbgConsole_SendDataReliable()
+ --- stdin_getchar(): calling DbgConsole_ReadCharacter()
  -- setup linker:
- --- scatter file: LPC55S69_cm33_core0_flash.scf
+ --- scatter file: MIMXRT1064xxxx_flexspi_nor.scf
  ---- heap size: 0x00010000
- -- select Debug adapter: CMSIS-DAP ARMv8M
+ --- Misc controls:
+     --predefine="-DXIP_BOOT_HEADER_ENABLE=1"
+ -- Target Options - C/C++ - Define: SKIP_SYSCLK_INIT XIP_BOOT_HEADER_DCD_ENABLE=1 XIP_BOOT_HEADER_ENABLE=1 XIP_EXTERNAL_FLASH=1
+ -- select Debug adapter: CMSIS-DAP
 
 MCUXpresso:
  - create and update MCUXpresso project
  -- open MCUXpresso, create .mex project based on uVision project and update:
  --- Pins:
- ---- Route Pin#92: FLEXCOMM0, RXD_SDA_MOSI_DATA
- ---- Route Pin#94: FLEXCOMM0, TXD_SCL_MISO_WS
- ---- Route Pin#3:  FLEXCOMM2, RXD_SDA_MOSI_DATA
- ---- Route Pin#27: FLEXCOMM2, TXD_SCL_MISO_WS
- --- Clock:
- ---- called by initialization: BOARD_BootClockFROHF96M
- ---- BOARD_BootClockFROHF96M:
- ----- FXCOM0 clock = 48 MHz [fro_hf_div: 48 MHz * 256 / 256]
- ----- FXCOM2 clock = 48 MHz [fro_hf_div: 48 MHz * 256 / 256]
- ----- FROHFDIV = 2 [48 MHz = 96 MHz /2 ]
+ ---- add Functional Group: BOARD_InitARDUINO_UART
+ ---- called by initialization: BOARD_InitARDUINO_UART
+ ----- BOARD_InitARDUINO_UART:
+ ------ Route Pin#J12: LPUART3, TX
+ ------ Route Pin#K10: LPUART3, RX
