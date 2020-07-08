@@ -4,7 +4,6 @@ How to create the Demo
 uVision:
  - create new project
  -- select device NXP MIMXRT1064DVL6A
- -- Target Options - C/C++ - Warnings: AC5-like Warnings
  -- RTE
  --- select IoT Client:Azure
  --- select IoT Utility:Azure:MQTT
@@ -94,6 +93,7 @@ uVision:
  --- Misc controls:
      --predefine="-DXIP_BOOT_HEADER_ENABLE=1"
  -- Target Options - C/C++ - Define: SKIP_SYSCLK_INIT XIP_BOOT_HEADER_DCD_ENABLE=1 XIP_BOOT_HEADER_ENABLE=1 XIP_EXTERNAL_FLASH=1
+ -- Target Options - C/C++ - Warnings: AC5-like Warnings
  -- select Debug adapter: CMSIS-DAP
 
 MCUXpresso:
