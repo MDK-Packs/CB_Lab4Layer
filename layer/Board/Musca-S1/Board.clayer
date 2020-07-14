@@ -29,7 +29,7 @@
     <compiler name="AC6" version="6.0.0:6.99.99"/>
   </compilers>
 
-  <target Ddsp="DSP" Dendian="Little-endian" Dfpu="SP_FPU" Dmve="NO_MVE" Dname="Musca-S1" Dsecure="TZ-disabled" Dtz="TZ" Dvendor="ARM:82" Pname="CM33-0">
+  <target Bvendor="ARM" Bname="V2M-Musca-S1" Bversion="S1" Ddsp="DSP" Dendian="Little-endian" Dfpu="SP_FPU" Dmve="NO_MVE" Dname="Musca-S1" Dsecure="TZ-disabled" Dtz="TZ" Dvendor="ARM:82" Pname="CM33-0">
     <output list="./Listings/" name="image" obj="./Objects/" type="exe"/>
     <ldflags add="--callgraph --entry=Reset_Handler --info sizes --info summarysizes --info totals --info unused --info veneers --load_addr_map_info --map --strict --summary_stderr --symbols --xref" compiler="AC6" file="./RTE/Device/Musca-S1_CM33-0/armcc6_arm.sct"/>
     <cflags add="-Oz -Wno-documentation -Wno-documentation-unknown-command -Wno-license-management -Wno-missing-noreturn -Wno-missing-prototypes -Wno-missing-variable-declarations -Wno-nonportable-include-path -Wno-packed -Wno-parentheses-equality  -Wno-reserved-id-macro -Wno-sign-conversion -Wno-unused-macros -ffunction-sections -fno-rtti -fshort-enums -fshort-wchar -funsigned-char -gdwarf-3 -std=c99 -xc" compiler="AC6"/>

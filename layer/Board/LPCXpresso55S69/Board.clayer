@@ -28,7 +28,7 @@
     <compiler name="AC6" version="6.0.0:6.99.99"/>
   </compilers>
 
-  <target Ddsp="DSP" Dendian="Little-endian" Dfpu="SP_FPU" Dmve="NO_MVE" Dname="LPC55S69JBD100" Dsecure="TZ-disabled" Dtz="TZ" Dvendor="NXP:11" Pname="cm33_core0">
+  <target Bvendor="NXP" Bname="LPCXpresso55S69" Ddsp="DSP" Dendian="Little-endian" Dfpu="SP_FPU" Dmve="NO_MVE" Dname="LPC55S69JBD100" Dsecure="TZ-disabled" Dtz="TZ" Dvendor="NXP:11" Pname="cm33_core0">
     <output list="./Listings/" name="aws_mqtt_demo" obj="./Objects/" type="exe"/>
     <ldflags add="--callgraph --diag_suppress=L6314 --entry=Reset_Handler --info sizes --info summarysizes --info totals --info unused --info veneers --load_addr_map_info --map --strict --summary_stderr --symbols --xref" compiler="AC6" file="./RTE/Device/LPC55S69JBD100_cm33_core0/LPC55S69_cm33_core0_flash.scf"/>
     <cflags add="-IC:/ARM/PACK/NXP/LPC55S69_DFP/12.1.1 -Oz -Wno-documentation -Wno-documentation-unknown-command -Wno-license-management -Wno-missing-noreturn -Wno-missing-prototypes -Wno-missing-variable-declarations -Wno-nonportable-include-path -Wno-packed -Wno-parentheses-equality  -Wno-reserved-id-macro -Wno-sign-conversion -Wno-unused-macros -ffunction-sections -fno-rtti -fshort-enums -fshort-wchar -funsigned-char -gdwarf-3 -std=c99 -xc" compiler="AC6"/>
