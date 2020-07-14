@@ -1,0 +1,120 @@
+How to create the Demo
+----------------------
+
+uVision:
+ - create new project
+ - select device STM32F746NGHx
+ - launch STM32CubeMX from RTE
+
+STM32CubeMX:
+ - Pinout & Configuration
+ -- System Core
+ --- CORTEX_M7
+ ---- Parameter Settings
+ ----- ART ACCELERATOR: Enabled
+ ----- Instruction Prefetch: Enabled
+ ----- CPU ICache: Enabled
+ ----- CPU DCache: Enabled
+ --- GPIO
+ ---- GPIO Pins
+ ----- PC13: mode: Input, label: MemoryCard_CD0
+ --- NVIC
+ ---- NVIC
+ ----- System service call via SWI instruction: Preemption Priority = 14
+ ----- Pendable request for system service: Preemption Priority = 15
+ ----- Time base: System tick timer: Preemption Priority = 15
+ ---- Code generation
+ ----- System service call via SWI instruction: disable Generate IRQ handler
+ ----- Pendable request for system service: disable Generate IRQ handler
+ ----- Time base: System tick timer: disable Generate IRQ handler
+ ----- Time base: System tick timer: disable Call HAL handler
+ ----- SDMMC1 global interrupt: disable Generate IRQ handler
+ ----- USART6 global interrupt: disable Generate IRQ handler
+ -- RCC
+ --- High Speed Clock (HSE): Crystal/Ceramic Resonator
+ -- Connectivity
+ --- USART6
+ ---- Mode: Asynchronous
+ ---- NVIC Settings
+ ----- USART6 global interrupt: enabled
+ ---- GPIO Settings
+ ----- PC7: USART6_TX, Maximum output speed: Very High
+ ----- PC6: USART6_RX, Maximum output speed: Very High
+ --- SDMMC1
+ ---- Mode: SD 4 bits Wide bus
+ ---- NVIC Settings
+ ----- SDMMC1 global interrupt: enabled
+ ---- DMA Settings
+ ----- SDMMC1_RX (default settings)
+ ----- SDMMC1_TX (default settings)
+ -- Security
+ --- RNG: Activated
+ - Clock Configuration
+ -- PLL Source Mux: HSE
+ -- PLLM: /25
+ -- PLL N: x432
+ -- PLL Q: /9
+ -- System Clock Mux: PLLCLK
+ -- APB1 Prescaler: /4
+ -- APB2 Prescaler: /2
+ -- SDMMC Clock Mux: PLL48CLK
+ - Project Manager
+ -- Code Generator: Add necessary library files as reference
+ -- Advanced Settings
+ --- USART6: enable Not Generate Function Call
+ --- SDMMC1: enable Not Generate Function Call
+ - Generate Code
+ - Close
+ - go back to uVision
+
+uVision:
+ - Target Options - C/C++ - Warnings: AC5-like Warnings
+ - RTE
+ -- select IoT Client:Watson
+ -- select IoT Client:MQTTClient-C
+ -- select IoT Utility:MQTTPacket
+ -- select Data Exchange:JSON:cJSON
+ -- select Security:mbed TLS
+ -- select CMSIS-RTOS2:Keil RTX5
+ -- select CMSIS:CORE
+ -- select Socket:WiFi
+ -- variant ESP8266 WiFi module via USART
+ --- select CMSIS Driver:WiFi:ESP8266
+ --- select CMSIS Driver:USART
+ --- resolve dependencies
+ -- variant WizFi360 WiFi module via USART
+ --- select CMSIS Driver:WiFi:WizFi360
+ --- select CMSIS Driver:USART
+ --- resolve dependencies
+ -- select File System:CORE (LFN)
+ -- select File System:Driver:Memory Card (1 instance)
+ -- select Compiler:I/O:File:File System
+ -- select Compiler:I/O:STDOUT ITM
+ -- select CMSIS Driver:MCI
+ - configure components
+ -- variant ESP8266 WiFi module
+ --- update WiFi_ESP8266_Config.h:
+ ---- Serial Driver Number: 6
+ -- variant WizFi360 WiFi module
+ --- update WiFi_WizFi360_Config.h:
+ ---- Serial Driver Number: 6
+ -- heap size
+ --- update Device:startup_stm32f746xx.s:
+ ---- Heap_Size: 0x00010000
+ - update main.h:
+ -- add includes: cmsis_os2.h
+ -- add prototype: extern void app_initialize (void);
+ - update main.c:
+ -- override default HAL_GetTick function (using osKernelGetTickCount)
+ -- add RTOS and application startup to main() before infinite loop
+ --- osKernelInitialize(); app_initialize(); osKernelStart();
+ - add app_main.c:
+ -- app_initialize(): creates application main thread
+ -- app_main: main thread calls finit("M0:"), fmount("M0:"), socket_startup()
+    and executes helloWorld ()
+ - add socket_startup.c:
+ -- socket_startup(): initializes WiFi and connects to AP
+ - add Watson demo module: helloWorld.c
+ -- User Code Template IoT Client:Watson:Hello World
+ - add mbed TLS hardware entropy: entropy_hardware_poll.c (taken from STM32Cube)
+ - select Debug adapter: ST-Link Debugger
