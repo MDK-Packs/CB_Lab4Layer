@@ -1,0 +1,124 @@
+How to create the Demo
+----------------------
+
+uVision:
+ - create new project
+ -- select device NXP MIMXRT1064DVL6A
+ -- RTE
+ --- select IoT Client:MQTTClient-C
+ --- select IoT Utility:MQTTPacket
+ --- select Security:mbed TLS
+ --- select CMSIS-RTOS2:Keil RTX5
+ --- select CMSIS:CORE
+ --- select Socket:WiFi
+ --- variant ESP8266 WiFi module via USART
+ ---- select CMSIS Driver:WiFi:ESP8266
+ ---- select CMSIS Driver:USART:lpuart_cmsis_edma
+ ---- resolve dependencies
+ --- variant WizFi360 WiFi module via USART
+ ---- select CMSIS Driver:WiFi:WizFi360
+ ---- select CMSIS Driver:USART:lpuart_cmsis_edma
+ ---- resolve dependencies
+ --- select Board Support:SDK Project Template:project_template variant:evkmimxrt1064
+ --- select Device:SDK Utilities:debug_console
+ --- select Device:SDK Utilities:serial_manager_uart
+ --- resolve dependencies
+ --- select Compiler:I/O:STDERR (User)
+ --- select Compiler:I/O:STDIN (User)
+ --- select Compiler:I/O:STDOUT (User)
+ -- configure components
+ --- variant ESP8266 WiFi module
+ ---- update WiFi_ESP8266_Config.h:
+ ----- Serial Driver Number: 3
+ --- variant WizFi360 WiFi module
+ ---- update WiFi_WizFi360_Config.h:
+ ----- Serial Driver Number: 3
+ --- RTE Device configuration: RTE_Device.h
+     #define RTE_USART3 1
+     #define RTE_USART3_DMA_EN 1
+ --- update mbed TLS configuration: copy from Paho_MQTT pack (folder: config)
+ -- add main.h:
+    extern void app_initialize (void);
+ -- add main.c:
+ --- include headers:
+     #include "RTE_Components.h"
+     #include  CMSIS_device_header
+     #include "cmsis_os2.h"
+     #include "clock_config.h"
+     #include "board.h"
+     #include "pin_mux.h"
+     #include "main.h"
+ --- Callbacks for LPUART1 Driver
+     uint32_t LPUART1_GetFreq   (void) { return BOARD_BOOTCLOCKRUN_UART_CLK_ROOT; }
+     void     LPUART1_InitPins  (void) { /* Done in BOARD_InitDEBUG_UART function */ }
+     void     LPUART1_DeinitPins(void) { /* Not implemented */ }
+ --- Callbacks for LPUART3 Driver
+     uint32_t LPUART3_GetFreq   (void) { return BOARD_BOOTCLOCKRUN_UART_CLK_ROOT; }
+     void     LPUART3_InitPins  (void) { /* Done in BOARD_InitARDUINO_UART function */ }
+     void     LPUART3_DeinitPins(void) { /* Not implemented */ }
+ --- main function:
+     int main (void) {
+       BOARD_InitBootPins();
+       BOARD_InitBootClocks();
+       BOARD_InitDebugConsole();
+       SystemCoreClockUpdate();
+       osKernelInitialize();
+       app_initialize();
+       osKernelStart();
+       for (;;) {}
+     }
+ -- add app_main.c:
+ --- app_initialize(): creates application main thread
+ --- app_main: main thread calls socket_startup() and executes MQTTEcho_Test()
+ -- add socket_startup.c:
+ --- socket_startup(): initializes WiFi and connects to AP
+ -- add Paho demo module: MQTTEcho.c
+ --- User Code Template IoT Client:MQTTClient-C:MQTT Echo
+ -- add certificates: certificates.h (template: IoT Client:MQTTClient-C:Certificates)
+    static const char CA_Cert[] =
+    /* DST Root CA X3 */
+    "-----BEGIN CERTIFICATE-----\n"
+    "MIIDSjCCAjKgAwIBAgIQRK+wgNajJ7qJMDmGLvhAazANBgkqhkiG9w0BAQUFADA/"
+    "MSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMT"
+    "DkRTVCBSb290IENBIFgzMB4XDTAwMDkzMDIxMTIxOVoXDTIxMDkzMDE0MDExNVow"
+    "PzEkMCIGA1UEChMbRGlnaXRhbCBTaWduYXR1cmUgVHJ1c3QgQ28uMRcwFQYDVQQD"
+    "Ew5EU1QgUm9vdCBDQSBYMzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB"
+    "AN+v6ZdQCINXtMxiZfaQguzH0yxrMMpb7NnDfcdAwRgUi+DoM3ZJKuM/IUmTrE4O"
+    "rz5Iy2Xu/NMhD2XSKtkyj4zl93ewEnu1lcCJo6m67XMuegwGMoOifooUMM0RoOEq"
+    "OLl5CjH9UL2AZd+3UWODyOKIYepLYYHsUmu5ouJLGiifSKOeDNoJjj4XLh7dIN9b"
+    "xiqKqy69cK3FCxolkHRyxXtqqzTWMIn/5WgTe1QLyNau7Fqckh49ZLOMxt+/yUFw"
+    "7BZy1SbsOFU5Q9D8/RhcQPGX69Wam40dutolucbY38EVAjqr2m7xPi71XAicPNaD"
+    "aeQQmxkqtilX4+U9m5/wAl0CAwEAAaNCMEAwDwYDVR0TAQH/BAUwAwEB/zAOBgNV"
+    "HQ8BAf8EBAMCAQYwHQYDVR0OBBYEFMSnsaR7LHH62+FLkHX/xBVghYkQMA0GCSqG"
+    "SIb3DQEBBQUAA4IBAQCjGiybFwBcqR7uKGY3Or+Dxz9LwwmglSBd49lZRNI+DT69"
+    "ikugdB/OEIKcdBodfpga3csTS7MgROSR6cz8faXbauX+5v3gTt23ADq1cEmv8uXr"
+    "AvHRAosZy5Q6XkjEGB5YGV8eAlrwDPGxrancWYaLbumR9YbK+rlmM6pZW87ipxZz"
+    "R8srzJmwN0jP41ZL9c8PDHIyh8bwRLtTcm1D9SZImlJnt1ir/md2cXjbDaJWFBM5"
+    "JDGFoqgCWjBH4d1QB7wCCZAA62RjYJsWvIjJEubSfZGL+T0yjWW06XyxV3bqxbYo"
+    "Ob8VZRzI9neWagqNdwvYkQsEjgfbKbYK7p2CNTUQ\n"
+    "-----END CERTIFICATE-----\n";
+    static const char ClientCert[] = "";
+    static const char ClientKey[] = "";
+ -- Device:fsl_debug_console.c - C/C++ Define: SDK_DEBUGCONSOLE=1 __MCUXPRESSO
+ -- add retarget_stdio.c:
+ --- stderr_putchar(): calling DbgConsole_SendDataReliable()
+ --- stdout_putchar(): calling DbgConsole_SendDataReliable()
+ --- stdin_getchar(): calling DbgConsole_ReadCharacter()
+ -- setup linker:
+ --- scatter file: MIMXRT1064xxxx_flexspi_nor.scf
+ ---- heap size: 0x00010000
+ --- Misc controls:
+     --predefine="-DXIP_BOOT_HEADER_ENABLE=1"
+ -- Target Options - C/C++ - Define: SKIP_SYSCLK_INIT XIP_BOOT_HEADER_DCD_ENABLE=1 XIP_BOOT_HEADER_ENABLE=1 XIP_EXTERNAL_FLASH=1
+ -- Target Options - C/C++ - Warnings: AC5-like Warnings
+ -- select Debug adapter: CMSIS-DAP
+
+MCUXpresso:
+ - create and update MCUXpresso project
+ -- open MCUXpresso, create .mex project based on uVision project and update:
+ --- Pins:
+ ---- add Functional Group: BOARD_InitARDUINO_UART
+ ---- called by initialization: BOARD_InitARDUINO_UART
+ ----- BOARD_InitARDUINO_UART:
+ ------ Route Pin#J12: LPUART3, TX
+ ------ Route Pin#K10: LPUART3, RX
