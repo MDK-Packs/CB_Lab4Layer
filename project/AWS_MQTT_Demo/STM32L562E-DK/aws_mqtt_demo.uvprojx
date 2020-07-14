@@ -2087,8 +2087,8 @@
       </Layer>
       <Layer>
         <LayName>Board</LayName>
-        <LayDesc>Board layer for STM32L562-DK</LayDesc>
-        <LayKeys>Board, STM32L562-DK</LayKeys>
+        <LayDesc>Board layer for STM32L562E-DK</LayDesc>
+        <LayKeys>Board, STM32L562E-DK</LayKeys>
         <LayCat>Board</LayCat>
         <LayLic>BSD 3-Clause, Apache 2.0</LayLic>
         <LayTarg>1</LayTarg>

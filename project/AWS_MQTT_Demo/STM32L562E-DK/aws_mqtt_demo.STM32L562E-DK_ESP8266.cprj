@@ -37,9 +37,9 @@
       <license>Apache 2.0</license>
     </layer>
     <layer hasTarget="1" name="Board">
-      <description>Board layer for STM32L562-DK</description>
+      <description>Board layer for STM32L562E-DK</description>
       <category>Board</category>
-      <keywords>Board, STM32L562-DK</keywords>
+      <keywords>Board, STM32L562E-DK</keywords>
       <license>BSD 3-Clause, Apache 2.0</license>
     </layer>
   </layers>
