@@ -611,6 +611,30 @@ void BOARD_InitHyperFlash(void);
  */
 void BOARD_InitARDUINO_UART(void);
 
+/* GPIO_AD_B0_09 (coord F14), JTAG_TDI/J21[5]/ENET_RST/J22[5] */
+#define BOARD_INITUSER_LED_USER_LED_GPIO                                   GPIO1   /*!< GPIO device name: GPIO1 */
+#define BOARD_INITUSER_LED_USER_LED_PORT                                   GPIO1   /*!< PORT device name: GPIO1 */
+#define BOARD_INITUSER_LED_USER_LED_PIN                                       9U   /*!< GPIO1 pin index: 9 */
+
+
+/*!
+ * @brief Configures pin routing and optionally pin electrical features.
+ *
+ */
+void BOARD_InitUSER_LED(void);
+
+/* WAKEUP (coord L6), SD_PWREN */
+#define BOARD_INITUSER_BUTTON_USER_BUTTON_GPIO                             GPIO5   /*!< GPIO device name: GPIO5 */
+#define BOARD_INITUSER_BUTTON_USER_BUTTON_PORT                             GPIO5   /*!< PORT device name: GPIO5 */
+#define BOARD_INITUSER_BUTTON_USER_BUTTON_PIN                                 0U   /*!< GPIO5 pin index: 0 */
+
+
+/*!
+ * @brief Configures pin routing and optionally pin electrical features.
+ *
+ */
+void BOARD_InitUSER_BUTTON(void);
+
 #if defined(__cplusplus)
 }
 #endif
