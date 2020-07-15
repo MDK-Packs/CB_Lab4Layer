@@ -42,9 +42,6 @@ STM32CubeMX:
  ----- Prescaler: 4
  ---- NVIC Settings
  ----- SPI3 global interrupt: enabled
- ---- DMA Settings
- ----- SPI3_RX (default settings)
- ----- SPI3_TX (default settings)
  ---- GPIO Settings
  ----- SPI3_MOSI: PB5, Maximum output speed: Very High
  ----- SPI3_MISO: PB4, Maximum output speed: Very High
