@@ -32,7 +32,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "cmsis_os2.h"                  // ::CMSIS:RTOS2
+
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
