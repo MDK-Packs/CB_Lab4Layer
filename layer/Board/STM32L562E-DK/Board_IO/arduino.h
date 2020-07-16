@@ -1,4 +1,4 @@
-/* -----------------------------------------------------------------------------
+/*---------------------------------------------------------------------------
  * Copyright (c) 2020 Arm Limited (or its affiliates). All rights reserved.
  *
  * SPDX-License-Identifier: Apache-2.0
@@ -14,7 +14,11 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * -------------------------------------------------------------------------- */
+ *
+ *      Name:    arduino.h
+ *      Purpose: Arduino header file
+ *
+ *---------------------------------------------------------------------------*/
 
 #include <stdint.h>
 
