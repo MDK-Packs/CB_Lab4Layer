@@ -154,31 +154,31 @@
 //  <i> Define event recording level bitmask for events generated from Queue functions.
 //  <i> Default: 0x05
 //    <0x00=>Off <0x01=>Errors <0x05=>Errors + Operation <0x0F=>All
-#define configEVR_LEVEL_QUEUE                   0x05
+#define configEVR_LEVEL_QUEUE                   0x01
 
 //  <o>Timer functions
 //  <i> Define event recording level bitmask for events generated from Timer functions.
 //  <i> Default: 0x05
 //    <0x00=>Off <0x01=>Errors <0x05=>Errors + Operation <0x0F=>All
-#define configEVR_LEVEL_TIMERS                  0x05
+#define configEVR_LEVEL_TIMERS                  0x01
 
 //  <o>Event Groups functions
 //  <i> Define event recording level bitmask for events generated from Event Groups functions.
 //  <i> Default: 0x05
 //    <0x00=>Off <0x01=>Errors <0x05=>Errors + Operation <0x0F=>All
-#define configEVR_LEVEL_EVENTGROUPS             0x05
+#define configEVR_LEVEL_EVENTGROUPS             0x01
 
 //  <o>Heap functions
 //  <i> Define event recording level bitmask for events generated from Heap functions.
 //  <i> Default: 0x05
 //    <0x00=>Off <0x01=>Errors <0x05=>Errors + Operation <0x0F=>All
-#define configEVR_LEVEL_HEAP                    0x05
+#define configEVR_LEVEL_HEAP                    0x01
 
 //  <o>Stream Buffer functions
 //  <i> Define event recording level bitmask for events generated from Stream Buffer functions.
 //  <i> Default: 0x05
 //    <0x00=>Off <0x01=>Errors <0x05=>Errors + Operation <0x0F=>All
-#define configEVR_LEVEL_STREAMBUFFER            0x05
+#define configEVR_LEVEL_STREAMBUFFER            0x01
 //  </e>
 // </h>
 

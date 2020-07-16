@@ -343,7 +343,7 @@
 //   <e>Global Initialization
 //   <i> Initialize Event Recorder during 'osKernelInitialize'.
 #ifndef OS_EVR_INIT
-#define OS_EVR_INIT                 0
+#define OS_EVR_INIT                 1
 #endif
  
 //     <q>Start recording
@@ -360,7 +360,7 @@
 //       <o.3>Detailed operation events
 //     </h>
 #ifndef OS_EVR_LEVEL
-#define OS_EVR_LEVEL                0x05U
+#define OS_EVR_LEVEL                0x01U
 #endif
  
 //     <h>RTOS Event Filter Setup
