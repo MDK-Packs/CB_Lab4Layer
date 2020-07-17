@@ -125,7 +125,7 @@ in the application for enabling according instance. */
 #define RTE_I2C7_Master_DMA_BASE DMA0
 #define RTE_I2C7_Master_DMA_CH 15
 
-/* SPI select, SPI0 - SPI7.*/
+/* SPI select, SPI0 - SPI8.*/
 /* User needs to provide the implementation for XXX_GetFreq/XXX_InitPins/XXX_DeinitPins 
 in the application for enabling according instance. */ 
 #define RTE_SPI0 0
@@ -144,6 +144,8 @@ in the application for enabling according instance. */
 #define RTE_SPI6_DMA_EN 0
 #define RTE_SPI7 0
 #define RTE_SPI7_DMA_EN 0
+#define RTE_SPI8 1
+#define RTE_SPI8_DMA_EN 0
 
 /* SPI configuration. */
 #define RTE_SPI0_SSEL_NUM kSPI_Ssel0

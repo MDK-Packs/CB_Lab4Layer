@@ -22,6 +22,7 @@ processor: LPC55S69
 package_id: LPC55S69JBD100
 mcu_data: ksdk2_0
 processor_version: 7.0.1
+board: LPCXpresso55S69
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
 
@@ -44,7 +45,7 @@ extern uint32_t SystemCoreClock;
  ******************************************************************************/
 void BOARD_InitBootClocks(void)
 {
-    BOARD_BootClockFROHF96M();
+    BOARD_BootClockPLL150M();
 }
 
 /*******************************************************************************
@@ -56,10 +57,6 @@ void BOARD_InitBootClocks(void)
 name: BOARD_BootClockFRO12M
 outputs:
 - {id: System_clock.outFreq, value: 12 MHz}
-settings:
-- {id: ANALOG_CONTROL_FRO192M_CTRL_ENDI_FRO_96M_CFG, value: Enable}
-sources:
-- {id: ANACTRL.fro_hf.outFreq, value: 96 MHz}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
 
@@ -77,8 +74,6 @@ void BOARD_BootClockFRO12M(void)
     POWER_DisablePD(kPDRUNCFG_PD_FRO192M);               /*!< Ensure FRO is on  */
     CLOCK_SetupFROClocking(12000000U);                   /*!< Set up FRO to the 12 MHz, just for sure */
     CLOCK_AttachClk(kFRO12M_to_MAIN_CLK);                /*!< Switch to FRO 12MHz first to ensure we can change the clock setting */
-
-    CLOCK_SetupFROClocking(96000000U);                   /* Enable FRO HF(96MHz) output */
 
     POWER_SetVoltageForFreq(12000000U);                  /*!< Set voltage for the one of the fastest clock outputs: System clock output */
     CLOCK_SetFLASHAccessCyclesForFreq(12000000U);          /*!< Set FLASH wait states for core */
@@ -101,16 +96,10 @@ void BOARD_BootClockFRO12M(void)
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 !!Configuration
 name: BOARD_BootClockFROHF96M
-called_from_default_init: true
 outputs:
-- {id: FXCOM0_clock.outFreq, value: 48 MHz}
-- {id: FXCOM2_clock.outFreq, value: 48 MHz}
 - {id: System_clock.outFreq, value: 96 MHz}
 settings:
 - {id: ANALOG_CONTROL_FRO192M_CTRL_ENDI_FRO_96M_CFG, value: Enable}
-- {id: SYSCON.FCCLKSEL0.sel, value: SYSCON.FROHFDIV}
-- {id: SYSCON.FCCLKSEL2.sel, value: SYSCON.FROHFDIV}
-- {id: SYSCON.FROHFDIV.scale, value: '2'}
 - {id: SYSCON.MAINCLKSELA.sel, value: ANACTRL.fro_hf_clk}
 sources:
 - {id: ANACTRL.fro_hf.outFreq, value: 96 MHz}
@@ -138,18 +127,10 @@ void BOARD_BootClockFROHF96M(void)
     CLOCK_SetFLASHAccessCyclesForFreq(96000000U);          /*!< Set FLASH wait states for core */
 
     /*!< Set up dividers */
-    CLOCK_SetClkDiv(kCLOCK_DivFlexFrg0, 0U, true);               /*!< Reset FRGCTRL0_DIV divider counter and halt it */
-    CLOCK_SetClkDiv(kCLOCK_DivFlexFrg0, 256U, false);         /*!< Set FRGCTRL0_DIV divider to value 256 */
-    CLOCK_SetClkDiv(kCLOCK_DivFlexFrg2, 0U, true);               /*!< Reset FRGCTRL2_DIV divider counter and halt it */
-    CLOCK_SetClkDiv(kCLOCK_DivFlexFrg2, 256U, false);         /*!< Set FRGCTRL2_DIV divider to value 256 */
     CLOCK_SetClkDiv(kCLOCK_DivAhbClk, 1U, false);         /*!< Set AHBCLKDIV divider to value 1 */
-    CLOCK_SetClkDiv(kCLOCK_DivFrohfClk, 0U, true);               /*!< Reset FROHFDIV divider counter and halt it */
-    CLOCK_SetClkDiv(kCLOCK_DivFrohfClk, 2U, false);         /*!< Set FROHFDIV divider to value 2 */
 
     /*!< Set up clock selectors - Attach clocks to the peripheries */
     CLOCK_AttachClk(kFRO_HF_to_MAIN_CLK);                 /*!< Switch MAIN_CLK to FRO_HF */
-    CLOCK_AttachClk(kFRO_HF_DIV_to_FLEXCOMM0);                 /*!< Switch FLEXCOMM0 to FRO_HF_DIV */
-    CLOCK_AttachClk(kFRO_HF_DIV_to_FLEXCOMM2);                 /*!< Switch FLEXCOMM2 to FRO_HF_DIV */
 
     /*< Set SystemCoreClock variable. */
     SystemCoreClock = BOARD_BOOTCLOCKFROHF96M_CORE_CLOCK;
@@ -167,7 +148,6 @@ outputs:
 - {id: System_clock.outFreq, value: 100 MHz}
 settings:
 - {id: PLL0_Mode, value: Normal}
-- {id: ANALOG_CONTROL_FRO192M_CTRL_ENDI_FRO_96M_CFG, value: Enable}
 - {id: ENABLE_CLKIN_ENA, value: Enabled}
 - {id: ENABLE_SYSTEM_CLK_OUT, value: Enabled}
 - {id: SYSCON.MAINCLKSELB.sel, value: SYSCON.PLL0_BYPASS}
@@ -176,7 +156,6 @@ settings:
 - {id: SYSCON.PLL0N_DIV.scale, value: '4', locked: true}
 - {id: SYSCON.PLL0_PDEC.scale, value: '4', locked: true}
 sources:
-- {id: ANACTRL.fro_hf.outFreq, value: 96 MHz}
 - {id: SYSCON.XTAL32M.outFreq, value: 16 MHz, enabled: true}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
@@ -195,8 +174,6 @@ void BOARD_BootClockPLL100M(void)
     POWER_DisablePD(kPDRUNCFG_PD_FRO192M);               /*!< Ensure FRO is on  */
     CLOCK_SetupFROClocking(12000000U);                   /*!< Set up FRO to the 12 MHz, just for sure */
     CLOCK_AttachClk(kFRO12M_to_MAIN_CLK);                /*!< Switch to FRO 12MHz first to ensure we can change the clock setting */
-
-    CLOCK_SetupFROClocking(96000000U);                   /* Enable FRO HF(96MHz) output */
 
     /*!< Configure XTAL32M */
     POWER_DisablePD(kPDRUNCFG_PD_XTAL32M);                        /* Ensure XTAL32M is powered */
@@ -240,18 +217,28 @@ void BOARD_BootClockPLL100M(void)
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 !!Configuration
 name: BOARD_BootClockPLL150M
+called_from_default_init: true
 outputs:
+- {id: FXCOM0_clock.outFreq, value: 12 MHz}
+- {id: FXCOM2_clock.outFreq, value: 12 MHz}
+- {id: HSLSPI_clock.outFreq, value: 96 MHz}
 - {id: System_clock.outFreq, value: 150 MHz}
 settings:
 - {id: PLL0_Mode, value: Normal}
+- {id: ANALOG_CONTROL_FRO192M_CTRL_ENDI_FRO_96M_CFG, value: Enable}
 - {id: ENABLE_CLKIN_ENA, value: Enabled}
 - {id: ENABLE_SYSTEM_CLK_OUT, value: Enabled}
+- {id: SYSCON.FCCLKSEL0.sel, value: ANACTRL.fro_12m_clk}
+- {id: SYSCON.FCCLKSEL2.sel, value: ANACTRL.fro_12m_clk}
+- {id: SYSCON.FROHFDIV.scale, value: '1', locked: true}
+- {id: SYSCON.HSLSPICLKSEL.sel, value: SYSCON.FROHFDIV}
 - {id: SYSCON.MAINCLKSELB.sel, value: SYSCON.PLL0_BYPASS}
 - {id: SYSCON.PLL0CLKSEL.sel, value: SYSCON.CLK_IN_EN}
 - {id: SYSCON.PLL0M_MULT.scale, value: '150', locked: true}
 - {id: SYSCON.PLL0N_DIV.scale, value: '8', locked: true}
 - {id: SYSCON.PLL0_PDEC.scale, value: '2', locked: true}
 sources:
+- {id: ANACTRL.fro_hf.outFreq, value: 96 MHz}
 - {id: SYSCON.XTAL32M.outFreq, value: 16 MHz, enabled: true}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
@@ -270,6 +257,8 @@ void BOARD_BootClockPLL150M(void)
     POWER_DisablePD(kPDRUNCFG_PD_FRO192M);               /*!< Ensure FRO is on  */
     CLOCK_SetupFROClocking(12000000U);                   /*!< Set up FRO to the 12 MHz, just for sure */
     CLOCK_AttachClk(kFRO12M_to_MAIN_CLK);                /*!< Switch to FRO 12MHz first to ensure we can change the clock setting */
+
+    CLOCK_SetupFROClocking(96000000U);                   /* Enable FRO HF(96MHz) output */
 
     /*!< Configure XTAL32M */
     POWER_DisablePD(kPDRUNCFG_PD_XTAL32M);                        /* Ensure XTAL32M is powered */
@@ -296,10 +285,19 @@ void BOARD_BootClockPLL150M(void)
     CLOCK_SetPLL0Freq(&pll0Setup);                       /*!< Configure PLL0 to the desired values */
 
     /*!< Set up dividers */
+    CLOCK_SetClkDiv(kCLOCK_DivFlexFrg0, 0U, true);               /*!< Reset FRGCTRL0_DIV divider counter and halt it */
+    CLOCK_SetClkDiv(kCLOCK_DivFlexFrg0, 256U, false);         /*!< Set FRGCTRL0_DIV divider to value 256 */
+    CLOCK_SetClkDiv(kCLOCK_DivFlexFrg2, 0U, true);               /*!< Reset FRGCTRL2_DIV divider counter and halt it */
+    CLOCK_SetClkDiv(kCLOCK_DivFlexFrg2, 256U, false);         /*!< Set FRGCTRL2_DIV divider to value 256 */
     CLOCK_SetClkDiv(kCLOCK_DivAhbClk, 1U, false);         /*!< Set AHBCLKDIV divider to value 1 */
+    CLOCK_SetClkDiv(kCLOCK_DivFrohfClk, 0U, true);               /*!< Reset FROHFDIV divider counter and halt it */
+    CLOCK_SetClkDiv(kCLOCK_DivFrohfClk, 1U, false);         /*!< Set FROHFDIV divider to value 1 */
 
     /*!< Set up clock selectors - Attach clocks to the peripheries */
     CLOCK_AttachClk(kPLL0_to_MAIN_CLK);                 /*!< Switch MAIN_CLK to PLL0 */
+    CLOCK_AttachClk(kFRO12M_to_FLEXCOMM0);                 /*!< Switch FLEXCOMM0 to FRO12M */
+    CLOCK_AttachClk(kFRO12M_to_FLEXCOMM2);                 /*!< Switch FLEXCOMM2 to FRO12M */
+    CLOCK_AttachClk(kFRO_HF_DIV_to_HSLSPI);                 /*!< Switch HSLSPI to FRO_HF_DIV */
 
     /*< Set SystemCoreClock variable. */
     SystemCoreClock = BOARD_BOOTCLOCKPLL150M_CORE_CLOCK;

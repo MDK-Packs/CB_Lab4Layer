@@ -14,11 +14,29 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ *      Name:    arduino.h
+ *      Purpose: Arduino header file
+ *
  *---------------------------------------------------------------------------*/
 
-#ifndef MAIN_H__
-#define MAIN_H__
+#include <stdint.h>
 
-extern void app_initialize (void);
+/**
+  \fn          void ARDUINO_IO_D10_Set (uint32_t val)
+  \brief       Set IO D10 digital output.
+  \param[in]   val output value
+                 - 0
+                 - 1
+  \return      none
+*/
+void ARDUINO_IO_D10_Set (uint32_t val);
 
-#endif
+/**
+  \fn          uint32_t ARDUINO_IO_D9_Get (void)
+  \brief       Get IO D9 digital input.
+  \return      input state
+                 - 0
+                 - 1
+*/
+uint32_t ARDUINO_IO_D9_Get (void);
