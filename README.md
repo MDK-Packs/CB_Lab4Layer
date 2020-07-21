@@ -14,6 +14,7 @@ Directory    | Content Description
 `./build`    | Input: Scripts that generate reference examples from layers
 `./layers`   | Input: Software layers that are extracted from projects
 `./project`  | Input: Master software examples that used to generate the layers
+`./docs`     | Documentation that explains how to create the software examples from scratch
 
 __Note:__ this is work in progress and there are several gaps that we will close in the near future:
 
