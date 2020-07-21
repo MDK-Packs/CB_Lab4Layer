@@ -208,29 +208,33 @@ do
   fi  
 done
 
-#compose README.md
-cat layer.App.md > README.md
-echo >> README.md
-echo >> README.md
-if [ ! -z ${rtos} ]
+# cbuildgen version 0.9.0
+if [ ! -z "$(grep 0.9.0 <<< $(cbuildgen))" ]
 then
-  cat layer.RTOS.md >> README.md
+  # compose README.md
+  cat layer.App.md > README.md
   echo >> README.md
   echo >> README.md
+  if [ ! -z ${rtos} ]
+  then
+    cat layer.RTOS.md >> README.md
+    echo >> README.md
+    echo >> README.md
+  fi
+  if [ ! -z ${socket} ]
+  then
+    cat layer.Socket.md >> README.md
+    echo >> README.md
+    echo >> README.md
+  fi
+  if [ ! -z ${module} ]
+  then
+    cat layer.Module.md >> README.md
+    echo >> README.md
+    echo >> README.md
+  fi
+  cat layer.Board.md >> README.md
 fi
-if [ ! -z ${socket} ]
-then
-  cat layer.Socket.md >> README.md
-  echo >> README.md
-  echo >> README.md
-fi
-if [ ! -z ${module} ]
-then
-  cat layer.Module.md >> README.md
-  echo >> README.md
-  echo >> README.md
-fi
-cat layer.Board.md >> README.md
 
 #remove layer meta files
 for item in ${layer[@]}
@@ -240,6 +244,11 @@ do
   rm -f "${item,,}_configure.sh"
   rm -f "${item}.clayer"
 done
+
+# set cprj description
+description=$(head -n 1 README.md)
+sed -i "s|Automatic generated project|${description}|" "${app}.cprj"
+
 
 popd
 
