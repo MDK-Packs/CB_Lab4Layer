@@ -115,10 +115,6 @@ fi
 # set target name
 target="${board}"
 
-# update layer and clayer collection
-layer+=("Board")
-clayer+=" ../../${layerpath}/Board/${board}/Board.clayer"
-
 # check if Module layer is specified and exists
 if [ ! -z ${module} ]
 then
@@ -129,9 +125,6 @@ then
   fi
   # update target name
   target+="_${module}"
-  # update layer and clayer collection
-  layer+=("Module")
-  clayer+=" ../../${layerpath}/Module/${module}/Module.clayer"
 fi
 
 # check if Socket layer is specified and exists
@@ -144,9 +137,6 @@ then
   fi
   # update target name
   target+="_${socket}"
-  # update layer and clayer collection
-  layer+=("Socket")
-  clayer+=" ../../${layerpath}/Socket/${socket}/Socket.clayer"
 fi
 
 # check if RTOS layer is specified and exists
@@ -159,10 +149,35 @@ then
   fi
   # update target name
   target+="_${rtos}"
+fi
+
+# check if RTOS layer is specified
+if [ ! -z ${rtos} ]
+then
   # update layer and clayer collection
   layer+=("RTOS")
   clayer+=" ../../${layerpath}/RTOS/${rtos}/RTOS.clayer"
 fi
+
+# check if Socket layer is specified
+if [ ! -z ${socket} ]
+then
+  # update layer and clayer collection
+  layer+=("Socket")
+  clayer+=" ../../${layerpath}/Socket/${socket}/Socket.clayer"
+fi
+
+# check if Module layer is specified
+if [ ! -z ${module} ]
+then
+  # update layer and clayer collection
+  layer+=("Module")
+  clayer+=" ../../${layerpath}/Module/${module}/Module.clayer"
+fi
+
+# update Board layer and clayer collection
+layer+=("Board")
+clayer+=" ../../${layerpath}/Board/${board}/Board.clayer"
 
 # create application directory if it does not exist
 if [ ! -d "${app}" ]
