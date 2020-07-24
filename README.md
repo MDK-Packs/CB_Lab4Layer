@@ -1,6 +1,6 @@
 # CB_Lab4Layer
 
-This is the experimental CMSIS-Build Laboratory that uses project layers to compose multiple project examples 
+This is the experimental [__CMSIS-Build__](https://arm-software.github.io/CMSIS_5/Build/html/index.html) Laboratory that uses project layers to compose multiple project examples 
 from a set of different software packs.  
 
 CMSIS-Build can generate multiple reference examples for many different evaluation kits that demonstrate the 
