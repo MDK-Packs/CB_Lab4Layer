@@ -1,6 +1,6 @@
 # NUCLEO-STM32L552ZE-Q Trusted Firmware for Cortex-M (TF-M) Workbook
 
-This workbook explains the necessary steps to create a secure TF-M base plltform.
+This workbook explains the necessary steps to create a secure TF-M base platform.
 
 The following material is using the [STMicroelectronics NUCLEO-STM32L552ZE-Q](https://www.st.com/en/evaluation-tools/nucleo-l552ze-q.html) development board. It explains how to set up a project in Arm Keil MDK (using STM32CubeMX for setting up the device) and the necessary configuration steps. It shows how to add an application that sends MQTT messages to the AWS cloud.
 
