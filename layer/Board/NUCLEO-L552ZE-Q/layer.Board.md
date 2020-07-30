@@ -80,7 +80,7 @@ The **Mode** is set to *2-ways associative cache*.
 
 ## Clock Configuration
 
-> To achieve the right baud rates for the serial interfaces, the clock setup has been changed.
+> To achieve the correct baud rates for the serial interfaces, the clock setup has been changed.
 
 The **System Clock Mux** uses the *PLLCLK* and the **PLL - N** multiplier is set to *55*.
 
@@ -105,3 +105,31 @@ The board configuration can be modified using [STM32CubeMX](https://www.keil.com
  - vioLED1:    LD1 GREEN (PC7)
  - vioLED2:    LD2 BLUE (PB7)
 
+## Software Components
+
+The following software components are added by this layer:
+- ARM Compiler:Compiler:Event Recorder:DAP
+- ARM Compiler:Compiler:I/O:STDERR:User
+- ARM Compiler:Compiler:I/O:STDIN:User
+- ARM Compiler:Compiler:I/O:STDOUT:User
+- CMSIS:CORE
+- CMSIS Driver:SPI
+- CMSIS Driver:USART
+- CMSIS Driver:VIO:Board:NUCLEO-L552ZE-Q
+- Device:STM32Cube Framework:STM32CubeMX
+- Device:STM32Cube HAL:Common
+- Device:STM32Cube HAL:Cortex
+- Device:STM32Cube HAL:DMA
+- Device:STM32Cube HAL:EXTI
+- Device:STM32Cube HAL:Flash
+- Device:STM32Cube HAL:GPIO
+- Device:STM32Cube HAL:ICACHE
+- Device:STM32Cube HAL:IRDA
+- Device:STM32Cube HAL:PWR
+- Device:STM32Cube HAL:RCC
+- Device:STM32Cube HAL:SPI
+- Device:STM32Cube HAL:Smartcard
+- Device:STM32Cube HAL:UART
+- Device:STM32Cube HAL:USART
+- Device:Startup
+- NUCLEO-L552ZE-Q:Board Support:Drivers:Basic I/O
