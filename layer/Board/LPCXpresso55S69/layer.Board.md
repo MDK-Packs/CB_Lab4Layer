@@ -53,7 +53,7 @@ The board layer for NXP LPCXpresso55S69 is using the software component ::Board 
 
 The board configuration can be modified using [MCUXpresso Config Tools](https://www2.keil.com/nxp) and is stored in the file `LPCXpresso55S69.mex`.
 
-## To Do: the following is not reflected in the IOC file
+## To Do: the following is not reflected in the MEX file
 
 **CMSIS-Driver VIO** with the following board hardware mapping:
  - vioBUTTON0: Button USER (PIO1_9)
