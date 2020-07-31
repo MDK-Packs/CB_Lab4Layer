@@ -22,21 +22,13 @@ The **Mode** is set to *2-ways associative cache*.
 
 ### NVIC
 
-> For the correct operation of the RTOS and the serial interfaces, some interrupts have to be enabled and preemption priorities have to be set right.
+> For the correct operation of the RTOS and the serial interfaces, some interrupts have to be enabled, preemption priorities have to be set right, IRQ Handler generation, and HAL handler calls have to be configured.
 
-|NVIC Interrupt                         |Preemption Priority|
-|---------------------------------------|:-----------------:|
-|System service call via SWI instruction|6                  |
-|Pendable request for system service    |7                  |
-|Time base: System tick timer           |7                  |
-
-> Handler generation and calls are configured as follows.
-
-|Interrupt                              |Generate IRQ handler|Call HAL handler|
-|---------------------------------------|:------------------:|:--------------:|
-|System service call via SWI instruction|disabled            |                |
-|Pendable request for system service    |disabled            |                |
-|Time base: System tick timer           |disabled            |disabled        |
+|NVIC Interrupt                         |Preemption Priority|Generate IRQ handler|Call HAL handler|
+|---------------------------------------|:-----------------:|:------------------:|:--------------:|
+|System service call via SWI instruction|6                  |disabled            |                |
+|Pendable request for system service    |7                  |disabled            |                |
+|Time base: System tick timer           |7                  |disabled            |disabled        |
 
 ## Connectivity Configuration
 
@@ -104,32 +96,3 @@ The board configuration can be modified using [STM32CubeMX](https://www.keil.com
  - vioLED0:    LD3 RED (PA9)
  - vioLED1:    LD1 GREEN (PC7)
  - vioLED2:    LD2 BLUE (PB7)
-
-## Software Components
-
-The following software components are added by this layer:
-- ARM Compiler:Compiler:Event Recorder:DAP
-- ARM Compiler:Compiler:I/O:STDERR:User
-- ARM Compiler:Compiler:I/O:STDIN:User
-- ARM Compiler:Compiler:I/O:STDOUT:User
-- CMSIS:CORE
-- CMSIS Driver:SPI
-- CMSIS Driver:USART
-- CMSIS Driver:VIO:Board:NUCLEO-L552ZE-Q
-- Device:STM32Cube Framework:STM32CubeMX
-- Device:STM32Cube HAL:Common
-- Device:STM32Cube HAL:Cortex
-- Device:STM32Cube HAL:DMA
-- Device:STM32Cube HAL:EXTI
-- Device:STM32Cube HAL:Flash
-- Device:STM32Cube HAL:GPIO
-- Device:STM32Cube HAL:ICACHE
-- Device:STM32Cube HAL:IRDA
-- Device:STM32Cube HAL:PWR
-- Device:STM32Cube HAL:RCC
-- Device:STM32Cube HAL:SPI
-- Device:STM32Cube HAL:Smartcard
-- Device:STM32Cube HAL:UART
-- Device:STM32Cube HAL:USART
-- Device:Startup
-- NUCLEO-L552ZE-Q:Board Support:Drivers:Basic I/O
