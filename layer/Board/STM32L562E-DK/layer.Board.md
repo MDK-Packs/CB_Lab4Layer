@@ -45,8 +45,8 @@ Board: STMicroelectronics STM32L562E-DK
 | Debug monitor                           | Preempt=0    | Generate IRQ handler
 | Pendable request for system service     | Preempt=7    | none
 | Time base: System tick timer            | Preempt=7    | none
-| LPUART1 global / wake-up                | Preempt=0    | Generate IRQ handler, Call HAL handler
-| SPI3 global                             | Preempt=0    | Generate IRQ handler, Call HAL handler
+| LPUART1 global / wake-up                | Preempt=0    | Generate IRQ handler, Call HAL handler, Do Not Generate Function Call
+| SPI3 global                             | Preempt=0    | Generate IRQ handler, Call HAL handler, Do Not Generate Function Call
 
 ### CMSIS-Driver mapping
 
