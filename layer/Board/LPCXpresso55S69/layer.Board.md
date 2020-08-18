@@ -19,8 +19,8 @@ Board: NXP LPCXpresso55S69
 |60      |FLEXCOMM8  |HS_SPI_MOSI          |SPI8        | D11       | Arduino UNO R3 connector (P17)
 |61      |FLEXCOMM8  |HS_SPI_SCK           |SPI8        | D13       | Arduino UNO R3 connector (P17)
 |62      |FLEXCOMM8  |HS_SPI_MISO          |SPI8        | D12       | Arduino UNO R3 connector (P17)
-|31      |GPIO       |PIO1_5               |            | D9        | Data ready signal for SPI
-|59      |FLEXCOMM8  |HS_SPI_SSEL1         |            | D10       | NSS signal for SPI
+|31      |GPIO       |PIO1_5               |            | D9        | Data ready signal for SPI8
+|59      |FLEXCOMM8  |HS_SPI_SSEL1         |            | D10       | NSS signal for SPI8
 |92      |FLEXCOMM0  |FC0_RXD_SDA_MOSI_DATA|USART0      |           | UART for debug console
 |94      |FLEXCOMM0  |FC0_TXD_SDA_MOSI_DATA|USART0      |           | UART for debug console
 |3       |FLEXCOMM2  |FC2_RXD_SDA_MOSI_DATA|USART2      | D0        | Arduino UNO R3 connector (P18)
