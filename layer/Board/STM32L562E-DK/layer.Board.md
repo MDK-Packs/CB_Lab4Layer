@@ -74,7 +74,7 @@ Board: STMicroelectronics STM32L562E-DK
 | CMSIS-Driver | Peripheral
 |:-------------|:----------
 | SPI3         | SPI3
-| LPUART1      | USART6
+| USART6       | LPUART1
 
 | CMSIS-Driver VIO  | Physical board hardware
 |:------------------|:-----------------------
