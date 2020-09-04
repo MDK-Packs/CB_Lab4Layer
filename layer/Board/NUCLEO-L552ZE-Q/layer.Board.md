@@ -57,8 +57,8 @@ Board: STMicroelectronics NUCLEO-L552ZE-Q
 | Debug monitor                           | 0                | Generate IRQ handler
 | Pendable request for system service     | 0                | none
 | Time base: System tick timer            | 0                | none
-| USART3 global / wake-up                 | 1                | Generate IRQ handler, Call HAL handler
-| SPI1 global                             | 1                | Generate IRQ handler, Call HAL handler
+| USART3 global / wake-up                 | 4                | Generate IRQ handler, Call HAL handler
+| SPI1 global                             | 4                | Generate IRQ handler, Call HAL handler
 
 ### Connectivity Peripherals Configuration
 

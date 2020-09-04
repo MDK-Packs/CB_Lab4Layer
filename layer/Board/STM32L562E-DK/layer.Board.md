@@ -56,8 +56,8 @@ Board: STMicroelectronics STM32L562E-DK
 | Debug monitor                           | 0                | Generate IRQ handler
 | Pendable request for system service     | 0                | none
 | Time base: System tick timer            | 0                | none
-| LPUART1 global / wake-up                | 1                | Generate IRQ handler, Call HAL handler
-| SPI3 global                             | 1                | Generate IRQ handler, Call HAL handler
+| LPUART1 global / wake-up                | 4                | Generate IRQ handler, Call HAL handler
+| SPI3 global                             | 4                | Generate IRQ handler, Call HAL handler
 
 ### Connectivity Peripherals Configuration
 
