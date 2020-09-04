@@ -1,5 +1,5 @@
-FreeRTOS Real-Time Operating System
------------------------------------
+RTOS: FreeRTOS Real-Time Operating System
+-----------------------------------------
 The [FreeRTOS RTOS](https://github.com/ARM-software/CMSIS-FreeRTOS) 
 implements the resource management. It is configured with the following settings:
 
