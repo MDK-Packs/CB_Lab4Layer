@@ -4,6 +4,8 @@ Board: STMicroelectronics 32F746GDISCOVERY
 - This board layer is configured using [*STM32CubeMX*](https://www.st.com/en/development-tools/stm32cubemx.html)
 - [Setup with classic Keil MDK](https://www.keil.com/pack/doc/STM32Cube)
 
+### System Configuration
+
 | System Component        | Setting
 |:------------------------|:----------------------------------------
 | Device                  | STM32F746NGHx
