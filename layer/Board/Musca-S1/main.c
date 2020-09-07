@@ -27,6 +27,7 @@ int main (void)
 {
   SystemCoreClockUpdate();
   stdout_init();
+  NVIC_SetPriority(UART0_IRQn, 4U);
 
   osKernelInitialize();                         // Initialize CMSIS-RTOS
   app_initialize();                             // Initialize application
