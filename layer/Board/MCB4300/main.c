@@ -24,6 +24,10 @@
 int main (void) {
 
   SystemCoreClockUpdate();                      // System Initialization
+
+  NVIC_SetPriority(ETHERNET_IRQn, 4U);
+  NVIC_SetPriority(SDIO_IRQn,     4U);
+
   osKernelInitialize();                         // Initialize CMSIS-RTOS
   app_initialize();                             // Initialize application
   osKernelStart();                              // Start thread execution
