@@ -362,6 +362,38 @@ void BOARD_InitACCELPins(void); /* Function assigned for the Cortex-M33 (Core #0
 
 /*!
  * @brief Select Digital mode.: Enable Digital mode. Digital input is enabled. */
+#define PIO0_27_DIGIMODE_DIGITAL 0x01u
+/*!
+ * @brief Selects pin function.: Alternative connection 1. */
+#define PIO0_27_FUNC_ALT1 0x01u
+/*!
+ * @brief Select Digital mode.: Enable Digital mode. Digital input is enabled. */
+#define PIO1_24_DIGIMODE_DIGITAL 0x01u
+/*!
+ * @brief Selects pin function.: Alternative connection 1. */
+#define PIO1_24_FUNC_ALT1 0x01u
+
+/*! @name PIO0_27 (number 27), P18[13]/P24[4]/FC2_USART_TXD_ARD
+  @{ */
+#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_TX_PORT 0U /*!<@brief PORT device name: 0U */
+#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_TX_PIN 27U /*!<@brief 0U pin index: 27 */
+                                                               /* @} */
+
+/*! @name PIO1_24 (number 3), P18[15]/P18[10]/P24[3]/PLU_OUT6/GPIO/FC2_USART_RXD_ARD/SD1_D1
+  @{ */
+#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_RX_PORT 1U /*!<@brief PORT device name: 1U */
+#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_RX_PIN 24U /*!<@brief 1U pin index: 24 */
+                                                               /* @} */
+
+/*!
+ * @brief Configures pin routing and optionally pin electrical features for USART on 
+ * Arduino UNO R3 connectors.
+ *
+ */
+void BOARD_InitPins_Arduino_USART2(void); /* Function assigned for the Cortex-M33 (Core #0) */
+
+/*!
+ * @brief Select Digital mode.: Enable Digital mode. Digital input is enabled. */
 #define PIO0_26_DIGIMODE_DIGITAL 0x01u
 /*!
  * @brief
@@ -454,49 +486,10 @@ void BOARD_InitPins_Arduino_SPI8(void); /* Function assigned for the Cortex-M33 
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features for PIO1_5 pin on 
- * Arduino UNO R3 connectors, used by 
- * 
- * 
- * 
- * 
- * 
- * 
- * Inventek ISM43362 WiFi Shield (DATARDY).
- *
- */
-void BOARD_InitPins_Arduino_PIO1_5(void); /* Function assigned for the Cortex-M33 (Core #0) */
-
-/*!
- * @brief Select Digital mode.: Enable Digital mode. Digital input is enabled. */
-#define PIO0_27_DIGIMODE_DIGITAL 0x01u
-/*!
- * @brief Selects pin function.: Alternative connection 1. */
-#define PIO0_27_FUNC_ALT1 0x01u
-/*!
- * @brief Select Digital mode.: Enable Digital mode. Digital input is enabled. */
-#define PIO1_24_DIGIMODE_DIGITAL 0x01u
-/*!
- * @brief Selects pin function.: Alternative connection 1. */
-#define PIO1_24_FUNC_ALT1 0x01u
-
-/*! @name PIO0_27 (number 27), P18[13]/P24[4]/FC2_USART_TXD_ARD
-  @{ */
-#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_TX_PORT 0U /*!<@brief PORT device name: 0U */
-#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_TX_PIN 27U /*!<@brief 0U pin index: 27 */
-                                                               /* @} */
-
-/*! @name PIO1_24 (number 3), P18[15]/P18[10]/P24[3]/PLU_OUT6/GPIO/FC2_USART_RXD_ARD/SD1_D1
-  @{ */
-#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_RX_PORT 1U /*!<@brief PORT device name: 1U */
-#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_RX_PIN 24U /*!<@brief 1U pin index: 24 */
-                                                               /* @} */
-
-/*!
- * @brief Configures pin routing and optionally pin electrical features for USART on 
  * Arduino UNO R3 connectors.
  *
  */
-void BOARD_InitPins_Arduino_USART2(void); /* Function assigned for the Cortex-M33 (Core #0) */
+void BOARD_InitPins_Arduino_PIO1_5(void); /* Function assigned for the Cortex-M33 (Core #0) */
 
 #if defined(__cplusplus)
 }
