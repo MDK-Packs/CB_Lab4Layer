@@ -1,24 +1,20 @@
 Azure MQTT Demo
 ===============
 
-This demo application connects to 
-[Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/) 
-through MQTT, sends messages and checks for receive confirmation.
+This demo application connects to the [Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/) through MQTT, sends messages and checks for receive confirmation.
 
-It requires a registered [device](https://www2.keil.com/iot/microsoft) in the Azure IoT hub.
+It requires a registered [device](https://github.com/MDK-Packs/Documentation/blob/master/Microsoft_Azure_IoT_Hub/README.md) in the Azure IoT hub.
 
 The following describes the various components and the configuration settings.
 
 Once the application is configured you can:
- - Build the application
- - Connect the debugger
- - Run the application and view messages in a debug printf or terminal window
-
+- Build the application.
+- Connect the debugger.
+- Run the application and view messages in a debug printf or terminal window.
 
 Azure IoT Client
 ----------------
-The file `iothub_ll_telemetry_sample_mdk.c` configures the connection to 
-Azure IoT Hub with these settings:
- - connectionString: Connection string - primary key
+The file `iothub_ll_telemetry_sample_mdk.c` configures the connection to the Azure IoT Hub with these settings:
+ - `connectionString`: Connection string - primary key
 
-Note: These settings need to be configured by the user!
+*Note*: This setting requires user configuration!
