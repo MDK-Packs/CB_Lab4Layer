@@ -1,30 +1,28 @@
 Google MQTT Demo
 ================
 
-This demo application connects to 
-[Google Cloud IoT](https://cloud.google.com/solutions/iot/) 
-through MQTT and publishes messages.
+This demo application connects to [Google Cloud IoT](https://cloud.google.com/solutions/iot/) through MQTT and publishes messages.
 
-It requires a registered [device](https://www2.keil.com/iot/google) in the Google Cloud IoT.
+It requires a registered [device](https://github.com/MDK-Packs/Documentation/blob/master/Google_Cloud/README.md) in the Google Cloud IoT.
 
 The following describes the various components and the configuration settings.
 
 Once the application is configured you can:
- - Build the application
- - Connect the debugger
- - Run the application and view messages in a debug printf or terminal window
+- Build the application.
+- Connect the debugger.
+- Run the application and view messages in a debug printf or terminal window.
 
 
 Google IoT Client
 -----------------
 The file `demo.c` configures the connection to Google IoT with these settings:
- - PROJECT_ID:   Project ID
- - CLOUD_REGION: Cloud region
- - REGISTRY_ID:  Registry ID
- - DEVICE_ID:    Device ID
+- `PROJECT_ID`:   Project ID
+- `CLOUD_REGION`: Cloud region
+- `REGISTRY_ID`:  Registry ID
+- `DEVICE_ID`:    Device ID
 
-Note: These settings need to be configured by the user!
+*Note*: These settings need to be configured by the user!
 
 The file `pkey.h` configures the device private key.
 
-Note: The device private key needs to be provided by the user!
+*Note*: The device private key needs to be provided by the user!
