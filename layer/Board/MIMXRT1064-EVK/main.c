@@ -55,6 +55,10 @@ int main (void) {
   // Enable ENET_REF_CLK output mode
   IOMUXC_EnableMode(IOMUXC_GPR, kIOMUXC_GPR_ENET1TxClkOutputDir, true);
 
+  NVIC_SetPriority(ENET_IRQn,    8U);
+  NVIC_SetPriority(USDHC1_IRQn,  8U);
+  NVIC_SetPriority(LPUART3_IRQn, 8U);
+
   SystemCoreClockUpdate();
 
 #ifdef RTE_VIO_BOARD

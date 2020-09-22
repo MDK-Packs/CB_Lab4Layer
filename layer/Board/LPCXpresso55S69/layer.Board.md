@@ -27,24 +27,24 @@ Board: NXP LPCXpresso55S69
 
 ### GPIO Configuration and usage
 
-| Functional Group              | Pin | Peripheral | Signal            | Identifier      | Pin Settings                                           | Usage
-|:------------------------------|:----|:-----------|:------------------|:----------------|:-------------------------------------------------------|:-----
-| BOARD_InitDEBUG_UARTPins      | 92  | FLEXCOMM0  | RXD_SDA_MOSI_DATA |                 | default                                                | UART for debug console (FC0_USART_RXD)
-| BOARD_InitDEBUG_UARTPins      | 94  | FLEXCOMM0  | TXD_SCL_MISO_WS   |                 | default                                                | UART for debug console (FC0_USART_TXD)
-| BOARD_InitLEDsPins            | 1   | GPIO       | PIO1, 4           |                 | Direction Output, GPIO initial state 1, mode PullUp    | LED BLUE
-| BOARD_InitLEDsPins            | 5   | GPIO       | PIO1, 6           |                 | Direction Output, GPIO initial state 1, mode PullUp    | LED RED
-| BOARD_InitLEDsPins            | 9   | GPIO       | PIO1, 7           |                 | Direction Output, GPIO initial state 1, mode PullUp    | LED GREEN
-| BOARD_InitBUTTONsPins         | 88  | GPIO       | PIO0, 5           |                 | Direction Input, mode PullUp                           | Button ISP    (S1: PIO0_5_ISP1)
-| BOARD_InitBUTTONsPins         | 64  | GPIO       | PIO1, 18          |                 | Direction Input, mode PullUp                           | Button WAKEUP (S2: WAKE/GPIO)
-| BOARD_InitBUTTONsPins         | 10  | GPIO       | PIO1, 9           |                 | Direction Input, mode PullUp                           | Button USER   (S3: PIO1_9_GPI_ARD)
-| BOARD_InitBUTTONsPins         | 32  | SYSCON     | RESET             |                 | Direction Input                                        | Button RESET  (S4: nRESET_ULP)
-| BOARD_InitPins_Arduino_USART2 | 27  | FLEXCOMM2  | TXD_SCL_MISO_WS   |                 | default                                                | Arduino UNO R3 pin D1  (P18-13: FC2_USART_TXD_ARD)
-| BOARD_InitPins_Arduino_USART2 | 3   | FLEXCOMM2  | RXD_SDA_MOSI_DATA |                 | default                                                | Arduino UNO R3 pin D0  (P18-15: PLU_OUT6/GPIO/FC2_USART_RXD_ARD/SD1_D1)
-| BOARD_InitPins_Arduino_SPI8   | 61  | FLEXCOMM8  | HS_SPI_SCK        |                 | Slew rate Fast                                         | Arduino UNO R3 pin D13 (P17-9:  LSPI_HS_SCK)
-| BOARD_InitPins_Arduino_SPI8   | 62  | FLEXCOMM8  | HS_SPI_MISO       |                 | Slew rate Fast                                         | Arduino UNO R3 pin D12 (P17-11: LSPI_HS_MISO)
-| BOARD_InitPins_Arduino_SPI8   | 60  | FLEXCOMM8  | HS_SPI_MOSI       |                 | Slew rate Fast                                         | Arduino UNO R3 pin D11 (P17-13: LSPI_HS_MOSI)
-| BOARD_InitPins_Arduino_SPI8   | 59  | GPIO       | PIO1, 1           | ARDUINO_SPI_SSN | Direction Output, GPIO initial state 1, Slew rate Fast | Arduino UNO R3 pin D10 (P17-15: LSPI_HS_SSEL1)
-| BOARD_InitPins_Arduino_PIO1_5 | 31  | GPIO       | PIO1, 5           | ARDUINO_PIO1_5  | Direction Input                                        | Arduino UNO R3 pin D9  (P17-17: PIO1_5_GPIO_ARD)
+| Functional Group              | Pin | Peripheral | Signal / Identifier       | Pin Settings                                           | Usage
+|:------------------------------|:----|:-----------|:--------------------------|:-------------------------------------------------------|:-----
+| BOARD_InitDEBUG_UARTPins      | 92  | FLEXCOMM0  | RXD_SDA_MOSI_DATA         | default                                                | UART for debug console (FC0_USART_RXD)
+| BOARD_InitDEBUG_UARTPins      | 94  | FLEXCOMM0  | TXD_SCL_MISO_WS           | default                                                | UART for debug console (FC0_USART_TXD)
+| BOARD_InitLEDsPins            | 1   | GPIO       | PIO1, 4                   | Direction Output, GPIO initial state 1, mode PullUp    | LED BLUE
+| BOARD_InitLEDsPins            | 5   | GPIO       | PIO1, 6                   | Direction Output, GPIO initial state 1, mode PullUp    | LED RED
+| BOARD_InitLEDsPins            | 9   | GPIO       | PIO1, 7                   | Direction Output, GPIO initial state 1, mode PullUp    | LED GREEN
+| BOARD_InitBUTTONsPins         | 88  | GPIO       | PIO0, 5                   | Direction Input, mode PullUp                           | Button ISP    (S1: PIO0_5_ISP1)
+| BOARD_InitBUTTONsPins         | 64  | GPIO       | PIO1, 18                  | Direction Input, mode PullUp                           | Button WAKEUP (S2: WAKE/GPIO)
+| BOARD_InitBUTTONsPins         | 10  | GPIO       | PIO1, 9                   | Direction Input, mode PullUp                           | Button USER   (S3: PIO1_9_GPI_ARD)
+| BOARD_InitBUTTONsPins         | 32  | SYSCON     | RESET                     | Direction Input                                        | Button RESET  (S4: nRESET_ULP)
+| BOARD_InitPins_Arduino_USART2 | 27  | FLEXCOMM2  | TXD_SCL_MISO_WS           | default                                                | Arduino UNO R3 pin D1  (P18-13: FC2_USART_TXD_ARD)
+| BOARD_InitPins_Arduino_USART2 | 3   | FLEXCOMM2  | RXD_SDA_MOSI_DATA         | default                                                | Arduino UNO R3 pin D0  (P18-15: FC2_USART_RXD_ARD)
+| BOARD_InitPins_Arduino_SPI8   | 61  | FLEXCOMM8  | HS_SPI_SCK                | Slew rate Fast                                         | Arduino UNO R3 pin D13 (P17-9:  LSPI_HS_SCK)
+| BOARD_InitPins_Arduino_SPI8   | 62  | FLEXCOMM8  | HS_SPI_MISO               | Slew rate Fast                                         | Arduino UNO R3 pin D12 (P17-11: LSPI_HS_MISO)
+| BOARD_InitPins_Arduino_SPI8   | 60  | FLEXCOMM8  | HS_SPI_MOSI               | Slew rate Fast                                         | Arduino UNO R3 pin D11 (P17-13: LSPI_HS_MOSI)
+| BOARD_InitPins_Arduino_SPI8   | 59  | GPIO       | PIO1, 1 / ARDUINO_SPI_SSN | Direction Output, GPIO initial state 1, Slew rate Fast | Arduino UNO R3 pin D10 (P17-15: LSPI_HS_SSEL1)
+| BOARD_InitPins_Arduino_PIO1_5 | 31  | GPIO       | PIO1, 5 / ARDUINO_PIO1_5  | Direction Input                                        | Arduino UNO R3 pin D9  (P17-17: PIO1_5_GPIO_ARD)
 
 ### NVIC Configuration
 
