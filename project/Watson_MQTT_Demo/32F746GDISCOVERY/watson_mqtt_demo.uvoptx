@@ -165,8 +165,8 @@
         <SubType>1</SubType>
       </ScvdPack>
       <ScvdPack>
-        <Filename>C:\ARM\PACK\Keil\MDK-Middleware\7.11.1\FileSystem\FileSystem.scvd</Filename>
-        <Type>Keil.MDK-Middleware.7.11.1</Type>
+        <Filename>C:\ARM\PACK\Keil\MDK-Middleware\7.12.0\FileSystem\FileSystem.scvd</Filename>
+        <Type>Keil.MDK-Middleware.7.12.0</Type>
         <SubType>1</SubType>
       </ScvdPack>
       <Tracepoint>
@@ -365,8 +365,8 @@
         <SubType>1</SubType>
       </ScvdPack>
       <ScvdPack>
-        <Filename>C:\ARM\PACK\Keil\MDK-Middleware\7.11.1\FileSystem\FileSystem.scvd</Filename>
-        <Type>Keil.MDK-Middleware.7.11.1</Type>
+        <Filename>C:\ARM\PACK\Keil\MDK-Middleware\7.12.0\FileSystem\FileSystem.scvd</Filename>
+        <Type>Keil.MDK-Middleware.7.12.0</Type>
         <SubType>1</SubType>
       </ScvdPack>
       <Tracepoint>
