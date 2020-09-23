@@ -32,7 +32,7 @@
   </compilers>
 
   <target Bvendor="STMicroelectronics" Bname="B-L475E-IOT01A" Bversion="1" Ddsp="DSP" Dendian="Little-endian" Dfpu="SP_FPU" Dmve="NO_MVE" Dname="STM32L475VGTx" Dsecure="Non-secure" Dtz="NO_TZ" Dvendor="STMicroelectronics:13">
-    <output list="./Listings/" name="image" obj="./Objects/" type="exe"/>
+    <output intdir="./Objects/" name="image" outdir="./Objects/" type="exe"/>
     <ldflags add="--branchpatch=sdcomp-29491-629360 --callgraph --entry=Reset_Handler --info sizes --info summarysizes --info totals --info unused --info veneers --load_addr_map_info --map --strict --summary_stderr --symbols --xref" compiler="AC6" file="./stm32l475.sct"/>
     <cflags add="-I ./Board_IO -Oz -Wno-documentation -Wno-documentation-unknown-command -Wno-license-management -Wno-missing-noreturn -Wno-missing-prototypes -Wno-missing-variable-declarations -Wno-nonportable-include-path -Wno-packed -Wno-parentheses-equality -Wno-reserved-id-macro -Wno-sign-conversion -Wno-unused-macros -ffunction-sections -fno-rtti -fshort-enums -fshort-wchar -funsigned-char -gdwarf-3 -std=c99 -xc" compiler="AC6"/>
     <asflags add="--xref -g" compiler="AC6" use="armasm"/>

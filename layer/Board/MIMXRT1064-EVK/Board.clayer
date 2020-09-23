@@ -34,7 +34,7 @@
   </compilers>
 
   <target Bvendor="NXP" Bname="EVK-MIMXRT1064" Ddsp="NO_DSP" Dendian="Little-endian" Dfpu="DP_FPU" Dmve="NO_MVE" Dname="MIMXRT1064DVL6A" Dsecure="Non-secure" Dtz="NO_TZ" Dvendor="NXP:11">
-    <output list="./Listings/" name="image" obj="./Objects/" type="exe"/>
+    <output intdir="./Objects/" name="image" outdir="./Objects/" type="exe"/>
     <ldflags add="--callgraph --diag_suppress 6314,6329 --entry=Reset_Handler --info sizes --info summarysizes --info totals --info unused --info veneers --load_addr_map_info --map --predefine=&quot;-DXIP_BOOT_HEADER_ENABLE=1&quot; --strict --summary_stderr --symbols --xref" compiler="AC6" file="./RTE/Device/MIMXRT1064DVL6A/MIMXRT1064xxxxx_flexspi_nor.scf"/>
     <cflags add="-DSKIP_SYSCLK_INIT -DXIP_BOOT_HEADER_DCD_ENABLE=&quot;1&quot; -DXIP_BOOT_HEADER_ENABLE=&quot;1&quot; -DXIP_EXTERNAL_FLASH=&quot;1&quot; -Oz -Wno-documentation -Wno-documentation-unknown-command -Wno-license-management -Wno-missing-noreturn -Wno-missing-prototypes -Wno-missing-variable-declarations -Wno-nonportable-include-path -Wno-packed -Wno-parentheses-equality  -Wno-reserved-id-macro -Wno-sign-conversion -Wno-unused-macros -ffunction-sections -fno-rtti -fshort-enums -fshort-wchar -funsigned-char -gdwarf-3 -std=c99 -xc" compiler="AC6"/>
     <asflags add="-gdwarf-3 -masm=auto" compiler="AC6"/>

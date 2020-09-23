@@ -31,7 +31,7 @@
   </compilers>
 
   <target Bvendor="Keil" Bname="MCB4300" Bversion="Ver 1.3" Ddsp="NO_DSP" Dendian="Little-endian" Dfpu="SP_FPU" Dmve="NO_MVE" Dname="LPC4357" Dsecure="Non-secure" Dtz="NO_TZ" Dvendor="NXP:11" Pname="Cortex-M4">
-    <output list="./Listings/" name="image" obj="./Objects/" type="exe"/>
+    <output intdir="./Objects/" name="image" outdir="./Objects/" type="exe"/>
     <ldflags add="--callgraph --entry=Reset_Handler --info sizes --info summarysizes --info totals --info unused --info veneers --load_addr_map_info --map --strict --summary_stderr --symbols --xref" compiler="AC6" file="./lpc4357.sct"/>
     <cflags add="-Oz -Wno-documentation -Wno-documentation-unknown-command -Wno-license-management -Wno-missing-noreturn -Wno-missing-prototypes -Wno-missing-variable-declarations -Wno-nonportable-include-path -Wno-packed -Wno-parentheses-equality  -Wno-reserved-id-macro -Wno-sign-conversion -Wno-unused-macros -ffunction-sections -fno-rtti -fshort-enums -fshort-wchar -funsigned-char -gdwarf-3 -std=c99 -xc" compiler="AC6"/>
     <asflags add="--xref -g" compiler="AC6" use="armasm"/>
