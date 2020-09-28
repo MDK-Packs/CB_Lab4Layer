@@ -1,8 +1,13 @@
 Board: STMicroelectronics NUCLEO-L552ZE-Q
 -----------------------------------------
 
-- This board layer is configured using [*STM32CubeMX*](https://www.st.com/en/development-tools/stm32cubemx.html)
-- [Setup with classic Keil MDK](https://www.keil.com/pack/doc/STM32Cube)
+The tables below list the device configuration for this board. This setup is configured using **STM32CubeMX**, 
+an interactive tool provided by ST for device configuration. Refer to ["Create Projects with STM32Cube HAL and STM32CubeMX"](https://www.keil.com/pack/doc/STM32Cube) for additional information.
+
+The heap/stack setup and the CMSIS-Driver assignment is in configuration files of related software components.
+**STM32CubeMX** is used for all other settings.
+
+The example project can be re-configured to work on custom hardware. Refer to ["Migrate STM32 Based Example Projects to Custom Hardware"](https://github.com/MDK-Packs/Documentation/tree/master/Porting_to_Custom_Hardware) for information. 
 
 ### System Configuration
 
