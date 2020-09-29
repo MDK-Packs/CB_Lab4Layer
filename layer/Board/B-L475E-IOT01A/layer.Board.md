@@ -1,8 +1,13 @@
 Board: STMicroelectronics B-L475E-IOT01A
 ----------------------------------------
 
-- This board setup is mainly configured using [STM32CubeMX with classic Keil MDK](https://www.keil.com/pack/doc/STM32Cube) and uses a board specific CMSIS-Driver VIO.
-- Refer to [Migrate STM32 Based Example Projects to Custom Hardware](https://github.com/MDK-Packs/Documentation/blob/master/Porting_to_Custom_Hardware/README.md) for instructions on how to adapt it to bespoke hardware designs.
+The tables below list the device configuration for this board. This setup is configured using **STM32CubeMX**, 
+an interactive tool provided by ST for device configuration. Refer to ["Create Projects with STM32Cube HAL and STM32CubeMX"](https://www.keil.com/pack/doc/STM32Cube) for additional information.
+
+The heap/stack setup and the CMSIS-Driver assignment is in configuration files of related software components.
+**STM32CubeMX** is used for all other settings.
+
+The example project can be re-configured to work on custom hardware. Refer to ["Migrate STM32 Based Example Projects to Custom Hardware"](https://github.com/MDK-Packs/Documentation/tree/master/Porting_to_Custom_Hardware) for information. 
 
 ### System Configuration
 
