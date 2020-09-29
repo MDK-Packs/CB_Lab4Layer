@@ -32,7 +32,6 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "cmsis_os2.h"                  // ::CMSIS:RTOS2
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -58,8 +57,12 @@ extern void app_initialize (void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define ARDUINO_IO_D9_Pin GPIO_PIN_15
+#define ARDUINO_IO_D9_GPIO_Port GPIOA
 #define MemoryCard_CD0_Pin GPIO_PIN_13
 #define MemoryCard_CD0_GPIO_Port GPIOC
+#define ARDUINO_IO_D10_Pin GPIO_PIN_0
+#define ARDUINO_IO_D10_GPIO_Port GPIOI
 /* USER CODE BEGIN Private defines */
 extern RNG_HandleTypeDef hrng;
 /* USER CODE END Private defines */
