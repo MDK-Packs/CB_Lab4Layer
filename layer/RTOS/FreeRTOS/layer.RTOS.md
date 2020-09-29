@@ -1,6 +1,8 @@
 RTOS: FreeRTOS Real-Time Operating System
 -----------------------------------------
-The real-time operating system [FreeRTOS](https://github.com/ARM-software/CMSIS-FreeRTOS) implements the resource management. It is configured with the following settings:
+The real-time operating system [FreeRTOS](https://github.com/ARM-software/CMSIS-FreeRTOS) implements the resource management.
+
+It is configured with the following settings:
 
 - Minimal stack size \[words]: 768
 - Total heap size \[bytes]: 24000
