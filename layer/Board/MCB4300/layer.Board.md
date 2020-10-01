@@ -68,9 +68,4 @@ and configured by adapting:
 | ETH_PHY0     | DP83848 (external)
 | MCI0         | SD/MMC
 
-**STDOUT** routed to ITM
-
-
-
-
-
+**STDOUT** is routed to ITM

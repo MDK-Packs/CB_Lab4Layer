@@ -85,7 +85,7 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 | UART4        | Asynchronous, Hardware Flow Control=off, Do Not Generate Initialization Function Call                              | yes | no                                                 | Arduino UNO R3 connector (CN3)
 | USART1       | Asynchronous, Hardware Flow Control=off, Baud Rate: 115200 Bits/s, Word Length: 8 Bits, Parity: None, Stop Bits: 1 | no  | no                                                 | ST-LINK Virtual COM port
 
-**STDIO** routed to Virtual COM port (USART1)
+**STDIO** is routed to Virtual COM port (USART1)
 
 ### Security Peripherals Configuration
 

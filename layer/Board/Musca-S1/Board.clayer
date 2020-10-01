@@ -1,47 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <cprj schemaVersion="0.0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CPRJ.xsd">
-  <created timestamp="2020-07-02T16:53:15" tool="cbuildgen 0.9.0">
+  <created timestamp="2020-10-01T21:39:49" tool="cbuildgen 0.9.1-precommit+799">
+    <used file="google_mqtt_demo.Musca-S1_ESP8266.cprj" path="D:/Test/CB_Lab4Layer/build/../project/Google_MQTT_Demo/Musca-S1_ESP8266_WiFi_RTX" timestamp="2020-09-30T14:24:29"/>
   </created>
 
   <info isLayer="true">
-    <description>Board layer for Musca-S1</description>
+    <description>Board setup with interfaces</description>
     <category>Board</category>
-    <keywords>Board, Musca-S1</keywords>
     <license>BSD 3-Clause, Apache 2.0</license>
+    <interfaces>
+      <consumes id="RTOS2"/>
+      <provides id="A_UART" value="0"/>
+      <provides id="STDOUT"/>
+      <provides id="Heap" value="65536"/>
+    </interfaces>
   </info>
 
   <layers>
     <layer hasTarget="1" name="Board">
-      <description>Board layer for Musca-S1</description>
+      <description>Board setup with interfaces</description>
       <category>Board</category>
-      <keywords>Board, Musca-S1</keywords>
       <license>BSD 3-Clause, Apache 2.0</license>
+      <interfaces>
+        <consumes id="RTOS2"/>
+        <provides id="A_UART" value="0"/>
+        <provides id="STDOUT"/>
+        <provides id="Heap" value="65536"/>
+      </interfaces>
     </layer>
   </layers>
 
   <packages>
     <package name="CMSIS" vendor="ARM"/>
-    <package name="ARM_Compiler" vendor="Keil"/>
     <package name="Musca-S1_DFP" vendor="ARM"/>
+    <package name="ARM_Compiler" vendor="Keil"/>
   </packages>
 
   <compilers>
     <compiler name="AC6" version="6.0.0:6.99.99"/>
   </compilers>
 
-  <target Bvendor="ARM" Bname="V2M-Musca-S1" Bversion="S1" Ddsp="DSP" Dendian="Little-endian" Dfpu="SP_FPU" Dmve="NO_MVE" Dname="Musca-S1" Dsecure="TZ-disabled" Dtz="TZ" Dvendor="ARM:82" Pname="CM33-0">
+  <target Bname="V2M-Musca-S1" Bvendor="ARM" Bversion="S1" Ddsp="DSP" Dendian="Little-endian" Dfpu="SP_FPU" Dmve="NO_MVE" Dname="Musca-S1" Dsecure="TZ-disabled" Dtz="TZ" Dvendor="ARM:82" Pname="CM33-0">
     <output intdir="./Objects/" name="image" outdir="./Objects/" type="exe"/>
     <ldflags add="--callgraph --entry=Reset_Handler --info sizes --info summarysizes --info totals --info unused --info veneers --load_addr_map_info --map --strict --summary_stderr --symbols --xref" compiler="AC6" file="./RTE/Device/Musca-S1_CM33-0/armcc6_arm.sct"/>
     <cflags add="-Oz -Wno-documentation -Wno-documentation-unknown-command -Wno-license-management -Wno-missing-noreturn -Wno-missing-prototypes -Wno-missing-variable-declarations -Wno-nonportable-include-path -Wno-packed -Wno-parentheses-equality  -Wno-reserved-id-macro -Wno-sign-conversion -Wno-unused-macros -ffunction-sections -fno-rtti -fshort-enums -fshort-wchar -funsigned-char -gdwarf-3 -std=c99 -xc" compiler="AC6"/>
     <asflags add="-gdwarf-3 -masm=auto" compiler="AC6"/>
   </target>
-  
+
   <components>
     <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" layer="Board"/>
-    <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="Event Recorder" Cvariant="DAP" Cvendor="Keil" layer="Board">
-      <file attr="config" category="header" name="Config/EventRecorderConf.h" version="1.1.0"/>
-    </component>
-    <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="I/O" Csub="STDOUT" Cvariant="User" Cvendor="Keil" layer="Board"/>
     <component Cclass="CMSIS Driver" Cgroup="USART" Cvendor="ARM" layer="Board"/>
     <component Cclass="Device" Cgroup="Startup" Cvariant="C Startup" Cvendor="ARM" layer="Board">
       <file attr="config" category="header" name="CMSIS/Driver/Config/RTE_Device.h" version="1.2.0"/>
@@ -49,10 +56,14 @@
       <file attr="config" category="sourceC" name="Device/Source/startup_Musca-S1.c" version="2.0.0"/>
       <file attr="config" category="sourceC" name="Device/Source/system_Musca-S1.c" version="2.0.0"/>
     </component>
+    <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="Event Recorder" Cvariant="DAP" Cvendor="Keil" layer="Board">
+      <file attr="config" category="header" name="Config/EventRecorderConf.h" version="1.1.0"/>
+    </component>
+    <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="I/O" Csub="STDOUT" Cvariant="User" Cvendor="Keil" layer="Board"/>
   </components>
 
   <files>
-    <group name="Source Code">
+    <group name="App">
       <file category="sourceC" layer="Board" name="./main.c"/>
       <file category="header" layer="Board" name="./main.h"/>
       <file category="sourceC" layer="Board" name="./stdout_USART.c"/>

@@ -491,6 +491,7 @@ void BOARD_InitPins_Arduino_SPI8(void); /* Function assigned for the Cortex-M33 
  */
 void BOARD_InitPins_Arduino_PIO1_5(void); /* Function assigned for the Cortex-M33 (Core #0) */
 
+
 #if defined(__cplusplus)
 }
 #endif

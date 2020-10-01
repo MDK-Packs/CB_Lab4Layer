@@ -71,7 +71,7 @@
 #define  m_usb_sram_start              0x50100000
 #define  m_usb_sram_size               0x00004000
 
-#define m_data_noinit_size             0x00000500
+#define  m_data_noinit_size            0x00000500
 
 LR_m_text m_interrupts_start m_interrupts_size+m_text_size+m_veneer_table_size {   ; load region size_region
 

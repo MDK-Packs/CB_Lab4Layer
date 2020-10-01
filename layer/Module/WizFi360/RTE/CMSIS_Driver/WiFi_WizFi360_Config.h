@@ -34,7 +34,7 @@
 // <o>Connect to hardware via Driver_USART# <0-255>
 // <i>Defines the serial driver control block number (Driver_USART#)
 // <i> Default: 0
-#define WIFI_WIZ360_SERIAL_DRIVER           0
+#define WIFI_WIZ360_SERIAL_DRIVER           6
 
 // <o> Serial interface baudrate <115200=>115200
 //                               <230400=>230400

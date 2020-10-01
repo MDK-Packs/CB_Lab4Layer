@@ -40,4 +40,4 @@ The Board layer contains the following configured components:
 |:-------------|:----------
 | USART0       | UART0
 
-**STDOUT** routed to Virtual COM port (DAPLink, baudrate = 115200)
+**STDOUT** is routed to Virtual COM port (DAPLink, baudrate = 115200)

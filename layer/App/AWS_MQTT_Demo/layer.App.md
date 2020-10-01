@@ -14,7 +14,6 @@ Once the application is configured you can:
 - Connect the debugger.
 - Run the application and view messages in a debug printf or terminal window.
 
-
 AWS IoT Client
 --------------
 

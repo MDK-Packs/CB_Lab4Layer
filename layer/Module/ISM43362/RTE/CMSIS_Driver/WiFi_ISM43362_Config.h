@@ -36,7 +36,7 @@
 
 //   <o> SPI Driver Number
 //   <i> Configuration settings specifying SPI driver number used (if Module uses SPI interface)
-#define WIFI_ISM43362_SPI_DRV_NUM           0
+#define WIFI_ISM43362_SPI_DRV_NUM           1
 
 //   <o> Memory pool size
 //   <i> Configuration settings specifying memory pool size for receive packets buffering

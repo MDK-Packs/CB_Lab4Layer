@@ -12,7 +12,6 @@ Once the application is configured you can:
 - Connect the debugger.
 - Run the application and view messages in a debug printf or terminal window.
 
-
 Google IoT Client
 -----------------
 The file `demo.c` configures the connection to Google IoT with these settings:

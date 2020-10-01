@@ -131,7 +131,7 @@
 //   <i> Defines stack size for Idle thread.
 //   <i> Default: 512
 #ifndef OS_IDLE_THREAD_STACK_SIZE
-#define OS_IDLE_THREAD_STACK_SIZE   256
+#define OS_IDLE_THREAD_STACK_SIZE   512
 #endif
  
 //   <o>Idle Thread TrustZone Module Identifier
@@ -153,7 +153,7 @@
 //   <i> Initializes thread stack with watermark pattern for analyzing stack usage.
 //   <i> Enabling this option increases significantly the execution time of thread creation.
 #ifndef OS_STACK_WATERMARK
-#define OS_STACK_WATERMARK          1
+#define OS_STACK_WATERMARK          0
 #endif
  
 //   <o>Processor mode for Thread execution 
@@ -200,7 +200,7 @@
 //   <i> May be set to 0 when timers are not used.
 //   <i> Default: 512
 #ifndef OS_TIMER_THREAD_STACK_SIZE
-#define OS_TIMER_THREAD_STACK_SIZE  256
+#define OS_TIMER_THREAD_STACK_SIZE  512
 #endif
  
 //   <o>Timer Thread TrustZone Module Identifier
@@ -360,7 +360,7 @@
 //       <o.3>Detailed operation events
 //     </h>
 #ifndef OS_EVR_LEVEL
-#define OS_EVR_LEVEL                0x01U
+#define OS_EVR_LEVEL                0x00U
 #endif
  
 //     <h>RTOS Event Filter Setup
