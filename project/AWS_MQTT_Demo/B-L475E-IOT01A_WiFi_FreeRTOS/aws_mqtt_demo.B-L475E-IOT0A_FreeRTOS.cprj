@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<cprj schemaVersion="0.0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CPRJ.xsd">
+
+  <created timestamp="2020-09-30T14:22:41" tool="uVision V5.31.0.45"/>
+
+  <info>
+    <name>AWS MQTT Demo</name>
+    <description/>
+    <category>Example</category>
+  </info>
+
+  <layers>
+    <layer name="App">
+      <description>Demonstrates the subscribe-publish workflow of MQTT</description>
+      <doc>https://docs.aws.amazon.com/freertos/latest/lib-ref/c-sdk/mqtt/mqtt_demo.html</doc>
+      <category>Cloud, IoT, MQTT, AWS, Example</category>
+      <license>MIT</license>
+      <interfaces>
+        <consumes id="IoT_Socket"/>
+        <consumes id="RTOS2"/>
+        <consumes id="STDOUT"/>
+        <consumes id="Heap" value="65536"/>
+      </interfaces>
+    </layer>
+    <layer name="Socket">
+      <description>IoT Socket interface connecting to CMSIS-Driver WiFi</description>
+      <doc>https://mdk-packs.github.io/IoT_Socket/html/index.html</doc>
+      <category>Socket</category>
+      <license>Apache 2.0</license>
+      <interfaces>
+        <consumes id="C_WiFi" value="0"/>
+        <provides id="IoT_Socket"/>
+      </interfaces>
+    </layer>
+    <layer name="RTOS">
+      <description>FreeRTOS open-source real-time operating system with CMSIS-RTOS v2 API</description>
+      <doc>https://arm-software.github.io/CMSIS-FreeRTOS/General/html/index.html</doc>
+      <category>RTOS</category>
+      <license>Apache 2.0</license>
+      <interfaces>
+        <provides id="RTOS2"/>
+      </interfaces>
+    </layer>
+    <layer hasTarget="1" name="Board">
+      <description>Board setup with interfaces</description>
+      <category>Board</category>
+      <license>BSD 3-Clause, Apache 2.0</license>
+      <interfaces>
+        <consumes id="RTOS2"/>
+        <provides id="C_WiFi" value="0"/>
+        <provides id="STDOUT"/>
+        <provides id="Heap" value="65536"/>
+      </interfaces>
+    </layer>
+  </layers>
+
+  <packages>
+    <package name="B-L475E-IOT01A_BSP" vendor="Keil"/>
+    <package name="CMSIS" vendor="ARM"/>
+    <package name="CMSIS-Driver" vendor="ARM"/>
+    <package name="CMSIS-FreeRTOS" vendor="ARM"/>
+    <package name="mbedTLS" vendor="ARM"/>
+    <package name="AWS_IoT_Device" vendor="MDK-Packs"/>
+    <package name="IoT_Socket" vendor="MDK-Packs"/>
+    <package name="ARM_Compiler" vendor="Keil"/>
+    <package name="STM32L4xx_DFP" vendor="Keil"/>
+  </packages>
+
+  <compilers>
+    <compiler name="AC6" version="6.0.0:6.99.99"/>
+  </compilers>
+
+  <target Bname="B-L475E-IOT01A" Bvendor="STMicroelectronics" Bversion="1" Ddsp="DSP" Dendian="Little-endian" Dfpu="SP_FPU" Dmve="NO_MVE" Dname="STM32L475VGTx" Dsecure="Non-secure" Dtz="NO_TZ" Dvendor="STMicroelectronics:13">
+    <output intdir="./Objects/" name="image" outdir="./Objects/" type="exe"/>
+    <ldflags add="--branchpatch=sdcomp-29491-629360 --callgraph --entry=Reset_Handler --info sizes --info summarysizes --info totals --info unused --info veneers --load_addr_map_info --map --strict --summary_stderr --symbols --xref" compiler="AC6" file="./stm32l475.sct"/>
+    <cflags add="-Oz -Wno-documentation -Wno-documentation-unknown-command -Wno-license-management -Wno-missing-noreturn -Wno-missing-prototypes -Wno-missing-variable-declarations -Wno-nonportable-include-path -Wno-packed -Wno-parentheses-equality  -Wno-reserved-id-macro -Wno-sign-conversion -Wno-unused-macros -ffunction-sections -fno-rtti -fshort-enums -fshort-wchar -funsigned-char -gdwarf-3 -std=c99 -xc" compiler="AC6"/>
+    <asflags add="--xref -g" compiler="AC6" use="armasm"/>
+  </target>
+
+  <components>
+    <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" layer="Board"/>
+    <component Cclass="CMSIS" Cgroup="RTOS2" Csub="FreeRTOS" Cvariant="Cortex-M" Cvendor="ARM" layer="RTOS"/>
+    <component Cclass="CMSIS Driver" Cgroup="SPI" Cvendor="Keil" layer="Board"/>
+    <component Cclass="CMSIS Driver" Cgroup="WiFi" Csub="ISM43362" Cvariant="SPI" Cvendor="Keil" layer="Board">
+      <file attr="config" category="header" name="WiFi/ISM43362/Config/WiFi_ISM43362_Config.h" version="1.1.0"/>
+      <file attr="config" category="source" name="WiFi/ISM43362/Config/WiFi_ISM43362_HW.c" version="1.1.0"/>
+    </component>
+    <component Cclass="Device" Cgroup="STM32Cube Framework" Csub="STM32CubeMX" Cvendor="Keil" layer="Board"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Common" Cvendor="Keil" layer="Board"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Cortex" Cvendor="Keil" layer="Board"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="DMA" Cvendor="Keil" layer="Board"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="GPIO" Cvendor="Keil" layer="Board"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="PWR" Cvendor="Keil" layer="Board"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RCC" Cvendor="Keil" layer="Board"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RNG" Cvendor="Keil" layer="Board"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="SPI" Cvendor="Keil" layer="Board"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="UART" Cvendor="Keil" layer="Board"/>
+    <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" layer="Board">
+      <file attr="config" category="source" name="Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/arm/startup_stm32l475xx.s" version="1.3.1"/>
+      <file attr="config" category="source" name="Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.c" version="1.3.1"/>
+    </component>
+    <component Cclass="IoT Client" Cgroup="AWS" Cvendor="MDK-Packs" layer="App">
+      <file attr="config" category="header" name="config/iot_config.h" version="1.0.0"/>
+    </component>
+    <component Cclass="IoT Utility" Cgroup="AWS" Csub="Common" Cvendor="MDK-Packs" layer="App"/>
+    <component Cclass="IoT Utility" Cgroup="AWS" Csub="MQTT" Cvendor="MDK-Packs" layer="App">
+      <cflags add="-DIOT_MQTT_RESPONSE_WAIT_MS=&quot;10000&quot;" compiler="AC6"/>
+    </component>
+    <component Cclass="IoT Utility" Cgroup="AWS" Csub="Platform" Cvariant="CMSIS-RTOS2 mbedTLS" Cvendor="MDK-Packs" layer="App">
+      <cflags add="-DIOT_NETWORK_MBEDTLS_POLL_TIMEOUT_MS=&quot;10000&quot;" compiler="AC6"/>
+      <file attr="config" category="header" name="third_party/mbedtls/mbedtls/config/iot_config_mbedtls.h" version="2.17.0"/>
+    </component>
+    <component Cclass="IoT Utility" Cgroup="Socket" Csub="WiFi" Cvendor="MDK-Packs" layer="Socket"/>
+    <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" layer="App">
+      <file attr="config" category="header" name="configs/mbedTLS_config.h" version="2.17.0"/>
+    </component>
+    <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="I/O" Csub="STDOUT" Cvariant="ITM" Cvendor="Keil" layer="Board"/>
+    <component Cbundle="FreeRTOS" Cclass="RTOS" Cgroup="Config" Cvariant="CMSIS RTOS2" Cvendor="ARM" layer="RTOS">
+      <file attr="config" category="header" name="CMSIS/RTOS2/FreeRTOS/Config/ARMCM/FreeRTOSConfig.h" version="10.2.0"/>
+    </component>
+    <component Cbundle="FreeRTOS" Cclass="RTOS" Cgroup="Core" Cvariant="Cortex-M" Cvendor="ARM" layer="RTOS"/>
+    <component Cbundle="FreeRTOS" Cclass="RTOS" Cgroup="Event Groups" Cvendor="ARM" layer="RTOS"/>
+    <component Cbundle="FreeRTOS" Cclass="RTOS" Cgroup="Heap" Cvariant="Heap_4" Cvendor="ARM" layer="RTOS"/>
+    <component Cbundle="FreeRTOS" Cclass="RTOS" Cgroup="Timers" Cvendor="ARM" layer="RTOS"/>
+  </components>
+
+  <files>
+    <group name="App">
+      <file category="sourceC" layer="App" name="./app_main.c"/>
+      <file category="sourceC" layer="App" name="./iot_demo.c">
+        <cflags add="-DRunDemo=&quot;RunMqttDemo&quot;" compiler="AC6"/>
+      </file>
+      <file category="sourceC" layer="App" name="./iot_demo_mqtt.c"/>
+      <file category="header" layer="App" name="./iot_demo_logging.h"/>
+      <file category="sourceC" layer="Socket" name="./socket_startup.c"/>
+    </group>
+    <group name="mbedTLS HW">
+      <file category="sourceC" layer="Board" name="./mbedTLS_HW/Src/entropy_hardware_poll.c"/>
+    </group>
+    <group name="Documentation">
+      <file category="doc" layer="App" name="./README.md"/>
+    </group>
+    <group name="STM32CubeMX">
+      <file category="other" layer="Board" name="./RTE/Device/STM32L475VGTx/STCubeGenerated/STCubeGenerated.ioc"/>
+    </group>
+  </files>
+
+</cprj>

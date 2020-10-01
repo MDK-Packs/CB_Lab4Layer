@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<cprj schemaVersion="0.0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CPRJ.xsd">
+
+  <created timestamp="2020-09-30T14:23:13" tool="uVision V5.31.0.45"/>
+
+  <info>
+    <name>AWS MQTT Demo</name>
+    <description/>
+    <category>Example</category>
+  </info>
+
+  <layers>
+    <layer name="App">
+      <description>Demonstrates the subscribe-publish workflow of MQTT</description>
+      <doc>https://docs.aws.amazon.com/freertos/latest/lib-ref/c-sdk/mqtt/mqtt_demo.html</doc>
+      <category>Cloud, IoT, MQTT, AWS, Example</category>
+      <license>MIT</license>
+      <interfaces>
+        <consumes id="IoT_Socket"/>
+        <consumes id="RTOS2"/>
+        <consumes id="STDOUT"/>
+        <consumes id="Heap" value="65536"/>
+      </interfaces>
+    </layer>
+    <layer name="Socket">
+      <description>IoT Socket interface connecting to lwIP over Ethernet</description>
+      <doc>https://www.nongnu.org/lwip/2_1_x/index.html</doc>
+      <category>Socket</category>
+      <license>BSD 3-Clause</license>
+      <interfaces>
+        <consumes id="C_ETH" value="0"/>
+        <consumes id="RTOS2"/>
+        <provides id="IoT_Socket"/>
+      </interfaces>
+    </layer>
+    <layer name="RTOS">
+      <description>Keil RTX5 open-source real-time operating system with CMSIS-RTOS v2 API</description>
+      <doc>https://www2.keil.com/mdk5/cmsis/rtx</doc>
+      <category>RTOS</category>
+      <license>Apache 2.0</license>
+      <interfaces>
+        <provides id="RTOS2"/>
+      </interfaces>
+    </layer>
+    <layer hasTarget="1" name="Board">
+      <description>Board setup with interfaces</description>
+      <category>Board</category>
+      <license>BSD 3-Clause, Apache 2.0</license>
+      <interfaces>
+        <consumes id="RTOS2"/>
+        <provides id="C_ETH" value="0"/>
+        <provides id="STDOUT"/>
+        <provides id="Heap" value="65536"/>
+      </interfaces>
+    </layer>
+  </layers>
+
+  <packages>
+    <package name="LPC4300_DFP" vendor="Keil"/>
+    <package name="CMSIS" vendor="ARM"/>
+    <package name="CMSIS-Driver" vendor="ARM"/>
+    <package name="mbedTLS" vendor="ARM"/>
+    <package name="AWS_IoT_Device" vendor="MDK-Packs"/>
+    <package name="IoT_Socket" vendor="MDK-Packs"/>
+    <package name="lwIP" vendor="lwIP"/>
+    <package name="ARM_Compiler" vendor="Keil"/>
+  </packages>
+
+  <compilers>
+    <compiler name="AC6" version="6.0.0:6.99.99"/>
+  </compilers>
+
+  <target Bname="MCB4300" Bvendor="Keil" Bversion="Ver 1.3" Ddsp="NO_DSP" Dendian="Little-endian" Dfpu="SP_FPU" Dmve="NO_MVE" Dname="LPC4357" Dsecure="Non-secure" Dtz="NO_TZ" Dvendor="NXP:11" Pname="Cortex-M4">
+    <output intdir="./Objects/" name="image" outdir="./Objects/" type="exe"/>
+    <ldflags add="--callgraph --entry=Reset_Handler --info sizes --info summarysizes --info totals --info unused --info veneers --load_addr_map_info --map --strict --summary_stderr --symbols --xref" compiler="AC6" file="./lpc4357.sct"/>
+    <cflags add="-Oz -Wno-documentation -Wno-documentation-unknown-command -Wno-license-management -Wno-missing-noreturn -Wno-missing-prototypes -Wno-missing-variable-declarations -Wno-nonportable-include-path -Wno-packed -Wno-parentheses-equality  -Wno-reserved-id-macro -Wno-sign-conversion -Wno-unused-macros -ffunction-sections -fno-rtti -fshort-enums -fshort-wchar -funsigned-char -gdwarf-3 -std=c99 -xc" compiler="AC6"/>
+    <asflags add="--xref -g" compiler="AC6" use="armasm"/>
+  </target>
+
+  <components>
+    <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" layer="Board"/>
+    <component Cclass="CMSIS" Cgroup="RTOS2" Csub="Keil RTX5" Cvariant="Source" Cvendor="ARM" layer="RTOS">
+      <file attr="config" category="source" name="CMSIS/RTOS2/RTX/Config/RTX_Config.c" version="5.1.0"/>
+      <file attr="config" category="header" name="CMSIS/RTOS2/RTX/Config/RTX_Config.h" version="5.5.1"/>
+    </component>
+    <component Cclass="CMSIS Driver" Cgroup="Ethernet MAC" Cvendor="Keil" layer="Board"/>
+    <component Cclass="CMSIS Driver" Cgroup="Ethernet PHY" Csub="DP83848C" Cvendor="Keil" layer="Board"/>
+    <component Cclass="Device" Cgroup="SCU" Cvendor="Keil" layer="Board"/>
+    <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" layer="Board">
+      <file attr="config" category="source" name="Device/Source/ARM/startup_LPC43xx.s" version="1.0.0"/>
+      <file attr="config" category="source" name="Device/Source/system_LPC43xx.c" version="1.0.3"/>
+      <file attr="config" category="header" name="RTE_Driver/Config/RTE_Device.h" version="2.2.1"/>
+    </component>
+    <component Cclass="IoT Client" Cgroup="AWS" Cvendor="MDK-Packs" layer="App">
+      <file attr="config" category="header" name="config/iot_config.h" version="1.0.0"/>
+    </component>
+    <component Cclass="IoT Utility" Cgroup="AWS" Csub="Common" Cvendor="MDK-Packs" layer="App"/>
+    <component Cclass="IoT Utility" Cgroup="AWS" Csub="MQTT" Cvendor="MDK-Packs" layer="App">
+      <cflags add="-DIOT_MQTT_RESPONSE_WAIT_MS=&quot;10000&quot;" compiler="AC6"/>
+    </component>
+    <component Cclass="IoT Utility" Cgroup="AWS" Csub="Platform" Cvariant="CMSIS-RTOS2 mbedTLS" Cvendor="MDK-Packs" layer="App">
+      <cflags add="-DIOT_NETWORK_MBEDTLS_POLL_TIMEOUT_MS=&quot;10000&quot;" compiler="AC6"/>
+      <file attr="config" category="header" name="third_party/mbedtls/mbedtls/config/iot_config_mbedtls.h" version="2.17.0"/>
+    </component>
+    <component Cclass="IoT Utility" Cgroup="Socket" Csub="lwIP" Cvendor="MDK-Packs" layer="Socket"/>
+    <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" layer="App">
+      <file attr="config" category="header" name="configs/mbedTLS_config.h" version="2.17.0"/>
+    </component>
+    <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="Event Recorder" Cvariant="DAP" Cvendor="Keil">
+      <file attr="config" category="header" name="Config/EventRecorderConf.h" version="1.1.0"/>
+    </component>
+    <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="I/O" Csub="STDOUT" Cvariant="ITM" Cvendor="Keil" layer="Board"/>
+    <component Cbundle="lwIP" Cclass="Network" Cgroup="API" Cvendor="lwIP" layer="Socket"/>
+    <component Cbundle="lwIP" Cclass="Network" Cgroup="CORE" Cvariant="IPv4" Cvendor="lwIP" layer="Socket">
+      <file attr="config" category="header" name="rte/config/lwipopts.h" version="2.1.2"/>
+    </component>
+    <component Cbundle="lwIP" Cclass="Network" Cgroup="Driver" Csub="Ethernet" Cvariant="CMSIS Driver" Cvendor="lwIP" layer="Socket">
+      <file attr="config" category="header" name="ports/cmsis-driver/config/ethif_config.h" version="1.0.0"/>
+    </component>
+    <component Cbundle="lwIP" Cclass="Network" Cgroup="Interface" Csub="Ethernet" Cvendor="lwIP" layer="Socket"/>
+    <component Cbundle="lwIP" Cclass="Network" Cgroup="RTOS" Cvariant="CMSIS-RTOS2" Cvendor="lwIP" layer="Socket"/>
+  </components>
+
+  <files>
+    <group name="App">
+      <file category="sourceC" layer="App" name="./app_main.c"/>
+      <file category="sourceC" layer="App" name="./iot_demo.c">
+        <cflags add="-DRunDemo=&quot;RunMqttDemo&quot;" compiler="AC6"/>
+      </file>
+      <file category="sourceC" layer="App" name="./iot_demo_mqtt.c"/>
+      <file category="header" layer="App" name="./iot_demo_logging.h"/>
+      <file category="sourceC" layer="Socket" name="./socket_startup.c"/>
+      <file category="sourceC" layer="Board" name="./main.c"/>
+      <file category="header" layer="Board" name="./main.h"/>
+    </group>
+    <group name="Documentation">
+      <file category="doc" layer="App" name="./README.md"/>
+    </group>
+  </files>
+
+</cprj>
