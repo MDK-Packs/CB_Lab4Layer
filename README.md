@@ -15,7 +15,7 @@ Directory    | Content Description
 `./layer`    | Output/Input: Layers extracted from master projects that are used to generate reference examples
 `./project`  | Input: Master projects that are used to extract the layers
 `./docs`     | Documentation that explains how to create the demo examples from scratch
-`./demo`     | Demo examples (published on http://www2.keil.com/iot)
+`./demo`     | Demo examples (published on http://www.keil.com/iot)
 
 __Note:__ this is work in progress and there are several gaps that we will close in the near future:
 
@@ -84,4 +84,9 @@ Invoke CMSIS-Build using the .cprj file directly from the build directory (or fr
       (cbuild.sh): Build Invocation 0.9.0 (C) 2019-2020 ARM
       ... 
       cbuild.sh finished successfully!
+```
+
+Layers can be extracted from the master projects by executing the following script:
+```
+      $ ./extract_layers.sh
 ```
