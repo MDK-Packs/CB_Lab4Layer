@@ -12,9 +12,10 @@ RTOS based Blinky to more complex examples such as Cloud IoT connectors, or Mach
 Directory    | Content Description
 :------------|:----------------
 `./build`    | Input: Scripts that generate reference examples from layers
-`./layers`   | Input: Software layers that are extracted from projects
-`./project`  | Input: Master software examples that used to generate the layers
-`./docs`     | Documentation that explains how to create the software examples from scratch
+`./layer`    | Output/Input: Layers extracted from master projects that are used to generate reference examples
+`./project`  | Input: Master projects that are used to extract the layers
+`./docs`     | Documentation that explains how to create the demo examples from scratch
+`./demo`     | Demo examples (published on http://www2.keil.com/iot)
 
 __Note:__ this is work in progress and there are several gaps that we will close in the near future:
 
@@ -34,7 +35,7 @@ Layer        | Implements
 Board        | Base setup of a evaluation board; it includes CMSIS-Drivers and typically uses the device SDK
 RTOS         | RTOS kernel used in the example application
 Socket       | IP (internet) communication; frequently a TCP/IP stack
-WiFi         | WiFi Shield used in the example; a separate layer to make it easy to change Arduino shields
+Module       | WiFi Shield used in the example; a separate layer to make it easy to change Arduino shields
 App          | Application example; for IoT Cloud examples it contains typically a Cloud SDK
 
 The examples are composed in a way that the device configuration is preserved and can be adopted to the
