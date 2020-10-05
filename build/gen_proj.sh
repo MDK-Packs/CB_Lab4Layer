@@ -210,7 +210,7 @@ export ARDUINO_SPI_NUMBER=$(grep -o '<provides id="A_SPI" value="."' "${app}.cpr
 # execute layer configure
 for item in ${layer[@]}
 do
-  name="layer.${item,,}.sh"
+  name="layer.${item}.sh"
   if [ -f $name ]
   then
     ./$name  
