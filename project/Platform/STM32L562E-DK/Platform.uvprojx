@@ -828,7 +828,7 @@
         <LayKeys>RTOS</LayKeys>
         <LayCat>RTOS</LayCat>
         <LayLic>Apache 2.0</LayLic>
-        <LayTitle>RTX5</LayTitle>
+        <LayTitle>RTX</LayTitle>
         <LayUrl>https://www2.keil.com/mdk5/cmsis/rtx</LayUrl>
         <interfaces>
           <provides id="RTOS2"/>
