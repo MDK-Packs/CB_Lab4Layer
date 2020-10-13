@@ -64,7 +64,7 @@ The following steps describe how to generate working examples from the content o
 3. __Compose a single project from layers__: For this step it is necessary to understand which layers can be combined. Valid combinations are in the `ProjectList.txt` (# is a comment line that lists future combinations). 
    The example below composes the project AWS_MQTT_Demo for 32F746GDISCOVERY board using ESP8266 module and WiFi socket with RTX as RTOS
 ```
-      $ ./gen_proj.sh App=AWS_MQTT_Demo Board=32F746GDISCOVERY Module=ESP8266 Socket=WiFi RTOS=RTX --layer=../Layer
+      $ ./gen_proj.sh App=AWS_MQTT_Demo Board=32F746GDISCOVERY Module=ESP8266 Socket=WiFi RTOS=RTX --layer=../layer
       Generate project from layers
       Output:  AWS_MQTT_Demo/32F746GDISCOVERY_ESP8266_WiFi_RTX
       Project: AWS_MQTT_Demo.cprj
@@ -74,7 +74,7 @@ The following steps describe how to generate working examples from the content o
 
 4. __Compose multiple projects out of layers__: The file `ProjectList.txt` provides the verified combinations. To compose all project combinations execute the following script:
 ```
-      $ ./gen_proj_list.sh ProjectList.txt --layer=../Layer
+      $ ./gen_proj_list.sh ProjectList.txt --layer=../layer
 ```
 
 5. __Build a composed project__:
