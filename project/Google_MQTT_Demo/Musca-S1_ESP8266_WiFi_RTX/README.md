@@ -66,7 +66,7 @@ This module was tested with the ESP8266 AT command set firmware revision **1.6.2
 Board: Arm Musca-S1
 -------------------
 
-The Board layer contains the following configured components:
+The tables below list the device configuration for this board.
 
 ### System Configuration
 
