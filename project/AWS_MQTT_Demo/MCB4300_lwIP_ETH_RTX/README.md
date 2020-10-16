@@ -52,11 +52,12 @@ The IoT Socket is implemented using
 Board: Keil MCB4300
 -------------------
 
-This board layer is composed of components selected using the RTE (Run Time Environment) 
-and configured by adapting:
+The tables below list the device configuration for this board. This board layer is composed of components selected using the RTE (Run Time Environment) and configured by adapting:
 - `startup_LPC43xx.s` (Device:Startup)
 - `system_LPC43xx.c` (Device:Startup)
 - `RTE_Device.h` (Device:Startup)
+
+The heap/stack setup and the CMSIS-Driver assignment is in configuration files of related software components.
 
 ### System Configuration
 
