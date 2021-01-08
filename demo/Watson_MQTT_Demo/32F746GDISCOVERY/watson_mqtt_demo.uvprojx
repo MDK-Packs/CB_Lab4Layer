@@ -10,13 +10,13 @@
       <TargetName>STM32F746G-D ESP8266</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6140000::V6.14::ARMCLANG</pCCUsed>
+      <pCCUsed>6150000::V6.15::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F746NGHx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F7xx_DFP.2.13.0</PackID>
+          <PackID>Keil.STM32F7xx_DFP.2.14.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IROM(0x08000000,0x100000) IROM2(0x00200000,0x100000) IRAM(0x20010000,0x40000) IRAM2(0x20000000,0x10000) CPUTYPE("Cortex-M7") FPU3(SFPU) CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -483,13 +483,13 @@
       <TargetName>STM32F746G-D WizFi360</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6140000::V6.14::ARMCLANG</pCCUsed>
+      <pCCUsed>6150000::V6.15::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F746NGHx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F7xx_DFP.2.13.0</PackID>
+          <PackID>Keil.STM32F7xx_DFP.2.14.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IROM(0x08000000,0x100000) IROM2(0x00200000,0x100000) IRAM(0x20010000,0x40000) IRAM2(0x20000000,0x10000) CPUTYPE("Cortex-M7") FPU3(SFPU) CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -1045,152 +1045,180 @@
         </targetInfos>
       </component>
       <component Cbundle="MDK-Plus" Cclass="File System" Cgroup="CORE" Cvariant="LFN" Cvendor="Keil" Cversion="6.13.8" condition="CMSIS Core with RTOS and File System I/O">
-        <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.12.0"/>
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.12.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Cbundle="MDK-Plus" Cclass="File System" Cgroup="Drive" Csub="Memory Card" Cvendor="Keil" Cversion="6.13.8" condition="File System and SD/MMC Driver" maxInstances="2">
-        <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.12.0"/>
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.12.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
-      <component Capiversion="2.2.0" Cclass="CMSIS Driver" Cgroup="MCI" Cvendor="Keil" Cversion="1.8.0" condition="STM32F7 CMSIS_Driver MCI">
-        <package name="STM32F7xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.13.0"/>
+      <component Capiversion="2.2.0" Cclass="CMSIS Driver" Cgroup="MCI" Cvendor="Keil" Cversion="1.10.0" condition="STM32F7 CMSIS_Driver MCI">
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
-      <component Capiversion="2.1.0" Cclass="CMSIS Driver" Cgroup="USART" Cvendor="Keil" Cversion="1.14.0" condition="STM32F7 CMSIS_Driver USART">
-        <package name="STM32F7xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.13.0"/>
+      <component Capiversion="2.1.0" Cclass="CMSIS Driver" Cgroup="USART" Cvendor="Keil" Cversion="1.16.0" condition="STM32F7 CMSIS_Driver USART">
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="ESP8266" Cvariant="UART" Cvendor="Keil" Cversion="1.4.0" condition="CMSIS Core with RTOS2 and USART Driver" isTargetSpecific="1">
-        <package license="LICENSE.txt" name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.1"/>
+        <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
         </targetInfos>
       </component>
       <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="WizFi360" Cvariant="UART" Cvendor="Keil" Cversion="1.5.0" condition="CMSIS Core with RTOS2 and USART Driver" isTargetSpecific="1">
-        <package license="LICENSE.txt" name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.1"/>
+        <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Common" Cvendor="Keil" Cversion="1.2.8" condition="STM32F7 HAL Common">
-        <package name="STM32F7xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.13.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Cortex" Cvendor="Keil" Cversion="1.2.8" condition="STM32F7 HAL">
-        <package name="STM32F7xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.13.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="DMA" Cvendor="Keil" Cversion="1.2.8" condition="STM32F7 HAL">
-        <package name="STM32F7xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.13.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="GPIO" Cvendor="Keil" Cversion="1.2.8" condition="STM32F7 HAL">
-        <package name="STM32F7xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.13.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="MMC" Cvendor="Keil" Cversion="1.2.8" condition="STM32F7 HAL DMA">
-        <package name="STM32F7xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.13.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="PWR" Cvendor="Keil" Cversion="1.2.8" condition="STM32F7 HAL">
-        <package name="STM32F7xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.13.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RCC" Cvendor="Keil" Cversion="1.2.8" condition="STM32F7 HAL GPIO">
-        <package name="STM32F7xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.13.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RNG" Cvendor="Keil" Cversion="1.2.8" condition="STM32F7 HAL">
-        <package name="STM32F7xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.13.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="SD" Cvendor="Keil" Cversion="1.2.8" condition="STM32F7 HAL DMA">
-        <package name="STM32F7xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.13.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="UART" Cvendor="Keil" Cversion="1.2.8" condition="STM32F7 HAL DMA">
-        <package name="STM32F7xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.13.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
+        <targetInfos>
+          <targetInfo name="STM32F746G-D ESP8266"/>
+          <targetInfo name="STM32F746G-D WizFi360"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube LL" Csub="Common" Cvendor="Keil" Cversion="1.2.8" condition="STM32F7 LL Common">
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
+        <targetInfos>
+          <targetInfo name="STM32F746G-D ESP8266"/>
+          <targetInfo name="STM32F746G-D WizFi360"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube LL" Csub="PWR" Cvendor="Keil" Cversion="1.2.8" condition="STM32F7 LL">
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
+        <targetInfos>
+          <targetInfo name="STM32F746G-D ESP8266"/>
+          <targetInfo name="STM32F746G-D WizFi360"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube LL" Csub="RCC" Cvendor="Keil" Cversion="1.2.8" condition="STM32F7 LL">
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
+        <targetInfos>
+          <targetInfo name="STM32F746G-D ESP8266"/>
+          <targetInfo name="STM32F746G-D WizFi360"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube LL" Csub="UTILS" Cvendor="Keil" Cversion="1.2.8" condition="STM32F7">
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.2.5" condition="STM32F7 CMSIS">
-        <package name="STM32F7xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.13.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Data Exchange" Cgroup="JSON" Csub="cJSON" Cvendor="MDK-Packs" Cversion="1.7.7" condition="ARMCC">
-        <package license="LICENSE.txt" name="cJSON" schemaVersion="1.4" url="https://github.com/MDK-Packs/Pack/raw/master/cJSON/" vendor="MDK-Packs" version="1.0.0"/>
+        <package name="cJSON" schemaVersion="1.4" url="https://github.com/MDK-Packs/Pack/raw/master/cJSON/" vendor="MDK-Packs" version="1.0.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="IoT Client" Cgroup="MQTTClient-C" Cvendor="MDK-Packs" Cversion="1.1.0" condition="MQTTClient-C">
-        <package license="edl-v10.txt" name="Paho_MQTT" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/Paho_MQTT/" vendor="MDK-Packs" version="1.0.2"/>
+        <package name="Paho_MQTT" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/Paho_MQTT/" vendor="MDK-Packs" version="1.0.2"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="IoT Client" Cgroup="Watson" Cvendor="MDK-Packs" Cversion="1.0.1" condition="Watson IoT Client">
-        <package license="LICENSE.txt" name="Watson_IoT_Device" schemaVersion="1.4" url="https://github.com/MDK-Packs/Pack/raw/master/Watson_IoT_Device/" vendor="MDK-Packs" version="1.0.2"/>
+        <package name="Watson_IoT_Device" schemaVersion="1.4" url="https://github.com/MDK-Packs/Pack/raw/master/Watson_IoT_Device/" vendor="MDK-Packs" version="1.0.2"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="IoT Utility" Cgroup="MQTTPacket" Cvendor="MDK-Packs" Cversion="1.1.0" condition="Cortex-M Device">
-        <package license="edl-v10.txt" name="Paho_MQTT" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/Paho_MQTT/" vendor="MDK-Packs" version="1.0.2"/>
+        <package name="Paho_MQTT" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/Paho_MQTT/" vendor="MDK-Packs" version="1.0.2"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
       </component>
       <component Capiversion="1.2.0" Cclass="IoT Utility" Cgroup="Socket" Csub="WiFi" Cvendor="MDK-Packs" Cversion="1.0.0" condition="WiFi Driver Socket">
-        <package license="LICENSE.txt" name="IoT_Socket" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/IoT_Socket/" vendor="MDK-Packs" version="1.2.1"/>
+        <package name="IoT_Socket" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/IoT_Socket/" vendor="MDK-Packs" version="1.2.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
@@ -1219,7 +1247,7 @@
       <file attr="config" category="header" name="WiFi\ESP8266\Config\WiFi_ESP8266_Config.h" version="1.0.0">
         <instance index="0">RTE\CMSIS_Driver\WiFi_ESP8266_Config.h</instance>
         <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="ESP8266" Cvariant="UART" Cvendor="Keil" Cversion="1.4.0" condition="CMSIS Core with RTOS2 and USART Driver"/>
-        <package license="LICENSE.txt" name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.1"/>
+        <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
         </targetInfos>
@@ -1227,7 +1255,7 @@
       <file attr="config" category="header" name="WiFi\WizFi360\Config\WiFi_WizFi360_Config.h" version="1.0.0">
         <instance index="0">RTE\CMSIS_Driver\WiFi_WizFi360_Config.h</instance>
         <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="WizFi360" Cvariant="UART" Cvendor="Keil" Cversion="1.5.0" condition="CMSIS Core with RTOS2 and USART Driver"/>
-        <package license="LICENSE.txt" name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.1"/>
+        <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D WizFi360"/>
         </targetInfos>
@@ -1235,7 +1263,7 @@
       <file attr="config" category="source" condition="STM32F746_ARMCC" name="Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\arm\startup_stm32f746xx.s" version="1.2.2">
         <instance index="0">RTE\Device\STM32F746NGHx\startup_stm32f746xx.s</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.2.5" condition="STM32F7 CMSIS"/>
-        <package name="STM32F7xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.13.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
@@ -1244,7 +1272,7 @@
       <file attr="config" category="source" name="Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\system_stm32f7xx.c" version="1.2.2">
         <instance index="0">RTE\Device\STM32F746NGHx\system_stm32f7xx.c</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.2.5" condition="STM32F7 CMSIS"/>
-        <package name="STM32F7xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.13.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.1" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
@@ -1253,7 +1281,7 @@
       <file attr="config" category="source" name="FileSystem\Config\FS_Config.c" version="6.3.0">
         <instance index="0">RTE\File_System\FS_Config.c</instance>
         <component Cbundle="MDK-Plus" Cclass="File System" Cgroup="CORE" Cvariant="LFN" Cvendor="Keil" Cversion="6.13.8" condition="CMSIS Core with RTOS and File System I/O"/>
-        <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.12.0"/>
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.12.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
@@ -1262,7 +1290,7 @@
       <file attr="config" category="header" name="FileSystem\Config\FS_Config_MC.h" version="6.2.0">
         <instance index="0">RTE\File_System\FS_Config_MC_0.h</instance>
         <component Cbundle="MDK-Plus" Cclass="File System" Cgroup="Drive" Csub="Memory Card" Cvendor="Keil" Cversion="6.13.8" condition="File System and SD/MMC Driver" maxInstances="2"/>
-        <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.12.0"/>
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.12.0"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
@@ -1271,7 +1299,7 @@
       <file attr="config" category="source" name="config\iotf_env.c" version="1.0.0">
         <instance index="0">RTE\IoT_Client\iotf_env.c</instance>
         <component Cclass="IoT Client" Cgroup="Watson" Cvendor="MDK-Packs" Cversion="1.0.1" condition="Watson IoT Client"/>
-        <package license="LICENSE.txt" name="Watson_IoT_Device" schemaVersion="1.4" url="https://github.com/MDK-Packs/Pack/raw/master/Watson_IoT_Device/" vendor="MDK-Packs" version="1.0.2"/>
+        <package name="Watson_IoT_Device" schemaVersion="1.4" url="https://github.com/MDK-Packs/Pack/raw/master/Watson_IoT_Device/" vendor="MDK-Packs" version="1.0.2"/>
         <targetInfos>
           <targetInfo name="STM32F746G-D ESP8266"/>
           <targetInfo name="STM32F746G-D WizFi360"/>
