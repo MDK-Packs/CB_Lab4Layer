@@ -7,7 +7,7 @@
 #include "certificates.h"
 #endif
 
-#define SERVER_NAME "mqtt.eclipse.org"
+#define SERVER_NAME "test.mosquitto.org"
 #if (MQTT_MBEDTLS != 0)
 #define SERVER_PORT 8883
 #else
