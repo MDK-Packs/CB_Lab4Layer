@@ -1,6 +1,6 @@
 /*---------------------------------------------------------------------------
- * Copyright (c) 2020 Arm Limited (or its affiliates). All rights reserved.
- *
+ * Copyright (c) 2020-2021 Arm Limited (or its affiliates).
+ * All rights reserved.
  * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the License); you may
@@ -19,6 +19,16 @@
 #ifndef MAIN_H__
 #define MAIN_H__
 
-extern void app_initialize (void);
+#include <stdint.h>
+
+/* Prototypes */
+extern uint32_t LPUART1_GetFreq    (void);
+extern void     LPUART1_InitPins   (void);
+extern void     LPUART1_DeinitPins (void);
+extern uint32_t LPUART3_GetFreq    (void);
+extern void     LPUART3_InitPins   (void);
+extern void     LPUART3_DeinitPins (void);
+
+extern void     app_initialize     (void);
 
 #endif
