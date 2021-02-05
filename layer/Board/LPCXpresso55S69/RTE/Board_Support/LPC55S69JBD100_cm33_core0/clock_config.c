@@ -21,7 +21,7 @@ product: Clocks v7.0
 processor: LPC55S69
 package_id: LPC55S69JBD100
 mcu_data: ksdk2_0
-processor_version: 7.0.1
+processor_version: 9.0.0
 board: LPCXpresso55S69
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
@@ -285,10 +285,16 @@ void BOARD_BootClockPLL150M(void)
     CLOCK_SetPLL0Freq(&pll0Setup);                       /*!< Configure PLL0 to the desired values */
 
     /*!< Set up dividers */
-    CLOCK_SetClkDiv(kCLOCK_DivFlexFrg0, 0U, true);               /*!< Reset FRGCTRL0_DIV divider counter and halt it */
-    CLOCK_SetClkDiv(kCLOCK_DivFlexFrg0, 256U, false);         /*!< Set FRGCTRL0_DIV divider to value 256 */
-    CLOCK_SetClkDiv(kCLOCK_DivFlexFrg2, 0U, true);               /*!< Reset FRGCTRL2_DIV divider counter and halt it */
-    CLOCK_SetClkDiv(kCLOCK_DivFlexFrg2, 256U, false);         /*!< Set FRGCTRL2_DIV divider to value 256 */
+    #if FSL_CLOCK_DRIVER_VERSION >= MAKE_VERSION(2, 3, 4)
+      CLOCK_SetClkDiv(kCLOCK_DivFlexFrg0, 0U, false);         /*!< Set DIV to value 0xFF and MULT to value 0U in related FLEXFRGCTRL register */
+    #else
+      CLOCK_SetClkDiv(kCLOCK_DivFlexFrg0, 256U, false);         /*!< Set DIV to value 0xFF and MULT to value 0U in related FLEXFRGCTRL register */
+    #endif
+    #if FSL_CLOCK_DRIVER_VERSION >= MAKE_VERSION(2, 3, 4)
+      CLOCK_SetClkDiv(kCLOCK_DivFlexFrg2, 0U, false);         /*!< Set DIV to value 0xFF and MULT to value 0U in related FLEXFRGCTRL register */
+    #else
+      CLOCK_SetClkDiv(kCLOCK_DivFlexFrg2, 256U, false);         /*!< Set DIV to value 0xFF and MULT to value 0U in related FLEXFRGCTRL register */
+    #endif
     CLOCK_SetClkDiv(kCLOCK_DivAhbClk, 1U, false);         /*!< Set AHBCLKDIV divider to value 1 */
     CLOCK_SetClkDiv(kCLOCK_DivFrohfClk, 0U, true);               /*!< Reset FROHFDIV divider counter and halt it */
     CLOCK_SetClkDiv(kCLOCK_DivFrohfClk, 1U, false);         /*!< Set FROHFDIV divider to value 1 */
