@@ -1,7 +1,7 @@
 Board: NXP LPCXpresso55S69
 --------------------------
 
-The tables below list the device configuration for this board. The board layer for the NXP LPCXpresso55S69 is using the software component `::Board Support: SDK Project Template: project_template (Variant: lpcxpresso55s69)` from `NXP.LPCXpresso55S69_BSP.12.3.0` pack.
+The tables below list the device configuration for this board. The board layer for the NXP LPCXpresso55S69 is using the software component `::Board Support: SDK Project Template: project_template (Variant: lpcxpresso55s69)` from `NXP.LPCXpresso55S69_BSP.12.4.0` pack.
 
 The heap/stack setup and the CMSIS-Driver assignment is in configuration files of related software components.
 

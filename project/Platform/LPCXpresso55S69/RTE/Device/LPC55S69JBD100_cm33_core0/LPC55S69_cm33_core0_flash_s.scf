@@ -116,6 +116,6 @@ LR_m_text m_interrupts_start m_interrupts_size+m_text_size+m_veneer_table_size {
 
 LR_CORE1_IMAGE m_core1_image_start {
   CORE1_REGION m_core1_image_start m_core1_image_size {
-    * (.m0code)
+    * (.core1_code)
   }
 }

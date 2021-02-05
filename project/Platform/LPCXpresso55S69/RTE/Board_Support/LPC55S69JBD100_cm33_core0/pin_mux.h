@@ -34,15 +34,29 @@ void BOARD_InitBootPins(void);
 
 /*! @name PIO0_29 (number 92), P8[2]/U6[13]/FC0_USART_RXD
   @{ */
-#define BOARD_INITDEBUG_UARTPINS_DEBUG_UART_RX_PORT 0U /*!<@brief PORT device name: 0U */
-#define BOARD_INITDEBUG_UARTPINS_DEBUG_UART_RX_PIN 29U /*!<@brief 0U pin index: 29 */
-                                                       /* @} */
+/*!
+ * @brief PORT peripheral base pointer */
+#define BOARD_INITDEBUG_UARTPINS_DEBUG_UART_RX_PORT 0U
+/*!
+ * @brief PORT pin number */
+#define BOARD_INITDEBUG_UARTPINS_DEBUG_UART_RX_PIN 29U
+/*!
+ * @brief PORT pin mask */
+#define BOARD_INITDEBUG_UARTPINS_DEBUG_UART_RX_PIN_MASK (1U << 29U)
+/* @} */
 
 /*! @name PIO0_30 (number 94), P8[3]/U6[12]/FC0_USART_TXD
   @{ */
-#define BOARD_INITDEBUG_UARTPINS_DEBUG_UART_TX_PORT 0U /*!<@brief PORT device name: 0U */
-#define BOARD_INITDEBUG_UARTPINS_DEBUG_UART_TX_PIN 30U /*!<@brief 0U pin index: 30 */
-                                                       /* @} */
+/*!
+ * @brief PORT peripheral base pointer */
+#define BOARD_INITDEBUG_UARTPINS_DEBUG_UART_TX_PORT 0U
+/*!
+ * @brief PORT pin number */
+#define BOARD_INITDEBUG_UARTPINS_DEBUG_UART_TX_PIN 30U
+/*!
+ * @brief PORT pin mask */
+#define BOARD_INITDEBUG_UARTPINS_DEBUG_UART_TX_PIN_MASK (1U << 30U)
+/* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
@@ -64,21 +78,42 @@ void BOARD_InitDEBUG_UARTPins(void); /* Function assigned for the Cortex-M33 (Co
 
 /*! @name PIO0_11 (number 13), U14[4]/SWDCLK_TRGT
   @{ */
-#define BOARD_INITSWD_DEBUGPINS_DEBUG_SWD_SWDCLK_PORT 0U /*!<@brief PORT device name: 0U */
-#define BOARD_INITSWD_DEBUGPINS_DEBUG_SWD_SWDCLK_PIN 11U /*!<@brief 0U pin index: 11 */
-                                                         /* @} */
+/*!
+ * @brief PORT peripheral base pointer */
+#define BOARD_INITSWD_DEBUGPINS_DEBUG_SWD_SWDCLK_PORT 0U
+/*!
+ * @brief PORT pin number */
+#define BOARD_INITSWD_DEBUGPINS_DEBUG_SWD_SWDCLK_PIN 11U
+/*!
+ * @brief PORT pin mask */
+#define BOARD_INITSWD_DEBUGPINS_DEBUG_SWD_SWDCLK_PIN_MASK (1U << 11U)
+/* @} */
 
 /*! @name PIO0_12 (number 12), U15[4]/D7/P7[2]/IF_SWDIO
   @{ */
-#define BOARD_INITSWD_DEBUGPINS_DEBUG_SWD_SWDIO_PORT 0U /*!<@brief PORT device name: 0U */
-#define BOARD_INITSWD_DEBUGPINS_DEBUG_SWD_SWDIO_PIN 12U /*!<@brief 0U pin index: 12 */
-                                                        /* @} */
+/*!
+ * @brief PORT peripheral base pointer */
+#define BOARD_INITSWD_DEBUGPINS_DEBUG_SWD_SWDIO_PORT 0U
+/*!
+ * @brief PORT pin number */
+#define BOARD_INITSWD_DEBUGPINS_DEBUG_SWD_SWDIO_PIN 12U
+/*!
+ * @brief PORT pin mask */
+#define BOARD_INITSWD_DEBUGPINS_DEBUG_SWD_SWDIO_PIN_MASK (1U << 12U)
+/* @} */
 
 /*! @name PIO0_10 (number 21), U14[12]/SWO_TRGT
   @{ */
-#define BOARD_INITSWD_DEBUGPINS_DEBUG_SWD_SWO_PORT 0U /*!<@brief PORT device name: 0U */
-#define BOARD_INITSWD_DEBUGPINS_DEBUG_SWD_SWO_PIN 10U /*!<@brief 0U pin index: 10 */
-                                                      /* @} */
+/*!
+ * @brief PORT peripheral base pointer */
+#define BOARD_INITSWD_DEBUGPINS_DEBUG_SWD_SWO_PORT 0U
+/*!
+ * @brief PORT pin number */
+#define BOARD_INITSWD_DEBUGPINS_DEBUG_SWD_SWO_PIN 10U
+/*!
+ * @brief PORT pin mask */
+#define BOARD_INITSWD_DEBUGPINS_DEBUG_SWD_SWO_PIN_MASK (1U << 10U)
+/* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
@@ -151,9 +186,10 @@ void BOARD_InitSWD_DEBUGPins(void); /* Function assigned for the Cortex-M33 (Cor
 
 /*! @name PIO0_22 (number 78), P10[1]/USB0_VBUS
   @{ */
-#define BOARD_INITUSBPINS_USB0_VBUS_PORT 0U /*!<@brief PORT device name: 0U */
-#define BOARD_INITUSBPINS_USB0_VBUS_PIN 22U /*!<@brief 0U pin index: 22 */
-                                            /* @} */
+#define BOARD_INITUSBPINS_USB0_VBUS_PORT 0U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITUSBPINS_USB0_VBUS_PIN 22U                   /*!<@brief PORT pin number */
+#define BOARD_INITUSBPINS_USB0_VBUS_PIN_MASK (1U << 22U)      /*!<@brief PORT pin mask */
+                                                              /* @} */
 
 /*! @name USB1_DM (number 35), P9[2]/D9[2]/USB1_HS_N
   @{ */
@@ -182,24 +218,36 @@ void BOARD_InitUSBPins(void); /* Function assigned for the Cortex-M33 (Core #0) 
 
 /*! @name PIO1_4 (number 1), R78/P18[5]/LEDR/PWM_ARD
   @{ */
-#define BOARD_INITLEDSPINS_LED_BULE_GPIO GPIO /*!<@brief GPIO device name: GPIO */
-#define BOARD_INITLEDSPINS_LED_BULE_PORT 1U   /*!<@brief PORT device name: 1U */
-#define BOARD_INITLEDSPINS_LED_BULE_PIN 4U    /*!<@brief 1U pin index: 4 */
-                                              /* @} */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITLEDSPINS_LED_BULE_GPIO GPIO                /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITLEDSPINS_LED_BULE_GPIO_PIN_MASK (1U << 4U) /*!<@brief GPIO pin mask */
+#define BOARD_INITLEDSPINS_LED_BULE_PORT 1U                  /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITLEDSPINS_LED_BULE_PIN 4U                   /*!<@brief PORT pin number */
+#define BOARD_INITLEDSPINS_LED_BULE_PIN_MASK (1U << 4U)      /*!<@brief PORT pin mask */
+                                                             /* @} */
 
 /*! @name PIO1_6 (number 5), R80/P18[9]/LEDB/PWM_ARD
   @{ */
-#define BOARD_INITLEDSPINS_LED_RED_GPIO GPIO /*!<@brief GPIO device name: GPIO */
-#define BOARD_INITLEDSPINS_LED_RED_PORT 1U   /*!<@brief PORT device name: 1U */
-#define BOARD_INITLEDSPINS_LED_RED_PIN 6U    /*!<@brief 1U pin index: 6 */
-                                             /* @} */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITLEDSPINS_LED_RED_GPIO GPIO                /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITLEDSPINS_LED_RED_GPIO_PIN_MASK (1U << 6U) /*!<@brief GPIO pin mask */
+#define BOARD_INITLEDSPINS_LED_RED_PORT 1U                  /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITLEDSPINS_LED_RED_PIN 6U                   /*!<@brief PORT pin number */
+#define BOARD_INITLEDSPINS_LED_RED_PIN_MASK (1U << 6U)      /*!<@brief PORT pin mask */
+                                                            /* @} */
 
 /*! @name PIO1_7 (number 9), R79/P18[7]/LEDG/PWM_ARD
   @{ */
-#define BOARD_INITLEDSPINS_LED_GREEN_GPIO GPIO /*!<@brief GPIO device name: GPIO */
-#define BOARD_INITLEDSPINS_LED_GREEN_PORT 1U   /*!<@brief PORT device name: 1U */
-#define BOARD_INITLEDSPINS_LED_GREEN_PIN 7U    /*!<@brief 1U pin index: 7 */
-                                               /* @} */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITLEDSPINS_LED_GREEN_GPIO GPIO                /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITLEDSPINS_LED_GREEN_GPIO_PIN_MASK (1U << 7U) /*!<@brief GPIO pin mask */
+#define BOARD_INITLEDSPINS_LED_GREEN_PORT 1U                  /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITLEDSPINS_LED_GREEN_PIN 7U                   /*!<@brief PORT pin number */
+#define BOARD_INITLEDSPINS_LED_GREEN_PIN_MASK (1U << 7U)      /*!<@brief PORT pin mask */
+                                                              /* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
@@ -218,24 +266,36 @@ void BOARD_InitLEDsPins(void); /* Function assigned for the Cortex-M33 (Core #0)
 
 /*! @name PIO0_5 (number 88), S1/J10[1]/U3[12]/P17[8]/P7[7]/U11[4]/P0_5-ISP1
   @{ */
-#define BOARD_INITBUTTONSPINS_S1_GPIO GPIO /*!<@brief GPIO device name: GPIO */
-#define BOARD_INITBUTTONSPINS_S1_PORT 0U   /*!<@brief PORT device name: 0U */
-#define BOARD_INITBUTTONSPINS_S1_PIN 5U    /*!<@brief 0U pin index: 5 */
-                                           /* @} */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITBUTTONSPINS_S1_GPIO GPIO                /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITBUTTONSPINS_S1_GPIO_PIN_MASK (1U << 5U) /*!<@brief GPIO pin mask */
+#define BOARD_INITBUTTONSPINS_S1_PORT 0U                  /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITBUTTONSPINS_S1_PIN 5U                   /*!<@brief PORT pin number */
+#define BOARD_INITBUTTONSPINS_S1_PIN_MASK (1U << 5U)      /*!<@brief PORT pin mask */
+                                                          /* @} */
 
 /*! @name PIO1_18 (number 64), S2/P18[16]/P24[2]/WAKE/GPIO
   @{ */
-#define BOARD_INITBUTTONSPINS_S2_GPIO GPIO /*!<@brief GPIO device name: GPIO */
-#define BOARD_INITBUTTONSPINS_S2_PORT 1U   /*!<@brief PORT device name: 1U */
-#define BOARD_INITBUTTONSPINS_S2_PIN 18U   /*!<@brief 1U pin index: 18 */
-                                           /* @} */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITBUTTONSPINS_S2_GPIO GPIO                 /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITBUTTONSPINS_S2_GPIO_PIN_MASK (1U << 18U) /*!<@brief GPIO pin mask */
+#define BOARD_INITBUTTONSPINS_S2_PORT 1U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITBUTTONSPINS_S2_PIN 18U                   /*!<@brief PORT pin number */
+#define BOARD_INITBUTTONSPINS_S2_PIN_MASK (1U << 18U)      /*!<@brief PORT pin mask */
+                                                           /* @} */
 
 /*! @name PIO1_9 (number 10), S3/P18[1]/PIO1_9_GPIO_ARD
   @{ */
-#define BOARD_INITBUTTONSPINS_S3_GPIO GPIO /*!<@brief GPIO device name: GPIO */
-#define BOARD_INITBUTTONSPINS_S3_PORT 1U   /*!<@brief PORT device name: 1U */
-#define BOARD_INITBUTTONSPINS_S3_PIN 9U    /*!<@brief 1U pin index: 9 */
-                                           /* @} */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITBUTTONSPINS_S3_GPIO GPIO                /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITBUTTONSPINS_S3_GPIO_PIN_MASK (1U << 9U) /*!<@brief GPIO pin mask */
+#define BOARD_INITBUTTONSPINS_S3_PORT 1U                  /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITBUTTONSPINS_S3_PIN 9U                   /*!<@brief PORT pin number */
+#define BOARD_INITBUTTONSPINS_S3_PIN_MASK (1U << 9U)      /*!<@brief PORT pin mask */
+                                                          /* @} */
 
 /*! @name RESETN (number 32), S4/P16[10]/P23[2]/U14[8]/RESETN
   @{ */
@@ -267,57 +327,66 @@ void BOARD_InitPins_Core0(void); /* Function assigned for the Cortex-M33 (Core #
 
 /*! @name PIO1_20 (number 4), P17[1]/P24[5]/FC4_I2C_SCL_ARD
   @{ */
-#define BOARD_INITI2SPINS_FC4_I2C_SCL_PORT 1U /*!<@brief PORT device name: 1U */
-#define BOARD_INITI2SPINS_FC4_I2C_SCL_PIN 20U /*!<@brief 1U pin index: 20 */
-                                              /* @} */
+#define BOARD_INITI2SPINS_FC4_I2C_SCL_PORT 1U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITI2SPINS_FC4_I2C_SCL_PIN 20U                   /*!<@brief PORT pin number */
+#define BOARD_INITI2SPINS_FC4_I2C_SCL_PIN_MASK (1U << 20U)      /*!<@brief PORT pin mask */
+                                                                /* @} */
 
 /*! @name PIO1_21 (number 30), P17[3]/P24[6]/FC4_I2C_SDA_ARD
   @{ */
-#define BOARD_INITI2SPINS_FC4_I2C_SDA_PORT 1U /*!<@brief PORT device name: 1U */
-#define BOARD_INITI2SPINS_FC4_I2C_SDA_PIN 21U /*!<@brief 1U pin index: 21 */
-                                              /* @} */
+#define BOARD_INITI2SPINS_FC4_I2C_SDA_PORT 1U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITI2SPINS_FC4_I2C_SDA_PIN 21U                   /*!<@brief PORT pin number */
+#define BOARD_INITI2SPINS_FC4_I2C_SDA_PIN_MASK (1U << 21U)      /*!<@brief PORT pin mask */
+                                                                /* @} */
 
 /*! @name PIO1_31 (number 91), P19[7]/P19[8]/PLU_IN0/GPIO
   @{ */
-#define BOARD_INITI2SPINS_MCLK_PORT 1U /*!<@brief PORT device name: 1U */
-#define BOARD_INITI2SPINS_MCLK_PIN 31U /*!<@brief 1U pin index: 31 */
-                                       /* @} */
+#define BOARD_INITI2SPINS_MCLK_PORT 1U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITI2SPINS_MCLK_PIN 31U                   /*!<@brief PORT pin number */
+#define BOARD_INITI2SPINS_MCLK_PIN_MASK (1U << 31U)      /*!<@brief PORT pin mask */
+                                                         /* @} */
 
 /*! @name PIO0_21 (number 76), P17[14]/FC7_I2S_SCK
   @{ */
-#define BOARD_INITI2SPINS_FC7_I2S_SCK_PORT 0U /*!<@brief PORT device name: 0U */
-#define BOARD_INITI2SPINS_FC7_I2S_SCK_PIN 21U /*!<@brief 0U pin index: 21 */
-                                              /* @} */
+#define BOARD_INITI2SPINS_FC7_I2S_SCK_PORT 0U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITI2SPINS_FC7_I2S_SCK_PIN 21U                   /*!<@brief PORT pin number */
+#define BOARD_INITI2SPINS_FC7_I2S_SCK_PIN_MASK (1U << 21U)      /*!<@brief PORT pin mask */
+                                                                /* @} */
 
 /*! @name PIO0_20 (number 74), P17[10]/FC7_I2S_TX
   @{ */
-#define BOARD_INITI2SPINS_FC7_I2S_TX_PORT 0U /*!<@brief PORT device name: 0U */
-#define BOARD_INITI2SPINS_FC7_I2S_TX_PIN 20U /*!<@brief 0U pin index: 20 */
-                                             /* @} */
+#define BOARD_INITI2SPINS_FC7_I2S_TX_PORT 0U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITI2SPINS_FC7_I2S_TX_PIN 20U                   /*!<@brief PORT pin number */
+#define BOARD_INITI2SPINS_FC7_I2S_TX_PIN_MASK (1U << 20U)      /*!<@brief PORT pin mask */
+                                                               /* @} */
 
 /*! @name PIO0_19 (number 90), P17[12]/FC7_I2S_WS
   @{ */
-#define BOARD_INITI2SPINS_FC7_I2S_WS_PORT 0U /*!<@brief PORT device name: 0U */
-#define BOARD_INITI2SPINS_FC7_I2S_WS_PIN 19U /*!<@brief 0U pin index: 19 */
-                                             /* @} */
+#define BOARD_INITI2SPINS_FC7_I2S_WS_PORT 0U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITI2SPINS_FC7_I2S_WS_PIN 19U                   /*!<@brief PORT pin number */
+#define BOARD_INITI2SPINS_FC7_I2S_WS_PIN_MASK (1U << 19U)      /*!<@brief PORT pin mask */
+                                                               /* @} */
 
 /*! @name PIO0_10 (number 21), U14[12]/SWO_TRGT
   @{ */
-#define BOARD_INITI2SPINS_FC6_I2S_CLK_PORT 0U /*!<@brief PORT device name: 0U */
-#define BOARD_INITI2SPINS_FC6_I2S_CLK_PIN 10U /*!<@brief 0U pin index: 10 */
-                                              /* @} */
+#define BOARD_INITI2SPINS_FC6_I2S_CLK_PORT 0U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITI2SPINS_FC6_I2S_CLK_PIN 10U                   /*!<@brief PORT pin number */
+#define BOARD_INITI2SPINS_FC6_I2S_CLK_PIN_MASK (1U << 10U)      /*!<@brief PORT pin mask */
+                                                                /* @} */
 
 /*! @name PIO1_13 (number 2), P17[20]/FC6_I2S_RX
   @{ */
-#define BOARD_INITI2SPINS_FC6_I2S_RX_PORT 1U /*!<@brief PORT device name: 1U */
-#define BOARD_INITI2SPINS_FC6_I2S_RX_PIN 13U /*!<@brief 1U pin index: 13 */
-                                             /* @} */
+#define BOARD_INITI2SPINS_FC6_I2S_RX_PORT 1U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITI2SPINS_FC6_I2S_RX_PIN 13U                   /*!<@brief PORT pin number */
+#define BOARD_INITI2SPINS_FC6_I2S_RX_PIN_MASK (1U << 13U)      /*!<@brief PORT pin mask */
+                                                               /* @} */
 
 /*! @name PIO1_16 (number 87), P18[17]/SD1_PWR_EN
   @{ */
-#define BOARD_INITI2SPINS_FC6_I2S_WS_PORT 1U /*!<@brief PORT device name: 1U */
-#define BOARD_INITI2SPINS_FC6_I2S_WS_PIN 16U /*!<@brief 1U pin index: 16 */
-                                             /* @} */
+#define BOARD_INITI2SPINS_FC6_I2S_WS_PORT 1U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITI2SPINS_FC6_I2S_WS_PIN 16U                   /*!<@brief PORT pin number */
+#define BOARD_INITI2SPINS_FC6_I2S_WS_PIN_MASK (1U << 16U)      /*!<@brief PORT pin mask */
+                                                               /* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
@@ -337,22 +406,28 @@ void BOARD_InitI2SPins(void); /* Function assigned for the Cortex-M33 (Core #0) 
 
 /*! @name PIO1_21 (number 30), P17[3]/P24[6]/FC4_I2C_SDA_ARD
   @{ */
-#define BOARD_INITACCELPINS_FC4_I2C_SDA_PORT 1U /*!<@brief PORT device name: 1U */
-#define BOARD_INITACCELPINS_FC4_I2C_SDA_PIN 21U /*!<@brief 1U pin index: 21 */
-                                                /* @} */
+#define BOARD_INITACCELPINS_FC4_I2C_SDA_PORT 1U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITACCELPINS_FC4_I2C_SDA_PIN 21U                   /*!<@brief PORT pin number */
+#define BOARD_INITACCELPINS_FC4_I2C_SDA_PIN_MASK (1U << 21U)      /*!<@brief PORT pin mask */
+                                                                  /* @} */
 
 /*! @name PIO1_20 (number 4), P17[1]/P24[5]/FC4_I2C_SCL_ARD
   @{ */
-#define BOARD_INITACCELPINS_FC4_I2C_SCL_PORT 1U /*!<@brief PORT device name: 1U */
-#define BOARD_INITACCELPINS_FC4_I2C_SCL_PIN 20U /*!<@brief 1U pin index: 20 */
-                                                /* @} */
+#define BOARD_INITACCELPINS_FC4_I2C_SCL_PORT 1U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITACCELPINS_FC4_I2C_SCL_PIN 20U                   /*!<@brief PORT pin number */
+#define BOARD_INITACCELPINS_FC4_I2C_SCL_PIN_MASK (1U << 20U)      /*!<@brief PORT pin mask */
+                                                                  /* @} */
 
 /*! @name PIO1_19 (number 58), U7[3]/P18[14]/PLU_OUT1/GPIO
   @{ */
-#define BOARD_INITACCELPINS_ACCL_INTR_GPIO GPIO /*!<@brief GPIO device name: GPIO */
-#define BOARD_INITACCELPINS_ACCL_INTR_PORT 1U   /*!<@brief PORT device name: 1U */
-#define BOARD_INITACCELPINS_ACCL_INTR_PIN 19U   /*!<@brief 1U pin index: 19 */
-                                                /* @} */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITACCELPINS_ACCL_INTR_GPIO GPIO                 /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITACCELPINS_ACCL_INTR_GPIO_PIN_MASK (1U << 19U) /*!<@brief GPIO pin mask */
+#define BOARD_INITACCELPINS_ACCL_INTR_PORT 1U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITACCELPINS_ACCL_INTR_PIN 19U                   /*!<@brief PORT pin number */
+#define BOARD_INITACCELPINS_ACCL_INTR_PIN_MASK (1U << 19U)      /*!<@brief PORT pin mask */
+                                                                /* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
@@ -375,15 +450,29 @@ void BOARD_InitACCELPins(void); /* Function assigned for the Cortex-M33 (Core #0
 
 /*! @name PIO0_27 (number 27), P18[13]/P24[4]/FC2_USART_TXD_ARD
   @{ */
-#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_TX_PORT 0U /*!<@brief PORT device name: 0U */
-#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_TX_PIN 27U /*!<@brief 0U pin index: 27 */
-                                                               /* @} */
+/*!
+ * @brief PORT peripheral base pointer */
+#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_TX_PORT 0U
+/*!
+ * @brief PORT pin number */
+#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_TX_PIN 27U
+/*!
+ * @brief PORT pin mask */
+#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_TX_PIN_MASK (1U << 27U)
+/* @} */
 
 /*! @name PIO1_24 (number 3), P18[15]/P18[10]/P24[3]/PLU_OUT6/GPIO/FC2_USART_RXD_ARD/SD1_D1
   @{ */
-#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_RX_PORT 1U /*!<@brief PORT device name: 1U */
-#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_RX_PIN 24U /*!<@brief 1U pin index: 24 */
-                                                               /* @} */
+/*!
+ * @brief PORT peripheral base pointer */
+#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_RX_PORT 1U
+/*!
+ * @brief PORT pin number */
+#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_RX_PIN 24U
+/*!
+ * @brief PORT pin mask */
+#define BOARD_INITPINS_ARDUINO_USART2_ARDUINO_USART_RX_PIN_MASK (1U << 24U)
+/* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features for USART on 
@@ -444,28 +533,63 @@ void BOARD_InitPins_Arduino_USART2(void); /* Function assigned for the Cortex-M3
 
 /*! @name PIO1_2 (number 61), P17[9]/P23[4]/LSPI_HS_SCK
   @{ */
-#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_SCK_PORT 1U /*!<@brief PORT device name: 1U */
-#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_SCK_PIN 2U  /*!<@brief 1U pin index: 2 */
-                                                            /* @} */
+/*!
+ * @brief PORT peripheral base pointer */
+#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_SCK_PORT 1U
+/*!
+ * @brief PORT pin number */
+#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_SCK_PIN 2U
+/*!
+ * @brief PORT pin mask */
+#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_SCK_PIN_MASK (1U << 2U)
+/* @} */
 
 /*! @name PIO1_3 (number 62), P17[11]/P23[5]/LSPI_HS_MISO
   @{ */
-#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_MISO_PORT 1U /*!<@brief PORT device name: 1U */
-#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_MISO_PIN 3U  /*!<@brief 1U pin index: 3 */
-                                                             /* @} */
+/*!
+ * @brief PORT peripheral base pointer */
+#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_MISO_PORT 1U
+/*!
+ * @brief PORT pin number */
+#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_MISO_PIN 3U
+/*!
+ * @brief PORT pin mask */
+#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_MISO_PIN_MASK (1U << 3U)
+/* @} */
 
 /*! @name PIO0_26 (number 60), P17[13]/P23[6]/LSPI_HS_MOSI
   @{ */
-#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_MOSI_PORT 0U /*!<@brief PORT device name: 0U */
-#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_MOSI_PIN 26U /*!<@brief 0U pin index: 26 */
-                                                             /* @} */
+/*!
+ * @brief PORT peripheral base pointer */
+#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_MOSI_PORT 0U
+/*!
+ * @brief PORT pin number */
+#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_MOSI_PIN 26U
+/*!
+ * @brief PORT pin mask */
+#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_MOSI_PIN_MASK (1U << 26U)
+/* @} */
 
 /*! @name PIO1_1 (number 59), P17[15]/P23[3]/LSPI_HS_SSEL1
   @{ */
-#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_SSN_GPIO GPIO /*!<@brief GPIO device name: GPIO */
-#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_SSN_PORT 1U   /*!<@brief PORT device name: 1U */
-#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_SSN_PIN 1U    /*!<@brief 1U pin index: 1 */
-                                                              /* @} */
+
+/* Symbols to be used with GPIO driver */
+/*!
+ * @brief GPIO peripheral base pointer */
+#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_SSN_GPIO GPIO
+/*!
+ * @brief GPIO pin mask */
+#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_SSN_GPIO_PIN_MASK (1U << 1U)
+/*!
+ * @brief PORT peripheral base pointer */
+#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_SSN_PORT 1U
+/*!
+ * @brief PORT pin number */
+#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_SSN_PIN 1U
+/*!
+ * @brief PORT pin mask */
+#define BOARD_INITPINS_ARDUINO_SPI8_ARDUINO_SPI_SSN_PIN_MASK (1U << 1U)
+/* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features for SPI on 
@@ -479,10 +603,24 @@ void BOARD_InitPins_Arduino_SPI8(void); /* Function assigned for the Cortex-M33 
 
 /*! @name PIO1_5 (number 31), P17[17]/P24[1]/PIO1_5_GPIO_ARD
   @{ */
-#define BOARD_INITPINS_ARDUINO_PIO1_5_ARDUINO_PIO1_5_GPIO GPIO /*!<@brief GPIO device name: GPIO */
-#define BOARD_INITPINS_ARDUINO_PIO1_5_ARDUINO_PIO1_5_PORT 1U   /*!<@brief PORT device name: 1U */
-#define BOARD_INITPINS_ARDUINO_PIO1_5_ARDUINO_PIO1_5_PIN 5U    /*!<@brief 1U pin index: 5 */
-                                                               /* @} */
+
+/* Symbols to be used with GPIO driver */
+/*!
+ * @brief GPIO peripheral base pointer */
+#define BOARD_INITPINS_ARDUINO_PIO1_5_ARDUINO_PIO1_5_GPIO GPIO
+/*!
+ * @brief GPIO pin mask */
+#define BOARD_INITPINS_ARDUINO_PIO1_5_ARDUINO_PIO1_5_GPIO_PIN_MASK (1U << 5U)
+/*!
+ * @brief PORT peripheral base pointer */
+#define BOARD_INITPINS_ARDUINO_PIO1_5_ARDUINO_PIO1_5_PORT 1U
+/*!
+ * @brief PORT pin number */
+#define BOARD_INITPINS_ARDUINO_PIO1_5_ARDUINO_PIO1_5_PIN 5U
+/*!
+ * @brief PORT pin mask */
+#define BOARD_INITPINS_ARDUINO_PIO1_5_ARDUINO_PIO1_5_PIN_MASK (1U << 5U)
+/* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features for PIO1_5 pin on 
@@ -490,7 +628,6 @@ void BOARD_InitPins_Arduino_SPI8(void); /* Function assigned for the Cortex-M33 
  *
  */
 void BOARD_InitPins_Arduino_PIO1_5(void); /* Function assigned for the Cortex-M33 (Core #0) */
-
 
 #if defined(__cplusplus)
 }

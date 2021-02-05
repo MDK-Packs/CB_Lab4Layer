@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding= "UTF-8" ?>
-<configuration name="LPCXpresso55S69" version="1.7" xsi:schemaLocation="http://mcuxpresso.nxp.com/XSD/mex_configuration_1.7 http://mcuxpresso.nxp.com/XSD/mex_configuration_1.7.xsd" uuid="6c6bcd04-a24b-4f8f-aa35-5b756538b2f6" xmlns="http://mcuxpresso.nxp.com/XSD/mex_configuration_1.7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<configuration name="LPCXpresso55S69" xsi:schemaLocation="http://mcuxpresso.nxp.com/XSD/mex_configuration_1.9 http://mcuxpresso.nxp.com/XSD/mex_configuration_1.9.xsd" uuid="6c6bcd04-a24b-4f8f-aa35-5b756538b2f6" version="1.9" xmlns="http://mcuxpresso.nxp.com/XSD/mex_configuration_1.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <common>
       <processor>LPC55S69</processor>
       <package>LPC55S69JBD100</package>
@@ -18,13 +18,13 @@
       <generate_code_modified_registers_only>false</generate_code_modified_registers_only>
    </preferences>
    <tools>
-      <pins name="Pins" version="7.0" enabled="true" update_project_code="true">
+      <pins name="Pins" version="9.0" enabled="true" update_project_code="true">
          <generated_project_files>
             <file path="RTE/Board_Support/LPC55S69JBD100_cm33_core0/pin_mux.c" update_enabled="true"/>
             <file path="RTE/Board_Support/LPC55S69JBD100_cm33_core0/pin_mux.h" update_enabled="true"/>
          </generated_project_files>
          <pins_profile>
-            <processor_version>7.0.1</processor_version>
+            <processor_version>9.0.0</processor_version>
             <pin_labels>
                <pin_label pin_num="60" pin_signal="PIO0_26/FC2_RXD_SDA_MOSI_DATA/CLKOUT/CT_INP14/SCT0_OUT5/USB0_IDVALUE/FC0_SCK/HS_SPI_MOSI/SECURE_GPIO0_26" label="P17[13]/P23[6]/LSPI_HS_MOSI" identifier="ARDUINO_SPI_MOSI"/>
                <pin_label pin_num="27" pin_signal="PIO0_27/FC2_TXD_SCL_MISO_WS/CTIMER3_MAT2/SCT0_OUT6/FC7_RXD_SDA_MOSI_DATA/PLU_OUT0/SECURE_GPIO0_27" label="P18[13]/P24[4]/FC2_USART_TXD_ARD" identifier="ARDUINO_USART_TX"/>
@@ -631,7 +631,7 @@
             <file path="RTE/Board_Support/LPC55S69JBD100_cm33_core0/clock_config.h" update_enabled="true"/>
          </generated_project_files>
          <clocks_profile>
-            <processor_version>7.0.1</processor_version>
+            <processor_version>9.0.0</processor_version>
          </clocks_profile>
          <clock_configurations>
             <clock_configuration name="BOARD_BootClockFRO12M">
@@ -887,13 +887,13 @@
          </dcdx_profile>
          <dcdx_configurations/>
       </dcdx>
-      <periphs name="Peripherals" version="7.0" enabled="true" update_project_code="true">
+      <periphs name="Peripherals" version="9.0" enabled="true" update_project_code="true">
          <generated_project_files>
             <file path="RTE/Board_Support/LPC55S69JBD100_cm33_core0/peripherals.c" update_enabled="true"/>
             <file path="RTE/Board_Support/LPC55S69JBD100_cm33_core0/peripherals.h" update_enabled="true"/>
          </generated_project_files>
          <peripherals_profile>
-            <processor_version>7.0.1</processor_version>
+            <processor_version>9.0.0</processor_version>
          </peripherals_profile>
          <functional_groups>
             <functional_group name="BOARD_InitPeripherals_cm33_core0" uuid="61d0725d-b300-49cb-9c66-b5edfbf8ffc1" called_from_default_init="true" id_prefix="" core="cm33_core0">
@@ -901,7 +901,7 @@
                <options/>
                <dependencies/>
                <instances>
-                  <instance name="ACCEL" uuid="4cedbf23-d746-4b23-91f9-169c711d8ecd" type="flexcomm_i2c" type_id="flexcomm_i2c_567d1a9d97c12e5d39b00259c3436dc4" mode="I2C_Polling" peripheral="FLEXCOMM4" enabled="false" comment="" custom_name_enabled="true">
+                  <instance name="ACCEL" uuid="4cedbf23-d746-4b23-91f9-169c711d8ecd" type="flexcomm_i2c" type_id="flexcomm_i2c_567d1a9d97c12e5d39b00259c3436dc4" mode="I2C_Polling" peripheral="FLEXCOMM4" enabled="false" comment="" custom_name_enabled="true" editing_lock="false">
                      <config_set name="fsl_i2c" quick_selection="QS_I2C_Master">
                         <setting name="i2c_mode" value="kI2C_Master"/>
                         <setting name="clockSource" value="FXCOMFunctionClock"/>
@@ -913,7 +913,7 @@
                         </struct>
                      </config_set>
                   </instance>
-                  <instance name="DEBUG_UART" uuid="849d42e1-4f69-41ee-9448-c805305c9b8b" type="flexcomm_usart" type_id="flexcomm_usart_fcc110cc6b16332e9dfd9e0df675e21f" mode="polling" peripheral="FLEXCOMM0" enabled="false" comment="" custom_name_enabled="true">
+                  <instance name="DEBUG_UART" uuid="849d42e1-4f69-41ee-9448-c805305c9b8b" type="flexcomm_usart" type_id="flexcomm_usart_fcc110cc6b16332e9dfd9e0df675e21f" mode="polling" peripheral="FLEXCOMM0" enabled="false" comment="" custom_name_enabled="true" editing_lock="false">
                      <config_set name="usartConfig_t">
                         <struct name="usartConfig">
                            <setting name="clockSource" value="FXCOMFunctionClock"/>
@@ -930,10 +930,10 @@
                         </struct>
                      </config_set>
                   </instance>
-                  <instance name="LEDS" uuid="fd92a0eb-9c76-4326-a30c-567a42c19e01" type="lpc_gpio" type_id="lpc_gpio_8c9ab9b3668a514c1f4609fe43001865" mode="GPIO" peripheral="GPIO" enabled="false" comment="" custom_name_enabled="true">
+                  <instance name="LEDS" uuid="fd92a0eb-9c76-4326-a30c-567a42c19e01" type="lpc_gpio" type_id="lpc_gpio_8c9ab9b3668a514c1f4609fe43001865" mode="GPIO" peripheral="GPIO" enabled="false" comment="" custom_name_enabled="true" editing_lock="false">
                      <config_set name="lpc_gpio"/>
                   </instance>
-                  <instance name="SW" uuid="6d6c9e58-90c2-4662-b8be-6f1465b0099f" type="lpc_gpio" type_id="lpc_gpio_8c9ab9b3668a514c1f4609fe43001865" mode="GPIO" peripheral="GPIO" enabled="false" comment="" custom_name_enabled="true">
+                  <instance name="SW" uuid="6d6c9e58-90c2-4662-b8be-6f1465b0099f" type="lpc_gpio" type_id="lpc_gpio_8c9ab9b3668a514c1f4609fe43001865" mode="GPIO" peripheral="GPIO" enabled="false" comment="" custom_name_enabled="true" editing_lock="false">
                      <config_set name="lpc_gpio"/>
                   </instance>
                </instances>
@@ -947,14 +947,23 @@
          </functional_groups>
          <components>
             <component name="system" uuid="c541d045-35a7-407a-8954-1e5d90d61b00" type_id="system_54b53072540eeeb8f8e9343e71f28176">
-               <config_set_global name="global_system_definitions"/>
+               <config_set_global name="global_system_definitions">
+                  <setting name="user_definitions" value=""/>
+                  <setting name="user_includes" value=""/>
+               </config_set_global>
             </component>
             <component name="msg" uuid="b1831cba-97ad-47cd-9eb6-d55ef370caf5" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
                <config_set_global name="global_messages"/>
             </component>
+            <component name="generic_uart" uuid="4bc1c824-69fd-4488-821f-f989254db50c" type_id="generic_uart_8cae00565451cf2346eb1b8c624e73a6">
+               <config_set_global name="global_uart"/>
+            </component>
+            <component name="generic_can" uuid="be68d3e8-72b5-4437-a34e-8cadf7c70a3e" type_id="generic_can_1bfdd78b1af214566c1f23cf6a582d80">
+               <config_set_global name="global_can"/>
+            </component>
          </components>
       </periphs>
-      <tee name="TEE" version="1.0" enabled="false" update_project_code="true">
+      <tee name="TEE" version="3.0" enabled="false" update_project_code="true">
          <generated_project_files/>
          <tee_profile>
             <processor_version>0.0.0</processor_version>
@@ -1213,14 +1222,14 @@
             </pins_masks>
          </ahb>
          <sau enabled="true" all_non_secure="false" generate_code_for_disabled_regions="false">
-            <region start="0" size="268435456" security="ns" index="0" enabled="true"/>
-            <region start="536870912" size="3758096384" security="ns" index="1" enabled="true"/>
-            <region start="0" size="32" security="ns" index="2" enabled="false"/>
-            <region start="0" size="32" security="ns" index="3" enabled="false"/>
-            <region start="0" size="32" security="ns" index="4" enabled="false"/>
-            <region start="0" size="32" security="ns" index="5" enabled="false"/>
-            <region start="0" size="32" security="ns" index="6" enabled="false"/>
-            <region start="0" size="32" security="ns" index="7" enabled="false"/>
+            <region start="0" size="268435456" security="ns" enabled="true" index="0"/>
+            <region start="536870912" size="3758096384" security="ns" enabled="true" index="1"/>
+            <region start="0" size="32" security="ns" enabled="false" index="2"/>
+            <region start="0" size="32" security="ns" enabled="false" index="3"/>
+            <region start="0" size="32" security="ns" enabled="false" index="4"/>
+            <region start="0" size="32" security="ns" enabled="false" index="5"/>
+            <region start="0" size="32" security="ns" enabled="false" index="6"/>
+            <region start="0" size="32" security="ns" enabled="false" index="7"/>
          </sau>
          <global_options>
             <option id="AIRCR_PRIS" value="no"/>

@@ -31,8 +31,8 @@ static const osThreadAttr_t app_main_attr = {
 /*---------------------------------------------------------------------------
  * Application main thread
  *---------------------------------------------------------------------------*/
-static void app_main (void *arg) {
-  (void)arg;
+static void app_main (void *argument) {
+  (void)argument;
 
   // Add user code here:
   for (;;) {}
