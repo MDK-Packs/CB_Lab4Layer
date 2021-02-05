@@ -1,7 +1,7 @@
 Board: Arm Musca-S1
 -------------------
 
-The Board layer contains the following configured components:
+The tables below list the device configuration for this board.
 
 ### System Configuration
 
