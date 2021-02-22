@@ -67,7 +67,7 @@
   <components>
     <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" layer="Board"/>
     <component Cclass="CMSIS Driver" Cgroup="Ethernet MAC" Cvendor="Keil" layer="Board">
-      <cflags add="-DRTE_ETH_DMA_MEM_ADDR=&quot;0x2000C000&quot;" compiler="AC6"/>
+      <cflags add="-DEMAC_DMA_MEMORY_ADDRESS=&quot;0x2000C000&quot;" compiler="AC6"/>
     </component>
     <component Cclass="CMSIS Driver" Cgroup="Ethernet PHY" Csub="LAN8742A" Cvendor="Keil" layer="Board"/>
     <component Cclass="CMSIS Driver" Cgroup="MCI" Cvendor="Keil" layer="Board"/>

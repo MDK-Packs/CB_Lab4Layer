@@ -492,7 +492,7 @@
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery">
             <c>
-              <Define>RTE_ETH_DMA_MEM_ADDR=0x2000C000</Define>
+              <Define>EMAC_DMA_MEMORY_ADDRESS=0x2000C000</Define>
             </c>
           </targetInfo>
         </targetInfos>
@@ -608,7 +608,7 @@
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery">
             <c>
-              <Define>RTE_ETH_DMA_MEM_ADDR=0x2000C000</Define>
+              <Define>EMAC_DMA_MEMORY_ADDRESS=0x2000C000</Define>
             </c>
           </targetInfo>
         </targetInfos>
