@@ -63,9 +63,6 @@
 #define MBEDTLS_SSL_ENCRYPT_THEN_MAC
 #define MBEDTLS_SSL_EXTENDED_MASTER_SECRET
 
-/* Enable hardware acceleration in the SSL module. */
-#define MBEDTLS_SSL_HW_RECORD_ACCEL
-
 /* Enable SSL max fragment length, ALPN, and SNI. */
 #define MBEDTLS_SSL_MAX_FRAGMENT_LENGTH
 #define MBEDTLS_SSL_ALPN
