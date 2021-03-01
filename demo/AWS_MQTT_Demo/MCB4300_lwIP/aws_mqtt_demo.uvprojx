@@ -10,7 +10,7 @@
       <TargetName>MCB4300</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6140000::V6.14::ARMCLANG</pCCUsed>
+      <pCCUsed>6150000::V6.15::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -549,8 +549,8 @@
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </component>
-      <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0">
-        <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
+      <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.24.0">
+        <package name="mbedTLS" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="1.7.0"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
@@ -690,15 +690,15 @@
       <file attr="config" category="header" name="config\iot_config.h" version="1.0.0">
         <instance index="0">RTE\IoT_Client\iot_config.h</instance>
         <component Cclass="IoT Client" Cgroup="AWS" Cvendor="MDK-Packs" Cversion="4.0.0" condition="AWS IoT Client"/>
-        <package license="LICENSE" name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
+        <package name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="third_party\mbedtls\mbedtls\config\iot_config_mbedtls.h" version="2.17.0">
         <instance index="0">RTE\IoT_Utility\iot_config_mbedtls.h</instance>
-        <component Cclass="IoT Utility" Cgroup="AWS" Csub="Platform" Cvariant="CMSIS-RTOS2 mbedTLS" Cvendor="MDK-Packs" Cversion="1.0.0" Pre_Include_Global_h="#define IOT_SYSTEM_TYPES_FILE &quot;iot_platform_types_cmsis.h&quot;&#xD;&#xA;        #define MBEDTLS_CONFIG_FILE &quot;iot_config_mbedtls.h&quot;" condition="AWS Platform [CMSIS-RTOS2 mbedTLS]"/>
-        <package license="LICENSE" name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
+        <component Cclass="IoT Utility" Cgroup="AWS" Csub="Platform" Cvariant="CMSIS-RTOS2 mbedTLS" Cvendor="MDK-Packs" Cversion="1.0.0" condition="AWS Platform [CMSIS-RTOS2 mbedTLS]"/>
+        <package name="AWS_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/AWS_IoT_Device/" vendor="MDK-Packs" version="2.0.0-beta"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
@@ -706,7 +706,7 @@
       <file attr="config" category="header" name="ports\cmsis-driver\config\ethif_config.h" version="1.0.0">
         <instance index="0">RTE\Network\ethif_config.h</instance>
         <component Cbundle="lwIP" Cclass="Network" Cgroup="Driver" Csub="Ethernet" Cvariant="CMSIS Driver" Cvendor="lwIP" Cversion="2.1.2" condition="CMSIS Driver Ethernet"/>
-        <package name="lwIP" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="lwIP" version="2.1.1"/>
+        <package name="lwIP" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="lwIP" version="2.1.2"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
@@ -714,15 +714,15 @@
       <file attr="config" category="header" name="rte\config\lwipopts.h" version="2.1.2">
         <instance index="0">RTE\Network\lwipopts.h</instance>
         <component Cbundle="lwIP" Cclass="Network" Cgroup="CORE" Cvariant="IPv4" Cvendor="lwIP" Cversion="2.1.2" isDefaultVariant="1"/>
-        <package name="lwIP" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="lwIP" version="2.1.1"/>
+        <package name="lwIP" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="lwIP" version="2.1.2"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </file>
-      <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.17.0">
+      <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.24.0">
         <instance index="0">RTE\Security\mbedTLS_config.h</instance>
-        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0"/>
-        <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
+        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.24.0"/>
+        <package name="mbedTLS" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="1.7.0"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
