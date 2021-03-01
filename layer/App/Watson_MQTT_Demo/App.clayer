@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <cprj schemaVersion="0.0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CPRJ.xsd">
-  <created timestamp="2021-02-05T14:35:46" tool="cbuildgen 0.10.0">
+  <created timestamp="2021-03-01T10:02:54" tool="cbuildgen 0.10.0">
     <used file="watson_mqtt_demo.MCB4300.cprj" path="D:/GitHub/MDK-Packs/CB_Lab4Layer/build/../project/Watson_MQTT_Demo/MCB4300_MW-Network_ETH_RTX" timestamp="2020-09-30T14:25:53"/>
   </created>
 
@@ -33,7 +33,7 @@
   </layers>
 
   <packages>
-    <package name="mbedTLS" vendor="ARM"/>
+    <package name="mbedTLS" vendor="ARM" version="1.6.1:1.6.1"/>
     <package name="ARM_Compiler" vendor="Keil"/>
     <package name="MDK-Middleware" vendor="Keil"/>
     <package name="Paho_MQTT" vendor="MDK-Packs"/>
