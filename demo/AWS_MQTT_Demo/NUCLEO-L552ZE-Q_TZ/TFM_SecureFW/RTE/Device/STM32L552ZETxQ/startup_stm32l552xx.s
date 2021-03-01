@@ -60,7 +60,7 @@ __heap_limit
                 EXPORT  __Vectors_End
                 EXPORT  __Vectors_Size
 
-__Vectors       DCD     |Image$$ARM_LIB_STACK_MSP$$ZI$$Limit|              ; Top of Stack
+__Vectors       DCD     |Image$$ARM_LIB_STACK_MSP$$ZI$$Limit|   ; Top of Stack
                 DCD     Reset_Handler             ; Reset Handler
                 DCD     NMI_Handler               ; NMI Handler
                 DCD     HardFault_Handler         ; Hard Fault Handler
@@ -200,9 +200,18 @@ Reset_Handler   PROC
                 EXPORT  Reset_Handler             [WEAK]
                 IMPORT  SystemInit
                 IMPORT  __main
+                IMPORT  |Image$$ARM_LIB_STACK_MSP$$ZI$$Base|
+                IMPORT  |Image$$ARM_LIB_STACK$$ZI$$Limit|
+                IMPORT  |Image$$ARM_LIB_STACK$$ZI$$Base|
 
+                LDR     R0, =|Image$$ARM_LIB_STACK_MSP$$ZI$$Base|
+                MSR     MSPLIM, R0
                 LDR     R0, =SystemInit
                 BLX     R0
+                LDR     R0, =|Image$$ARM_LIB_STACK$$ZI$$Limit|
+                MSR     PSP, R0
+                LDR     R0, =|Image$$ARM_LIB_STACK$$ZI$$Base|
+                MSR     PSPLIM, R0
                 MRS     R0, control    ; Get control value
                 ORR     R0, R0, #2     ; Select switch to PSP
                 MSR     control, R0

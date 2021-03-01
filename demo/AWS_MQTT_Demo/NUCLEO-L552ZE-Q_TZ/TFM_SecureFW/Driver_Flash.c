@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013-2018 Arm Limited
+ * Copyright (c) 2013-2020 Arm Limited
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -112,9 +112,9 @@ static bool is_range_valid(struct arm_flash_dev_t *flash_dev,
 static bool is_erase_allow(struct arm_flash_dev_t *flash_dev,
                            uint32_t param)
 {
-  /*  allow erase inside  NV Counter,ITS, SST */
+  /*  allow erase inside  NV Counter,ITS, PS */
   return
-    ((param >= FLASH_SST_AREA_OFFSET) && 
+    ((param >= FLASH_PS_AREA_OFFSET) && 
        (param < (FLASH_NV_COUNTERS_AREA_OFFSET + FLASH_NV_COUNTERS_AREA_SIZE)))
     ? (true) : (false);
 }
@@ -131,9 +131,9 @@ static bool is_erase_allow(struct arm_flash_dev_t *flash_dev,
 static bool is_write_allow(struct arm_flash_dev_t *flash_dev,
                            uint32_t start, uint32_t len)
 {
-  /*  allow write inside  NV Counter,ITS, SST */
+  /*  allow write inside  NV Counter,ITS, PS */
   return ((start + len) < (FLASH_NV_COUNTERS_AREA_OFFSET + FLASH_NV_COUNTERS_AREA_SIZE)) &&
-         (start >= (FLASH_SST_AREA_OFFSET))
+         (start >= (FLASH_PS_AREA_OFFSET))
          ? true : false;
 }
 /**

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019, Arm Limited. All rights reserved.
+ * Copyright (c) 2019-2020, Arm Limited. All rights reserved.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  *
@@ -11,21 +11,29 @@
 #include "RTE_Components.h"
 
 #ifdef  TFM_LVL
-#if    (TFM_LVL != 1)
+#if    (TFM_LVL > 1)
 #ifndef CONFIG_TFM_ENABLE_MEMORY_PROTECT
 #define CONFIG_TFM_ENABLE_MEMORY_PROTECT
 #endif
 #endif
 #endif
 
+#ifdef RTE_TFM_DOMAIN_S
+#define DOMAIN_NS 0
+#endif
+
+#ifdef RTE_TFM_DOMAIN_NS
+#define DOMAIN_NS 1
+#endif
+
 #ifdef  RTE_TFM_CORE_IPC
 #define TFM_PSA_API
 #endif
 
-#ifdef  RTE_TFM_SS_SST
-#define TFM_PARTITION_SECURE_STORAGE
-#ifdef  RTE_TFM_SS_SST_ENCRYPTED
-#define SST_ENCRYPTION
+#ifdef  RTE_TFM_SS_PS
+#define TFM_PARTITION_PROTECTED_STORAGE
+#ifdef  RTE_TFM_SS_PS_ENCRYPTED
+#define PS_ENCRYPTION
 #endif
 #endif
 
@@ -47,10 +55,38 @@
 
 #ifdef  RTE_TFM_SS_INITIAL_ATTESTATION
 #define TFM_PARTITION_INITIAL_ATTESTATION
+#ifdef  RTE_TFM_SS_SYMMETRIC_INITIAL_ATTESTATION
+#define SYMMETRIC_INITIAL_ATTESTATION
+#endif
+#endif
+
+#ifdef  RTE_TFM_API_PS
+#define TFM_PARTITION_PROTECTED_STORAGE
+#endif
+
+#ifdef  RTE_TFM_API_ITS
+#define TFM_PARTITION_INTERNAL_TRUSTED_STORAGE
+#endif
+
+#ifdef  RTE_TFM_API_AUDIT_LOGGING
+#define TFM_PARTITION_AUDIT_LOG
+#endif
+
+#ifdef  RTE_TFM_API_CRYPTO
+#define TFM_PARTITION_CRYPTO
+#endif
+
+#ifdef  RTE_TFM_API_PLATFORM
+#define TFM_PARTITION_PLATFORM
+#endif
+
+#ifdef  RTE_TFM_API_INITIAL_ATTESTATION
+#define TFM_PARTITION_INITIAL_ATTESTATION
 #endif
 
 #ifdef  RTE_TFM_TS_CORE
 #define TFM_PARTITION_TEST_CORE
+#define TFM_ENABLE_PERIPH_ACCESS_TEST
 #define CORE_TEST_INTERACTIVE
 #endif
 
@@ -62,26 +98,23 @@
 #define TFM_PARTITION_TEST_SECURE_SERVICES
 #endif
 
-#ifdef  RTE_TFM_TS_SST
-#define TFM_PARTITION_TEST_SST
+#ifdef  RTE_TFM_TS_PS
+#define TFM_PARTITION_TEST_PS
 #endif
 
 #ifdef  RTE_TFM_TS_IRQ
 #define TFM_ENABLE_IRQ_TEST
 #endif
 
-#if (defined(RTE_TFM_TEST_SST_S)         || \
-     defined(RTE_TFM_TEST_ITS_S)         || \
-     defined(RTE_TFM_TEST_AUDIT_S)       || \
-     defined(RTE_TFM_TEST_CRYPTO_S)      || \
-     defined(RTE_TFM_TEST_ATTESTATION_S) || \
-     defined(RTE_TFM_TEST_PLATFORM_S)    || \
-     defined(RTE_TFM_TEST_IPC_S))
-#define SERVICES_TEST_S
+#ifdef  RTE_TFM_TEST_FRAMEWORK_S
+#define TEST_FRAMEWORK_S
 #endif
 
-#ifdef  RTE_TFM_TEST_SST_S
-#define ENABLE_SECURE_STORAGE_SERVICE_TESTS
+#ifdef  RTE_TFM_TEST_PS_S
+#define ENABLE_PROTECTED_STORAGE_SERVICE_TESTS
+#ifdef  PS_ROLLBACK_PROTECTION
+#define PS_TEST_NV_COUNTERS
+#endif
 #endif
 
 #ifdef  RTE_TFM_TEST_ITS_S
@@ -108,34 +141,16 @@
 #define ENABLE_IPC_TEST
 #endif
 
-#ifdef  RTE_TFM_API_IPC
-#define TFM_PSA_API
-#ifdef  TFM_PARTITION_AUDIT_LOG
-#error  "Audit Logging API not supported with IPC!"
-#endif
+#ifdef  RTE_TFM_TEST_FRAMEWORK_NS
+#define TEST_FRAMEWORK_NS
 #endif
 
 #ifdef  RTE_TFM_TEST_PSA_API_NS
 #define PSA_API_TEST_NS
 #endif
 
-#ifdef  RTE_TFM_TEST_FRAMEWORK_NS
-#define TEST_FRAMEWORK_NS
-#endif
-
-#if (defined(RTE_TFM_TEST_SST_NS)         || \
-     defined(RTE_TFM_TEST_ITS_NS)         || \
-     defined(RTE_TFM_TEST_AUDIT_NS)       || \
-     defined(RTE_TFM_TEST_CRYPTO_NS)      || \
-     defined(RTE_TFM_TEST_ATTESTATION_NS) || \
-     defined(RTE_TFM_TEST_PLATFORM_NS)    || \
-     defined(RTE_TFM_TEST_QCBOR_NS)       || \
-     defined(RTE_TFM_TEST_T_COSE_NS))
-#define SERVICES_TEST_NS
-#endif
-
-#ifdef  RTE_TFM_TEST_SST_NS
-#define ENABLE_SECURE_STORAGE_SERVICE_TESTS
+#ifdef  RTE_TFM_TEST_PS_NS
+#define ENABLE_PROTECTED_STORAGE_SERVICE_TESTS
 #endif
 
 #ifdef  RTE_TFM_TEST_ITS_NS
@@ -189,12 +204,23 @@
 #endif
 
 #ifdef  RTE_TFM_LIBRARY_T_COSE
+#ifdef  RTE_TFM_LIBRARY_T_COSE_SYMMETRIC
+#ifndef SYMMETRIC_INITIAL_ATTESTATION
+#define SYMMETRIC_INITIAL_ATTESTATION
+#endif
+#endif
+#define T_COSE_COMPILE_TIME_CONFIG
 #define T_COSE_USE_PSA_CRYPTO
+#define T_COSE_USE_PSA_CRYPTO_FROM_TFM
+#define T_COSE_DISABLE_CONTENT_TYPE
+#define T_COSE_DISABLE_SHORT_CIRCUIT_SIGN
+#ifdef  SYMMETRIC_INITIAL_ATTESTATION
+#define T_COSE_DISABLE_SIGN1
+#else
 #define T_COSE_DISABLE_ES384
 #define T_COSE_DISABLE_ES512
-#define T_COSE_DISABLE_CONTENT_TYPE
 #define T_COSE_DISABLE_SIGN_VERIFY_TESTS
-#define T_COSE_USE_PSA_CRYPTO_FROM_TFM
+#endif
 #endif
 
 #ifdef  BL2
@@ -203,6 +229,9 @@
 #endif
 #ifndef MCUBOOT_SIGN_RSA_LEN
 #define MCUBOOT_SIGN_RSA_LEN 3072
+#endif
+#ifdef  MCUBOOT_MEASURED_BOOT
+#define BOOT_DATA_AVAILABLE
 #endif
 #endif
 
@@ -216,7 +245,7 @@
 #define _DRIVER_FLASH(n) _DRIVER_FLASH_(n)
 
 #define FLASH_DEV_NAME     _DRIVER_FLASH(FLASH_DRV_NUM)
-#define SST_FLASH_DEV_NAME _DRIVER_FLASH(SST_FLASH_DRV_NUM)
+#define PS_FLASH_DEV_NAME  _DRIVER_FLASH(PS_FLASH_DRV_NUM)
 #define ITS_FLASH_DEV_NAME _DRIVER_FLASH(ITS_FLASH_DRV_NUM)
 
 #endif /* __TFM_CONFIG_RTE_H__ */

@@ -450,6 +450,9 @@
           <GroupName>::Device</GroupName>
         </Group>
         <Group>
+          <GroupName>::PSA</GroupName>
+        </Group>
+        <Group>
           <GroupName>::Security</GroupName>
         </Group>
         <Group>
@@ -480,6 +483,12 @@
           <targetInfo name="NUCLEO-L552ZE-Q"/>
         </targetInfos>
       </api>
+      <api Capiversion="1.0.0" Cclass="PSA" Cgroup="Crypto" exclusive="1">
+        <package name="PSA" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="1.0.0"/>
+        <targetInfos>
+          <targetInfo name="NUCLEO-L552ZE-Q"/>
+        </targetInfos>
+      </api>
     </apis>
     <components>
       <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="5.4.0" condition="ARMv6_7_8-M Device">
@@ -494,14 +503,26 @@
           <targetInfo name="NUCLEO-L552ZE-Q"/>
         </targetInfos>
       </component>
-      <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0">
-        <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
+      <component Capiversion="1.0.0" Cclass="PSA" Cgroup="Crypto" Csub="TFM" Cvendor="ARM" Cversion="1.2.0" condition="TFM PSA Crypto">
+        <package name="TFM" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="2.1.0"/>
         <targetInfos>
           <targetInfo name="NUCLEO-L552ZE-Q"/>
         </targetInfos>
       </component>
-      <component Cclass="TFM" Cgroup="API" Cvariant="SFN" Cvendor="ARM" Cversion="1.0.0" condition="TFM API">
-        <package name="TFM" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="2.0.0"/>
+      <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.24.0">
+        <package name="mbedTLS" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="1.7.0"/>
+        <targetInfos>
+          <targetInfo name="NUCLEO-L552ZE-Q"/>
+        </targetInfos>
+      </component>
+      <component Cclass="TFM" Cgroup="API" Csub="Crypto" Cvendor="ARM" Cversion="1.2.0" condition="TFM API">
+        <package name="TFM" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="2.1.0"/>
+        <targetInfos>
+          <targetInfo name="NUCLEO-L552ZE-Q"/>
+        </targetInfos>
+      </component>
+      <component Cclass="TFM" Cgroup="Core" Cvariant="SFN" Cvendor="ARM" Cversion="1.2.0" condition="TFM Non-Secure Core">
+        <package name="TFM" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="2.1.0"/>
         <targetInfos>
           <targetInfo name="NUCLEO-L552ZE-Q"/>
         </targetInfos>
@@ -608,26 +629,26 @@
           <targetInfo name="NUCLEO-L552ZE-Q"/>
         </targetInfos>
       </file>
-      <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.17.0">
+      <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.24.0">
         <instance index="0">RTE\Security\mbedTLS_config.h</instance>
-        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0"/>
-        <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
+        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.24.0"/>
+        <package name="mbedTLS" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="1.7.0"/>
         <targetInfos>
           <targetInfo name="NUCLEO-L552ZE-Q"/>
         </targetInfos>
       </file>
-      <file attr="config" category="header" name="rte\config\non_secure\tfm_config.h" version="1.0.0">
+      <file attr="config" category="header" name="rte\config\non_secure\tfm_config.h" version="1.2.0">
         <instance index="0">RTE\TFM\tfm_config.h</instance>
-        <component Cclass="TFM" Cgroup="API" Cvariant="SFN" Cvendor="ARM" Cversion="1.0.0" condition="TFM API"/>
-        <package name="TFM" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="2.0.0"/>
+        <component Cclass="TFM" Cgroup="Core" Cvariant="SFN" Cvendor="ARM" Cversion="1.2.0" condition="TFM Non-Secure Core"/>
+        <package name="TFM" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="2.1.0"/>
         <targetInfos>
           <targetInfo name="NUCLEO-L552ZE-Q"/>
         </targetInfos>
       </file>
-      <file attr="config" category="source" name="rte\config\tfm_config_rte.h" version="1.0.0">
+      <file attr="config" category="source" name="rte\config\tfm_config_rte.h" version="1.2.0">
         <instance index="0">RTE\TFM\tfm_config_rte.h</instance>
-        <component Cclass="TFM" Cgroup="API" Cvariant="SFN" Cvendor="ARM" Cversion="1.0.0" condition="TFM API"/>
-        <package name="TFM" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="2.0.0"/>
+        <component Cclass="TFM" Cgroup="Core" Cvariant="SFN" Cvendor="ARM" Cversion="1.2.0" condition="TFM Non-Secure Core"/>
+        <package name="TFM" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="2.1.0"/>
         <targetInfos>
           <targetInfo name="NUCLEO-L552ZE-Q"/>
         </targetInfos>

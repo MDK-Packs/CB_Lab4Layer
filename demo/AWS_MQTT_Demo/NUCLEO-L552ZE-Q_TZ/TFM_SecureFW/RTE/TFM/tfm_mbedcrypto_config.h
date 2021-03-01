@@ -58,6 +58,11 @@
  *
  * Comment to disable the use of assembly code.
  */
+
+/* Due to an outstanding bug with mbedtls and arm compiler 6, this feature is
+ * disabled temporarily on cortex-m0 and m0-plus.
+ * https://github.com/ARMmbed/mbedtls/issues/1077
+ */
 #define MBEDTLS_HAVE_ASM
 
 /**

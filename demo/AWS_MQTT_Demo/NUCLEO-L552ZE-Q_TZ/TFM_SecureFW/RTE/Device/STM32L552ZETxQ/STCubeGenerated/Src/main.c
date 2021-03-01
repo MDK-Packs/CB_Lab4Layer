@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "tfm_hal_platform.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -248,11 +248,12 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-/* platform-specific hw initialization */
-int tfm_spm_hal_post_init_platform (void)
+/* Platform specific initialization */
+enum tfm_hal_status_t tfm_hal_platform_init(void)
 {
+  __enable_irq();
   main();
-  return 0;
+  return TFM_HAL_SUCCESS;
 }
 /* USER CODE END 4 */
 
