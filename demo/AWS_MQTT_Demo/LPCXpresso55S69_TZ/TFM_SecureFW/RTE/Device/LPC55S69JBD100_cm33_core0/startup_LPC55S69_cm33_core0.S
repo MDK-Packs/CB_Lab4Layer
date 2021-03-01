@@ -24,7 +24,7 @@
     .globl __Vectors
 
 __Vectors:
-    .long    Image$$ARM_LIB_STACK_MSP$$ZI$$Limit                /* Top of Stack */
+    .long    Image$$ARM_LIB_STACK_MSP$$ZI$$Limit             /* Top of Stack */
     .long    Reset_Handler                                   /* Reset Handler */
     .long    NMI_Handler                                     /* NMI Handler*/
     .long    HardFault_Handler                               /* Hard Fault Handler*/
@@ -115,12 +115,16 @@ __Vectors:
     .type    Reset_Handler, %function
 
 Reset_Handler:
-    cpsid   i               /* mask interrupts */
-//  ldr   r0, =Image$$ARM_LIB_STACK$$ZI$$Base
-//  msr   msplim, r0
+    cpsid i                 /* mask interrupts */
+    ldr   r0, =Image$$ARM_LIB_STACK_MSP$$ZI$$Base
+    msr   msplim, r0
     ldr   r0,=SystemInit
     blx   r0
-//  cpsie   i               /* Unmask interrupts */
+//  cpsie i                 /* Unmask interrupts */
+    ldr   r0, =Image$$ARM_LIB_STACK$$ZI$$Limit
+    msr   psp, r0
+    ldr   r0, =Image$$ARM_LIB_STACK$$ZI$$Base
+    msr   psplim, r0
     mrs   r0, control       /* Get control value */
     orr   r0, r0, #2        /* Select switch to PSP */
     msr   control, r0

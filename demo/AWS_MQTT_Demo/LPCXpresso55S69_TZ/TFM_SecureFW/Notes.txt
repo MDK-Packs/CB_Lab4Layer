@@ -12,7 +12,7 @@ uVision:
  --- select TFM:Secure Service:Crypto
  --- select TFM:Secure Service:Internal Trusted Storage
  --- select TFM Platform:* required components
- --- select Security:mbed Crypto
+ --- select Security:mbed TLS
  --- select CMSIS Driver:Flash:Custom
  --- select CMSIS Driver:USART:Custom
  --- select CMSIS:CORE
@@ -20,11 +20,10 @@ uVision:
  --- select Device:SDK Drivers:iap1
  --- resolve dependencies
  -- update TFM configuration: tfm_config.h
- --- define ITS_CREATE_FLASH_LAYOUT (create initial flash layout for ITS)
- --- define TFM_CRYPTO_ENGINE_BUF_SIZE (0x4000)
- -- update TFM flash layout configuration: flash_layout.h
  --- ITS_MAX_ASSET_SIZE=2048, ITS_NUM_ASSETS=4
  -- add SystemInit.c module with SystemInitHook function (Board Clock and Pin configuration)
+    #include "board.h"
+    #include "pin_mux.h"
     void SystemInitHook (void) {
       CLOCK_AttachClk(BOARD_DEBUG_UART_CLK_ATTACH);
       BOARD_InitPins();
@@ -58,21 +57,26 @@ uVision:
  --- rename exported driver to Driver_USART1 (add 1 index)
  -- update Board Support:board.c
  --- correct bug: change BOARD_DEBUG_UART_BASEADDR to BOARD_DEBUG_UART_INSTANCE
- -- update Device:LPC55S69_cm33_Core0.s (startup file)
+ -- disable Device:Startup component and add following files from DFP to the project:
+ --- LPC55S69_cm33_Core0.S
+ --- system_LPC55S69_cm33_core0.c
+ -- update LPC55S69_cm33_Core0.S (startup file)
  --- rename section .isr_vector to RESET
  --- Vector table:
  ---- change Image$$ARM_LIB_STACK$$ZI$$Limit to Image$$ARM_LIB_STACK_MSP$$ZI$$Limit
  --- Reset Handler:
- ---- remove MSPLIM setup:
-      ldr   r0, =Image$$ARM_LIB_STACK$$ZI$$Base
-      msr   msplim, r0
+ ---- update MSPLIM setup:
+      ldr   r0, =Image$$ARM_LIB_STACK_MSP$$ZI$$Base
  ---- remove unmask interrupts:
-      cpsie   i               /* Unmask interrupts */
- ---- add switch to PSP before branching to __main
+      cpsie i                 /* Unmask interrupts */
+ ---- add PSP setup and switch to PSP before branching to __main
+      ldr   r0, =Image$$ARM_LIB_STACK$$ZI$$Limit
+      msr   psp, r0
+      ldr   r0, =Image$$ARM_LIB_STACK$$ZI$$Base
+      msr   psplim, r0
       mrs   r0, control       /* Get control value */
       orr   r0, r0, #2        /* Select switch to PSP */
       msr   control, r0
- -- Device:LPC55S69_cm33_Core0.s - Asm Misc Controls: -x assembler-with-cpp
  -- setup linker:
  --- scatter file: tfm_common_s.sct
  --- options:
@@ -84,7 +88,7 @@ uVision:
      --diag_suppress=L6312,L6314,L6329
  -- select Debug adapter: CMSIS-DAP ARMv8M
  -- update CMSIS_Zone generated files:
- --- tz_sau_nvic.c, tz_mpc_ppc.c, (tz_confg.h/.c)
+ --- tz_sau_nvic.c, tz_mpc_ppc.c
  --- mem_layout.h
 
 MCUXpresso:

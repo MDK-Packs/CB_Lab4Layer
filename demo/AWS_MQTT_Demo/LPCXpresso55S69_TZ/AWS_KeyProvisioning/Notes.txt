@@ -10,7 +10,9 @@ uVision:
  --- select Security:mbed TLS
  --- select CMSIS-RTOS2:Keil RTX5 (Source_NS)
  --- select CMSIS:CORE
- --- select TFM:API (SFN)
+ --- select PSA:Crypto:TFM
+ --- select TFM:Core (SFN)
+ --- select TFM:API:Crypto
  --- select Board Support:SDK Project Template:project_template variant:LPC55S69
  --- select Device:SDK Utilities:debug_console
  --- select Device:SDK Utilities:serial_manager_uart
@@ -36,9 +38,6 @@ uVision:
  ---- MBEDTLS_PK_C
  ---- MBEDTLS_PK_PARSE_C
  ---- MBEDTLS_RSA_C
- --- TFM configuration: tfm_config.h
- ---- enable Internal Trusted Storage
- ---- enable Crypto
  -- update Board Support:board.c
  --- correct bug: change BOARD_DEBUG_UART_BASEADDR to BOARD_DEBUG_UART_INSTANCE
  -- add main.h:
@@ -73,7 +72,6 @@ uVision:
  --- iot_config.h (private key)
  -- add TF-M CMSE library: tfm_secure_fw_CMSE_Lib.o
  -- Device:fsl_debug_console.c - C/C++ Define: SDK_DEBUGCONSOLE_UART
- -- Device:LPC55S69_cm33_Core0.s - Asm Misc Controls: -x assembler-with-cpp
  -- setup linker:
  --- scatter file: LPC55S69_cm33_core0_flash.scf
  ---- heap size: 0x00010000

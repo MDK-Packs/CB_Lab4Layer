@@ -27,7 +27,9 @@ uVision:
  --- select Device:SDK Utilities:debug_console
  --- select Device:SDK Utilities:serial_manager_uart
  --- resolve dependencies
- --- select TFM:API (SFN)
+ --- select PSA:Crypto:TFM
+ --- select TFM:Core (SFN)
+ --- select TFM:API:Crypto
  -- configure components
  --- variant ESP8266 WiFi module
  ---- update WiFi_ESP8266_Config.h:
@@ -35,11 +37,10 @@ uVision:
  --- variant WizFi360 WiFi module
  ---- update WiFi_WizFi360_Config.h:
  ----- Serial Driver Number: 2
- --- TFM configuration: tfm_config.h
- ---- enable Internal Trusted Storage
- ---- enable Crypto
  --- RTE Device configuration: RTE_Device.h
      #define RTE_USART2 1
+ -- update IoT Utility:iot_config_mbedtls.h
+ --- remove: #define MBEDTLS_SSL_HW_RECORD_ACCEL
  -- update Board Support:board.c
  --- correct bug: change BOARD_DEBUG_UART_BASEADDR to BOARD_DEBUG_UART_INSTANCE
  -- add main.h:
@@ -80,7 +81,6 @@ uVision:
  --- iot_demo_logging.h
  -- add TF-M CMSE library: tfm_secure_fw_CMSE_Lib.o
  -- Device:fsl_debug_console.c - C/C++ Define: SDK_DEBUGCONSOLE_UART
- -- Device:LPC55S69_cm33_Core0.s - Asm Misc Controls: -x assembler-with-cpp
  -- setup linker:
  --- scatter file: LPC55S69_cm33_core0_flash.scf
  ---- heap size: 0x00010000

@@ -13,7 +13,7 @@ void TZ_Config_SAU(void)
   /* Initialize SAU Region 0 */
   SAU->RNR  =  (0U                      & SAU_RNR_REGION_Msk);
   SAU->RBAR =  (0x00030000U             & SAU_RBAR_BADDR_Msk);
-  SAU->RLAR =  (0x0006FFE0U             & SAU_RLAR_LADDR_Msk) |
+  SAU->RLAR =  (0x00087FE0U             & SAU_RLAR_LADDR_Msk) |
               ((0U << SAU_RLAR_NSC_Pos) & SAU_RLAR_NSC_Msk)   | 1U;
 
   /* Initialize SAU Region 1 */
