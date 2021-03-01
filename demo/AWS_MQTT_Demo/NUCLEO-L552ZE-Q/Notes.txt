@@ -3,8 +3,8 @@ How to create the Demo
 
 uVision:
  - create new project
- - select device STM32L552ZETxQ
- - launch STM32CubeMX from RTE
+ - select device STMicroelectronics STM32L552ZETxQ
+ - RTE: select Device:STM32Cube Framework:STM32CubeMX and launch STM32CubeMX
 
 STM32CubeMX:
  - TrustZone not activated
