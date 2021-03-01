@@ -3,9 +3,9 @@ How to create the TF-M Secure Firmware
 
 uVision:
  - create new project tfm_secure_fw
- - select device STM32L562QEIxQ
+ - select device STMicroelectronics STM32L562QEIxQ
  - set target name STM32L562E-DK
- - launch STM32CubeMX from RTE
+ - RTE: select Device:STM32Cube Framework:STM32CubeMX and launch STM32CubeMX
 
 STM32CubeMX:
  - TrustZone not activated
@@ -13,6 +13,7 @@ STM32CubeMX:
  -- System Core
  --- NVIC
  ---- Code generation
+ ----- Hard fault interrupt: disable Generate IRQ handler
  ----- Memory management: disable Generate IRQ handler
  ----- Prefetch fault, memory access fault: disable Generate IRQ handler
  ----- Undefined instruction or illegal: disable Generate IRQ handler
@@ -26,9 +27,19 @@ STM32CubeMX:
  ---- GPIO Settings
  ----- PA9:  USART1_TX, Maximum output speed: Very High
  ----- PA10: USART1_RX, Maximum output speed: Very High
+ -- Security
+ --- AES
+ ---- Activated
+ --- HASH
+ ---- Activated
+ --- PKA
+ ---- Activated
+ --- RNG
+ ---- Activated
  - Clock Configuration
  -- System Clock Mux: PLLCLK
  -- PLL N: x55
+ -- CLK48 Clock Mux: MSI
  - Project Manager
  -- Code Generator: Add necessary library files as reference
  - Generate Code
@@ -43,14 +54,12 @@ uVision:
  -- select TFM:Secure Service:Crypto
  -- select TFM:Secure Service:Internal Trusted Storage
  -- select TFM Platform:* required components
- -- select Security:mbed Crypto
+ -- select Security:mbed TLS
  -- select CMSIS Driver:Flash:Custom
  -- select CMSIS Driver:USART:Custom
  -- select CMSIS:CORE
+ -- resolve dependencies
  - update TFM configuration: tfm_config.h
- -- define ITS_CREATE_FLASH_LAYOUT (create initial flash layout for ITS)
- -- define TFM_CRYPTO_ENGINE_BUF_SIZE (0x4000)
- - update TFM flash layout configuration: flash_layout.h
  -- ITS_MAX_ASSET_SIZE=2048, ITS_NUM_ASSETS=4
  - add Flash Driver (taken from STM32Cube)
  - add USART Driver (output redirected to ST UART HAL)
@@ -61,24 +70,38 @@ uVision:
  -- update Send function
     int32_t ARM_USART_Send(const void *data, uint32_t num)
     {
-        HAL_UART_Transmit(&huart1, (uint8_t *)data, num, 1000U);
-        return ARM_DRIVER_OK;
+      HAL_UART_Transmit(&huart1, (uint8_t *)data, num, 1000U);
+      return ARM_DRIVER_OK;
     }
  -- rename exported driver to Driver_USART1 (add 1 index)
+ - update stm32l5xx_hal_conf.h:
+ -- uncomment define: HAL_GTZC_MODULE_ENABLED
  - update main.h:
- -- add: extern UART_HandleTypeDef hlpuart1;
+ -- add include: tfm_hal_platform.h
  - update main.c:
  -- define main as main0
  -- remove endless loop from main
- -- added tfm_spm_hal_post_init_platform() calling main
+ -- add tfm_hal_platform_init() calling __enable_irq() and main()
  - update Device:startup_stm32l562xx.s (startup file)
  -- Vector table:
  --- change __initial_sp to |Image$$ARM_LIB_STACK_MSP$$ZI$$Limit| and add IMPORT (Stack_Size=0)
  -- Reset Handler:
- --- add switch to PSP before branching to __main
+ --- import linker defined symbols
+     IMPORT  |Image$$ARM_LIB_STACK_MSP$$ZI$$Base|
+     IMPORT  |Image$$ARM_LIB_STACK$$ZI$$Limit|
+     IMPORT  |Image$$ARM_LIB_STACK$$ZI$$Base|
+ --- add MSPLIM setup at the start
+     LDR     R0, =|Image$$ARM_LIB_STACK_MSP$$ZI$$Base|
+     MSR     MSPLIM, R0
+ --- add PSP setup and switch to PSP before branching to __main
+     LDR     R0, =|Image$$ARM_LIB_STACK$$ZI$$Limit|
+     MSR     PSP, R0
+     LDR     R0, =|Image$$ARM_LIB_STACK$$ZI$$Base|
      MRS     R0, control    ; Get control value
      ORR     R0, R0, #2     ; Select switch to PSP
      MSR     control, R0
+ - update Device:system_stm32l5xx_s.c (system file)
+ -- change CMSE_NS_ENTRY to __attribute__((cmse_nonsecure_entry, noinline, section("SFN")))
  - setup linker:
  -- scatter file: tfm_common_s.sct
  -- options:
@@ -89,7 +112,7 @@ uVision:
     --predefine="-IRTE/TFM_Platform/STM32L562QEIxP/"
     --diag_suppress=L6312,L6314,L6329
  - select Debug adapter: ST-Link Debugger
- - update CMSIS Zone generated files (manual update):
+ - update CMSIS Zone generated files:
  -- mem_layout.h: memory regions
  -- partition_gen.h: SAU and Interrupts
  -- sys_isolation_cfg.c: GTZC and MPC/PPC

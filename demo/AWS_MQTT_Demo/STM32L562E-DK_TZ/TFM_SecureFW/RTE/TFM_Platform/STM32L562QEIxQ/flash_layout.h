@@ -107,9 +107,9 @@
 #error "Only MCUBOOT_IMAGE_NUMBER 1 and 2 are supported!"
 #endif /* MCUBOOT_IMAGE_NUMBER */
 
-/* Secure Storage (SST) Service definitions */
-#define FLASH_SST_AREA_OFFSET           (REGION_SST_START - REGION_FLASH_S_START)
-#define FLASH_SST_AREA_SIZE             (REGION_SST_SIZE)
+/* Protected Storage (PS) Service definitions */
+#define FLASH_PS_AREA_OFFSET            (REGION_PS_START - REGION_FLASH_S_START)
+#define FLASH_PS_AREA_SIZE              (REGION_PS_SIZE)
 
 /* Internal Trusted Storage (ITS) Service definitions */
 #define FLASH_ITS_AREA_OFFSET           (REGION_ITS_START - REGION_FLASH_S_START)
@@ -131,33 +131,27 @@
                                          SECURE_IMAGE_MAX_SIZE)
 #define NON_SECURE_IMAGE_MAX_SIZE       FLASH_NS_PARTITION_SIZE
 
-/* Secure Storage (SST) Service definitions */
-#define SST_FLASH_AREA_ADDR     FLASH_SST_AREA_OFFSET
-/* Dedicated flash area for SST */
-#define SST_FLASH_AREA_SIZE     FLASH_SST_AREA_SIZE
-#define SST_SECTOR_SIZE         FLASH_AREA_IMAGE_SECTOR_SIZE
-/* Number of SST_SECTOR_SIZE per block */
-#define SST_SECTORS_PER_BLOCK   (0x1)
+/* Protected Storage (PS) Service definitions */
+#define PS_FLASH_AREA_ADDR      FLASH_PS_AREA_OFFSET
+/* Dedicated flash area for PS */
+#define PS_FLASH_AREA_SIZE      FLASH_PS_AREA_SIZE
+#define PS_RAM_FS_SIZE          PS_FLASH_AREA_SIZE
+#define PS_SECTOR_SIZE          FLASH_AREA_IMAGE_SECTOR_SIZE
+/* Number of PS_SECTOR_SIZE per block */
+#define PS_SECTORS_PER_BLOCK    (0x1)
 /* Specifies the smallest flash programmable unit in bytes */
-#define SST_FLASH_PROGRAM_UNIT  (0x8)
-/* The maximum asset size to be stored in the SST area */
-#define SST_MAX_ASSET_SIZE      (2048)
-/* The maximum number of assets to be stored in the SST area */
-#define SST_NUM_ASSETS          (10)
+#define PS_FLASH_PROGRAM_UNIT   (0x8)
 
 /* Internal Trusted Storage (ITS) Service definitions */
 #define ITS_FLASH_AREA_ADDR     FLASH_ITS_AREA_OFFSET
 /* Dedicated flash area for ITS */
 #define ITS_FLASH_AREA_SIZE     FLASH_ITS_AREA_SIZE
+#define ITS_RAM_FS_SIZE         ITS_FLASH_AREA_SIZE
 #define ITS_SECTOR_SIZE         FLASH_AREA_IMAGE_SECTOR_SIZE
 /* Number of ITS_SECTOR_SIZE per block */
 #define ITS_SECTORS_PER_BLOCK   (0x1)
 /* Specifies the smallest flash programmable unit in bytes */
 #define ITS_FLASH_PROGRAM_UNIT  (0x8)
-/* The maximum asset size to be stored in the ITS area */
-#define ITS_MAX_ASSET_SIZE      (2048)
-/* The maximum number of assets to be stored in the ITS area */
-#define ITS_NUM_ASSETS          (8)
 
 /* NV Counters definitions */
 #define TFM_NV_COUNTERS_AREA_ADDR    FLASH_NV_COUNTERS_AREA_OFFSET

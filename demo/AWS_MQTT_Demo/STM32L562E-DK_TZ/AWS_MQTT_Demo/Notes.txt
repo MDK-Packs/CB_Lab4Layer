@@ -3,8 +3,8 @@ How to create the Demo
 
 uVision:
  - create new project
- - select device STM32L562QEIxQ
- - launch STM32CubeMX from RTE
+ - select device STMicroelectronics STM32L562QEIxQ
+ - RTE: select Device:STM32Cube Framework:STM32CubeMX and launch STM32CubeMX
 
 STM32CubeMX:
  - TrustZone not activated
@@ -87,7 +87,9 @@ uVision:
  --- select CMSIS Driver:SPI
  --- resolve dependencies
  -- select Compiler:I/O:STDOUT ITM
- -- select TFM:API (SFN)
+ -- select PSA:Crypto:TFM
+ -- select TFM:Core (SFN)
+ -- select TFM:API:Crypto
  - configure components
  -- variant ESP8266 WiFi module
  --- update WiFi_ESP8266_Config.h:
@@ -107,9 +109,6 @@ uVision:
  -- heap size
  --- update Device:startup_stm32l562xx.s:
  ---- Heap_Size: 0x00010000
- -- TFM configuration: tfm_config.h
- --- enable Internal Trusted Storage
- --- enable Crypto
  - update main.h:
  -- add includes: cmsis_os2.h, tfm_ns_interface.h
  -- add prototype: extern void app_initialize (void);
