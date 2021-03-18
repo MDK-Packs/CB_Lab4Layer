@@ -81,6 +81,7 @@ mkdir "LPC54018-IoT-Module"
 mkdir "LPCXpresso55S69"
 mkdir "NUCLEO-L552ZE-Q"
 mkdir "STM32L562E-DK"
+mkdir "STM32H745I-DISCO"
 popd
 
 popd
@@ -89,6 +90,10 @@ popd
 
 cbuildgen "${project_path}/Blinky/B-L475E-IOT01A/Blinky.B-L475E-IOT01A.cprj" extract --outdir="${temp_path}"
 cp -r "${temp_path}/App/."    "${layer_path}/App/Blinky"
+rm -r "${temp_path}"
+
+cbuildgen "${project_path}/Blinky/STM32H745I-DISCO/Blinky.STM32H745I-DISCO.cprj" extract --outdir="${temp_path}"
+cp -r "${temp_path}/Board/." "${layer_path}/Board/STM32H745I-DISCO"
 rm -r "${temp_path}"
 
 cbuildgen "${project_path}/AWS_MQTT_Demo/B-L475E-IOT01A_WiFi_FreeRTOS/aws_mqtt_demo.B-L475E-IOT0A_FreeRTOS.cprj" extract --outdir="${temp_path}"
