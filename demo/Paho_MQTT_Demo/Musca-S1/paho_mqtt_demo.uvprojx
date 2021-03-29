@@ -10,13 +10,13 @@
       <TargetName>Musca-S1 ESP8266</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6140000::V6.14::ARMCLANG</pCCUsed>
+      <pCCUsed>6160000::V6.16::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>Musca-S1:CM33-0</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.Musca-S1_DFP.1.2.0-dev0</PackID>
+          <PackID>ARM.Musca-S1_DFP.1.2.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x00000000,0x00200000) IRAM2(0x0A000000,0x00200000) IROM(0x00200000,0x02000000) IROM2(0x0E000000,0x00000400) XRAM(0x10000000,0x00200000) XRAM2(0x1A000000,0x00200000) XRAM3(0x20000000,0x00080000) XROM(0x10200000,0x02000000) XROM2(0x1E000000,0x00000400) CPUTYPE("Cortex-M33") FPU3(SFPU) DSP TZ CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -313,7 +313,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>7</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -457,13 +457,13 @@
       <TargetName>Musca-S1 WizFi360</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6140000::V6.14::ARMCLANG</pCCUsed>
+      <pCCUsed>6160000::V6.16::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>Musca-S1:CM33-0</Device>
           <Vendor>ARM</Vendor>
-          <PackID>ARM.Musca-S1_DFP.1.2.0-dev0</PackID>
+          <PackID>ARM.Musca-S1_DFP.1.2.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x00000000,0x00200000) IRAM2(0x0A000000,0x00200000) IROM(0x00200000,0x02000000) IROM2(0x0E000000,0x00000400) XRAM(0x10000000,0x00200000) XRAM2(0x1A000000,0x00200000) XRAM3(0x20000000,0x00080000) XROM(0x10200000,0x02000000) XROM2(0x1E000000,0x00000400) CPUTYPE("Cortex-M33") FPU3(SFPU) DSP TZ CLOCK(12000000) ESEL ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -760,7 +760,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>7</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -962,8 +962,8 @@
           <targetInfo name="Musca-S1 WizFi360"/>
         </targetInfos>
       </component>
-      <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0">
-        <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
+      <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.24.0">
+        <package name="mbedTLS" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="1.7.0"/>
         <targetInfos>
           <targetInfo name="Musca-S1 ESP8266"/>
           <targetInfo name="Musca-S1 WizFi360"/>
@@ -1033,8 +1033,8 @@
       </file>
       <file attr="config" category="header" name="WiFi\ESP8266\Config\WiFi_ESP8266_Config.h" version="1.0.0">
         <instance index="0">RTE\CMSIS_Driver\WiFi_ESP8266_Config.h</instance>
-        <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="ESP8266" Cvariant="UART" Cvendor="Keil" Cversion="1.3.0" condition="CMSIS Core with RTOS2 and USART Driver"/>
-        <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.0"/>
+        <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="ESP8266" Cvariant="UART" Cvendor="Keil" Cversion="1.4.0" condition="CMSIS Core with RTOS2 and USART Driver"/>
+        <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.1"/>
         <targetInfos>
           <targetInfo name="Musca-S1 ESP8266"/>
           <targetInfo excluded="1" name="Musca-S1 WizFi360"/>
@@ -1042,8 +1042,8 @@
       </file>
       <file attr="config" category="header" name="WiFi\WizFi360\Config\WiFi_WizFi360_Config.h" version="1.0.0">
         <instance index="0">RTE\CMSIS_Driver\WiFi_WizFi360_Config.h</instance>
-        <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="WizFi360" Cvariant="UART" Cvendor="Keil" Cversion="1.4.0" condition="CMSIS Core with RTOS2 and USART Driver"/>
-        <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.0"/>
+        <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="WizFi360" Cvariant="UART" Cvendor="Keil" Cversion="1.5.0" condition="CMSIS Core with RTOS2 and USART Driver"/>
+        <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.1"/>
         <targetInfos>
           <targetInfo excluded="1" name="Musca-S1 ESP8266"/>
           <targetInfo name="Musca-S1 WizFi360"/>
@@ -1052,7 +1052,7 @@
       <file attr="config" category="header" name="CMSIS\Driver\Config\RTE_Device.h" version="1.2.0">
         <instance index="0">RTE\Device\Musca-S1_CM33-0\RTE_Device.h</instance>
         <component Cclass="Device" Cgroup="Startup" Cvariant="C Startup" Cvendor="ARM" Cversion="2.0.0" condition="Musca-S1 CMSIS"/>
-        <package name="Musca-S1_DFP" schemaVersion="1.6.1" supportContact="https://github.com/ARM-software/CMSIS-Musca-S1/issues" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0-dev0"/>
+        <package name="Musca-S1_DFP" schemaVersion="1.6.1" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0"/>
         <targetInfos>
           <targetInfo name="Musca-S1 ESP8266"/>
           <targetInfo name="Musca-S1 WizFi360"/>
@@ -1061,7 +1061,7 @@
       <file attr="config" category="linkerScript" condition="ARMCC6" name="Device\Source\ARM\armcc6_arm.sct" version="1.0.0">
         <instance index="0">RTE\Device\Musca-S1_CM33-0\armcc6_arm.sct</instance>
         <component Cclass="Device" Cgroup="Startup" Cvariant="C Startup" Cvendor="ARM" Cversion="2.0.0" condition="Musca-S1 CMSIS"/>
-        <package name="Musca-S1_DFP" schemaVersion="1.6.1" supportContact="https://github.com/ARM-software/CMSIS-Musca-S1/issues" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0-dev0"/>
+        <package name="Musca-S1_DFP" schemaVersion="1.6.1" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0"/>
         <targetInfos>
           <targetInfo name="Musca-S1 ESP8266"/>
           <targetInfo name="Musca-S1 WizFi360"/>
@@ -1070,7 +1070,7 @@
       <file attr="config" category="sourceC" name="Device\Source\startup_Musca-S1.c" version="2.0.0">
         <instance index="0">RTE\Device\Musca-S1_CM33-0\startup_Musca-S1.c</instance>
         <component Cclass="Device" Cgroup="Startup" Cvariant="C Startup" Cvendor="ARM" Cversion="2.0.0" condition="Musca-S1 CMSIS"/>
-        <package name="Musca-S1_DFP" schemaVersion="1.6.1" supportContact="https://github.com/ARM-software/CMSIS-Musca-S1/issues" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0-dev0"/>
+        <package name="Musca-S1_DFP" schemaVersion="1.6.1" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0"/>
         <targetInfos>
           <targetInfo name="Musca-S1 ESP8266"/>
           <targetInfo name="Musca-S1 WizFi360"/>
@@ -1079,16 +1079,16 @@
       <file attr="config" category="sourceC" name="Device\Source\system_Musca-S1.c" version="2.0.0">
         <instance index="0">RTE\Device\Musca-S1_CM33-0\system_Musca-S1.c</instance>
         <component Cclass="Device" Cgroup="Startup" Cvariant="C Startup" Cvendor="ARM" Cversion="2.0.0" condition="Musca-S1 CMSIS"/>
-        <package name="Musca-S1_DFP" schemaVersion="1.6.1" supportContact="https://github.com/ARM-software/CMSIS-Musca-S1/issues" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0-dev0"/>
+        <package name="Musca-S1_DFP" schemaVersion="1.6.1" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0"/>
         <targetInfos>
           <targetInfo name="Musca-S1 ESP8266"/>
           <targetInfo name="Musca-S1 WizFi360"/>
         </targetInfos>
       </file>
-      <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.17.0">
+      <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.24.0">
         <instance index="0">RTE\Security\mbedTLS_config.h</instance>
-        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0"/>
-        <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
+        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.24.0"/>
+        <package name="mbedTLS" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="1.7.0"/>
         <targetInfos>
           <targetInfo name="Musca-S1 ESP8266"/>
           <targetInfo name="Musca-S1 WizFi360"/>

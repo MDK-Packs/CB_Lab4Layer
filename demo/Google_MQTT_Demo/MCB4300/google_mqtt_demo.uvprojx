@@ -10,7 +10,7 @@
       <TargetName>MCB4300</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6140000::V6.14::ARMCLANG</pCCUsed>
+      <pCCUsed>6160000::V6.16::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -313,7 +313,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>7</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -503,8 +503,8 @@
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </component>
-      <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0">
-        <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
+      <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.24.0">
+        <package name="mbedTLS" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="1.7.0"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
@@ -521,8 +521,8 @@
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </component>
-      <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Interface" Csub="ETH" Cvendor="Keil" Cversion="7.13.1" condition="Network Driver ETH" maxInstances="2">
-        <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
+      <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Interface" Csub="ETH" Cvendor="Keil" Cversion="7.14.0" condition="Network Driver ETH" maxInstances="2">
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.12.0"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
@@ -655,56 +655,56 @@
       </file>
       <file attr="config" category="source" name="Network\Config\Net_Config.c" version="7.1.0">
         <instance index="0">RTE\Network\Net_Config.c</instance>
-        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="CORE" Cvariant="IPv4 Release" Cvendor="Keil" Cversion="7.13.1" condition="CMSIS Core with RTOS" isDefaultVariant="1"/>
-        <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
+        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="CORE" Cvariant="IPv4 Release" Cvendor="Keil" Cversion="7.14.0" condition="CMSIS Core with RTOS" isDefaultVariant="1"/>
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.12.0"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="Network\Config\Net_Config_BSD.h" version="5.0.0">
         <instance index="0">RTE\Network\Net_Config_BSD.h</instance>
-        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Socket" Csub="BSD" Cvendor="Keil" Cversion="7.13.1" condition="Network UDP/TCP"/>
-        <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
+        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Socket" Csub="BSD" Cvendor="Keil" Cversion="7.14.0" condition="Network UDP/TCP"/>
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.12.0"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="Network\Config\Net_Config_DNS_Client.h" version="5.0.0">
         <instance index="0">RTE\Network\Net_Config_DNS_Client.h</instance>
-        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Service" Csub="DNS Client" Cvendor="Keil" Cversion="7.13.1" condition="Network UDP"/>
-        <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
+        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Service" Csub="DNS Client" Cvendor="Keil" Cversion="7.14.0" condition="Network UDP"/>
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.12.0"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </file>
-      <file attr="config" category="header" name="Network\Config\Net_Config_ETH.h" version="7.2.0">
+      <file attr="config" category="header" name="Network\Config\Net_Config_ETH.h" version="7.3.0">
         <instance index="0">RTE\Network\Net_Config_ETH_0.h</instance>
-        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Interface" Csub="ETH" Cvendor="Keil" Cversion="7.13.1" condition="Network Driver ETH" maxInstances="2"/>
-        <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
+        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Interface" Csub="ETH" Cvendor="Keil" Cversion="7.14.0" condition="Network Driver ETH" maxInstances="2"/>
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.12.0"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="Network\Config\Net_Config_TCP.h" version="7.1.1">
         <instance index="0">RTE\Network\Net_Config_TCP.h</instance>
-        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Socket" Csub="TCP" Cvendor="Keil" Cversion="7.13.1" condition="Network Interface"/>
-        <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
+        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Socket" Csub="TCP" Cvendor="Keil" Cversion="7.14.0" condition="Network Interface"/>
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.12.0"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" name="Network\Config\Net_Config_UDP.h" version="5.1.0">
         <instance index="0">RTE\Network\Net_Config_UDP.h</instance>
-        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Socket" Csub="UDP" Cvendor="Keil" Cversion="7.13.1" condition="Network Interface"/>
-        <package license="license.rtf" name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.11.1"/>
+        <component Cbundle="MDK-Plus" Cclass="Network" Cgroup="Socket" Csub="UDP" Cvendor="Keil" Cversion="7.14.0" condition="Network Interface"/>
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.12.0"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </file>
-      <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.17.0">
+      <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.24.0">
         <instance index="0">RTE\Security\mbedTLS_config.h</instance>
-        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0"/>
-        <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
+        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.24.0"/>
+        <package name="mbedTLS" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="1.7.0"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>

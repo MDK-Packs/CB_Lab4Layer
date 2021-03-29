@@ -10,14 +10,14 @@
       <TargetName>LPCXpresso55S69 ESP8266</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6150000::V6.15::ARMCLANG</pCCUsed>
+      <pCCUsed>6160000::V6.16::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>LPC55S69JBD100:cm33_core0</Device>
           <Vendor>NXP</Vendor>
-          <PackID>NXP.LPC55S69_DFP.12.3.0</PackID>
-          <PackURL>http://mcuxpresso.nxp.com/cmsis_pack/repo/</PackURL>
+          <PackID>NXP.LPC55S69_DFP.13.0.0</PackID>
+          <PackURL>https://mcuxpresso.nxp.com/cmsis_pack/repo/</PackURL>
           <Cpu>IRAM(0x20000000,0x044000) IRAM2(0x04000000,0x8000) IROM(0x00000000,0x098000) XRAM(0x40100000,0x4000) CPUTYPE("Cortex-M33") FPU3(SFPU) DSP TZ CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -313,7 +313,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>7</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -472,14 +472,14 @@
       <TargetName>LPCXpresso55S69 WizFi360</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6150000::V6.15::ARMCLANG</pCCUsed>
+      <pCCUsed>6160000::V6.16::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>LPC55S69JBD100:cm33_core0</Device>
           <Vendor>NXP</Vendor>
-          <PackID>NXP.LPC55S69_DFP.12.3.0</PackID>
-          <PackURL>http://mcuxpresso.nxp.com/cmsis_pack/repo/</PackURL>
+          <PackID>NXP.LPC55S69_DFP.13.0.0</PackID>
+          <PackURL>https://mcuxpresso.nxp.com/cmsis_pack/repo/</PackURL>
           <Cpu>IRAM(0x20000000,0x044000) IRAM2(0x04000000,0x8000) IROM(0x00000000,0x098000) XRAM(0x40100000,0x4000) CPUTYPE("Cortex-M33") FPU3(SFPU) DSP TZ CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -775,7 +775,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>7</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -944,7 +944,7 @@
       <api Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" exclusive="0" isTargetSpecific="1">
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
-          <targetInfo excluded="1" name="LPCXpresso55S69 ESP8266" versionMatchMode=""/>
+          <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo excluded="1" name="LPCXpresso55S69 WizFi360" versionMatchMode=""/>
         </targetInfos>
       </api>
@@ -978,176 +978,183 @@
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
-      <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0">
-        <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
+      <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.24.0">
+        <package name="mbedTLS" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="1.7.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
-      <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="ESP8266" Cvariant="UART" Cvendor="Keil" Cversion="1.3.0" condition="CMSIS Core with RTOS2 and USART Driver" isTargetSpecific="1">
-        <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.0"/>
+      <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="ESP8266" Cvariant="UART" Cvendor="Keil" Cversion="1.4.0" condition="CMSIS Core with RTOS2 and USART Driver" isTargetSpecific="1">
+        <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.1"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo excluded="1" name="LPCXpresso55S69 WizFi360" versionMatchMode=""/>
         </targetInfos>
       </component>
-      <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="WizFi360" Cvariant="UART" Cvendor="Keil" Cversion="1.4.0" condition="CMSIS Core with RTOS2 and USART Driver" isTargetSpecific="1">
-        <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.0"/>
+      <component Capiversion="1.1.0" Cclass="CMSIS Driver" Cgroup="WiFi" Csub="WizFi360" Cvariant="UART" Cvendor="Keil" Cversion="1.5.0" condition="CMSIS Core with RTOS2 and USART Driver" isTargetSpecific="1">
+        <package name="CMSIS-Driver" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="ARM" version="2.6.1"/>
         <targetInfos>
           <targetInfo excluded="1" name="LPCXpresso55S69 ESP8266" versionMatchMode=""/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="IoT Client" Cgroup="Google" Cvendor="MDK-Packs" Cversion="1.0.1" condition="Google IoT Client">
-        <package license="LICENSE.txt" name="Google_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/Google_IoT_Device/" vendor="MDK-Packs" version="1.0.2"/>
+        <package name="Google_IoT_Device" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/Google_IoT_Device/" vendor="MDK-Packs" version="1.0.2"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="IoT Client" Cgroup="MQTTClient-C" Cvendor="MDK-Packs" Cversion="1.1.0" condition="MQTTClient-C">
-        <package license="edl-v10.txt" name="Paho_MQTT" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/Paho_MQTT/" vendor="MDK-Packs" version="1.0.2"/>
+        <package name="Paho_MQTT" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/Paho_MQTT/" vendor="MDK-Packs" version="1.0.2"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="IoT Utility" Cgroup="MQTTPacket" Cvendor="MDK-Packs" Cversion="1.1.0" condition="Cortex-M Device">
-        <package license="edl-v10.txt" name="Paho_MQTT" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/Paho_MQTT/" vendor="MDK-Packs" version="1.0.2"/>
+        <package name="Paho_MQTT" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/Paho_MQTT/" vendor="MDK-Packs" version="1.0.2"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
       <component Capiversion="1.2.0" Cclass="IoT Utility" Cgroup="Socket" Csub="WiFi" Cvendor="MDK-Packs" Cversion="1.0.0" condition="WiFi Driver Socket">
-        <package license="LICENSE.txt" name="IoT_Socket" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/IoT_Socket/" vendor="MDK-Packs" version="1.2.0"/>
+        <package name="IoT_Socket" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/IoT_Socket/" vendor="MDK-Packs" version="1.2.1"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
-      <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset_AND_utility.debug_console">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+      <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND___component.serial_manager_AND_utility.debug_console__OR_utility.debug_console_lite__AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset">
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
-      <component Cclass="CMSIS Driver" Cgroup="USART" Csub="flexcomm_usart_cmsis" Cvendor="NXP" Cversion="2.0.0" condition="device.LPC55S69_AND_CMSIS_Driver_Include.USART_AND_RTE_Device_AND_driver.flexcomm_usart_dma">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+      <component Cclass="CMSIS Driver" Cgroup="USART" Csub="flexcomm_usart_cmsis" Cvendor="NXP" Cversion="2.2.0" condition="device.LPC55S69_AND_CMSIS_Driver_Include.USART_AND_RTE_Device_AND_driver.flexcomm_usart_dma">
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="SDK Drivers" Csub="clock" Cvendor="NXP" Cversion="2.1.0" condition="device.LPC55S69_AND_driver.common_AND_driver.power">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+      <component Cclass="Device" Cgroup="CMSIS" Csub="LPC55S69_system" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_device.LPC55S69_CMSIS">
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="SDK Drivers" Csub="common" Cvendor="NXP" Cversion="2.2.2" condition="device.LPC55S69_AND_device.LPC55S69_CMSIS_AND_driver.clock_AND_driver.reset">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+      <component Cclass="Device" Cgroup="SDK Drivers" Csub="clock" Cvendor="NXP" Cversion="2.3.3" condition="device.LPC55S69_AND__driver.power_OR_driver.power_s__AND_driver.common">
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="SDK Drivers" Csub="dma" Cvendor="NXP" Cversion="2.4.0" condition="device.LPC55S69_AND_driver.common">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+      <component Cclass="Device" Cgroup="SDK Drivers" Csub="common" Cvendor="NXP" Cversion="2.2.9" condition="device.LPC55S69_AND_device.LPC55S69_CMSIS_AND_driver.clock_AND_driver.reset">
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
+        <targetInfos>
+          <targetInfo name="LPCXpresso55S69 ESP8266"/>
+          <targetInfo name="LPCXpresso55S69 WizFi360"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="SDK Drivers" Csub="dma" Cvendor="NXP" Cversion="2.4.2" condition="device.LPC55S69_AND_driver.common">
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="flexcomm" Cvendor="NXP" Cversion="2.0.2" condition="device.LPC55S69_AND_driver.common">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="SDK Drivers" Csub="gpio" Cvendor="NXP" Cversion="2.1.5" condition="device.LPC55S69_AND_driver.common">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+      <component Cclass="Device" Cgroup="SDK Drivers" Csub="gpio" Cvendor="NXP" Cversion="2.1.7" condition="device.LPC55S69_AND_driver.common">
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="SDK Drivers" Csub="i2c" Cvendor="NXP" Cversion="2.0.6" condition="device.LPC55S69_AND_driver.common_AND_driver.flexcomm">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+      <component Cclass="Device" Cgroup="SDK Drivers" Csub="i2c" Cvendor="NXP" Cversion="2.1.0" condition="device.LPC55S69_AND_driver.common_AND_driver.flexcomm">
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="SDK Drivers" Csub="iocon" Cvendor="NXP" Cversion="2.1.1" condition="device.LPC55S69_AND_driver.common">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+      <component Cclass="Device" Cgroup="SDK Drivers" Csub="iocon" Cvendor="NXP" Cversion="2.1.2" condition="device.LPC55S69_AND_driver.common">
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="lists" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_driver.common">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="power" Cvendor="NXP" Cversion="2.0.0" condition="device.LPC55S69_AND_driver.common">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="reset" Cvendor="NXP" Cversion="2.0.1" condition="device.LPC55S69_AND_driver.common">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="SDK Drivers" Csub="spi" Cvendor="NXP" Cversion="2.1.0" condition="device.LPC55S69_AND_driver.common_AND_driver.flexcomm">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+      <component Cclass="Device" Cgroup="SDK Drivers" Csub="spi" Cvendor="NXP" Cversion="2.2.1" condition="device.LPC55S69_AND_driver.common_AND_driver.flexcomm">
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="SDK Drivers" Csub="usart" Cvendor="NXP" Cversion="2.1.1" condition="device.LPC55S69_AND_driver.flexcomm">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+      <component Cclass="Device" Cgroup="SDK Drivers" Csub="usart" Cvendor="NXP" Cversion="2.4.0" condition="device.LPC55S69_AND_driver.flexcomm">
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="usart_adapter" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_driver.common_AND_driver.flexcomm_AND_driver.flexcomm_usart">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="SDK Drivers" Csub="usart_dma" Cvendor="NXP" Cversion="2.1.1" condition="device.LPC55S69_AND_driver.flexcomm_AND_driver.flexcomm_usart_AND_driver.lpc_dma">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+      <component Cclass="Device" Cgroup="SDK Drivers" Csub="usart_dma" Cvendor="NXP" Cversion="2.3.1" condition="device.LPC55S69_AND_driver.flexcomm_AND_driver.flexcomm_usart_AND_driver.lpc_dma">
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Project Template" Csub="RTE_Device" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_driver.lpc_dma">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Utilities" Csub="debug_console" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_AND_driver.common">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266">
             <c>
@@ -1161,22 +1168,22 @@
           </targetInfo>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="SDK Utilities" Csub="serial_manager" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND__component.lists_AND_driver.common__AND__component.serial_manager_swo_OR_component.serial_manager_uart_OR_component.serial_manager_usb_cdc_virtual_">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+      <component Cclass="Device" Cgroup="SDK Utilities" Csub="serial_manager" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND__component.serial_manager_swo_OR_component.serial_manager_uart_OR_component.serial_manager_virtual__AND_component.lists_AND_driver.common">
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="SDK Utilities" Csub="serial_manager_uart" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_driver.flexcomm_usart">
-        <package license="Licenses.txt" name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.1.1"/>
+      <component Cclass="Device" Cgroup="SDK Utilities" Csub="serial_manager_uart" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_AND_component.usart_adapter_AND_driver.flexcomm_usart">
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.1.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33_AND__armclang_OR_iar_">
-        <package name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+      <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.1.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33_AND__armclang_OR_iar__AND_device.LPC55S69_system">
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
@@ -1186,8 +1193,8 @@
     <files>
       <file attr="config" category="sourceC" name="project_template\board.c" version="1.0.0">
         <instance index="0">RTE\Board_Support\LPC55S69JBD100_cm33_core0\board.c</instance>
-        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset_AND_utility.debug_console" isDefaultVariant="1"/>
-        <package name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND___component.serial_manager_AND_utility.debug_console__OR_utility.debug_console_lite__AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset" isDefaultVariant="1"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
@@ -1195,8 +1202,8 @@
       </file>
       <file attr="config" category="header" name="project_template\board.h" version="1.0.0">
         <instance index="0">RTE\Board_Support\LPC55S69JBD100_cm33_core0\board.h</instance>
-        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset_AND_utility.debug_console" isDefaultVariant="1"/>
-        <package name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND___component.serial_manager_AND_utility.debug_console__OR_utility.debug_console_lite__AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset" isDefaultVariant="1"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
@@ -1204,8 +1211,8 @@
       </file>
       <file attr="config" category="sourceC" name="project_template\clock_config.c" version="1.0.0">
         <instance index="0">RTE\Board_Support\LPC55S69JBD100_cm33_core0\clock_config.c</instance>
-        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset_AND_utility.debug_console" isDefaultVariant="1"/>
-        <package name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND___component.serial_manager_AND_utility.debug_console__OR_utility.debug_console_lite__AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset" isDefaultVariant="1"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
@@ -1213,8 +1220,8 @@
       </file>
       <file attr="config" category="header" name="project_template\clock_config.h" version="1.0.0">
         <instance index="0">RTE\Board_Support\LPC55S69JBD100_cm33_core0\clock_config.h</instance>
-        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset_AND_utility.debug_console" isDefaultVariant="1"/>
-        <package name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND___component.serial_manager_AND_utility.debug_console__OR_utility.debug_console_lite__AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset" isDefaultVariant="1"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
@@ -1222,8 +1229,8 @@
       </file>
       <file attr="config" category="sourceC" name="project_template\peripherals.c" version="1.0.0">
         <instance index="0">RTE\Board_Support\LPC55S69JBD100_cm33_core0\peripherals.c</instance>
-        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset_AND_utility.debug_console" isDefaultVariant="1"/>
-        <package name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND___component.serial_manager_AND_utility.debug_console__OR_utility.debug_console_lite__AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset" isDefaultVariant="1"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
@@ -1231,8 +1238,8 @@
       </file>
       <file attr="config" category="header" name="project_template\peripherals.h" version="1.0.0">
         <instance index="0">RTE\Board_Support\LPC55S69JBD100_cm33_core0\peripherals.h</instance>
-        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset_AND_utility.debug_console" isDefaultVariant="1"/>
-        <package name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND___component.serial_manager_AND_utility.debug_console__OR_utility.debug_console_lite__AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset" isDefaultVariant="1"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
@@ -1240,8 +1247,8 @@
       </file>
       <file attr="config" category="sourceC" name="project_template\pin_mux.c" version="1.0.0">
         <instance index="0">RTE\Board_Support\LPC55S69JBD100_cm33_core0\pin_mux.c</instance>
-        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset_AND_utility.debug_console" isDefaultVariant="1"/>
-        <package name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND___component.serial_manager_AND_utility.debug_console__OR_utility.debug_console_lite__AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset" isDefaultVariant="1"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
@@ -1249,8 +1256,8 @@
       </file>
       <file attr="config" category="header" name="project_template\pin_mux.h" version="1.0.0">
         <instance index="0">RTE\Board_Support\LPC55S69JBD100_cm33_core0\pin_mux.h</instance>
-        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_component.serial_manager_AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset_AND_utility.debug_console" isDefaultVariant="1"/>
-        <package name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="LPC55S69" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND___component.serial_manager_AND_utility.debug_console__OR_utility.debug_console_lite__AND_component.usart_adapter_AND_device.LPC55S69_startup_AND_driver.clock_AND_driver.common_AND_driver.flexcomm_i2c_AND_driver.flexcomm_spi_AND_driver.flexcomm_usart_AND_driver.lpc_gpio_AND_driver.lpc_iocon_AND_driver.power_AND_driver.reset" isDefaultVariant="1"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
@@ -1294,8 +1301,8 @@
       </file>
       <file attr="config" category="linkerScript" condition="core_id.cm33_core0_AND_core_type.cm33_AND_mdk" name="arm\LPC55S69_cm33_core0_flash.scf" version="1.1.0">
         <instance index="0">RTE\Device\LPC55S69JBD100_cm33_core0\LPC55S69_cm33_core0_flash.scf</instance>
-        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.1.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33_AND__armclang_OR_iar_"/>
-        <package name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.1.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33_AND__armclang_OR_iar__AND_device.LPC55S69_system"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
@@ -1303,8 +1310,8 @@
       </file>
       <file attr="config" category="linkerScript" condition="core_id.cm33_core0_AND_core_type.cm33_AND_mdk" name="arm\LPC55S69_cm33_core0_flash_ns.scf" version="1.1.0">
         <instance index="0">RTE\Device\LPC55S69JBD100_cm33_core0\LPC55S69_cm33_core0_flash_ns.scf</instance>
-        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.1.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33_AND__armclang_OR_iar_"/>
-        <package name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.1.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33_AND__armclang_OR_iar__AND_device.LPC55S69_system"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
@@ -1312,8 +1319,8 @@
       </file>
       <file attr="config" category="linkerScript" condition="core_id.cm33_core0_AND_core_type.cm33_AND_mdk" name="arm\LPC55S69_cm33_core0_flash_s.scf" version="1.1.0">
         <instance index="0">RTE\Device\LPC55S69JBD100_cm33_core0\LPC55S69_cm33_core0_flash_s.scf</instance>
-        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.1.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33_AND__armclang_OR_iar_"/>
-        <package name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.1.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33_AND__armclang_OR_iar__AND_device.LPC55S69_system"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
@@ -1321,8 +1328,8 @@
       </file>
       <file attr="config" category="linkerScript" condition="core_id.cm33_core0_AND_core_type.cm33_AND_mdk" name="arm\LPC55S69_cm33_core0_ram.scf" version="1.1.0">
         <instance index="0">RTE\Device\LPC55S69JBD100_cm33_core0\LPC55S69_cm33_core0_ram.scf</instance>
-        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.1.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33_AND__armclang_OR_iar_"/>
-        <package name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" Cversion="1.1.0" condition="device.LPC55S69_AND_CMSIS_Include_core_cm33_AND__armclang_OR_iar__AND_device.LPC55S69_system"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
@@ -1331,16 +1338,16 @@
       <file attr="config" category="header" name="template\RTE_Device.h" version="1.0.0">
         <instance index="0">RTE\Device\LPC55S69JBD100_cm33_core0\RTE_Device.h</instance>
         <component Cclass="Device" Cgroup="SDK Project Template" Csub="RTE_Device" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC55S69_AND_driver.lpc_dma"/>
-        <package name="LPC55S69_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC55S69_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
         </targetInfos>
       </file>
-      <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.17.0">
+      <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.24.0">
         <instance index="0">RTE\Security\mbedTLS_config.h</instance>
-        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0"/>
-        <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
+        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.24.0"/>
+        <package name="mbedTLS" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="1.7.0"/>
         <targetInfos>
           <targetInfo name="LPCXpresso55S69 ESP8266"/>
           <targetInfo name="LPCXpresso55S69 WizFi360"/>
