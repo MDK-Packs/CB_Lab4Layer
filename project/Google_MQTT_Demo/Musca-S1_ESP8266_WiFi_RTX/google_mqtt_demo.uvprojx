@@ -10,7 +10,7 @@
       <TargetName>Musca-S1 ESP8266</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6140001::V6.14.1::ARMCLANG</pCCUsed>
+      <pCCUsed>6160000::V6.16::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -313,7 +313,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>7</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -525,8 +525,8 @@
           <targetInfo name="Musca-S1 ESP8266"/>
         </targetInfos>
       </component>
-      <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0">
-        <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
+      <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.24.0">
+        <package name="mbedTLS" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="1.7.0"/>
         <targetInfos>
           <targetInfo name="Musca-S1 ESP8266"/>
         </targetInfos>
@@ -639,10 +639,10 @@
           <targetInfo name="Musca-S1 ESP8266"/>
         </targetInfos>
       </file>
-      <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.17.0">
+      <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.24.0">
         <instance index="0">RTE\Security\mbedTLS_config.h</instance>
-        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0"/>
-        <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
+        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.24.0"/>
+        <package name="mbedTLS" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="1.7.0"/>
         <targetInfos>
           <targetInfo name="Musca-S1 ESP8266"/>
         </targetInfos>

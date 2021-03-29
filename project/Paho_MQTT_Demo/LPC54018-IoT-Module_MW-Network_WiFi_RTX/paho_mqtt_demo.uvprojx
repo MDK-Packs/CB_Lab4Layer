@@ -10,14 +10,14 @@
       <TargetName>LPC54018-IoT-Module</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6150000::V6.15::ARMCLANG</pCCUsed>
+      <pCCUsed>6160000::V6.16::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>LPC54018JET180</Device>
           <Vendor>NXP</Vendor>
-          <PackID>NXP.LPC54018_DFP.12.3.0</PackID>
-          <PackURL>http://mcuxpresso.nxp.com/cmsis_pack/repo/</PackURL>
+          <PackID>NXP.LPC54018_DFP.13.0.0</PackID>
+          <PackURL>https://mcuxpresso.nxp.com/cmsis_pack/repo/</PackURL>
           <Cpu>IRAM(0x00000000,0x030000) IRAM2(0x20000000,0x028000) XRAM(0x40100000,0x2000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -313,7 +313,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>7</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -524,7 +524,7 @@
           <targetInfo name="LPC54018-IoT-Module" versionMatchMode="fixed"/>
         </targetInfos>
       </package>
-      <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0">
+      <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0">
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module" versionMatchMode="fixed"/>
         </targetInfos>
@@ -577,8 +577,8 @@
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
-      <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0">
-        <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
+      <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.24.0">
+        <package name="mbedTLS" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="1.7.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
@@ -656,7 +656,7 @@
         </targetInfos>
       </component>
       <component Cclass="Qualcomm" Cgroup="QCA400x" Csub="Host Driver SDK" Cvariant="SPI" Cvendor="MDK-Packs" Cversion="1.0.0" condition="CMSIS_CORE CMSIS_RTOS2 CMSIS_Driver_SPI">
-        <package name="QCA400x_Host_Driver_SDK" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/QCA400x_Host_Driver_SDK/" vendor="MDK-Packs" version="1.1.0"/>
+        <package name="QCA400x_Host_Driver_SDK" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/QCA400x_Host_Driver_SDK/" vendor="MDK-Packs" version="1.1.1"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
@@ -668,145 +668,145 @@
         </targetInfos>
       </component>
       <component Cclass="CMSIS Driver" Cgroup="SPI" Csub="flexcomm_spi_cmsis" Cvendor="NXP" Cversion="2.4.0" condition="device.LPC54018_AND_CMSIS_Driver_Include.SPI_AND_RTE_Device_AND_driver.flexcomm_spi_dma">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="CMSIS" Csub="LPC54018_header" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC54018_AND_CMSIS_Include_core_cm4">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="CMSIS" Csub="LPC54018_system" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC54018_AND_device.LPC54018_CMSIS">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="clock" Cvendor="NXP" Cversion="2.2.0" condition="device.LPC54018_AND_driver.common_AND_driver.power">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="common" Cvendor="NXP" Cversion="2.2.9" condition="device.LPC54018_AND_device.LPC54018_CMSIS_AND_driver.clock_AND_driver.reset">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="dma" Cvendor="NXP" Cversion="2.4.2" condition="device.LPC54018_AND_driver.common">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="emc" Cvendor="NXP" Cversion="2.0.4" condition="device.LPC54018_AND_driver.common">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="flexcomm" Cvendor="NXP" Cversion="2.0.2" condition="device.LPC54018_AND_driver.common">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="gpio" Cvendor="NXP" Cversion="2.1.7" condition="device.LPC54018_AND_driver.common">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="inputmux" Cvendor="NXP" Cversion="2.0.3" condition="device.LPC54018_AND_driver.common_AND_driver.inputmux_connections">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="inputmux_connections" Cvendor="NXP" Cversion="2.0.1" condition="device.LPC54018_AND_driver.common">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="lists" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC54018_AND_driver.common">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="pint" Cvendor="NXP" Cversion="2.1.8" condition="device.LPC54018_AND_driver.common">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="power" Cvendor="NXP" Cversion="2.0.0" condition="device.LPC54018_AND_driver.common">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="reset" Cvendor="NXP" Cversion="2.0.1" condition="device.LPC54018_AND_driver.common">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="spi" Cvendor="NXP" Cversion="2.2.1" condition="device.LPC54018_AND_driver.common_AND_driver.flexcomm">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="spi_dma" Cvendor="NXP" Cversion="2.1.1" condition="device.LPC54018_AND_driver.flexcomm_AND_driver.flexcomm_spi_AND_driver.lpc_dma">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="usart" Cvendor="NXP" Cversion="2.4.0" condition="device.LPC54018_AND_driver.flexcomm">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Drivers" Csub="usart_adapter" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC54018_AND_driver.common_AND_driver.flexcomm_AND_driver.flexcomm_usart">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Project Template" Csub="RTE_Device" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC54018_AND_driver.lpc_dma">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Utilities" Csub="debug_console" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC54018_AND_component.serial_manager_AND_driver.common">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Utilities" Csub="serial_manager" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC54018_AND__component.serial_manager_swo_OR_component.serial_manager_uart_OR_component.serial_manager_virtual__AND_component.lists_AND_driver.common">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="SDK Utilities" Csub="serial_manager_uart" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC54018_AND_component.serial_manager_AND_component.usart_adapter_AND_driver.flexcomm_usart">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="Startup" Csub="LPC54018_startup" Cvendor="NXP" Cversion="1.1.0" condition="device.LPC54018_AND__armclang_OR_iar__AND_device.LPC54018_system">
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
@@ -912,7 +912,7 @@
       <file attr="config" category="linkerScript" condition="mdk" name="arm\LPC54018_ram.scf" version="1.1.0">
         <instance index="0">RTE\Device\LPC54018JET180\LPC54018_ram.scf</instance>
         <component Cclass="Device" Cgroup="Startup" Csub="LPC54018_startup" Cvendor="NXP" Cversion="1.1.0" condition="device.LPC54018_AND__armclang_OR_iar__AND_device.LPC54018_system"/>
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
@@ -920,7 +920,7 @@
       <file attr="config" category="linkerScript" condition="mdk" name="arm\LPC54018_spifi_flash.scf" version="1.1.0">
         <instance index="0">RTE\Device\LPC54018JET180\LPC54018_spifi_flash.scf</instance>
         <component Cclass="Device" Cgroup="Startup" Csub="LPC54018_startup" Cvendor="NXP" Cversion="1.1.0" condition="device.LPC54018_AND__armclang_OR_iar__AND_device.LPC54018_system"/>
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
@@ -928,7 +928,7 @@
       <file attr="config" category="header" name="template\RTE_Device.h" version="1.0.0">
         <instance index="0">RTE\Device\LPC54018JET180\RTE_Device.h</instance>
         <component Cclass="Device" Cgroup="SDK Project Template" Csub="RTE_Device" Cvendor="NXP" Cversion="1.0.0" condition="device.LPC54018_AND_driver.lpc_dma"/>
-        <package name="LPC54018_DFP" schemaVersion="1.4" url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="12.3.0"/>
+        <package name="LPC54018_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
@@ -984,7 +984,7 @@
       <file attr="config" category="header" name="port\config\QCA400x_Config.h" version="1.0.0">
         <instance index="0">RTE\Qualcomm\QCA400x_Config.h</instance>
         <component Cclass="Qualcomm" Cgroup="QCA400x" Csub="Host Driver SDK" Cvariant="SPI" Cvendor="MDK-Packs" Cversion="1.0.0" condition="CMSIS_CORE CMSIS_RTOS2 CMSIS_Driver_SPI"/>
-        <package name="QCA400x_Host_Driver_SDK" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/QCA400x_Host_Driver_SDK/" vendor="MDK-Packs" version="1.1.0"/>
+        <package name="QCA400x_Host_Driver_SDK" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/QCA400x_Host_Driver_SDK/" vendor="MDK-Packs" version="1.1.1"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
@@ -992,7 +992,7 @@
       <file attr="config" category="source" name="port\config\QCA400x_HW.c" version="1.0.0">
         <instance index="0">RTE\Qualcomm\QCA400x_HW.c</instance>
         <component Cclass="Qualcomm" Cgroup="QCA400x" Csub="Host Driver SDK" Cvariant="SPI" Cvendor="MDK-Packs" Cversion="1.0.0" condition="CMSIS_CORE CMSIS_RTOS2 CMSIS_Driver_SPI"/>
-        <package name="QCA400x_Host_Driver_SDK" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/QCA400x_Host_Driver_SDK/" vendor="MDK-Packs" version="1.1.0"/>
+        <package name="QCA400x_Host_Driver_SDK" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/QCA400x_Host_Driver_SDK/" vendor="MDK-Packs" version="1.1.1"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
@@ -1000,15 +1000,15 @@
       <file attr="config" category="header" name="atheros_wifi\custom_src\include\config\a_config.h" version="1.0.0">
         <instance index="0">RTE\Qualcomm\a_config.h</instance>
         <component Cclass="Qualcomm" Cgroup="QCA400x" Csub="Host Driver SDK" Cvariant="SPI" Cvendor="MDK-Packs" Cversion="1.0.0" condition="CMSIS_CORE CMSIS_RTOS2 CMSIS_Driver_SPI"/>
-        <package name="QCA400x_Host_Driver_SDK" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/QCA400x_Host_Driver_SDK/" vendor="MDK-Packs" version="1.1.0"/>
+        <package name="QCA400x_Host_Driver_SDK" schemaVersion="1.6" url="https://github.com/MDK-Packs/Pack/raw/master/QCA400x_Host_Driver_SDK/" vendor="MDK-Packs" version="1.1.1"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
       </file>
-      <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.17.0">
+      <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.24.0">
         <instance index="0">RTE\Security\mbedTLS_config.h</instance>
-        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0"/>
-        <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
+        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.24.0"/>
+        <package name="mbedTLS" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="ARM" version="1.7.0"/>
         <targetInfos>
           <targetInfo name="LPC54018-IoT-Module"/>
         </targetInfos>
