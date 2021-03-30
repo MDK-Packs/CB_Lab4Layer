@@ -3,3 +3,9 @@
 **/Listings
 **/*.uvgui.*
 **/*.uvguix.*
+/build/AWS_MQTT_Demo/*
+/build/Azure_MQTT_Demo/*
+/build/Google_MQTT_Demo/*
+/build/Paho_MQTT_Demo/*
+/build/Watson_MQTT_Demo/*
+/build/Blinky/*
