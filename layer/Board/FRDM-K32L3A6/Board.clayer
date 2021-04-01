@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<cprj schemaVersion="0.0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CPRJ.xsd">
+  <created timestamp="2021-04-01T12:46:51" tool="cbuildgen 0.10.0">
+    <used file="Platform.FRDM-K32L3A6.cprj" path="D:/GitHub/MDK-Packs/CB_Lab4Layer/build/../project/Platform/FRDM-K32L3A6" timestamp="2021-04-01T12:21:48"/>
+  </created>
+
+  <info isLayer="true">
+    <description>Board setup with interfaces</description>
+    <category>Board</category>
+    <license>BSD 3-Clause, Apache 2.0</license>
+    <interfaces>
+      <consumes id="RTOS2"/>
+      <provides id="A_UART" value="1"/>
+      <provides id="A_SPI" value="0"/>
+      <provides id="A_IO9_I"/>
+      <provides id="A_IO10_O"/>
+      <provides id="C_VIO"/>
+      <provides id="STDOUT"/>
+      <provides id="STDIN"/>
+      <provides id="STDERR"/>
+      <provides id="Heap" value="65536"/>
+    </interfaces>
+  </info>
+
+  <layers>
+    <layer hasTarget="1" name="Board">
+      <description>Board setup with interfaces</description>
+      <category>Board</category>
+      <license>BSD 3-Clause, Apache 2.0</license>
+      <interfaces>
+        <consumes id="RTOS2"/>
+        <provides id="A_UART" value="1"/>
+        <provides id="A_SPI" value="0"/>
+        <provides id="A_IO9_I"/>
+        <provides id="A_IO10_O"/>
+        <provides id="C_VIO"/>
+        <provides id="STDOUT"/>
+        <provides id="STDIN"/>
+        <provides id="STDERR"/>
+        <provides id="Heap" value="65536"/>
+      </interfaces>
+    </layer>
+  </layers>
+
+  <packages>
+    <package name="CMSIS" vendor="ARM"/>
+    <package name="ARM_Compiler" vendor="Keil"/>
+    <package name="FRDM-K32L3A6_BSP" vendor="NXP" version="13.0.0:13.0.0"/>
+    <package name="K32L3A60_DFP" vendor="NXP" version="13.0.0:13.0.0"/>
+  </packages>
+
+  <compilers>
+    <compiler name="AC6" version="6.0.0:6.99.99"/>
+  </compilers>
+
+  <target Bname="FRDM-K32L3A6" Bvendor="NXP" Ddsp="NO_DSP" Dendian="Little-endian" Dfpu="SP_FPU" Dmve="NO_MVE" Dname="K32L3A60VPJ1A" Dsecure="Non-secure" Dtz="NO_TZ" Dvendor="NXP:11" Pname="cm4">
+    <output intdir="./Objects/" name="image" outdir="./Objects/" type="exe"/>
+    <ldflags add="--callgraph --diag_suppress 6314 --entry=Reset_Handler --info sizes --info summarysizes --info totals --info unused --info veneers --load_addr_map_info --map --strict --summary_stderr --symbols --xref" compiler="AC6" file="./RTE/Device/K32L3A60VPJ1A_cm4/K32L3A60xxx_cm4_flash.scf"/>
+    <cflags add="-I . -I ./Board_IO -O1 -Wno-documentation -Wno-documentation-unknown-command -Wno-license-management -Wno-missing-noreturn -Wno-missing-prototypes -Wno-missing-variable-declarations -Wno-nonportable-include-path -Wno-packed -Wno-parentheses-equality -Wno-reserved-id-macro -Wno-sign-conversion -Wno-unused-macros -ffunction-sections -fno-rtti -fshort-enums -fshort-wchar -funsigned-char -gdwarf-4 -std=c99 -xc" compiler="AC6"/>
+    <asflags add="-gdwarf-4 -masm=auto" compiler="AC6"/>
+  </target>
+
+  <components>
+    <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="frdmk32l3a6" Cvendor="NXP" layer="Board">
+      <file attr="config" category="sourceC" name="project_template/board.c" version="1.0.0"/>
+      <file attr="config" category="header" name="project_template/board.h" version="1.0.0"/>
+      <file attr="config" category="sourceC" name="project_template/clock_config.c" version="1.0.0"/>
+      <file attr="config" category="header" name="project_template/clock_config.h" version="1.0.0"/>
+      <file attr="config" category="sourceC" name="project_template/cm4/peripherals.c" version="1.0.0"/>
+      <file attr="config" category="header" name="project_template/cm4/peripherals.h" version="1.0.0"/>
+      <file attr="config" category="sourceC" name="project_template/cm4/pin_mux.c" version="1.0.0"/>
+      <file attr="config" category="header" name="project_template/cm4/pin_mux.h" version="1.0.0"/>
+    </component>
+    <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" layer="Board"/>
+    <component Cclass="CMSIS Driver" Cgroup="SPI" Csub="lpspi_cmsis" Cvendor="NXP" layer="Board"/>
+    <component Cclass="CMSIS Driver" Cgroup="USART" Csub="lpuart_cmsis" Cvendor="NXP" layer="Board"/>
+    <component Cclass="CMSIS Driver" Cgroup="VIO" Csub="Custom" Cvendor="ARM" layer="Board"/>
+    <component Cclass="Device" Cgroup="CMSIS" Csub="K32L3A60_header" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="CMSIS" Csub="K32L3A60_system" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="SDK Drivers" Csub="clock" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="SDK Drivers" Csub="common" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="SDK Drivers" Csub="dmamux" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="SDK Drivers" Csub="edma" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="SDK Drivers" Csub="fxos8700cq" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="SDK Drivers" Csub="gpio" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="SDK Drivers" Csub="i2c" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="SDK Drivers" Csub="lists" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="SDK Drivers" Csub="lpspi" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="SDK Drivers" Csub="lpuart" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="SDK Drivers" Csub="lpuart_adapter" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="SDK Drivers" Csub="msmc" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="SDK Drivers" Csub="port" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="SDK Project Template" Csub="RTE_Device" Cvendor="NXP" layer="Board">
+      <file attr="config" category="header" name="template/RTE_Device.h" version="1.0.0"/>
+    </component>
+    <component Cclass="Device" Cgroup="SDK Utilities" Csub="assert" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="SDK Utilities" Csub="debug_console" Cvendor="NXP" layer="Board">
+      <cflags add="-DSDK_DEBUGCONSOLE=&quot;1&quot; -D__MCUXPRESSO" compiler="AC6"/>
+    </component>
+    <component Cclass="Device" Cgroup="SDK Utilities" Csub="serial_manager" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="SDK Utilities" Csub="serial_manager_uart" Cvendor="NXP" layer="Board"/>
+    <component Cclass="Device" Cgroup="Startup" Cvendor="NXP" layer="Board">
+      <file attr="config" category="linkerScript" name="arm/K32L3A60xxx_cm4_flash.scf" version="1.1.0"/>
+      <file attr="config" category="linkerScript" name="arm/K32L3A60xxx_cm4_ram.scf" version="1.1.0"/>
+    </component>
+    <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="Event Recorder" Cvariant="DAP" Cvendor="Keil" layer="Board">
+      <file attr="config" category="header" name="Config/EventRecorderConf.h" version="1.1.0"/>
+    </component>
+    <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="I/O" Csub="STDERR" Cvariant="User" Cvendor="Keil" layer="Board"/>
+    <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="I/O" Csub="STDIN" Cvariant="User" Cvendor="Keil" layer="Board"/>
+    <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="I/O" Csub="STDOUT" Cvariant="User" Cvendor="Keil" layer="Board"/>
+  </components>
+
+  <files>
+    <group name="Board">
+      <file category="sourceC" layer="Board" name="./main.c"/>
+      <file category="header" layer="Board" name="./main.h"/>
+      <file category="sourceC" layer="Board" name="./RTE/Board_Support/vio_FRDM-K32L3A6.c"/>
+    </group>
+    <group name="Board IO">
+      <file category="sourceC" layer="Board" name="./Board_IO/retarget_stdio.c"/>
+      <file category="sourceC" layer="Board" name="./Board_IO/arduino.c"/>
+      <file category="header" layer="Board" name="./Board_IO/arduino.h"/>
+    </group>
+    <group name="MCUXpresso">
+      <file category="other" layer="Board" name="./FRDM-K32L3A6.mex"/>
+    </group>
+  </files>
+</cprj>
+
