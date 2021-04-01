@@ -2,6 +2,8 @@ App=Blinky Board=32F746GDISCOVERY RTOS=RTX
 App=Blinky Board=32F746GDISCOVERY RTOS=FreeRTOS
 App=Blinky Board=B-L475E-IOT01A RTOS=RTX
 App=Blinky Board=B-L475E-IOT01A RTOS=FreeRTOS
+App=Blinky Board=FRDM-K32L3A6 RTOS=RTX
+App=Blinky Board=FRDM-K32L3A6 RTOS=FreeRTOS
 App=Blinky Board=LPCXpresso55S69 RTOS=RTX
 App=Blinky Board=LPCXpresso55S69 RTOS=FreeRTOS
 App=Blinky Board=MIMXRT1064-EVK RTOS=RTX
@@ -24,6 +26,12 @@ App=AWS_MQTT_Demo Board=32F746GDISCOVERY Socket=lwIP_ETH RTOS=RTX
 App=AWS_MQTT_Demo Board=32F746GDISCOVERY Socket=lwIP_ETH RTOS=FreeRTOS
 App=AWS_MQTT_Demo Board=B-L475E-IOT01A Socket=WiFi RTOS=RTX
 App=AWS_MQTT_Demo Board=B-L475E-IOT01A Socket=WiFi RTOS=FreeRTOS
+App=AWS_MQTT_Demo Board=FRDM-K32L3A6 Module=ESP8266 Socket=WiFi RTOS=RTX
+App=AWS_MQTT_Demo Board=FRDM-K32L3A6 Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
+App=AWS_MQTT_Demo Board=FRDM-K32L3A6 Module=ISM43362 Socket=WiFi RTOS=RTX
+App=AWS_MQTT_Demo Board=FRDM-K32L3A6 Module=ISM43362 Socket=WiFi RTOS=FreeRTOS
+App=AWS_MQTT_Demo Board=FRDM-K32L3A6 Module=WizFi360 Socket=WiFi RTOS=RTX
+App=AWS_MQTT_Demo Board=FRDM-K32L3A6 Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
 App=AWS_MQTT_Demo Board=MCB4300 Socket=MW-Network_ETH RTOS=RTX
 App=AWS_MQTT_Demo Board=MCB4300 Socket=MW-Network_ETH RTOS=FreeRTOS
 App=AWS_MQTT_Demo Board=MCB4300 Socket=lwIP_ETH RTOS=RTX
@@ -73,6 +81,12 @@ App=Azure_MQTT_Demo Board=32F746GDISCOVERY Socket=lwIP_ETH RTOS=RTX
 App=Azure_MQTT_Demo Board=32F746GDISCOVERY Socket=lwIP_ETH RTOS=FreeRTOS
 App=Azure_MQTT_Demo Board=B-L475E-IOT01A Socket=WiFi RTOS=RTX
 App=Azure_MQTT_Demo Board=B-L475E-IOT01A Socket=WiFi RTOS=FreeRTOS
+App=Azure_MQTT_Demo Board=FRDM-K32L3A6 Module=ESP8266 Socket=WiFi RTOS=RTX
+App=Azure_MQTT_Demo Board=FRDM-K32L3A6 Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
+App=Azure_MQTT_Demo Board=FRDM-K32L3A6 Module=ISM43362 Socket=WiFi RTOS=RTX
+App=Azure_MQTT_Demo Board=FRDM-K32L3A6 Module=ISM43362 Socket=WiFi RTOS=FreeRTOS
+App=Azure_MQTT_Demo Board=FRDM-K32L3A6 Module=WizFi360 Socket=WiFi RTOS=RTX
+App=Azure_MQTT_Demo Board=FRDM-K32L3A6 Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
 App=Azure_MQTT_Demo Board=MCB4300 Socket=MW-Network_ETH RTOS=RTX
 App=Azure_MQTT_Demo Board=MCB4300 Socket=MW-Network_ETH RTOS=FreeRTOS
 App=Azure_MQTT_Demo Board=MCB4300 Socket=lwIP_ETH RTOS=RTX
@@ -122,6 +136,12 @@ App=Google_MQTT_Demo Board=32F746GDISCOVERY Socket=lwIP_ETH RTOS=RTX
 App=Google_MQTT_Demo Board=32F746GDISCOVERY Socket=lwIP_ETH RTOS=FreeRTOS
 App=Google_MQTT_Demo Board=B-L475E-IOT01A Socket=WiFi RTOS=RTX
 App=Google_MQTT_Demo Board=B-L475E-IOT01A Socket=WiFi RTOS=FreeRTOS
+App=Google_MQTT_Demo Board=FRDM-K32L3A6 Module=ESP8266 Socket=WiFi RTOS=RTX
+App=Google_MQTT_Demo Board=FRDM-K32L3A6 Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
+App=Google_MQTT_Demo Board=FRDM-K32L3A6 Module=ISM43362 Socket=WiFi RTOS=RTX
+App=Google_MQTT_Demo Board=FRDM-K32L3A6 Module=ISM43362 Socket=WiFi RTOS=FreeRTOS
+App=Google_MQTT_Demo Board=FRDM-K32L3A6 Module=WizFi360 Socket=WiFi RTOS=RTX
+App=Google_MQTT_Demo Board=FRDM-K32L3A6 Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
 App=Google_MQTT_Demo Board=MCB4300 Socket=MW-Network_ETH RTOS=RTX
 App=Google_MQTT_Demo Board=MCB4300 Socket=MW-Network_ETH RTOS=FreeRTOS
 App=Google_MQTT_Demo Board=MCB4300 Socket=lwIP_ETH RTOS=RTX
@@ -171,6 +191,12 @@ App=Paho_MQTT_Demo Board=32F746GDISCOVERY Socket=lwIP_ETH RTOS=RTX
 App=Paho_MQTT_Demo Board=32F746GDISCOVERY Socket=lwIP_ETH RTOS=FreeRTOS
 App=Paho_MQTT_Demo Board=B-L475E-IOT01A Socket=WiFi RTOS=RTX
 App=Paho_MQTT_Demo Board=B-L475E-IOT01A Socket=WiFi RTOS=FreeRTOS
+App=Paho_MQTT_Demo Board=FRDM-K32L3A6 Module=ESP8266 Socket=WiFi RTOS=RTX
+App=Paho_MQTT_Demo Board=FRDM-K32L3A6 Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
+App=Paho_MQTT_Demo Board=FRDM-K32L3A6 Module=ISM43362 Socket=WiFi RTOS=RTX
+App=Paho_MQTT_Demo Board=FRDM-K32L3A6 Module=ISM43362 Socket=WiFi RTOS=FreeRTOS
+App=Paho_MQTT_Demo Board=FRDM-K32L3A6 Module=WizFi360 Socket=WiFi RTOS=RTX
+App=Paho_MQTT_Demo Board=FRDM-K32L3A6 Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
 App=Paho_MQTT_Demo Board=MCB4300 Socket=MW-Network_ETH RTOS=RTX
 App=Paho_MQTT_Demo Board=MCB4300 Socket=MW-Network_ETH RTOS=FreeRTOS
 App=Paho_MQTT_Demo Board=MCB4300 Socket=lwIP_ETH RTOS=RTX
@@ -218,6 +244,12 @@ App=Watson_MQTT_Demo Board=32F746GDISCOVERY Socket=MW-Network_ETH RTOS=RTX
 App=Watson_MQTT_Demo Board=32F746GDISCOVERY Socket=MW-Network_ETH RTOS=FreeRTOS
 App=Watson_MQTT_Demo Board=32F746GDISCOVERY Socket=lwIP_ETH RTOS=RTX
 App=Watson_MQTT_Demo Board=32F746GDISCOVERY Socket=lwIP_ETH RTOS=FreeRTOS
+#App=Watson_MQTT_Demo Board=FRDM-K32L3A6 Module=ESP8266 Socket=WiFi RTOS=RTX
+#App=Watson_MQTT_Demo Board=FRDM-K32L3A6 Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
+#App=Watson_MQTT_Demo Board=FRDM-K32L3A6 Module=ISM43362 Socket=WiFi RTOS=RTX
+#App=Watson_MQTT_Demo Board=FRDM-K32L3A6 Module=ISM43362 Socket=WiFi RTOS=FreeRTOS
+#App=Watson_MQTT_Demo Board=FRDM-K32L3A6 Module=WizFi360 Socket=WiFi RTOS=RTX
+#App=Watson_MQTT_Demo Board=FRDM-K32L3A6 Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
 App=Watson_MQTT_Demo Board=MCB4300 Socket=MW-Network_ETH RTOS=RTX
 App=Watson_MQTT_Demo Board=MCB4300 Socket=MW-Network_ETH RTOS=FreeRTOS
 App=Watson_MQTT_Demo Board=MCB4300 Socket=lwIP_ETH RTOS=RTX
