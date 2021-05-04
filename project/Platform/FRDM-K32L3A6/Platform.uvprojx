@@ -1101,6 +1101,11 @@
         <LayAsnName>.\fsl_lpspi_cmsis.h</LayAsnName>
         <LayAsnLayerName>Board</LayAsnLayerName>
       </LayAsnItem>
+      <LayAsnItem>
+        <LayAsnType>1</LayAsnType>
+        <LayAsnName>ARM::CMSIS Driver:SPI:Custom</LayAsnName>
+        <LayAsnLayerName>Board</LayAsnLayerName>
+      </LayAsnItem>
     </LayAssign>
   </LayerInfo>
 
