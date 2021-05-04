@@ -408,6 +408,16 @@
               <FileType>1</FileType>
               <FilePath>.\RTE\Board_Support\vio_FRDM-K32L3A6.c</FilePath>
             </File>
+            <File>
+              <FileName>fsl_lpspi_cmsis.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\fsl_lpspi_cmsis.c</FilePath>
+            </File>
+            <File>
+              <FileName>fsl_lpspi_cmsis.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\fsl_lpspi_cmsis.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -530,6 +540,12 @@
       </api>
     </apis>
     <components>
+      <component Capiversion="2.3.0" Cclass="CMSIS Driver" Cgroup="SPI" Csub="Custom" Cvendor="ARM" Cversion="1.0.0" custom="1">
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
+        <targetInfos>
+          <targetInfo name="FRDM-K32L3A6"/>
+        </targetInfos>
+      </component>
       <component Capiversion="0.1.0" Cclass="CMSIS Driver" Cgroup="VIO" Csub="Custom" Cvendor="ARM" Cversion="1.0.0" custom="1">
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
@@ -574,12 +590,6 @@
       </component>
       <component Cclass="Board Support" Cgroup="SDK Project Template" Csub="project_template" Cvariant="frdmk32l3a6" Cvendor="NXP" Cversion="1.0.0" condition="device.K32L3A60_AND___component.serial_manager_AND_utility.assert_AND_utility.debug_console__OR__utility.assert_lite_AND_utility.debug_console_lite___AND_component.lpuart_adapter_AND_device.K32L3A60_startup_AND_driver.common_AND_driver.gpio_AND_driver.lpi2c_AND_driver.lpuart_AND_driver.msmc_AND_driver.port">
         <package name="FRDM-K32L3A6_BSP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
-        <targetInfos>
-          <targetInfo name="FRDM-K32L3A6"/>
-        </targetInfos>
-      </component>
-      <component Cclass="CMSIS Driver" Cgroup="SPI" Csub="lpspi_cmsis" Cvendor="NXP" Cversion="2.3.0" condition="device.K32L3A60_AND_CMSIS_Driver_Include.SPI_AND_RTE_Device_AND_driver.lpspi">
-        <package name="K32L3A60_DFP" schemaVersion="1.4" url="https://mcuxpresso.nxp.com/cmsis_pack/repo/" vendor="NXP" version="13.0.0"/>
         <targetInfos>
           <targetInfo name="FRDM-K32L3A6"/>
         </targetInfos>
@@ -938,11 +948,6 @@
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
-        <LayAsnName>NXP::CMSIS Driver:SPI:lpspi_cmsis</LayAsnName>
-        <LayAsnLayerName>Board</LayAsnLayerName>
-      </LayAsnItem>
-      <LayAsnItem>
-        <LayAsnType>1</LayAsnType>
         <LayAsnName>NXP::CMSIS Driver:USART:lpuart_cmsis</LayAsnName>
         <LayAsnLayerName>Board</LayAsnLayerName>
       </LayAsnItem>
@@ -1084,6 +1089,16 @@
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
         <LayAsnName>NXP::Device:SDK Utilities:serial_manager_uart</LayAsnName>
+        <LayAsnLayerName>Board</LayAsnLayerName>
+      </LayAsnItem>
+      <LayAsnItem>
+        <LayAsnType>2</LayAsnType>
+        <LayAsnName>.\fsl_lpspi_cmsis.c</LayAsnName>
+        <LayAsnLayerName>Board</LayAsnLayerName>
+      </LayAsnItem>
+      <LayAsnItem>
+        <LayAsnType>2</LayAsnType>
+        <LayAsnName>.\fsl_lpspi_cmsis.h</LayAsnName>
         <LayAsnLayerName>Board</LayAsnLayerName>
       </LayAsnItem>
     </LayAssign>

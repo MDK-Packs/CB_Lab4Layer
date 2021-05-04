@@ -78,5 +78,5 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 | vioLED0           | User LED RED
 | vioLED1           | User LED GREEN
 | vioLED2           | User LED BLUE
-|vioMotionAccelero  | MEMS accelerometer(FXOS8700CQ)
-|vioMotionMagneto   | MEMS magnetometer (FXOS8700CQ)
+| vioMotionAccelero | MEMS accelerometer(FXOS8700CQ)
+| vioMotionMagneto  | MEMS magnetometer (FXOS8700CQ)
