@@ -249,9 +249,9 @@ do
   rm -f "${item}.clayer"
 done
 
-# set cprj description
-description=$(head -n 1 README.md)
-sed -i "s|Automatic generated project|${description}|" "${app}.cprj"
+# replace generated cprj description with <name> and <description>
+description="<name>${app}</name>\n    <description>$(head -n 1 README.md)</description>"
+sed -i "s|<description>Automatic generated project</description>|${description}|" "${app}.cprj"
 
 popd
 
