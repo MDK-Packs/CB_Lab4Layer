@@ -75,6 +75,7 @@ pushd "Board"
 mkdir "32F746GDISCOVERY"
 mkdir "B-L475E-IOT01A"
 mkdir "FRDM-K32L3A6"
+mkdir "IMXRT1050-EVKB"
 mkdir "MCB4300"
 mkdir "MIMXRT1064-EVK"
 mkdir "Musca-S1"
@@ -147,6 +148,10 @@ rm -r "${temp_path}"
 
 cbuildgen "${project_path}/Platform/FRDM-K32L3A6/Platform.FRDM-K32L3A6.cprj" extract --outdir="${temp_path}"
 cp -r "${temp_path}/Board/." "${layer_path}/Board/FRDM-K32L3A6"
+rm -r "${temp_path}"
+
+cbuildgen "${project_path}/Platform/IMXRT1050-EVKB/Platform.IMXRT1050-EVKB.cprj" extract --outdir="${temp_path}"
+cp -r "${temp_path}/Board/." "${layer_path}/Board/IMXRT1050-EVKB"
 rm -r "${temp_path}"
 
 cbuildgen "${project_path}/Platform/LPCXpresso55S69/Platform.LPCXpresso55S69.cprj" extract --outdir="${temp_path}"
