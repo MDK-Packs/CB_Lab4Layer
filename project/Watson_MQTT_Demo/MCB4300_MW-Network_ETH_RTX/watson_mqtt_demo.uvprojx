@@ -464,7 +464,7 @@
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </package>
-      <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0">
+      <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.8.0">
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
@@ -479,12 +479,12 @@
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </package>
-      <package name="LPC4300_DFP" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="Keil" version="2.9.0">
+      <package name="LPC4300_DFP" schemaVersion="1.7.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.10.0">
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
       </package>
-      <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.12.0">
+      <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.13.0">
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
@@ -512,7 +512,7 @@
     </packages>
     <boards>
       <board Bname="MCB4300" Bvendor="Keil" Bversion="Ver 1.3">
-        <package name="LPC4300_DFP" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="Keil" version="2.9.0"/>
+        <package name="LPC4300_DFP" schemaVersion="1.7.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.10.0"/>
         <targetInfos>
           <targetInfo name="MCB4300"/>
         </targetInfos>
