@@ -81,6 +81,7 @@ mkdir "Musca-S1"
 mkdir "LPC54018-IoT-Module"
 mkdir "LPCXpresso55S69"
 mkdir "NUCLEO-L552ZE-Q"
+mkdir "NUCLEO-H743ZI"
 mkdir "STM32L562E-DK"
 mkdir "STM32H745I-DISCO"
 popd
@@ -157,6 +158,10 @@ rm -r "${temp_path}"
 
 cbuildgen "${project_path}/Platform/NUCLEO-L552ZE-Q/Platform.NUCLEO-L552ZE-Q.cprj" extract --outdir="${temp_path}"
 cp -r "${temp_path}/Board/." "${layer_path}/Board/NUCLEO-L552ZE-Q"
+rm -r "${temp_path}"
+
+cbuildgen "${project_path}/Platform/NUCLEO-H743ZI/Platform.NUCLEO-H743ZI.cprj" extract --outdir="${temp_path}"
+cp -r "${temp_path}/Board/." "${layer_path}/Board/NUCLEO-H743ZI"
 rm -r "${temp_path}"
 
 cbuildgen "${project_path}/Platform/STM32L562E-DK/Platform.STM32L562E-DK.cprj" extract --outdir="${temp_path}"
