@@ -203,7 +203,7 @@ echo "Project: ${app}.cprj"
 # compose project from layers
 cbuildgen compose "${app}.cprj" ${clayer}
 
-# read layer defines
+# export layer defines
 export ARDUINO_USART_NUMBER=$(grep -o '<provides id="A_UART" value="."' "${app}.cprj" | grep -o 'value="."' | grep -o '\([0-9.]*\)')
 export ARDUINO_SPI_NUMBER=$(grep -o '<provides id="A_SPI" value="."' "${app}.cprj" | grep -o 'value="."' | grep -o '\([0-9.]*\)')
 
@@ -250,8 +250,11 @@ do
 done
 
 # replace generated cprj description with <name> and <description>
-description="<name>${app}</name>\n    <description>$(head -n 1 README.md)</description>"
-sed -i "s|<description>Automatic generated project</description>|${description}|" "${app}.cprj"
+#  <name> is derived from "App" layer's title
+#  <description> is derived from "App" layer's description
+name=$(sed -nr 's|.*<layer name="App" title="(.*)">|<name>\1</name>|p' "${app}.cprj")
+description=$(sed -n '/<layer name="App"/,/<description>/p' "${app}.cprj" | sed -n '/<description>/p' | sed 's/^ */    /')
+sed -i "s|<description>Automatic generated project</description>|${name}\n${description}|" "${app}.cprj"
 
 popd
 
