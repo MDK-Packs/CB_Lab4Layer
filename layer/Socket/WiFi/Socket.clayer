@@ -16,7 +16,7 @@
   </info>
 
   <layers>
-    <layer name="Socket">
+    <layer name="Socket" title="WiFi">
       <description>IoT Socket interface connecting to CMSIS-Driver WiFi</description>
       <doc>https://mdk-packs.github.io/IoT_Socket/html/index.html</doc>
       <category>Socket</category>

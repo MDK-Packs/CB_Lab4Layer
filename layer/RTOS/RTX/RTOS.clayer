@@ -15,7 +15,7 @@
   </info>
 
   <layers>
-    <layer name="RTOS">
+    <layer name="RTOS" title="RTX">
       <description>Keil RTX5 open-source real-time operating system with CMSIS-RTOS v2 API</description>
       <doc>https://www2.keil.com/mdk5/cmsis/rtx</doc>
       <category>RTOS</category>

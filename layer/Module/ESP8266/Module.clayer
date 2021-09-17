@@ -17,7 +17,7 @@
   </info>
 
   <layers>
-    <layer name="Module">
+    <layer name="Module" title="ESP8266">
       <description>Arduino module with ESP8266 WiFi chip</description>
       <doc>https://www2.keil.com/iot/shields/wrl13287</doc>
       <category>Module, Arduino, WiFi</category>

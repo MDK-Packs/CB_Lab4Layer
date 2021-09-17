@@ -19,7 +19,7 @@
   </info>
 
   <layers>
-    <layer name="Module">
+    <layer name="Module" title="ISM43362">
       <description>Arduino module with ISM43362 WiFi chip</description>
       <doc>https://www2.keil.com/iot/shields/ismart43362/</doc>
       <category>Module, Arduino, WiFi</category>

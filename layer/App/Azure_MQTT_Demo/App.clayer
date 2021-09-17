@@ -17,7 +17,7 @@
   </info>
 
   <layers>
-    <layer name="App">
+    <layer name="App" title="Azure MQTT Demo">
       <description>Demonstrates the subscribe-publish workflow of MQTT</description>
       <category>Cloud, IoT, MQTT, Azure IoT, Example</category>
       <license>MIT</license>

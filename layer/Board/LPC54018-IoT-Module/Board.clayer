@@ -17,7 +17,7 @@
   </info>
 
   <layers>
-    <layer hasTarget="1" name="Board">
+    <layer hasTarget="1" name="Board" title="LPC54018-IoT-Module">
       <description>Board setup with interfaces</description>
       <category>Board</category>
       <license>BSD 3-Clause, Apache 2.0</license>

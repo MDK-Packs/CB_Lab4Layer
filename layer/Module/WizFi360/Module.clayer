@@ -17,7 +17,7 @@
   </info>
 
   <layers>
-    <layer name="Module">
+    <layer name="Module" title="WizFi360">
       <description>Arduino module with WizFi360 WiFi chip</description>
       <doc>https://www2.keil.com/iot/shields/wizfi360/</doc>
       <category>Module, Arduino, WiFi</category>

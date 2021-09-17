@@ -18,7 +18,7 @@
   </info>
 
   <layers>
-    <layer name="App">
+    <layer name="App" title="Watson MQTT Demo">
       <description>Demonstrates the subscribe-publish workflow of MQTT</description>
       <category>Cloud, IoT, MQTT, Watson, Example</category>
       <license>EPL 1.0</license>

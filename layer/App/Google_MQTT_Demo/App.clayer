@@ -17,7 +17,7 @@
   </info>
 
   <layers>
-    <layer name="App">
+    <layer name="App" title="Google MQTT Demo">
       <description>Demonstrates the subscribe-publish workflow of MQTT</description>
       <category>Cloud, IoT, MQTT, Google IoT, Example</category>
       <license>EPL 1.0, Apache 2.0</license>

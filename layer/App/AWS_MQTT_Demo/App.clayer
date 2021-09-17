@@ -18,7 +18,7 @@
   </info>
 
   <layers>
-    <layer name="App">
+    <layer name="App" title="AWS MQTT Demo">
       <description>Demonstrates the subscribe-publish workflow of MQTT</description>
       <doc>https://docs.aws.amazon.com/freertos/latest/lib-ref/c-sdk/mqtt/mqtt_demo.html</doc>
       <category>Cloud, IoT, MQTT, AWS, Example</category>

@@ -15,7 +15,7 @@
   </info>
 
   <layers>
-    <layer name="RTOS">
+    <layer name="RTOS" title="FreeRTOS">
       <description>FreeRTOS open-source real-time operating system with CMSIS-RTOS v2 API</description>
       <doc>https://arm-software.github.io/CMSIS-FreeRTOS/General/html/index.html</doc>
       <category>RTOS</category>

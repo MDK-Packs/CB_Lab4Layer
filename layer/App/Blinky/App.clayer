@@ -15,7 +15,7 @@
   </info>
 
   <layers>
-    <layer name="App">
+    <layer name="App" title="Blinky">
       <description>Simple example</description>
       <category>Example, Blinky</category>
       <license>Apache 2.0</license>
