@@ -17,7 +17,7 @@
   </info>
 
   <layers>
-    <layer name="Socket" title="lwIP_ETH">
+    <layer name="Socket" title="Ethernet Socket (lwIP)">
       <description>IoT Socket interface connecting to lwIP over Ethernet</description>
       <doc>https://www.nongnu.org/lwip/2_1_x/index.html</doc>
       <category>Socket</category>

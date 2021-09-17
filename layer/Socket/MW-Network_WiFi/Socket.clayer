@@ -17,7 +17,7 @@
   </info>
 
   <layers>
-    <layer name="Socket" title="MW-Network_WiFi">
+    <layer name="Socket" title="WiFi Socket (MW-Network)">
       <description>IoT Socket interface connecting to MW-Network over WiFi</description>
       <doc>https://www.keil.com/pack/doc/mw/Network/html/index.html</doc>
       <category>Socket</category>
