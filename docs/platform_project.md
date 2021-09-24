@@ -219,14 +219,14 @@ Go to **Project - Manage - Project Items... - Project Info/Layer tab** and annot
     - **Consumed Interfaces** to *RTOS2*
     - Select the **Target** checkbox:  
       ![Project Info/Layer - Board](./images/layer_info_board.png)
-- **RTOS** and set (this might be different for other CMSIS-RTOS2 operating systems):
-  - **Title** to *RTX*
-  - **Brief Description** to *Keil RTX5 open-source real-time operating system with CMSIS-RTOS v2 API*
-  - **Documentation** to *https://www2.keil.com/mdk5/cmsis/rtx*
-  - **Category** to *RTOS*
-  - **Licence** to *Apache 2.0*
-  - **Provided Interfaces** to *RTOS2*  
-    ![Project Info/Layer - RTOS](./images/layer_info_rtos.png)
+  - **RTOS** and set (this might be different for other CMSIS-RTOS2 operating systems):
+    - **Title** to *RTX*
+    - **Brief Description** to *Keil RTX5 open-source real-time operating system with CMSIS-RTOS v2 API*
+    - **Documentation** to *https://www2.keil.com/mdk5/cmsis/rtx*
+    - **Category** to *RTOS*
+    - **Licence** to *Apache 2.0*
+    - **Provided Interfaces** to *RTOS2*  
+      ![Project Info/Layer - RTOS](./images/layer_info_rtos.png)
 
 *Note*:
 
