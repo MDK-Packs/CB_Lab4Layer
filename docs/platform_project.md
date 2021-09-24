@@ -48,7 +48,7 @@ might be required based on the device/board support pack):
   - **CMSIS Driver:VIO(API):Board**, Variant: **'board name'**
 - Board Support: select components as needed
 
-![RTE components selection example](./images/rte_setup_example.png)
+![RTE components selection example](./images/rte_setup_example.png)  
 RTE components selection example
 
 ### Add source code
@@ -147,7 +147,7 @@ Go to **Project - Manage - Project Items...** and configure the project as follo
   - (STM32CubeMX specific) **STM32CubeMX**: *.ioc (configuration file)
   - (MCUXpresso specific) **MCUXpresso**: *.mex (configuration file)
 
-![Manage Project Items Example](./images/manage_proj_items_example.png)
+![Manage Project Items Example](./images/manage_proj_items_example.png)  
 Manage Project Items Example
 
 ### Configure target options
@@ -156,19 +156,19 @@ The target options need to configured properly for a consistent user experience.
 
 Go to **Project - Options for Target (Alt+F7)** and change:
 - On the **Output** tab:
-  - set the **Name of Executable** to "image":
+  - set the **Name of Executable** to "image":  
     ![Options for Target - Output tab](./images/targ_opt_output.png)
 - On the **C/C++(AC6)** tab:
   - Set **Optimization:** to *-O1*
   - Set **Warnings:** to *AC5-like Warnings*
-  - Add **Include Paths:** `.\Board_IO` (if `arduino.c` is available):
+  - Add **Include Paths:** `.\Board_IO` (if `arduino.c` is available):  
     ![Options for Target - C/C++ tab](./images/targ_opt_c_cpp.png)
 - On the **Linker** tab:
   - Deselect **Use Memory Layout from Target Dialog**
-  - Select a scatter file (which should place EventRevorder in Zero Initialized Data area)
+  - Select a scatter file (which should place EventRevorder in Zero Initialized Data area):  
     ![Options for Target - Linker tab](./images/targ_opt_linker.png)
 - On the **Debug** tab:
-  - Select a suitable debugger (CMSIS-DAP or ST-Link Debugger or example)
+  - Select a suitable debugger (CMSIS-DAP or ST-Link Debugger or example):  
     ![Options for Target - Debug tab](./images/targ_opt_debug.png)
 
 ### Configure other project settings
@@ -195,7 +195,7 @@ In the next step, add the layer information for the platform project.
 Go to **Project - Manage - Project Items... - Project Info/Layer tab** and annotate the layer information:
 
 - **\<Project Info>**, set **Title** to *Platform*
-- At the bottom, select the correct **Board**:
+- At the bottom, select the correct **Board**:  
   ![Project Info](./images/layer_info_project.png)
 - Add the following layers:
   - **App** and set:
@@ -203,8 +203,8 @@ Go to **Project - Manage - Project Items... - Project Info/Layer tab** and annot
     - **Brief Description** to *Platform is a simple CMSIS RTOS2 example skeleton*
     - **Category** to *Platform*
     - **License** to *Apache 2.0* (recommended, but can be set to you preferred license)
-    - **Consumed Interfaces** to *RTOS2*:
-  ![Project Info/Layer - App](./images/layer_info_app.png)
+    - **Consumed Interfaces** to *RTOS2*:  
+      ![Project Info/Layer - App](./images/layer_info_app.png)
   - **Board** and set:
     - **Title** to *'board name'*
     - **Brief Description** to *Board setup with interfaces*
@@ -217,16 +217,16 @@ Go to **Project - Manage - Project Items... - Project Info/Layer tab** and annot
       - for Retarget output/input: *STDOUT,STDIN,STDERR*
       - as Heap size: *Heap=65536*
     - **Consumed Interfaces** to *RTOS2*
-    - Select the **Target** checkbox:
-  ![Project Info/Layer - Board](./images/layer_info_board.png)
+    - Select the **Target** checkbox:  
+      ![Project Info/Layer - Board](./images/layer_info_board.png)
 - **RTOS** and set (this might be different for other CMSIS-RTOS2 operating systems):
   - **Title** to *RTX*
   - **Brief Description** to *Keil RTX5 open-source real-time operating system with CMSIS-RTOS v2 API*
   - **Documentation** to *https://www2.keil.com/mdk5/cmsis/rtx*
   - **Category** to *RTOS*
   - **Licence** to *Apache 2.0*
-  - **Provided Interfaces** to *RTOS2*
-  ![Project Info/Layer - RTOS](./images/layer_info_rtos.png)
+  - **Provided Interfaces** to *RTOS2*  
+    ![Project Info/Layer - RTOS](./images/layer_info_rtos.png)
 
 *Note*:
 
@@ -253,10 +253,10 @@ Add the following:
   - Device components
 - To **RTOS** layer: CMSIS-RTOS2 components
 
-To assign files that are not part of a software component, right-click a file and select **Options for File...**. Then, select the right **Layer:** at the bottom of the **Properties** tab:
+To assign files that are not part of a software component, right-click a file and select **Options for File...**. Then, select the right **Layer:** at the bottom of the **Properties** tab:  
 ![Options for File 'Platform.c'](./images/file_opt_platform_c.png)
 
-To assign software components, right-click a component and select **Options for Component Class...**. Click on the component you wish to assign and on the **Properties** tab, select the right **Layer:**:
+To assign software components, right-click a component and select **Options for Component Class...**. Click on the component you wish to assign and on the **Properties** tab, select the right **Layer:**:  
 ![Options for Component Class 'CMSIS'](./images/comp_opt_cmsis_core.png)
 
 ### Separate the Markdown files for the layers
