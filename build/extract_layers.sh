@@ -72,6 +72,7 @@ popd
 
 mkdir "Board"
 pushd "Board"
+mkdir "32L4R9IDISCOVERY"
 mkdir "32F746GDISCOVERY"
 mkdir "B-L475E-IOT01A"
 mkdir "FRDM-K32L3A6"
@@ -136,6 +137,10 @@ cbuildgen "${project_path}/Watson_MQTT_Demo/MCB4300_MW-Network_ETH_RTX/watson_mq
 cp -r "${temp_path}/App/."    "${layer_path}/App/Watson_MQTT_Demo"
 cp -r "${temp_path}/Socket/." "${layer_path}/Socket/MW-Network_ETH"
 cp -r "${temp_path}/Board/."  "${layer_path}/Board/MCB4300"
+rm -r "${temp_path}"
+
+cbuildgen "${project_path}/Platform/32L4R9IDISCOVERY/Platform.32L4R9IDISCOVERY.cprj" extract --outdir="${temp_path}"
+cp -r "${temp_path}/Board/." "${layer_path}/Board/32L4R9IDISCOVERY"
 rm -r "${temp_path}"
 
 cbuildgen "${project_path}/Platform/32F746GDISCOVERY/Platform.STM32F746G-Discovery.cprj" extract --outdir="${temp_path}"
