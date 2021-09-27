@@ -88,6 +88,7 @@ mkdir "NUCLEO-G474RE"
 mkdir "STM32L562E-DK"
 mkdir "STM32H735G-DK"
 mkdir "STM32H745I-DISCO"
+mkdir "STM32G071B-DISCO"
 popd
 
 popd
@@ -186,6 +187,10 @@ rm -r "${temp_path}"
 
 cbuildgen "${project_path}/Platform/STM32L562E-DK/Platform.STM32L562E-DK.cprj" extract --outdir="${temp_path}"
 cp -r "${temp_path}/Board/." "${layer_path}/Board/STM32L562E-DK"
+rm -r "${temp_path}"
+
+cbuildgen "${project_path}/Platform/STM32G071B-DISCO/Platform.STM32G071B-DISCO.cprj" extract --outdir="${temp_path}"
+cp -r "${temp_path}/Board/." "${layer_path}/Board/STM32G071B-DISCO"
 rm -r "${temp_path}"
 
 # remove README.md from project (auto generated when projects are composed)
