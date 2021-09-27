@@ -14,6 +14,8 @@ App=Blinky Board=MIMXRT1064-EVK RTOS=RTX
 App=Blinky Board=MIMXRT1064-EVK RTOS=FreeRTOS
 App=Blinky Board=NUCLEO-H743ZI RTOS=RTX
 App=Blinky Board=NUCLEO-H743ZI RTOS=FreeRTOS
+App=Blinky Board=NUCLEO-G474RE RTOS=RTX
+App=Blinky Board=NUCLEO-G474RE RTOS=FreeRTOS
 App=Blinky Board=NUCLEO-L552ZE-Q RTOS=RTX
 App=Blinky Board=NUCLEO-L552ZE-Q RTOS=FreeRTOS
 App=Blinky Board=STM32H735G-DK RTOS=RTX
@@ -84,6 +86,12 @@ App=AWS_MQTT_Demo Board=NUCLEO-H743ZI Socket=MW-Network_ETH RTOS=RTX
 App=AWS_MQTT_Demo Board=NUCLEO-H743ZI Socket=MW-Network_ETH RTOS=FreeRTOS
 App=AWS_MQTT_Demo Board=NUCLEO-H743ZI Socket=lwIP_ETH RTOS=RTX
 App=AWS_MQTT_Demo Board=NUCLEO-H743ZI Socket=lwIP_ETH RTOS=FreeRTOS
+#App=AWS_MQTT_Demo Board=NUCLEO-G474RE Module=ESP8266 Socket=WiFi RTOS=RTX
+#App=AWS_MQTT_Demo Board=NUCLEO-G474RE Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
+#App=AWS_MQTT_Demo Board=NUCLEO-G474RE Module=ISM43362 Socket=WiFi RTOS=RTX
+#App=AWS_MQTT_Demo Board=NUCLEO-G474RE Module=ISM43362 Socket=WiFi RTOS=FreeRTOS
+#App=AWS_MQTT_Demo Board=NUCLEO-G474RE Module=WizFi360 Socket=WiFi RTOS=RTX
+#App=AWS_MQTT_Demo Board=NUCLEO-G474RE Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
 App=AWS_MQTT_Demo Board=NUCLEO-L552ZE-Q Module=ESP8266 Socket=WiFi RTOS=RTX
 App=AWS_MQTT_Demo Board=NUCLEO-L552ZE-Q Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 App=AWS_MQTT_Demo Board=NUCLEO-L552ZE-Q Module=ISM43362 Socket=WiFi RTOS=RTX
@@ -175,6 +183,12 @@ App=Azure_MQTT_Demo Board=NUCLEO-H743ZI Socket=MW-Network_ETH RTOS=RTX
 App=Azure_MQTT_Demo Board=NUCLEO-H743ZI Socket=MW-Network_ETH RTOS=FreeRTOS
 App=Azure_MQTT_Demo Board=NUCLEO-H743ZI Socket=lwIP_ETH RTOS=RTX
 App=Azure_MQTT_Demo Board=NUCLEO-H743ZI Socket=lwIP_ETH RTOS=FreeRTOS
+#App=Azure_MQTT_Demo Board=NUCLEO-G474RE Module=ESP8266 Socket=WiFi RTOS=RTX
+#App=Azure_MQTT_Demo Board=NUCLEO-G474RE Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
+#App=Azure_MQTT_Demo Board=NUCLEO-G474RE Module=ISM43362 Socket=WiFi RTOS=RTX
+#App=Azure_MQTT_Demo Board=NUCLEO-G474RE Module=ISM43362 Socket=WiFi RTOS=FreeRTOS
+#App=Azure_MQTT_Demo Board=NUCLEO-G474RE Module=WizFi360 Socket=WiFi RTOS=RTX
+#App=Azure_MQTT_Demo Board=NUCLEO-G474RE Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
 App=Azure_MQTT_Demo Board=NUCLEO-L552ZE-Q Module=ESP8266 Socket=WiFi RTOS=RTX
 App=Azure_MQTT_Demo Board=NUCLEO-L552ZE-Q Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 App=Azure_MQTT_Demo Board=NUCLEO-L552ZE-Q Module=ISM43362 Socket=WiFi RTOS=RTX
@@ -266,6 +280,12 @@ App=Google_MQTT_Demo Board=NUCLEO-H743ZI Socket=MW-Network_ETH RTOS=RTX
 App=Google_MQTT_Demo Board=NUCLEO-H743ZI Socket=MW-Network_ETH RTOS=FreeRTOS
 App=Google_MQTT_Demo Board=NUCLEO-H743ZI Socket=lwIP_ETH RTOS=RTX
 App=Google_MQTT_Demo Board=NUCLEO-H743ZI Socket=lwIP_ETH RTOS=FreeRTOS
+#App=Google_MQTT_Demo Board=NUCLEO-G474RE Module=ESP8266 Socket=WiFi RTOS=RTX
+#App=Google_MQTT_Demo Board=NUCLEO-G474RE Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
+#App=Google_MQTT_Demo Board=NUCLEO-G474RE Module=ISM43362 Socket=WiFi RTOS=RTX
+#App=Google_MQTT_Demo Board=NUCLEO-G474RE Module=ISM43362 Socket=WiFi RTOS=FreeRTOS
+#App=Google_MQTT_Demo Board=NUCLEO-G474RE Module=WizFi360 Socket=WiFi RTOS=RTX
+#App=Google_MQTT_Demo Board=NUCLEO-G474RE Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
 App=Google_MQTT_Demo Board=NUCLEO-L552ZE-Q Module=ESP8266 Socket=WiFi RTOS=RTX
 App=Google_MQTT_Demo Board=NUCLEO-L552ZE-Q Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 App=Google_MQTT_Demo Board=NUCLEO-L552ZE-Q Module=ISM43362 Socket=WiFi RTOS=RTX
@@ -357,6 +377,12 @@ App=Paho_MQTT_Demo Board=NUCLEO-H743ZI Socket=MW-Network_ETH RTOS=RTX
 App=Paho_MQTT_Demo Board=NUCLEO-H743ZI Socket=MW-Network_ETH RTOS=FreeRTOS
 App=Paho_MQTT_Demo Board=NUCLEO-H743ZI Socket=lwIP_ETH RTOS=RTX
 App=Paho_MQTT_Demo Board=NUCLEO-H743ZI Socket=lwIP_ETH RTOS=FreeRTOS
+#App=Paho_MQTT_Demo Board=NUCLEO-G474RE Module=ESP8266 Socket=WiFi RTOS=RTX
+#App=Paho_MQTT_Demo Board=NUCLEO-G474RE Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
+#App=Paho_MQTT_Demo Board=NUCLEO-G474RE Module=ISM43362 Socket=WiFi RTOS=RTX
+#App=Paho_MQTT_Demo Board=NUCLEO-G474RE Module=ISM43362 Socket=WiFi RTOS=FreeRTOS
+#App=Paho_MQTT_Demo Board=NUCLEO-G474RE Module=WizFi360 Socket=WiFi RTOS=RTX
+#App=Paho_MQTT_Demo Board=NUCLEO-G474RE Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
 App=Paho_MQTT_Demo Board=NUCLEO-L552ZE-Q Module=ESP8266 Socket=WiFi RTOS=RTX
 App=Paho_MQTT_Demo Board=NUCLEO-L552ZE-Q Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 App=Paho_MQTT_Demo Board=NUCLEO-L552ZE-Q Module=ISM43362 Socket=WiFi RTOS=RTX
