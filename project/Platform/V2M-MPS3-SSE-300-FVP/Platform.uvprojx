@@ -426,7 +426,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Board_Driver</GroupName>
+          <GroupName>Board Driver</GroupName>
           <Files>
             <File>
               <FileName>ETH_LAN91C111.c</FileName>

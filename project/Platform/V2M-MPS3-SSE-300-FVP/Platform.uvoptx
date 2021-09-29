@@ -282,7 +282,7 @@
 
   <Group>
     <GroupName>Board IO</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -313,8 +313,8 @@
   </Group>
 
   <Group>
-    <GroupName>Board_Driver</GroupName>
-    <tvExp>1</tvExp>
+    <GroupName>Board Driver</GroupName>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

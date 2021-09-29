@@ -91,7 +91,7 @@
       <file category="sourceC" layer="Board" name="./Board_IO/retarget_stdio.c"/>
       <file category="sourceC" layer="Board" name="./Board_IO/vio_V2M-MPS3-SSE-300.c"/>
     </group>
-    <group name="Board_Driver">
+    <group name="Board Driver">
       <file category="sourceC" layer="Board" name="./Board_Driver/ETH_LAN91C111.c"/>
       <file category="header" layer="Board" name="./Board_Driver/ETH_LAN91C111.h"/>
     </group>
