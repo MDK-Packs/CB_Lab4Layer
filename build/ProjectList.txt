@@ -222,10 +222,10 @@ App=Azure_MQTT_Demo Board=Musca-S1 Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 #App=Azure_MQTT_Demo Board=Musca-S1 Module=ISM43362 Socket=WiFi RTOS=FreeRTOS
 App=Azure_MQTT_Demo Board=Musca-S1 Module=WizFi360 Socket=WiFi RTOS=RTX
 App=Azure_MQTT_Demo Board=Musca-S1 Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
-#App=Azure_MQTT_Demo Board=V2M-MPS3-SSE-300-FVP Socket=MW-Network_ETH RTOS=RTX
-#App=Azure_MQTT_Demo Board=V2M-MPS3-SSE-300-FVP Socket=MW-Network_ETH RTOS=FreeRTOS
-#App=Azure_MQTT_Demo Board=V2M-MPS3-SSE-300-FVP Socket=lwIP_ETH RTOS=RTX
-#App=Azure_MQTT_Demo Board=V2M-MPS3-SSE-300-FVP Socket=lwIP_ETH RTOS=FreeRTOS
+App=Azure_MQTT_Demo Board=V2M-MPS3-SSE-300-FVP Socket=MW-Network_ETH RTOS=RTX
+App=Azure_MQTT_Demo Board=V2M-MPS3-SSE-300-FVP Socket=MW-Network_ETH RTOS=FreeRTOS
+App=Azure_MQTT_Demo Board=V2M-MPS3-SSE-300-FVP Socket=lwIP_ETH RTOS=RTX
+App=Azure_MQTT_Demo Board=V2M-MPS3-SSE-300-FVP Socket=lwIP_ETH RTOS=FreeRTOS
 App=Google_MQTT_Demo Board=32L4R9IDISCOVERY Module=ESP8266 Socket=WiFi RTOS=RTX
 App=Google_MQTT_Demo Board=32L4R9IDISCOVERY Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 App=Google_MQTT_Demo Board=32L4R9IDISCOVERY Module=ISM43362 Socket=WiFi RTOS=RTX
