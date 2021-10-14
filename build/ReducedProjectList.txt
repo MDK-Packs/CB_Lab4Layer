@@ -36,23 +36,23 @@ App=Azure_MQTT_Demo Board=B-L475E-IOT01A Socket=WiFi RTOS=RTX
 App=Paho_MQTT_Demo Board=B-L475E-IOT01A Socket=WiFi RTOS=RTX
 App=Google_MQTT_Demo Board=B-L475E-IOT01A Socket=WiFi RTOS=FreeRTOS
 # Board=LPC54018-IoT-Module
-App=Blinky Board=LPC54018-IoT-Module RTOS=RTX
-App=AWS_MQTT_Demo Board=LPC54018-IoT-Module Socket=WiFi RTOS=FreeRTOS
-App=Azure_MQTT_Demo Board=LPC54018-IoT-Module Socket=WiFi RTOS=RTX
-App=Paho_MQTT_Demo Board=LPC54018-IoT-Module Socket=WiFi RTOS=RTX
-App=Google_MQTT_Demo Board=LPC54018-IoT-Module Socket=WiFi RTOS=FreeRTOS
+#App=Blinky Board=LPC54018-IoT-Module RTOS=RTX
+App=AWS_MQTT_Demo Board=LPC54018-IoT-Module Socket=MW-Network_WiFi RTOS=RTX
+App=Azure_MQTT_Demo Board=LPC54018-IoT-Module Socket=MW-Network_WiFi RTOS=RTX
+App=Paho_MQTT_Demo Board=LPC54018-IoT-Module Socket=MW-Network_WiFi RTOS=RTX
+App=Google_MQTT_Demo Board=LPC54018-IoT-Module Socket=MW-Network_WiFi RTOS=RTX
 # Board=Musca-S1
-App=Blinky Board=Musca-S1 RTOS=RTX
+#App=Blinky Board=Musca-S1 RTOS=RTX
 App=AWS_MQTT_Demo Board=Musca-S1 Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 App=Azure_MQTT_Demo Board=Musca-S1 Module=ESP8266 Socket=WiFi RTOS=RTX
 App=Paho_MQTT_Demo Board=Musca-S1 Module=ESP8266 Socket=WiFi RTOS=RTX
 App=Google_MQTT_Demo Board=Musca-S1 Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 # Board=NUCLEO-G474RE
 App=Blinky Board=NUCLEO-G474RE RTOS=RTX
-App=AWS_MQTT_Demo Board=NUCLEO-G474RE Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
-App=Azure_MQTT_Demo Board=NUCLEO-G474RE Module=ESP8266 Socket=WiFi RTOS=RTX
-App=Paho_MQTT_Demo Board=NUCLEO-G474RE Module=ESP8266 Socket=WiFi RTOS=RTX
-App=Google_MQTT_Demo Board=NUCLEO-G474RE Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
+#App=AWS_MQTT_Demo Board=NUCLEO-G474RE Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
+#App=Azure_MQTT_Demo Board=NUCLEO-G474RE Module=ESP8266 Socket=WiFi RTOS=RTX
+#App=Paho_MQTT_Demo Board=NUCLEO-G474RE Module=ESP8266 Socket=WiFi RTOS=RTX
+#App=Google_MQTT_Demo Board=NUCLEO-G474RE Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 # Board=NUCLEO-H743ZI
 App=Blinky Board=NUCLEO-H743ZI RTOS=RTX
 App=AWS_MQTT_Demo Board=NUCLEO-H743ZI Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
@@ -67,10 +67,10 @@ App=Paho_MQTT_Demo Board=NUCLEO-L552ZE-Q Module=ESP8266 Socket=WiFi RTOS=RTX
 App=Google_MQTT_Demo Board=NUCLEO-L552ZE-Q Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 # Board=STM32G071B-DISCO
 App=Blinky Board=STM32G071B-DISCO RTOS=RTX
-App=AWS_MQTT_Demo Board=STM32G071B-DISCO Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
-App=Azure_MQTT_Demo Board=STM32G071B-DISCO Module=ESP8266 Socket=WiFi RTOS=RTX
-App=Paho_MQTT_Demo Board=STM32G071B-DISCO Module=ESP8266 Socket=WiFi RTOS=RTX
-App=Google_MQTT_Demo Board=STM32G071B-DISCO Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
+#App=AWS_MQTT_Demo Board=STM32G071B-DISCO Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
+#App=Azure_MQTT_Demo Board=STM32G071B-DISCO Module=ESP8266 Socket=WiFi RTOS=RTX
+#App=Paho_MQTT_Demo Board=STM32G071B-DISCO Module=ESP8266 Socket=WiFi RTOS=RTX
+#App=Google_MQTT_Demo Board=STM32G071B-DISCO Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 # Board=STM32H735G-DK
 App=Blinky Board=STM32H735G-DK RTOS=RTX
 App=AWS_MQTT_Demo Board=STM32H735G-DK Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
@@ -79,10 +79,10 @@ App=Paho_MQTT_Demo Board=STM32H735G-DK Module=ESP8266 Socket=WiFi RTOS=RTX
 App=Google_MQTT_Demo Board=STM32H735G-DK Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 # Board=STM32H745I-DISCO
 App=Blinky Board=STM32H745I-DISCO RTOS=RTX
-App=AWS_MQTT_Demo Board=STM32H745I-DISCO Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
-App=Azure_MQTT_Demo Board=STM32H745I-DISCO Module=ESP8266 Socket=WiFi RTOS=RTX
-App=Paho_MQTT_Demo Board=STM32H745I-DISCO Module=ESP8266 Socket=WiFi RTOS=RTX
-App=Google_MQTT_Demo Board=STM32H745I-DISCO Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
+#App=AWS_MQTT_Demo Board=STM32H745I-DISCO Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
+#App=Azure_MQTT_Demo Board=STM32H745I-DISCO Module=ESP8266 Socket=WiFi RTOS=RTX
+#App=Paho_MQTT_Demo Board=STM32H745I-DISCO Module=ESP8266 Socket=WiFi RTOS=RTX
+#App=Google_MQTT_Demo Board=STM32H745I-DISCO Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 # Board=STM32L562E-DK
 App=Blinky Board=STM32L562E-DK RTOS=RTX
 App=AWS_MQTT_Demo Board=STM32L562E-DK Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
@@ -91,12 +91,12 @@ App=Paho_MQTT_Demo Board=STM32L562E-DK Module=ESP8266 Socket=WiFi RTOS=RTX
 App=Google_MQTT_Demo Board=STM32L562E-DK Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 # Board=V2M-MPS3-SSE-300-FVP
 App=Blinky Board=V2M-MPS3-SSE-300-FVP RTOS=RTX
-App=AWS_MQTT_Demo Board=V2M-MPS3-SSE-300-FVP Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
-App=Azure_MQTT_Demo Board=V2M-MPS3-SSE-300-FVP Module=ESP8266 Socket=WiFi RTOS=RTX
-App=Paho_MQTT_Demo Board=V2M-MPS3-SSE-300-FVP Module=ESP8266 Socket=WiFi RTOS=RTX
-App=Google_MQTT_Demo Board=V2M-MPS3-SSE-300-FVP Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
+App=AWS_MQTT_Demo Board=V2M-MPS3-SSE-300-FVP Socket=MW-Network_ETH RTOS=RTX
+App=Azure_MQTT_Demo Board=V2M-MPS3-SSE-300-FVP Socket=MW-Network_ETH RTOS=FreeRTOS
+App=Paho_MQTT_Demo Board=V2M-MPS3-SSE-300-FVP Socket=MW-Network_ETH RTOS=RTX
+App=Google_MQTT_Demo Board=V2M-MPS3-SSE-300-FVP Socket=MW-Network_ETH RTOS=FreeRTOS
 # Board=MCB4300
-App=Blinky Board=MCB4300 RTOS=RTX
+#App=Blinky Board=MCB4300 RTOS=RTX
 App=AWS_MQTT_Demo Board=MCB4300 Socket=MW-Network_ETH RTOS=RTX
 App=Azure_MQTT_Demo Board=MCB4300 Socket=MW-Network_ETH RTOS=RTX
 App=Paho_MQTT_Demo Board=MCB4300 Socket=lwIP_ETH RTOS=FreeRTOS
