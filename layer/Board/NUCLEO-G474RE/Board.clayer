@@ -77,7 +77,6 @@
   </components>
 
   <files>
-    <group name="App"/>
     <group name="Board IO">
       <file category="sourceC" layer="Board" name="./Board_IO/arduino.c"/>
       <file category="header" layer="Board" name="./Board_IO/arduino.h"/>
@@ -86,7 +85,6 @@
     <group name="STM32CubeMX">
       <file category="other" layer="Board" name="./RTE/Device/STM32G474RETx/STCubeGenerated/STCubeGenerated.ioc"/>
     </group>
-    <group name="Documentation"/>
   </files>
 </cprj>
 
