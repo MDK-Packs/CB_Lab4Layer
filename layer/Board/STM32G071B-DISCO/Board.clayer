@@ -81,14 +81,12 @@
   </components>
 
   <files>
-    <group name="App"/>
     <group name="Board IO">
       <file category="sourceC" layer="Board" name="./Board_IO/retarget_stdio.c"/>
     </group>
     <group name="STM32CubeMX">
       <file category="other" layer="Board" name="./RTE/Device/STM32G071RBTx/STCubeGenerated/STCubeGenerated.ioc"/>
     </group>
-    <group name="Documentation"/>
   </files>
 </cprj>
 
