@@ -58,9 +58,9 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 
 ### Connectivity Peripherals Configuration
 
-| Peripheral   | Mode / Settings                                                                                                    | IRQ | DMA                                              | Note
-|:-------------|:-------------------------------------------------------------------------------------------------------------------|:----|:---------------------------------------- --------|:----
-| LPUART1      | Asynchronous, Hardware Flow Control=off, Baud Rate: 115200 Bits/s, Word Length: 8 Bits, Parity: None, Stop Bits: 1 | no  | no                                               | ST-LINK Virtual COM port
+| Peripheral   | Mode / Settings                                                                                                    | IRQ | DMA                                             | Note
+|:-------------|:-------------------------------------------------------------------------------------------------------------------|:----|:------------------------------------------------|:----
+| LPUART1      | Asynchronous, Hardware Flow Control=off, Baud Rate: 115200 Bits/s, Word Length: 8 Bits, Parity: None, Stop Bits: 1 | no  | no                                              | ST-LINK Virtual COM port
 
 **STDIO** is routed to ST-LINK Virtual COM port (LPUART1)
 
