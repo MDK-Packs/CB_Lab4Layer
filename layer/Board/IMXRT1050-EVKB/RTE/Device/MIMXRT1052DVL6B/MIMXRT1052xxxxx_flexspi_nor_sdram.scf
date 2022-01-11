@@ -109,6 +109,12 @@ LR_m_text m_interrupts_start m_text_start+m_text_size-m_interrupts_start {   ; l
 #endif
   RW_m_data2 m_data2_start m_data2_size {
     * (RamFunction)
+    * (dtcm)
+    emac_imxrt105x.o (+RW +ZI)
+    mci_imxrt105x.o  (+RW +ZI)
+  }
+  RW_m_data3 m_data3_start m_data3_size {
+    .ANY (+RW +ZI)
   }
 #if (defined(__heap_noncacheable__))
   RW_m_data m_data_start m_data_size-Stack_Size { ; RW data
@@ -130,6 +136,7 @@ LR_m_text m_interrupts_start m_text_start+m_text_size-m_interrupts_start {   ; l
   }
   RW_m_ram_text m_qacode_start m_qacode_size { ;
     * (CodeQuickAccess)
+    * (itcm)
   }
 #if (defined(__heap_noncacheable__))
   RW_m_ncache m_ncache_start m_ncache_size - Heap_Size { ; ncache RW data

@@ -67,6 +67,7 @@ LR_m_text m_interrupts_start m_text_start+m_text_size-m_interrupts_start {   ; l
   }
   ER_m_text m_text_start FIXED m_text_size { ; load address = execution address
     * (InRoot$$Sections)
+    * (itcm)
     .ANY (+RO)
   }
   VECTOR_RAM m_interrupts_start EMPTY 0 {
@@ -82,6 +83,11 @@ LR_m_text m_interrupts_start m_text_start+m_text_size-m_interrupts_start {   ; l
   }
   RW_NOINIT +0 UNINIT {                ; RW uninitialized data
     * (.bss.noinit)
+  }
+  RW_m_data2 m_data2_start m_data2_size {
+    * (dtcm)
+    emac_imxrt105x.o (+RW +ZI)
+    mci_imxrt105x.o  (+RW +ZI)
   }
 #if (!defined(__heap_noncacheable__))
   ARM_LIB_HEAP +0 EMPTY Heap_Size {    ; Heap region growing up

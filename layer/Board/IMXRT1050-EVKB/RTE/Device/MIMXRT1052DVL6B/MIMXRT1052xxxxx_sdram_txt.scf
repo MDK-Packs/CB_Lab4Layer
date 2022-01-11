@@ -86,6 +86,11 @@ LR_m_text m_interrupts_start m_text_start+m_text_size-m_interrupts_start {   ; l
   RW_NOINIT +0 UNINIT {                ; RW uninitialized data
     * (.bss.noinit)
   }
+  RW_m_data2 m_data2_start m_data2_size {
+    * (dtcm)
+    emac_imxrt105x.o (+RW +ZI)
+    mci_imxrt105x.o  (+RW +ZI)
+  }
 #if (!defined(__heap_noncacheable__))
   ARM_LIB_HEAP +0 EMPTY Heap_Size {    ; Heap region growing up
   }
@@ -94,6 +99,7 @@ LR_m_text m_interrupts_start m_text_start+m_text_size-m_interrupts_start {   ; l
   }
   RW_m_ram_text m_qacode_start m_qacode_size { ;
     * (CodeQuickAccess)
+    * (itcm)
   }
 #if (defined(__heap_noncacheable__))
   RW_m_ncache m_ncache_start m_ncache_size - Heap_Size { ; ncache RW data

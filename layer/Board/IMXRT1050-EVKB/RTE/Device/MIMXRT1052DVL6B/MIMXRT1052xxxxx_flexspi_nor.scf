@@ -106,6 +106,9 @@ LR_m_text m_interrupts_start m_text_start+m_text_size-m_interrupts_start {   ; l
     * (RamFunction)
     * (NonCacheable.init)
     * (*NonCacheable)
+    * (dtcm)
+    emac_imxrt105x.o (+RW +ZI)
+    mci_imxrt105x.o  (+RW +ZI)
   }
   RW_NOINIT +0 UNINIT {                ; RW uninitialized data
     * (.bss.noinit)
@@ -116,6 +119,7 @@ LR_m_text m_interrupts_start m_text_start+m_text_size-m_interrupts_start {   ; l
   }
   RW_m_ram_text m_qacode_start m_qacode_size { ;
     * (CodeQuickAccess)
+    * (itcm)
   }
   RW_m_ncache m_data2_start EMPTY 0 {
   }

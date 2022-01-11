@@ -61,6 +61,7 @@ LR_m_text m_interrupts_start m_text_start+m_text_size-m_interrupts_start {   ; l
   }
   ER_m_text m_text_start FIXED m_text_size { ; load address = execution address
     * (InRoot$$Sections)
+    * (itcm)
     .ANY (+RO)
   }
   VECTOR_RAM m_interrupts_start EMPTY 0 {
@@ -69,6 +70,9 @@ LR_m_text m_interrupts_start m_text_start+m_text_size-m_interrupts_start {   ; l
     .ANY (+RW +ZI)
     * (NonCacheable.init)
     * (*NonCacheable)
+    * (dtcm)
+    emac_imxrt105x.o (+RW +ZI)
+    mci_imxrt105x.o  (+RW +ZI)
   }
   RW_NOINIT +0 UNINIT {                ; RW uninitialized data
     * (.bss.noinit)
