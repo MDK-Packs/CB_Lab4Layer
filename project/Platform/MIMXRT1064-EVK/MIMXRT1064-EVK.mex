@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding= "UTF-8" ?>
-<configuration name="MIMXRT1064xxxxA" xsi:schemaLocation="http://mcuxpresso.nxp.com/XSD/mex_configuration_1.9 http://mcuxpresso.nxp.com/XSD/mex_configuration_1.9.xsd" uuid="abd0eb5c-ec3f-4029-99a7-1da1be614d01" version="1.9" xmlns="http://mcuxpresso.nxp.com/XSD/mex_configuration_1.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<configuration name="MIMXRT1064xxxxA" xsi:schemaLocation="http://mcuxpresso.nxp.com/XSD/mex_configuration_11 http://mcuxpresso.nxp.com/XSD/mex_configuration_11.xsd" uuid="abd0eb5c-ec3f-4029-99a7-1da1be614d01" version="11" xmlns="http://mcuxpresso.nxp.com/XSD/mex_configuration_11" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <common>
       <processor>MIMXRT1064xxxxA</processor>
       <package>MIMXRT1064DVL6A</package>
@@ -8,21 +8,23 @@
       <cores selected="core0">
          <core name="Cortex-M7F" id="core0" description="M7 core"/>
       </cores>
-      <description>Configuration imported from D:\Test\CB_Lab4Layer\project\Paho_MQTT_Demo\MIMXRT1064-EVK</description>
+      <description></description>
    </common>
    <preferences>
       <validate_boot_init_only>true</validate_boot_init_only>
       <generate_extended_information>false</generate_extended_information>
       <generate_code_modified_registers_only>false</generate_code_modified_registers_only>
+      <update_include_paths>true</update_include_paths>
+      <generate_registers_defines>false</generate_registers_defines>
    </preferences>
    <tools>
-      <pins name="Pins" version="9.0" enabled="true" update_project_code="true">
+      <pins name="Pins" version="11.0" enabled="true" update_project_code="true">
          <generated_project_files>
             <file path="RTE/Board_Support/MIMXRT1064DVL6A/pin_mux.c" update_enabled="true"/>
             <file path="RTE/Board_Support/MIMXRT1064DVL6A/pin_mux.h" update_enabled="true"/>
          </generated_project_files>
          <pins_profile>
-            <processor_version>9.0.0</processor_version>
+            <processor_version>11.0.1</processor_version>
             <power_domains/>
             <pin_labels>
                <pin_label pin_num="E3" pin_signal="GPIO_EMC_00" label="SEMC_D0" identifier="SEMC_D0"/>
@@ -118,8 +120,8 @@
                <pin_label pin_num="L14" pin_signal="GPIO_AD_B0_13" label="UART1_RXD" identifier="UART1_RXD"/>
                <pin_label pin_num="H14" pin_signal="GPIO_AD_B0_14" label="CAN2_TX/U12[1]" identifier="CAN2_TX"/>
                <pin_label pin_num="L10" pin_signal="GPIO_AD_B0_15" label="CAN2_RX/U12[4]" identifier="CAN2_RX"/>
-               <pin_label pin_num="J11" pin_signal="GPIO_AD_B1_00" label="I2C1_SCL/CSI_I2C_SCL/J35[20]/J23[6]/U13[17]/U32[4]" identifier="I2C_SCL_FXOS8700CQ;CSI_I2C_SCL"/>
-               <pin_label pin_num="K11" pin_signal="GPIO_AD_B1_01" label="I2C1_SDA/CSI_I2C_SDA/J35[22]/J23[5]/U13[18]/U32[6]" identifier="I2C_SDA_FXOS8700CQ;CSI_I2C_SDA"/>
+               <pin_label pin_num="J11" pin_signal="GPIO_AD_B1_00" label="I2C1_SCL/CSI_I2C_SCL/J35[20]/J23[6]/U13[17]/U32[4]" identifier="I2C_SCL_FXOS8700CQ;CSI_I2C_SCL;I2C1_SCL"/>
+               <pin_label pin_num="K11" pin_signal="GPIO_AD_B1_01" label="I2C1_SDA/CSI_I2C_SDA/J35[22]/J23[5]/U13[18]/U32[6]" identifier="I2C_SDA_FXOS8700CQ;CSI_I2C_SDA;I2C1_SDA"/>
                <pin_label pin_num="L11" pin_signal="GPIO_AD_B1_02" label="SPDIF_OUT/J22[7]" identifier="SPDIF_OUT"/>
                <pin_label pin_num="M12" pin_signal="GPIO_AD_B1_03" label="SPDIF_IN/J22[8]" identifier="SPDIF_IN"/>
                <pin_label pin_num="H13" pin_signal="GPIO_AD_B1_08" label="AUD_INT/CSI_D9//J35[13]/J22[4]" identifier="CSI_D9"/>
@@ -352,7 +354,8 @@
                   <pin peripheral="SEMC" signal="DM, 1" pin_num="D6" pin_signal="GPIO_EMC_38"/>
                   <pin peripheral="SEMC" signal="semc_ras" pin_num="D2" pin_signal="GPIO_EMC_25"/>
                   <pin peripheral="SEMC" signal="semc_we" pin_num="D1" pin_signal="GPIO_EMC_28"/>
-                  <pin peripheral="SEMC" signal="CSX, 0" pin_num="C7" pin_signal="GPIO_EMC_41"/>
+                  <pin peripheral="SEMC" signal="CS, 0" pin_num="E1" pin_signal="GPIO_EMC_29"/>
+                  <pin peripheral="SEMC" signal="semc_dqs" pin_num="B7" pin_signal="GPIO_EMC_39"/>
                </pins>
             </function>
             <function name="BOARD_InitCSI">
@@ -598,6 +601,7 @@
                         <pin_feature name="slew_rate" value="Slow"/>
                      </pin_features>
                   </pin>
+                  <pin peripheral="GPIO1" signal="gpio_io, 02" pin_num="M11" pin_signal="GPIO_AD_B0_02"/>
                </pins>
             </function>
             <function name="BOARD_InitCAN">
@@ -656,7 +660,12 @@
                <pins>
                   <pin peripheral="ENET" signal="enet_mdc" pin_num="A7" pin_signal="GPIO_EMC_40"/>
                   <pin peripheral="ENET" signal="enet_mdio" pin_num="C7" pin_signal="GPIO_EMC_41"/>
-                  <pin peripheral="ENET" signal="enet_ref_clk" pin_num="B13" pin_signal="GPIO_B1_10"/>
+                  <pin peripheral="ENET" signal="enet_ref_clk" pin_num="B13" pin_signal="GPIO_B1_10">
+                     <pin_features>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                        <pin_feature name="software_input_on" value="Enable"/>
+                     </pin_features>
+                  </pin>
                   <pin peripheral="ENET" signal="enet_rx_data, 0" pin_num="E12" pin_signal="GPIO_B1_04"/>
                   <pin peripheral="ENET" signal="enet_rx_data, 1" pin_num="D12" pin_signal="GPIO_B1_05"/>
                   <pin peripheral="ENET" signal="enet_rx_en" pin_num="C12" pin_signal="GPIO_B1_06"/>
@@ -697,6 +706,7 @@
                   <pin peripheral="USDHC1" signal="usdhc_data, 0" pin_num="J1" pin_signal="GPIO_SD_B0_02"/>
                   <pin peripheral="USDHC1" signal="usdhc_cmd" pin_num="J4" pin_signal="GPIO_SD_B0_00"/>
                   <pin peripheral="USDHC1" signal="usdhc_clk" pin_num="J3" pin_signal="GPIO_SD_B0_01"/>
+                  <pin peripheral="USDHC1" signal="usdhc_vselect" pin_num="C14" pin_signal="GPIO_B1_14"/>
                </pins>
             </function>
             <function name="BOARD_InitHyperFlash">
@@ -839,18 +849,131 @@
                   </pin>
                </pins>
             </function>
+            <function name="BOARD_InitI2C">
+               <description>Configures pin routing and optionally pin electrical features.</description>
+               <options>
+                  <callFromInitBoot>true</callFromInitBoot>
+                  <coreID>core0</coreID>
+                  <enableClock>true</enableClock>
+               </options>
+               <dependencies>
+                  <dependency resourceType="Peripheral" resourceId="LPI2C1" description="Peripheral LPI2C1 is not initialized" problem_level="1" source="Pins:BOARD_InitI2C">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitI2C">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.iomuxc" description="Pins initialization requires the IOMUXC Driver in the project." problem_level="2" source="Pins:BOARD_InitI2C">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <pins>
+                  <pin peripheral="LPI2C1" signal="SCL" pin_num="J11" pin_signal="GPIO_AD_B1_00">
+                     <pin_features>
+                        <pin_feature name="identifier" value="I2C1_SCL"/>
+                        <pin_feature name="software_input_on" value="Enable"/>
+                        <pin_feature name="pull_keeper_enable" value="Disable"/>
+                        <pin_feature name="open_drain" value="Enable"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="LPI2C1" signal="SDA" pin_num="K11" pin_signal="GPIO_AD_B1_01">
+                     <pin_features>
+                        <pin_feature name="identifier" value="I2C1_SDA"/>
+                        <pin_feature name="software_input_on" value="Enable"/>
+                        <pin_feature name="pull_keeper_enable" value="Disable"/>
+                        <pin_feature name="open_drain" value="Enable"/>
+                     </pin_features>
+                  </pin>
+               </pins>
+            </function>
+            <function name="BOARD_InitAudio">
+               <description>Configures pin routing and optionally pin electrical features.</description>
+               <options>
+                  <callFromInitBoot>true</callFromInitBoot>
+                  <coreID>core0</coreID>
+                  <enableClock>true</enableClock>
+               </options>
+               <dependencies>
+                  <dependency resourceType="Peripheral" resourceId="GPIO1" description="Peripheral GPIO1 is not initialized" problem_level="1" source="Pins:BOARD_InitAudio">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="Peripheral" resourceId="SAI1" description="Peripheral SAI1 is not initialized" problem_level="1" source="Pins:BOARD_InitAudio">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitAudio">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.iomuxc" description="Pins initialization requires the IOMUXC Driver in the project." problem_level="2" source="Pins:BOARD_InitAudio">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.igpio" description="Pins initialization requires the IGPIO Driver in the project." problem_level="2" source="Pins:BOARD_InitAudio">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <pins>
+                  <pin peripheral="GPIO1" signal="gpio_io, 24" pin_num="H13" pin_signal="GPIO_AD_B1_08">
+                     <pin_features>
+                        <pin_feature name="direction" value="INPUT"/>
+                        <pin_feature name="gpio_interrupt" value="kGPIO_IntRisingEdge"/>
+                        <pin_feature name="pull_up_down_config" value="Pull_Up_47K_Ohm"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="SAI1" signal="sai_mclk" pin_num="M13" pin_signal="GPIO_AD_B1_09">
+                     <pin_features>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                        <pin_feature name="software_input_on" value="Enable"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="SAI1" signal="sai_rx_data0" pin_num="H12" pin_signal="GPIO_AD_B1_12">
+                     <pin_features>
+                        <pin_feature name="software_input_on" value="Enable"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="SAI1" signal="sai_tx_data0" pin_num="H11" pin_signal="GPIO_AD_B1_13">
+                     <pin_features>
+                        <pin_feature name="software_input_on" value="Enable"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="SAI1" signal="sai_tx_bclk" pin_num="G12" pin_signal="GPIO_AD_B1_14">
+                     <pin_features>
+                        <pin_feature name="software_input_on" value="Enable"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="SAI1" signal="sai_tx_sync" pin_num="J14" pin_signal="GPIO_AD_B1_15">
+                     <pin_features>
+                        <pin_feature name="software_input_on" value="Enable"/>
+                     </pin_features>
+                  </pin>
+               </pins>
+            </function>
          </functions_list>
       </pins>
-      <clocks name="Clocks" version="7.0" enabled="true" update_project_code="true">
+      <clocks name="Clocks" version="9.0" enabled="true" update_project_code="true">
          <generated_project_files>
             <file path="RTE/Board_Support/MIMXRT1064DVL6A/clock_config.c" update_enabled="true"/>
             <file path="RTE/Board_Support/MIMXRT1064DVL6A/clock_config.h" update_enabled="true"/>
          </generated_project_files>
          <clocks_profile>
-            <processor_version>9.0.0</processor_version>
+            <processor_version>11.0.1</processor_version>
          </clocks_profile>
          <clock_configurations>
-            <clock_configuration name="BOARD_BootClockRUN">
+            <clock_configuration name="BOARD_BootClockRUN" id_prefix="" prefix_user_defined="false">
                <description></description>
                <options/>
                <dependencies>
@@ -915,11 +1038,9 @@
                   <clock_output id="CLK_1M.outFreq" value="1 MHz" locked="false" accuracy=""/>
                   <clock_output id="CLK_24M.outFreq" value="24 MHz" locked="false" accuracy=""/>
                   <clock_output id="CSI_CLK_ROOT.outFreq" value="12 MHz" locked="false" accuracy=""/>
-                  <clock_output id="ENET1_TX_CLK.outFreq" value="50 MHz" locked="false" accuracy=""/>
-                  <clock_output id="ENET2_125M_CLK.outFreq" value="50 MHz" locked="false" accuracy=""/>
-                  <clock_output id="ENET2_TX_CLK.outFreq" value="50 MHz" locked="false" accuracy=""/>
                   <clock_output id="ENET_125M_CLK.outFreq" value="50 MHz" locked="false" accuracy=""/>
                   <clock_output id="ENET_25M_REF_CLK.outFreq" value="25 MHz" locked="false" accuracy=""/>
+                  <clock_output id="ENET_REF_CLK.outFreq" value="50 MHz" locked="false" accuracy=""/>
                   <clock_output id="FLEXIO1_CLK_ROOT.outFreq" value="30 MHz" locked="false" accuracy=""/>
                   <clock_output id="FLEXIO2_CLK_ROOT.outFreq" value="30 MHz" locked="false" accuracy=""/>
                   <clock_output id="FLEXSPI2_CLK_ROOT.outFreq" value="1440/11 MHz" locked="false" accuracy=""/>
@@ -934,12 +1055,12 @@
                   <clock_output id="MQS_MCLK.outFreq" value="1080/17 MHz" locked="false" accuracy=""/>
                   <clock_output id="PERCLK_CLK_ROOT.outFreq" value="75 MHz" locked="false" accuracy=""/>
                   <clock_output id="PLL7_MAIN_CLK.outFreq" value="24 MHz" locked="false" accuracy=""/>
-                  <clock_output id="SAI1_CLK_ROOT.outFreq" value="1080/17 MHz" locked="false" accuracy=""/>
-                  <clock_output id="SAI1_MCLK1.outFreq" value="1080/17 MHz" locked="false" accuracy=""/>
-                  <clock_output id="SAI1_MCLK2.outFreq" value="1080/17 MHz" locked="false" accuracy=""/>
+                  <clock_output id="SAI1_CLK_ROOT.outFreq" value="12.28875 MHz" locked="false" accuracy=""/>
+                  <clock_output id="SAI1_MCLK1.outFreq" value="12.28875 MHz" locked="false" accuracy=""/>
+                  <clock_output id="SAI1_MCLK2.outFreq" value="12.28875 MHz" locked="false" accuracy=""/>
                   <clock_output id="SAI1_MCLK3.outFreq" value="30 MHz" locked="false" accuracy=""/>
-                  <clock_output id="SAI2_CLK_ROOT.outFreq" value="1080/17 MHz" locked="false" accuracy=""/>
-                  <clock_output id="SAI2_MCLK1.outFreq" value="1080/17 MHz" locked="false" accuracy=""/>
+                  <clock_output id="SAI2_CLK_ROOT.outFreq" value="960/119 MHz" locked="false" accuracy=""/>
+                  <clock_output id="SAI2_MCLK1.outFreq" value="960/119 MHz" locked="false" accuracy=""/>
                   <clock_output id="SAI2_MCLK3.outFreq" value="30 MHz" locked="false" accuracy=""/>
                   <clock_output id="SAI3_CLK_ROOT.outFreq" value="1080/17 MHz" locked="false" accuracy=""/>
                   <clock_output id="SAI3_MCLK1.outFreq" value="1080/17 MHz" locked="false" accuracy=""/>
@@ -960,8 +1081,14 @@
                   <setting id="CCM.FLEXSPI_SEL.sel" value="CCM_ANALOG.PLL3_PFD0_CLK" locked="false"/>
                   <setting id="CCM.LPSPI_PODF.scale" value="5" locked="true"/>
                   <setting id="CCM.PERCLK_PODF.scale" value="2" locked="true"/>
+                  <setting id="CCM.SAI1_CLK_PODF.scale" value="64" locked="true"/>
+                  <setting id="CCM.SAI1_CLK_PRED.scale" value="1" locked="true"/>
+                  <setting id="CCM.SAI1_CLK_SEL.sel" value="CCM_ANALOG.PLL4_MAIN_CLK" locked="false"/>
+                  <setting id="CCM.SAI2_CLK_PODF.scale" value="63" locked="true"/>
+                  <setting id="CCM.SAI2_CLK_PRED.scale" value="1" locked="false"/>
                   <setting id="CCM.SEMC_PODF.scale" value="8" locked="false"/>
                   <setting id="CCM.TRACE_PODF.scale" value="3" locked="true"/>
+                  <setting id="CCM_ANALOG.AUDIO_DIV.scale" value="1" locked="true"/>
                   <setting id="CCM_ANALOG.ENET2_DIV.scale" value="10" locked="true"/>
                   <setting id="CCM_ANALOG.PLL1_BYPASS.sel" value="CCM_ANALOG.PLL1" locked="false"/>
                   <setting id="CCM_ANALOG.PLL1_PREDIV.scale" value="1" locked="true"/>
@@ -980,44 +1107,206 @@
                   <setting id="CCM_ANALOG.PLL3_PFD1_BYPASS.sel" value="CCM_ANALOG.PLL3_PFD1" locked="false"/>
                   <setting id="CCM_ANALOG.PLL3_PFD2_BYPASS.sel" value="CCM_ANALOG.PLL3_PFD2" locked="false"/>
                   <setting id="CCM_ANALOG.PLL3_PFD3_BYPASS.sel" value="CCM_ANALOG.PLL3_PFD3" locked="false"/>
-                  <setting id="CCM_ANALOG.PLL4.denom" value="50" locked="false"/>
-                  <setting id="CCM_ANALOG.PLL4.div" value="47" locked="false"/>
+                  <setting id="CCM_ANALOG.PLL4.denom" value="100" locked="true"/>
+                  <setting id="CCM_ANALOG.PLL4.div" value="32" locked="true"/>
+                  <setting id="CCM_ANALOG.PLL4.num" value="77" locked="true"/>
+                  <setting id="CCM_ANALOG.PLL4_BYPASS.sel" value="CCM_ANALOG.PLL4_POST_DIV" locked="false"/>
+                  <setting id="CCM_ANALOG.PLL4_POST_DIV.scale" value="1" locked="true"/>
                   <setting id="CCM_ANALOG.PLL5.denom" value="1" locked="false"/>
                   <setting id="CCM_ANALOG.PLL5.div" value="40" locked="false"/>
                   <setting id="CCM_ANALOG.PLL5.num" value="0" locked="false"/>
                   <setting id="CCM_ANALOG.PLL6_BYPASS.sel" value="CCM_ANALOG.PLL6" locked="false"/>
+                  <setting id="CCM_ANALOG_PLL_AUDIO_POWERDOWN_CFG" value="No" locked="false"/>
+                  <setting id="CCM_ANALOG_PLL_ENET_ENET2_REF_EN_CFG" value="Disabled" locked="false"/>
                   <setting id="CCM_ANALOG_PLL_USB1_POWER_CFG" value="Yes" locked="false"/>
+                  <setting id="IOMUXC_GPR.ENET_REF_CLK_SEL.sel" value="CCM_ANALOG.ENET_125M_CLK" locked="false"/>
                </clock_settings>
                <called_from_default_init>true</called_from_default_init>
             </clock_configuration>
          </clock_configurations>
       </clocks>
-      <dcdx name="DCDx" version="2.0" enabled="false" update_project_code="true">
-         <generated_project_files/>
+      <dcdx name="DCDx" version="3.0" enabled="true" update_project_code="true">
+         <generated_project_files>
+            <file path="RTE/Board_Support/MIMXRT1064DVL6A/dcd.c" update_enabled="true"/>
+            <file path="RTE/Board_Support/MIMXRT1064DVL6A/dcd.h" update_enabled="true"/>
+         </generated_project_files>
          <dcdx_profile>
-            <processor_version>N/A</processor_version>
+            <processor_version>11.0.1</processor_version>
+            <output_format>c_array</output_format>
          </dcdx_profile>
-         <dcdx_configurations/>
+         <dcdx_configurations>
+            <dcdx_configuration name="Device_configuration">
+               <description></description>
+               <options/>
+               <command_groups>
+                  <command_group name="Imported Commands" enabled="true">
+                     <commands>
+                        <command type="write_value" address="CCM_CCGR0" value="0xFFFFFFFF" value_width="4"/>
+                        <command type="write_value" address="CCM_CCGR1" value="0xFFFFFFFF" value_width="4"/>
+                        <command type="write_value" address="CCM_CCGR2" value="0xFFFFFFFF" value_width="4"/>
+                        <command type="write_value" address="CCM_CCGR3" value="0xFFFFFFFF" value_width="4"/>
+                        <command type="write_value" address="CCM_CCGR4" value="0xFFFFFFFF" value_width="4"/>
+                        <command type="write_value" address="CCM_CCGR5" value="0xFFFFFFFF" value_width="4"/>
+                        <command type="write_value" address="CCM_CCGR6" value="0xFFFFFFFF" value_width="4"/>
+                        <command type="write_value" address="CCM_ANALOG_PLL_SYS" value="0x2001" value_width="4"/>
+                        <command type="write_value" address="CCM_ANALOG_PFD_528" value="0x1D0000" value_width="4"/>
+                        <command type="write_value" address="CCM_CBCDR" value="0x98D40" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_00" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_01" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_02" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_03" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_04" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_05" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_06" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_07" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_08" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_09" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_10" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_11" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_12" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_13" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_14" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_15" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_16" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_17" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_18" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_19" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_20" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_21" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_22" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_23" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_24" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_25" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_26" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_27" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_28" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_29" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_30" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_31" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_32" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_33" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_34" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_35" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_36" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_37" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_38" value="0x00" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_39" value="0x10" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_00" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_01" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_02" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_03" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_04" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_05" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_06" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_07" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_08" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_09" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_10" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_11" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_12" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_13" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_14" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_15" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_16" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_17" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_18" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_19" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_20" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_21" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_22" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_23" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_24" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_25" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_26" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_27" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_28" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_29" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_30" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_31" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_32" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_33" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_34" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_35" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_36" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_37" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_38" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="IOMUXC_SW_PAD_CTL_PAD_GPIO_EMC_39" value="0x110F9" value_width="4"/>
+                        <command type="write_value" address="SEMC_MCR" value="0x10000004" value_width="4"/>
+                        <command type="write_value" address="SEMC_BMCR0" value="0x81" value_width="4"/>
+                        <command type="write_value" address="SEMC_BMCR1" value="0x81" value_width="4"/>
+                        <command type="write_value" address="SEMC_BR0" value="0x8000001B" value_width="4"/>
+                        <command type="write_value" address="SEMC_BR1" value="0x8200001B" value_width="4"/>
+                        <command type="write_value" address="SEMC_BR2" value="0x8400001B" value_width="4"/>
+                        <command type="write_value" address="SEMC_BR3" value="0x8600001B" value_width="4"/>
+                        <command type="write_value" address="SEMC_BR4" value="0x90000021" value_width="4"/>
+                        <command type="write_value" address="SEMC_BR5" value="0xA0000019" value_width="4"/>
+                        <command type="write_value" address="SEMC_BR6" value="0xA8000017" value_width="4"/>
+                        <command type="write_value" address="SEMC_BR7" value="0xA900001B" value_width="4"/>
+                        <command type="write_value" address="SEMC_BR8" value="0x21" value_width="4"/>
+                        <command type="write_value" address="SEMC_IOCR" value="0x79A8" value_width="4"/>
+                        <command type="write_value" address="SEMC_SDRAMCR0" value="0xF37" value_width="4"/>
+                        <command type="write_value" address="SEMC_SDRAMCR1" value="0x652922" value_width="4"/>
+                        <command type="write_value" address="SEMC_SDRAMCR2" value="0x10920" value_width="4"/>
+                        <command type="write_value" address="SEMC_SDRAMCR3" value="0x50210A08" value_width="4"/>
+                        <command type="write_value" address="SEMC_DBICR0" value="0x21" value_width="4"/>
+                        <command type="write_value" address="SEMC_DBICR1" value="0x888888" value_width="4"/>
+                        <command type="write_value" address="SEMC_IPCR1" value="0x02" value_width="4"/>
+                        <command type="write_value" address="SEMC_IPCR2" value="0x00" value_width="4"/>
+                        <command type="write_value" address="SEMC_IPCR0" value="0x80000000" value_width="4"/>
+                        <command type="write_value" address="SEMC_IPCMD" value="0xA55A000F" value_width="4"/>
+                        <command type="check_any_bit_set" address="SEMC_INTR" value="0x01" value_width="4"/>
+                        <command type="write_value" address="SEMC_IPCR0" value="0x80000000" value_width="4"/>
+                        <command type="write_value" address="SEMC_IPCMD" value="0xA55A000C" value_width="4"/>
+                        <command type="check_any_bit_set" address="SEMC_INTR" value="0x01" value_width="4"/>
+                        <command type="write_value" address="SEMC_IPCR0" value="0x80000000" value_width="4"/>
+                        <command type="write_value" address="SEMC_IPCMD" value="0xA55A000C" value_width="4"/>
+                        <command type="check_any_bit_set" address="SEMC_INTR" value="0x01" value_width="4"/>
+                        <command type="write_value" address="SEMC_IPTXDAT" value="0x33" value_width="4"/>
+                        <command type="write_value" address="SEMC_IPCR0" value="0x80000000" value_width="4"/>
+                        <command type="write_value" address="SEMC_IPCMD" value="0xA55A000A" value_width="4"/>
+                        <command type="check_any_bit_set" address="SEMC_INTR" value="0x01" value_width="4"/>
+                        <command type="write_value" address="SEMC_SDRAMCR3" value="0x50210A09" value_width="4"/>
+                     </commands>
+                  </command_group>
+               </command_groups>
+            </dcdx_configuration>
+         </dcdx_configurations>
       </dcdx>
-      <periphs name="Peripherals" version="7.0" enabled="false" update_project_code="true">
+      <periphs name="Peripherals" version="9.0" enabled="false" update_project_code="true">
          <generated_project_files/>
          <peripherals_profile>
-            <processor_version>7.0.1</processor_version>
+            <processor_version>9.0.1</processor_version>
          </peripherals_profile>
          <functional_groups>
-            <functional_group name="BOARD_InitPeripherals" uuid="27c41acc-fc39-4e5a-9083-a2002af00aef" called_from_default_init="true" id_prefix="" core="core0">
+            <functional_group name="BOARD_InitPeripherals" uuid="fecdaf60-ae79-4e12-abc0-08e2ca3af18a" called_from_default_init="true" id_prefix="" core="core0">
                <description></description>
                <options/>
                <dependencies/>
-               <instances/>
+               <instances>
+                  <instance name="NVIC" uuid="c02dc723-d105-4503-88d9-ca0e542024f6" type="nvic" type_id="nvic_57b5eef3774cc60acaede6f5b8bddc67" mode="general" peripheral="NVIC" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="nvic">
+                        <array name="interrupt_table"/>
+                        <array name="interrupts"/>
+                     </config_set>
+                  </instance>
+               </instances>
             </functional_group>
          </functional_groups>
          <components>
-            <component name="system" uuid="82b21f25-a45e-4590-bd35-34488d6d5712" type_id="system_54b53072540eeeb8f8e9343e71f28176">
-               <config_set_global name="global_system_definitions"/>
+            <component name="system" uuid="c3c7b228-bef1-4f9d-af7f-3c64679c8cf5" type_id="system_54b53072540eeeb8f8e9343e71f28176">
+               <config_set_global name="global_system_definitions">
+                  <setting name="user_definitions" value=""/>
+                  <setting name="user_includes" value=""/>
+               </config_set_global>
             </component>
-            <component name="msg" uuid="6fa59450-7cbb-4902-9572-d01b8c51ba5f" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
+            <component name="msg" uuid="f5e3747f-59e2-402f-b834-8ce324b47212" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
                <config_set_global name="global_messages"/>
+            </component>
+            <component name="generic_uart" uuid="a465dda1-62b1-4627-bbd7-78b24ea020e0" type_id="generic_uart_8cae00565451cf2346eb1b8c624e73a6">
+               <config_set_global name="global_uart"/>
+            </component>
+            <component name="generic_can" uuid="48964acd-2db0-4fcd-8dc0-2bf4c2481fbe" type_id="generic_can_1bfdd78b1af214566c1f23cf6a582d80">
+               <config_set_global name="global_can"/>
             </component>
          </components>
       </periphs>
@@ -1026,8 +1315,6 @@
          <tee_profile>
             <processor_version>N/A</processor_version>
          </tee_profile>
-         <global_options/>
-         <user_memory_regions/>
       </tee>
    </tools>
 </configuration>
