@@ -282,11 +282,16 @@ void BOARD_InitDEBUG_UART(void);
 #define BOARD_INITSDRAM_SEMC_WE_PERIPHERAL                                  SEMC   /*!< Peripheral name */
 #define BOARD_INITSDRAM_SEMC_WE_SIGNAL                                   semc_we   /*!< Signal name */
 
-/* GPIO_EMC_41 (coord C7), ENET_MDIO */
+/* GPIO_EMC_29 (coord E1), SEMC_CS0 */
 /* Routed pin properties */
-#define BOARD_INITSDRAM_ENET_MDIO_PERIPHERAL                                SEMC   /*!< Peripheral name */
-#define BOARD_INITSDRAM_ENET_MDIO_SIGNAL                                     CSX   /*!< Signal name */
-#define BOARD_INITSDRAM_ENET_MDIO_CHANNEL                                     0U   /*!< Signal channel */
+#define BOARD_INITSDRAM_SEMC_CS0_PERIPHERAL                                 SEMC   /*!< Peripheral name */
+#define BOARD_INITSDRAM_SEMC_CS0_SIGNAL                                       CS   /*!< Signal name */
+#define BOARD_INITSDRAM_SEMC_CS0_CHANNEL                                      0U   /*!< Signal channel */
+
+/* GPIO_EMC_39 (coord B7), SEMC_DQS */
+/* Routed pin properties */
+#define BOARD_INITSDRAM_SEMC_DQS_PERIPHERAL                                 SEMC   /*!< Peripheral name */
+#define BOARD_INITSDRAM_SEMC_DQS_SIGNAL                                 semc_dqs   /*!< Signal name */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
@@ -394,6 +399,7 @@ void BOARD_InitSDRAM(void);
  */
 void BOARD_InitCSI(void);
 
+#define BOARD_INITLCD_IOMUXC_GPR_GPR26_GPIO_MUX1_GPIO_SEL_MASK 0x04U /*!< GPIO1 and GPIO6 share same IO MUX function, GPIO_MUX1 selects one GPIO function: affected bits mask */
 #define BOARD_INITLCD_IOMUXC_GPR_GPR27_GPIO_MUX2_GPIO_SEL_MASK 0x80000000U /*!< GPIO2 and GPIO7 share same IO MUX function, GPIO_MUX2 selects one GPIO function: affected bits mask */
 
 /* GPIO_B0_04 (coord C8), LCDIF_D0/BT_CFG[0] */
@@ -642,6 +648,11 @@ void BOARD_InitENET(void);
 #define BOARD_INITUSDHC_SD1_CLK_PERIPHERAL                                USDHC1   /*!< Peripheral name */
 #define BOARD_INITUSDHC_SD1_CLK_SIGNAL                                 usdhc_clk   /*!< Signal name */
 
+/* GPIO_B1_14 (coord C14), SD0_VSELECT */
+/* Routed pin properties */
+#define BOARD_INITUSDHC_SD0_VSELECT_PERIPHERAL                            USDHC1   /*!< Peripheral name */
+#define BOARD_INITUSDHC_SD0_VSELECT_SIGNAL                         usdhc_vselect   /*!< Signal name */
+
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
  *
@@ -771,6 +782,69 @@ void BOARD_InitUSER_LED(void);
  *
  */
 void BOARD_InitUSER_BUTTON(void);
+
+/* GPIO_AD_B1_00 (coord J11), I2C1_SCL/CSI_I2C_SCL/J35[20]/J23[6]/U13[17]/U32[4] */
+/* Routed pin properties */
+#define BOARD_INITI2C_I2C1_SCL_PERIPHERAL                                 LPI2C1   /*!< Peripheral name */
+#define BOARD_INITI2C_I2C1_SCL_SIGNAL                                        SCL   /*!< Signal name */
+
+/* GPIO_AD_B1_01 (coord K11), I2C1_SDA/CSI_I2C_SDA/J35[22]/J23[5]/U13[18]/U32[6] */
+/* Routed pin properties */
+#define BOARD_INITI2C_I2C1_SDA_PERIPHERAL                                 LPI2C1   /*!< Peripheral name */
+#define BOARD_INITI2C_I2C1_SDA_SIGNAL                                        SDA   /*!< Signal name */
+
+/*!
+ * @brief Configures pin routing and optionally pin electrical features.
+ *
+ */
+void BOARD_InitI2C(void);
+
+#define BOARD_INITAUDIO_IOMUXC_GPR_GPR26_GPIO_MUX1_GPIO_SEL_MASK 0x01000000U /*!< GPIO1 and GPIO6 share same IO MUX function, GPIO_MUX1 selects one GPIO function: affected bits mask */
+
+/* GPIO_AD_B1_08 (coord H13), AUD_INT/CSI_D9//J35[13]/J22[4] */
+/* Routed pin properties */
+#define BOARD_INITAUDIO_CSI_D9_PERIPHERAL                                  GPIO1   /*!< Peripheral name */
+#define BOARD_INITAUDIO_CSI_D9_SIGNAL                                    gpio_io   /*!< Signal name */
+#define BOARD_INITAUDIO_CSI_D9_CHANNEL                                       24U   /*!< Signal channel */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITAUDIO_CSI_D9_GPIO                                        GPIO1   /*!< GPIO peripheral base pointer */
+#define BOARD_INITAUDIO_CSI_D9_GPIO_PIN                                      24U   /*!< GPIO pin number */
+#define BOARD_INITAUDIO_CSI_D9_GPIO_PIN_MASK                         (1U << 24U)   /*!< GPIO pin mask */
+#define BOARD_INITAUDIO_CSI_D9_PORT                                        GPIO1   /*!< PORT peripheral base pointer */
+#define BOARD_INITAUDIO_CSI_D9_PIN                                           24U   /*!< PORT pin number */
+#define BOARD_INITAUDIO_CSI_D9_PIN_MASK                              (1U << 24U)   /*!< PORT pin mask */
+
+/* GPIO_AD_B1_09 (coord M13), SAI1_MCLK/CSI_D8/J35[11] */
+/* Routed pin properties */
+#define BOARD_INITAUDIO_CSI_D8_PERIPHERAL                                   SAI1   /*!< Peripheral name */
+#define BOARD_INITAUDIO_CSI_D8_SIGNAL                                   sai_mclk   /*!< Signal name */
+
+/* GPIO_AD_B1_12 (coord H12), SAI1_RXD/CSI_D5/J35[5]/U13[16] */
+/* Routed pin properties */
+#define BOARD_INITAUDIO_CSI_D5_PERIPHERAL                                   SAI1   /*!< Peripheral name */
+#define BOARD_INITAUDIO_CSI_D5_SIGNAL                               sai_rx_data0   /*!< Signal name */
+
+/* GPIO_AD_B1_13 (coord H11), SAI1_TXD/CSI_D4/J35[3]/U13[14] */
+/* Routed pin properties */
+#define BOARD_INITAUDIO_CSI_D4_PERIPHERAL                                   SAI1   /*!< Peripheral name */
+#define BOARD_INITAUDIO_CSI_D4_SIGNAL                               sai_tx_data0   /*!< Signal name */
+
+/* GPIO_AD_B1_14 (coord G12), SAI1_TX_BCLK/CSI_D3/J35[4]/U13[12] */
+/* Routed pin properties */
+#define BOARD_INITAUDIO_CSI_D3_PERIPHERAL                                   SAI1   /*!< Peripheral name */
+#define BOARD_INITAUDIO_CSI_D3_SIGNAL                                sai_tx_bclk   /*!< Signal name */
+
+/* GPIO_AD_B1_15 (coord J14), SAI1_TX_SYNC/CSI_D2/J35[6]/U13[13] */
+/* Routed pin properties */
+#define BOARD_INITAUDIO_CSI_D2_PERIPHERAL                                   SAI1   /*!< Peripheral name */
+#define BOARD_INITAUDIO_CSI_D2_SIGNAL                                sai_tx_sync   /*!< Signal name */
+
+/*!
+ * @brief Configures pin routing and optionally pin electrical features.
+ *
+ */
+void BOARD_InitAudio(void);
 
 #if defined(__cplusplus)
 }

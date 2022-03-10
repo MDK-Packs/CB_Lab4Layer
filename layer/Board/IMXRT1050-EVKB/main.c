@@ -30,6 +30,8 @@
 #include "board.h"
 #include "pin_mux.h"
 #include "fsl_iomuxc.h"
+#include "fsl_dmamux.h"
+#include "fsl_sai_edma.h"
 #include "main.h"
 
 // Callbacks for LPUART1 Driver
@@ -43,17 +45,22 @@ void     LPUART3_InitPins  (void) { /* Done in BOARD_InitARDUINO_UART function *
 void     LPUART3_DeinitPins(void) { /* Not implemented */ }
 
 int main (void) {
+  edma_config_t DmaConfig;
 
   BOARD_InitBootPins();
   BOARD_InitBootClocks();
   BOARD_InitDebugConsole();
 
-  // Enable ENET_REF_CLK output mode
-  IOMUXC_EnableMode(IOMUXC_GPR, kIOMUXC_GPR_ENET1TxClkOutputDir, true);
-
   NVIC_SetPriority(ENET_IRQn,    8U);
   NVIC_SetPriority(USDHC1_IRQn,  8U);
   NVIC_SetPriority(LPUART3_IRQn, 8U);
+
+  /* Initialize DMAMUX */
+  DMAMUX_Init (DMAMUX);
+
+  /* Initialize EDMA */
+  EDMA_GetDefaultConfig (&DmaConfig);
+  EDMA_Init (DMA0,       &DmaConfig);
 
   SystemCoreClockUpdate();
 
