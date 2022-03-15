@@ -57,9 +57,9 @@ App=AWS_MQTT_Demo Board=IMXRT1050-EVKB Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 App=AWS_MQTT_Demo Board=IMXRT1050-EVKB Module=WizFi360 Socket=WiFi RTOS=RTX
 App=AWS_MQTT_Demo Board=IMXRT1050-EVKB Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
 App=AWS_MQTT_Demo Board=IMXRT1050-EVKB Socket=MW-Network_ETH RTOS=RTX
-#App=AWS_MQTT_Demo Board=IMXRT1050-EVKB Socket=MW-Network_ETH RTOS=FreeRTOS
-#App=AWS_MQTT_Demo Board=IMXRT1050-EVKB Socket=lwIP_ETH RTOS=RTX
-#App=AWS_MQTT_Demo Board=IMXRT1050-EVKB Socket=lwIP_ETH RTOS=FreeRTOS
+App=AWS_MQTT_Demo Board=IMXRT1050-EVKB Socket=MW-Network_ETH RTOS=FreeRTOS
+App=AWS_MQTT_Demo Board=IMXRT1050-EVKB Socket=lwIP_ETH RTOS=RTX
+App=AWS_MQTT_Demo Board=IMXRT1050-EVKB Socket=lwIP_ETH RTOS=FreeRTOS
 App=AWS_MQTT_Demo Board=MCB4300 Socket=MW-Network_ETH RTOS=RTX
 App=AWS_MQTT_Demo Board=MCB4300 Socket=MW-Network_ETH RTOS=FreeRTOS
 App=AWS_MQTT_Demo Board=MCB4300 Socket=lwIP_ETH RTOS=RTX
@@ -76,9 +76,9 @@ App=AWS_MQTT_Demo Board=MIMXRT1064-EVK Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 App=AWS_MQTT_Demo Board=MIMXRT1064-EVK Module=WizFi360 Socket=WiFi RTOS=RTX
 App=AWS_MQTT_Demo Board=MIMXRT1064-EVK Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
 App=AWS_MQTT_Demo Board=MIMXRT1064-EVK Socket=MW-Network_ETH RTOS=RTX
-#App=AWS_MQTT_Demo Board=MIMXRT1064-EVK Socket=MW-Network_ETH RTOS=FreeRTOS
-#App=AWS_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=RTX
-#App=AWS_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=FreeRTOS
+App=AWS_MQTT_Demo Board=MIMXRT1064-EVK Socket=MW-Network_ETH RTOS=FreeRTOS
+App=AWS_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=RTX
+App=AWS_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=FreeRTOS
 App=AWS_MQTT_Demo Board=NUCLEO-H743ZI Module=ESP8266 Socket=WiFi RTOS=RTX
 App=AWS_MQTT_Demo Board=NUCLEO-H743ZI Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 App=AWS_MQTT_Demo Board=NUCLEO-H743ZI Module=ISM43362 Socket=WiFi RTOS=RTX
@@ -176,8 +176,8 @@ App=Azure_MQTT_Demo Board=MIMXRT1064-EVK Module=WizFi360 Socket=WiFi RTOS=RTX
 App=Azure_MQTT_Demo Board=MIMXRT1064-EVK Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
 App=Azure_MQTT_Demo Board=MIMXRT1064-EVK Socket=MW-Network_ETH RTOS=RTX
 App=Azure_MQTT_Demo Board=MIMXRT1064-EVK Socket=MW-Network_ETH RTOS=FreeRTOS
-#App=Azure_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=RTX
-#App=Azure_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=FreeRTOS
+App=Azure_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=RTX
+App=Azure_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=FreeRTOS
 App=Azure_MQTT_Demo Board=NUCLEO-H743ZI Module=ESP8266 Socket=WiFi RTOS=RTX
 App=Azure_MQTT_Demo Board=NUCLEO-H743ZI Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 App=Azure_MQTT_Demo Board=NUCLEO-H743ZI Module=ISM43362 Socket=WiFi RTOS=RTX
@@ -275,8 +275,8 @@ App=Google_MQTT_Demo Board=MIMXRT1064-EVK Module=WizFi360 Socket=WiFi RTOS=RTX
 App=Google_MQTT_Demo Board=MIMXRT1064-EVK Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
 App=Google_MQTT_Demo Board=MIMXRT1064-EVK Socket=MW-Network_ETH RTOS=RTX
 App=Google_MQTT_Demo Board=MIMXRT1064-EVK Socket=MW-Network_ETH RTOS=FreeRTOS
-#App=Google_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=RTX
-#App=Google_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=FreeRTOS
+App=Google_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=RTX
+App=Google_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=FreeRTOS
 App=Google_MQTT_Demo Board=NUCLEO-H743ZI Module=ESP8266 Socket=WiFi RTOS=RTX
 App=Google_MQTT_Demo Board=NUCLEO-H743ZI Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 App=Google_MQTT_Demo Board=NUCLEO-H743ZI Module=ISM43362 Socket=WiFi RTOS=RTX
@@ -374,8 +374,8 @@ App=Paho_MQTT_Demo Board=MIMXRT1064-EVK Module=WizFi360 Socket=WiFi RTOS=RTX
 App=Paho_MQTT_Demo Board=MIMXRT1064-EVK Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
 App=Paho_MQTT_Demo Board=MIMXRT1064-EVK Socket=MW-Network_ETH RTOS=RTX
 App=Paho_MQTT_Demo Board=MIMXRT1064-EVK Socket=MW-Network_ETH RTOS=FreeRTOS
-#App=Paho_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=RTX
-#App=Paho_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=FreeRTOS
+App=Paho_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=RTX
+App=Paho_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=FreeRTOS
 App=Paho_MQTT_Demo Board=NUCLEO-H743ZI Module=ESP8266 Socket=WiFi RTOS=RTX
 App=Paho_MQTT_Demo Board=NUCLEO-H743ZI Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 App=Paho_MQTT_Demo Board=NUCLEO-H743ZI Module=ISM43362 Socket=WiFi RTOS=RTX
@@ -453,7 +453,7 @@ App=Watson_MQTT_Demo Board=IMXRT1050-EVKB Module=WizFi360 Socket=WiFi RTOS=FreeR
 App=Watson_MQTT_Demo Board=IMXRT1050-EVKB Socket=MW-Network_ETH RTOS=RTX
 App=Watson_MQTT_Demo Board=IMXRT1050-EVKB Socket=MW-Network_ETH RTOS=FreeRTOS
 App=Watson_MQTT_Demo Board=IMXRT1050-EVKB Socket=lwIP_ETH RTOS=RTX
-#App=Watson_MQTT_Demo Board=IMXRT1050-EVKB Socket=lwIP_ETH RTOS=FreeRTOS
+App=Watson_MQTT_Demo Board=IMXRT1050-EVKB Socket=lwIP_ETH RTOS=FreeRTOS
 App=Watson_MQTT_Demo Board=MCB4300 Socket=MW-Network_ETH RTOS=RTX
 App=Watson_MQTT_Demo Board=MCB4300 Socket=MW-Network_ETH RTOS=FreeRTOS
 App=Watson_MQTT_Demo Board=MCB4300 Socket=lwIP_ETH RTOS=RTX
@@ -470,8 +470,8 @@ App=Watson_MQTT_Demo Board=MIMXRT1064-EVK Module=WizFi360 Socket=WiFi RTOS=RTX
 App=Watson_MQTT_Demo Board=MIMXRT1064-EVK Module=WizFi360 Socket=WiFi RTOS=FreeRTOS
 App=Watson_MQTT_Demo Board=MIMXRT1064-EVK Socket=MW-Network_ETH RTOS=RTX
 App=Watson_MQTT_Demo Board=MIMXRT1064-EVK Socket=MW-Network_ETH RTOS=FreeRTOS
-#App=Watson_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=RTX
-#App=Watson_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=FreeRTOS
+App=Watson_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=RTX
+App=Watson_MQTT_Demo Board=MIMXRT1064-EVK Socket=lwIP_ETH RTOS=FreeRTOS
 App=Watson_MQTT_Demo Board=STM32H735G-DK Module=ESP8266 Socket=WiFi RTOS=RTX
 App=Watson_MQTT_Demo Board=STM32H735G-DK Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 App=Watson_MQTT_Demo Board=STM32H735G-DK Module=ISM43362 Socket=WiFi RTOS=RTX
