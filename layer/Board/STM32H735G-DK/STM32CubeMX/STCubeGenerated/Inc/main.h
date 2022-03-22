@@ -1,8 +1,9 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file    stm32h7xx_it.h
-  * @brief   This file contains the headers of the interrupt handlers.
+  * @file           : main.h
+  * @brief          : Header for main.c file.
+  *                   This file contains the common defines of the application.
   ******************************************************************************
   * @attention
   *
@@ -14,17 +15,20 @@
   * License. You may obtain a copy of the License at:
   *                        opensource.org/licenses/BSD-3-Clause
   *
- ******************************************************************************
+  ******************************************************************************
   */
 /* USER CODE END Header */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __STM32H7xx_IT_H
-#define __STM32H7xx_IT_H
+#ifndef __MAIN_H
+#define __MAIN_H
 
 #ifdef __cplusplus
- extern "C" {
+extern "C" {
 #endif
+
+/* Includes ------------------------------------------------------------------*/
+#include "stm32h7xx_hal.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -47,25 +51,26 @@
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
-void NMI_Handler(void);
-void HardFault_Handler(void);
-void MemManage_Handler(void);
-void BusFault_Handler(void);
-void UsageFault_Handler(void);
-void DebugMon_Handler(void);
-void DMA1_Stream0_IRQHandler(void);
-void DMA1_Stream1_IRQHandler(void);
-void USART1_IRQHandler(void);
-void ETH_IRQHandler(void);
-void SPI5_IRQHandler(void);
-/* USER CODE BEGIN EFP */
+void Error_Handler(void);
 
+/* USER CODE BEGIN EFP */
+extern void app_initialize (void);
 /* USER CODE END EFP */
+
+/* Private defines -----------------------------------------------------------*/
+#define ARDUINO_IO_D9_Pin GPIO_PIN_7
+#define ARDUINO_IO_D9_GPIO_Port GPIOB
+#define ARDUINO_IO_D10_Pin GPIO_PIN_6
+#define ARDUINO_IO_D10_GPIO_Port GPIOF
+#define MemoryCard_CD0_Pin GPIO_PIN_5
+#define MemoryCard_CD0_GPIO_Port GPIOF
+void   MX_USART1_UART_Init(void);
+/* USER CODE BEGIN Private defines */
+
+/* USER CODE END Private defines */
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* __STM32H7xx_IT_H */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+#endif /* __MAIN_H */
