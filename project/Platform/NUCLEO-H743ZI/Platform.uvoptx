@@ -165,8 +165,8 @@
         <SubType>1</SubType>
       </ScvdPack>
       <ScvdPack>
-        <Filename>C:\Keil_v5\ARM\PACK\Keil\ARM_Compiler\1.6.3\EventRecorder.scvd</Filename>
-        <Type>Keil.ARM_Compiler.1.6.3</Type>
+        <Filename>C:\Keil_v5\ARM\PACK\Keil\ARM_Compiler\1.7.0\EventRecorder.scvd</Filename>
+        <Type>Keil.ARM_Compiler.1.7.0</Type>
         <SubType>1</SubType>
       </ScvdPack>
       <Tracepoint>
@@ -298,7 +298,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\RTE\Device\STM32H743ZITx\STCubeGenerated\Src\main.c</PathWithFileName>
+      <PathWithFileName>.\STM32CubeMX\STCubeGenerated\Src\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -310,7 +310,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\RTE\Device\STM32H743ZITx\STCubeGenerated\Inc\stm32h7xx_it.h</PathWithFileName>
+      <PathWithFileName>.\STM32CubeMX\STCubeGenerated\Inc\stm32h7xx_it.h</PathWithFileName>
       <FilenameWithoutPath>stm32h7xx_it.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -322,7 +322,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\RTE\Device\STM32H743ZITx\STCubeGenerated\Src\stm32h7xx_it.c</PathWithFileName>
+      <PathWithFileName>.\STM32CubeMX\STCubeGenerated\Src\stm32h7xx_it.c</PathWithFileName>
       <FilenameWithoutPath>stm32h7xx_it.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -342,7 +342,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\RTE\Device\STM32H743ZITx\STCubeGenerated\STCubeGenerated.ioc</PathWithFileName>
+      <PathWithFileName>.\STM32CubeMX\STCubeGenerated\STCubeGenerated.ioc</PathWithFileName>
       <FilenameWithoutPath>STCubeGenerated.ioc</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
