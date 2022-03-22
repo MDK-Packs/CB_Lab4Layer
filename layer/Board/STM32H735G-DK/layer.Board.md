@@ -94,7 +94,7 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 
 | Peripheral   | Mode / Settings                                                                                                    | IRQ | DMA                                              | Note
 |:-------------|:-------------------------------------------------------------------------------------------------------------------|:----|:-------------------------------------------------|:----
-| SPI5         | Full-Duplex Master, Hardware NSS Signal=off, Do Not Generate Initialization Function Call                          | yes | SPI1_RX = DMA1 Stream 0, SPI1_TX = DMA1 Stream 1 | Arduino UNO R3 connector (CN8)
+| SPI5         | Full-Duplex Master, Hardware NSS Signal=off, Do Not Generate Initialization Function Call                          | yes | SPI5_RX = DMA1 Stream 0, SPI5_TX = DMA1 Stream 1 | Arduino UNO R3 connector (CN8)
 | USART1       | Asynchronous, Hardware Flow Control=off, Do Not Generate Initialization Function Call                              | yes | no                                               | Arduino UNO R3 connector (CN8)
 | USART3       | Asynchronous, Hardware Flow Control=off, Baud Rate: 115200 Bits/s, Word Length: 8 Bits, Parity: None, Stop Bits: 1 | no  | no                                               | ST-LINK Virtual COM port
 
