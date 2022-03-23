@@ -497,7 +497,7 @@
     </packages>
     <boards>
       <board Bname="EVKB-IMXRT1050_MDK" Bvendor="NXP" Bversion="Rev. A1">
-        <package name="IMXRT1050-EVKB_BSP" schemaVersion="1.7.2" url="https://github.com/MDK-Packs/Pack/raw/master/IMXRT1050-EVKB_BSP/" vendor="Keil" version="1.0.0"/>
+        <package name="IMXRT1050-EVKB_BSP" schemaVersion="1.7.2" url="https://github.com/MDK-Packs/Pack/raw/master/IMXRT1050-EVKB_BSP/" vendor="Keil" version="1.0.1"/>
         <targetInfos>
           <targetInfo name="IMXRT1050-EVKB"/>
         </targetInfos>
