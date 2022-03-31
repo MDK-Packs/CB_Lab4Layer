@@ -9,7 +9,7 @@
   </info>
 
   <layers>
-    <layer name="App">
+    <layer name="App" title="Platform">
       <description>Platform is a simple CMSIS RTOS2 example skeleton</description>
       <category>Platform</category>
       <license>Apache 2.0</license>
@@ -17,7 +17,7 @@
         <consumes id="RTOS2"/>
       </interfaces>
     </layer>
-    <layer hasTarget="1" name="Board">
+    <layer hasTarget="1" name="Board" title="B-L475E-IOT01A">
       <description>Board setup with interfaces</description>
       <category>Board</category>
       <license>BSD 3-Clause, Apache 2.0</license>
@@ -35,7 +35,7 @@
         <provides id="Heap" value="65536"/>
       </interfaces>
     </layer>
-    <layer name="RTOS">
+    <layer name="RTOS" title="RTX">
       <description>Keil RTX5 open-source real-time operating system with CMSIS-RTOS v2 API</description>
       <doc>https://www2.keil.com/mdk5/cmsis/rtx</doc>
       <category>RTOS</category>
