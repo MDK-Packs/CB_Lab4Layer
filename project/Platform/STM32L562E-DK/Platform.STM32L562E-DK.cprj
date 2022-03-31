@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<cprj schemaVersion="0.0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CPRJ.xsd">
+<cprj schemaVersion="1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CPRJ.xsd">
 
-  <created timestamp="2021-09-09T12:55:55" tool="uVision V5.35.0.0"/>
+  <created timestamp="2022-03-31T08:32:49" tool="uVision V5.36.0.0"/>
 
   <info>
     <name>Platform</name>
