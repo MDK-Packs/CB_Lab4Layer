@@ -61,10 +61,9 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 
 ### Connectivity Peripherals Configuration
 
-| Peripheral   | Mode / Settings                                                                                                    | IRQ | DMA                                              | Note
-|:-------------|:-------------------------------------------------------------------------------------------------------------------|:----|:---------------------------------------- --------|:----
-| SPI1         | Full-Duplex Master, Hardware NSS Signal=off, Do Not Generate Initialization Function Call                          | yes | SPI1_RX = DMA1 Stream 2, SPI1_TX = DMA1 Stream 3 | Arduino UNO R3 connector (CN7)
-                                            | Arduino UNO R3 connector (CN10)
+| Peripheral   | Mode / Settings                                                                           | IRQ | DMA                                              | Note
+|:-------------|:------------------------------------------------------------------------------------------|:----|:-------------------------------------------------|:----
+| SPI1         | Full-Duplex Master, Hardware NSS Signal=off, Do Not Generate Initialization Function Call | yes | SPI1_RX = DMA1 Stream 2, SPI1_TX = DMA1 Stream 3 | Arduino UNO R3 connector (CN7)
 
 **STDIO** is routed to ST-LINK Virtual COM port
 
