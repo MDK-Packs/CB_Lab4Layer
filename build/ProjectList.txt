@@ -20,6 +20,8 @@ App=Blinky Board=NUCLEO-L552ZE-Q RTOS=RTX
 App=Blinky Board=NUCLEO-L552ZE-Q RTOS=FreeRTOS
 App=Blinky Board=STM32H735G-DK RTOS=RTX
 App=Blinky Board=STM32H735G-DK RTOS=FreeRTOS
+App=Blinky Board=STM32H7B3I-DK RTOS=RTX
+App=Blinky Board=STM32H7B3I-DK RTOS=FreeRTOS
 App=Blinky Board=STM32L562E-DK RTOS=RTX
 App=Blinky Board=STM32L562E-DK RTOS=FreeRTOS
 App=Blinky Board=STM32H745I-DISCO RTOS=RTX
@@ -111,6 +113,8 @@ App=AWS_MQTT_Demo Board=STM32H735G-DK Socket=MW-Network_ETH RTOS=RTX
 App=AWS_MQTT_Demo Board=STM32H735G-DK Socket=MW-Network_ETH RTOS=FreeRTOS
 App=AWS_MQTT_Demo Board=STM32H735G-DK Socket=lwIP_ETH RTOS=RTX
 App=AWS_MQTT_Demo Board=STM32H735G-DK Socket=lwIP_ETH RTOS=FreeRTOS
+App=AWS_MQTT_Demo Board=STM32H7B3I-DK Socket=WiFi RTOS=RTX
+App=AWS_MQTT_Demo Board=STM32H7B3I-DK Socket=WiFi RTOS=FreeRTOS
 App=AWS_MQTT_Demo Board=STM32L562E-DK Module=ESP8266 Socket=WiFi RTOS=RTX
 App=AWS_MQTT_Demo Board=STM32L562E-DK Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 App=AWS_MQTT_Demo Board=STM32L562E-DK Module=ISM43362 Socket=WiFi RTOS=RTX
@@ -210,6 +214,8 @@ App=Azure_MQTT_Demo Board=STM32H735G-DK Socket=MW-Network_ETH RTOS=RTX
 App=Azure_MQTT_Demo Board=STM32H735G-DK Socket=MW-Network_ETH RTOS=FreeRTOS
 App=Azure_MQTT_Demo Board=STM32H735G-DK Socket=lwIP_ETH RTOS=RTX
 App=Azure_MQTT_Demo Board=STM32H735G-DK Socket=lwIP_ETH RTOS=FreeRTOS
+App=Azure_MQTT_Demo Board=STM32H7B3I-DK Socket=WiFi RTOS=RTX
+App=Azure_MQTT_Demo Board=STM32H7B3I-DK Socket=WiFi RTOS=FreeRTOS
 App=Azure_MQTT_Demo Board=STM32L562E-DK Module=ESP8266 Socket=WiFi RTOS=RTX
 App=Azure_MQTT_Demo Board=STM32L562E-DK Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 App=Azure_MQTT_Demo Board=STM32L562E-DK Module=ISM43362 Socket=WiFi RTOS=RTX
@@ -309,6 +315,8 @@ App=Google_MQTT_Demo Board=STM32H735G-DK Socket=MW-Network_ETH RTOS=RTX
 App=Google_MQTT_Demo Board=STM32H735G-DK Socket=MW-Network_ETH RTOS=FreeRTOS
 App=Google_MQTT_Demo Board=STM32H735G-DK Socket=lwIP_ETH RTOS=RTX
 App=Google_MQTT_Demo Board=STM32H735G-DK Socket=lwIP_ETH RTOS=FreeRTOS
+App=Google_MQTT_Demo Board=STM32H7B3I-DK Socket=WiFi RTOS=RTX
+App=Google_MQTT_Demo Board=STM32H7B3I-DK Socket=WiFi RTOS=FreeRTOS
 App=Google_MQTT_Demo Board=STM32L562E-DK Module=ESP8266 Socket=WiFi RTOS=RTX
 App=Google_MQTT_Demo Board=STM32L562E-DK Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 App=Google_MQTT_Demo Board=STM32L562E-DK Module=ISM43362 Socket=WiFi RTOS=RTX
@@ -408,6 +416,8 @@ App=Paho_MQTT_Demo Board=STM32H735G-DK Socket=MW-Network_ETH RTOS=RTX
 App=Paho_MQTT_Demo Board=STM32H735G-DK Socket=MW-Network_ETH RTOS=FreeRTOS
 App=Paho_MQTT_Demo Board=STM32H735G-DK Socket=lwIP_ETH RTOS=RTX
 App=Paho_MQTT_Demo Board=STM32H735G-DK Socket=lwIP_ETH RTOS=FreeRTOS
+App=Paho_MQTT_Demo Board=STM32H7B3I-DK Socket=WiFi RTOS=RTX
+App=Paho_MQTT_Demo Board=STM32H7B3I-DK Socket=WiFi RTOS=FreeRTOS
 App=Paho_MQTT_Demo Board=STM32L562E-DK Module=ESP8266 Socket=WiFi RTOS=RTX
 App=Paho_MQTT_Demo Board=STM32L562E-DK Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 App=Paho_MQTT_Demo Board=STM32L562E-DK Module=ISM43362 Socket=WiFi RTOS=RTX
@@ -482,6 +492,8 @@ App=Watson_MQTT_Demo Board=STM32H735G-DK Socket=MW-Network_ETH RTOS=RTX
 App=Watson_MQTT_Demo Board=STM32H735G-DK Socket=MW-Network_ETH RTOS=FreeRTOS
 App=Watson_MQTT_Demo Board=STM32H735G-DK Socket=lwIP_ETH RTOS=RTX
 App=Watson_MQTT_Demo Board=STM32H735G-DK Socket=lwIP_ETH RTOS=FreeRTOS
+App=Watson_MQTT_Demo Board=STM32H7B3I-DK Socket=WiFi RTOS=RTX
+App=Watson_MQTT_Demo Board=STM32H7B3I-DK Socket=WiFi RTOS=FreeRTOS
 #App=Watson_MQTT_Demo Board=STM32L562E-DK Module=ESP8266 Socket=WiFi RTOS=RTX
 #App=Watson_MQTT_Demo Board=STM32L562E-DK Module=ESP8266 Socket=WiFi RTOS=FreeRTOS
 #App=Watson_MQTT_Demo Board=STM32L562E-DK Module=ISM43362 Socket=WiFi RTOS=RTX
