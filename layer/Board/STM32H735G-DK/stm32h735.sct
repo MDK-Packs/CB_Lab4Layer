@@ -10,7 +10,7 @@ LR_IROM1 0x08000000 0x00100000  {      ; load region size_region
    .ANY (+XO)
   }
   RW_DTCM 0x20000000 0x0001F800  {
-   .ANY  (+RW +ZI)                     ; RW data
+   .ANY (+RW +ZI)                      ; RW data
    * (HEAP)                            ; Heap
    * (STACK)                           ; Stack
   }
@@ -18,10 +18,10 @@ LR_IROM1 0x08000000 0x00100000  {      ; load region size_region
     EventRecorder.o (+ZI)
   }
   RW_AXI_SRAM 0x24000000 0x0001C000  { ; AXI RAM (16kB at the end (0x2401C000) is reserved for SDMMC1)
-   .ANY  (+RW +ZI)                     ; RW data
+   .ANY (+RW +ZI)                      ; RW data
   }
-  RW_SRAM 0x30000000 0x00004000  {     ; SRAM1
-   .ANY  (+RW +ZI)                     ; RW data
+  RW_SRAM 0x30000000 0x00008000  {     ; SRAM1 + SRAM2
+   .ANY (+RW +ZI)                      ; RW data
    *(.bss.driver.usart1)
    *(.bss.driver.spi5)
   }
