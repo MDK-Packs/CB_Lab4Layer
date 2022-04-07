@@ -11,7 +11,7 @@ The real-time operating system [Keil RTX5](https://arm-software.github.io/CMSIS_
 
 It is configured with the following settings:
 
-- [Global Dynamic Memory size](https://arm-software.github.io/CMSIS_5/RTOS2/html/config_rtx5.html#systemConfig): 24000 bytes
+- [Global Dynamic Memory size](https://arm-software.github.io/CMSIS_5/RTOS2/html/config_rtx5.html#systemConfig): 32768 bytes
 - [Default Thread Stack size](https://arm-software.github.io/CMSIS_5/RTOS2/html/config_rtx5.html#threadConfig): 3072 bytes
 - [Event Recorder Configuration](https://arm-software.github.io/CMSIS_5/RTOS2/html/config_rtx5.html#evtrecConfig)
   - [Global Initialization](https://arm-software.github.io/CMSIS_5/RTOS2/html/config_rtx5.html#evtrecConfigGlobIni): 1
@@ -100,7 +100,7 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 ### Connectivity Peripherals Configuration
 
 | Peripheral   | Mode / Settings                                                                                                    | IRQ | DMA                                              | Note
-|:-------------|:-------------------------------------------------------------------------------------------------------------------|:----|:---------------------------------------- --------|:----
+|:-------------|:-------------------------------------------------------------------------------------------------------------------|:----|:-------------------------------------------------|:----
 | ETH          | RMII, Do Not Generate Initialization Function Call                                                                 | yes | no                                               | Ethernet LAN8742A
 | SPI1         | Full-Duplex Master, Hardware NSS Signal=off, Do Not Generate Initialization Function Call                          | yes | SPI1_RX = DMA1 Stream 2, SPI1_TX = DMA1 Stream 3 | Arduino UNO R3 connector (CN7)
 | USART3       | Asynchronous, Hardware Flow Control=off, Baud Rate: 115200 Bits/s, Word Length: 8 Bits, Parity: None, Stop Bits: 1 | no  | no                                               | ST-LINK Virtual COM port

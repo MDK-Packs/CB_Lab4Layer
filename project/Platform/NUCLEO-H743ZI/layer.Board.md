@@ -79,7 +79,7 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 ### Connectivity Peripherals Configuration
 
 | Peripheral   | Mode / Settings                                                                                                    | IRQ | DMA                                              | Note
-|:-------------|:-------------------------------------------------------------------------------------------------------------------|:----|:---------------------------------------- --------|:----
+|:-------------|:-------------------------------------------------------------------------------------------------------------------|:----|:-------------------------------------------------|:----
 | ETH          | RMII, Do Not Generate Initialization Function Call                                                                 | yes | no                                               | Ethernet LAN8742A
 | SPI1         | Full-Duplex Master, Hardware NSS Signal=off, Do Not Generate Initialization Function Call                          | yes | SPI1_RX = DMA1 Stream 2, SPI1_TX = DMA1 Stream 3 | Arduino UNO R3 connector (CN7)
 | USART3       | Asynchronous, Hardware Flow Control=off, Baud Rate: 115200 Bits/s, Word Length: 8 Bits, Parity: None, Stop Bits: 1 | no  | no                                               | ST-LINK Virtual COM port
