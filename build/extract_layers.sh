@@ -87,6 +87,7 @@ mkdir "NUCLEO-H743ZI"
 mkdir "NUCLEO-G474RE"
 mkdir "STM32L562E-DK"
 mkdir "STM32H735G-DK"
+mkdir "STM32H7B3I-DK"
 mkdir "STM32H745I-DISCO"
 mkdir "STM32G071B-DISCO"
 mkdir "V2M-MPS3-SSE-300-FVP"
@@ -184,6 +185,10 @@ rm -r "${temp_path}"
 
 cbuildgen "${project_path}/Platform/STM32H735G-DK/Platform.STM32H735G-DK.cprj" extract --outdir="${temp_path}"
 cp -r "${temp_path}/Board/." "${layer_path}/Board/STM32H735G-DK"
+rm -r "${temp_path}"
+
+cbuildgen "${project_path}/Platform/STM32H7B3I-DK/Platform.STM32H7B3I-DK.cprj" extract --outdir="${temp_path}"
+cp -r "${temp_path}/Board/." "${layer_path}/Board/STM32H7B3I-DK"
 rm -r "${temp_path}"
 
 cbuildgen "${project_path}/Platform/STM32L562E-DK/Platform.STM32L562E-DK.cprj" extract --outdir="${temp_path}"
