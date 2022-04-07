@@ -576,18 +576,6 @@
           <targetInfo name="STM32H735G-DK"/>
         </targetInfos>
       </component>
-      <component Cbundle="STM32H735G-DK" Cclass="Board Support" Cgroup="Components" Csub="MX25LM51245G" Cvendor="Keil" Cversion="2.0.2" condition="STM32H735G-DK BSP MX25LM51245G">
-        <package name="STM32H735G-DK_BSP" schemaVersion="1.7.2" url="https://github.com/MDK-Packs/Pack/raw/master/STM32H735G-DK_BSP/" vendor="Keil" version="2.0.0"/>
-        <targetInfos>
-          <targetInfo name="STM32H735G-DK"/>
-        </targetInfos>
-      </component>
-      <component Cbundle="STM32H735G-DK" Cclass="Board Support" Cgroup="Components" Csub="S70KL1281" Cvendor="Keil" Cversion="1.0.0" condition="STM32H735G-DK BSP S70KL1281">
-        <package name="STM32H735G-DK_BSP" schemaVersion="1.7.2" url="https://github.com/MDK-Packs/Pack/raw/master/STM32H735G-DK_BSP/" vendor="Keil" version="2.0.0"/>
-        <targetInfos>
-          <targetInfo name="STM32H735G-DK"/>
-        </targetInfos>
-      </component>
       <component Cbundle="STM32H735G-DK" Cclass="Board Support" Cgroup="Drivers" Csub="BUS" Cvendor="Keil" Cversion="1.2.0" condition="STM32H735G-DK BSP BUS">
         <package name="STM32H735G-DK_BSP" schemaVersion="1.7.2" url="https://github.com/MDK-Packs/Pack/raw/master/STM32H735G-DK_BSP/" vendor="Keil" version="2.0.0"/>
         <targetInfos>
@@ -595,12 +583,6 @@
         </targetInfos>
       </component>
       <component Cbundle="STM32H735G-DK" Cclass="Board Support" Cgroup="Drivers" Csub="Basic I/O" Cvendor="Keil" Cversion="1.2.0" condition="STM32H735G-DK BSP">
-        <package name="STM32H735G-DK_BSP" schemaVersion="1.7.2" url="https://github.com/MDK-Packs/Pack/raw/master/STM32H735G-DK_BSP/" vendor="Keil" version="2.0.0"/>
-        <targetInfos>
-          <targetInfo name="STM32H735G-DK"/>
-        </targetInfos>
-      </component>
-      <component Cbundle="STM32H735G-DK" Cclass="Board Support" Cgroup="Drivers" Csub="OSPI" Cvendor="Keil" Cversion="1.2.0" condition="STM32H735G-DK BSP OSPI">
         <package name="STM32H735G-DK_BSP" schemaVersion="1.7.2" url="https://github.com/MDK-Packs/Pack/raw/master/STM32H735G-DK_BSP/" vendor="Keil" version="2.0.0"/>
         <targetInfos>
           <targetInfo name="STM32H735G-DK"/>
@@ -774,22 +756,6 @@
       </component>
     </components>
     <files>
-      <file attr="config" category="header" name="Drivers\Config\mx25lm51245g_conf.h" version="1.0.0">
-        <instance index="0">RTE\Board_Support\STM32H735IGKx\mx25lm51245g_conf.h</instance>
-        <component Cbundle="STM32H735G-DK" Cclass="Board Support" Cgroup="Components" Csub="MX25LM51245G" Cvendor="Keil" Cversion="2.0.2" condition="STM32H735G-DK BSP MX25LM51245G"/>
-        <package name="STM32H735G-DK_BSP" schemaVersion="1.7.2" url="https://github.com/MDK-Packs/Pack/raw/master/STM32H735G-DK_BSP/" vendor="Keil" version="2.0.0"/>
-        <targetInfos>
-          <targetInfo name="STM32H735G-DK"/>
-        </targetInfos>
-      </file>
-      <file attr="config" category="header" name="Drivers\Config\s70kl1281_conf.h" version="1.0.0">
-        <instance index="0">RTE\Board_Support\STM32H735IGKx\s70kl1281_conf.h</instance>
-        <component Cbundle="STM32H735G-DK" Cclass="Board Support" Cgroup="Components" Csub="S70KL1281" Cvendor="Keil" Cversion="1.0.0" condition="STM32H735G-DK BSP S70KL1281"/>
-        <package name="STM32H735G-DK_BSP" schemaVersion="1.7.2" url="https://github.com/MDK-Packs/Pack/raw/master/STM32H735G-DK_BSP/" vendor="Keil" version="2.0.0"/>
-        <targetInfos>
-          <targetInfo name="STM32H735G-DK"/>
-        </targetInfos>
-      </file>
       <file attr="config" category="header" name="Drivers\Config\stm32h735g_discovery_conf.h" version="1.0.0">
         <instance index="0">RTE\Board_Support\STM32H735IGKx\stm32h735g_discovery_conf.h</instance>
         <component Cbundle="STM32H735G-DK" Cclass="Board Support" Cgroup="Drivers" Csub="Basic I/O" Cvendor="Keil" Cversion="1.2.0" condition="STM32H735G-DK BSP"/>
@@ -935,27 +901,12 @@
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
-        <LayAsnName>Keil.STM32H735G-DK::Board Support:Components:MX25LM51245G</LayAsnName>
-        <LayAsnLayerName>Board</LayAsnLayerName>
-      </LayAsnItem>
-      <LayAsnItem>
-        <LayAsnType>1</LayAsnType>
-        <LayAsnName>Keil.STM32H735G-DK::Board Support:Components:S70KL1281</LayAsnName>
-        <LayAsnLayerName>Board</LayAsnLayerName>
-      </LayAsnItem>
-      <LayAsnItem>
-        <LayAsnType>1</LayAsnType>
         <LayAsnName>Keil.STM32H735G-DK::Board Support:Drivers:BUS</LayAsnName>
         <LayAsnLayerName>Board</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>
         <LayAsnType>1</LayAsnType>
         <LayAsnName>Keil.STM32H735G-DK::Board Support:Drivers:Basic I/O</LayAsnName>
-        <LayAsnLayerName>Board</LayAsnLayerName>
-      </LayAsnItem>
-      <LayAsnItem>
-        <LayAsnType>1</LayAsnType>
-        <LayAsnName>Keil.STM32H735G-DK::Board Support:Drivers:OSPI</LayAsnName>
         <LayAsnLayerName>Board</LayAsnLayerName>
       </LayAsnItem>
       <LayAsnItem>

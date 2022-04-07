@@ -109,17 +109,10 @@
     <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="I/O" Csub="STDERR" Cvariant="User" Cvendor="Keil" layer="Board"/>
     <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="I/O" Csub="STDIN" Cvariant="User" Cvendor="Keil" layer="Board"/>
     <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="I/O" Csub="STDOUT" Cvariant="User" Cvendor="Keil" layer="Board"/>
-    <component Cbundle="STM32H735G-DK" Cclass="Board Support" Cgroup="Components" Csub="MX25LM51245G" Cvendor="Keil" layer="Board">
-      <file attr="config" category="header" name="Drivers/Config/mx25lm51245g_conf.h" version="1.0.0"/>
-    </component>
-    <component Cbundle="STM32H735G-DK" Cclass="Board Support" Cgroup="Components" Csub="S70KL1281" Cvendor="Keil" layer="Board">
-      <file attr="config" category="header" name="Drivers/Config/s70kl1281_conf.h" version="1.0.0"/>
-    </component>
     <component Cbundle="STM32H735G-DK" Cclass="Board Support" Cgroup="Drivers" Csub="BUS" Cvendor="Keil" layer="Board"/>
     <component Cbundle="STM32H735G-DK" Cclass="Board Support" Cgroup="Drivers" Csub="Basic I/O" Cvendor="Keil" layer="Board">
       <file attr="config" category="header" name="Drivers/Config/stm32h735g_discovery_conf.h" version="1.0.0"/>
     </component>
-    <component Cbundle="STM32H735G-DK" Cclass="Board Support" Cgroup="Drivers" Csub="OSPI" Cvendor="Keil" layer="Board"/>
   </components>
 
   <files>
