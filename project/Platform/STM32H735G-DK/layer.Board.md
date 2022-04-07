@@ -106,7 +106,7 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 |:-------------|:----------
 | ETH_MAC0     | ETH
 | ETH_PHY0     | LAN8742A (external)
-| MCI0         | SDMMC
+| MCI0         | SDMMC1
 | SPI5         | SPI5
 | USART1       | USART1
 | USART3       | USART3
