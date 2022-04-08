@@ -207,6 +207,11 @@ cbuildgen compose "${app}.cprj" ${clayer}
 export ARDUINO_USART_NUMBER=$(grep -o '<provides id="A_UART" value="."' "${app}.cprj" | grep -o 'value="."' | grep -o '\([0-9.]*\)')
 export ARDUINO_SPI_NUMBER=$(grep -o '<provides id="A_SPI" value="."' "${app}.cprj" | grep -o 'value="."' | grep -o '\([0-9.]*\)')
 
+# export MCI settings
+       CMSIS_MCI_VALUE=$(       grep '<provides id="C_MCI"' "${app}.cprj" | grep -o 'value=".*"' | grep -o '".*"' | sed -E 's/"//g')
+export CMSIS_MCI_DRIVER=$(      echo $CMSIS_MCI_VALUE  | sed -E 's/([^A-Za-z0-9]*([A-Za-z0-9]*)){1}.*/\2/')
+export CMSIS_MCI_CACHE_ADDR=$(  echo $CMSIS_MCI_VALUE  | sed -E 's/([^A-Za-z0-9]*([A-Za-z0-9]*)){2}.*/\2/')
+
 # execute layer configure
 for item in ${layer[@]}
 do
