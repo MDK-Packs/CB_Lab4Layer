@@ -33,7 +33,7 @@
   </layers>
 
   <packages>
-    <package name="mbedTLS" vendor="ARM"/>
+    <package name="mbedTLS" vendor="ARM" version="1.7.0:1.7.0"/>
     <package name="AWS_IoT_Device" vendor="MDK-Packs"/>
   </packages>
 
