@@ -37,7 +37,7 @@ void BOARD_InitBootClocks(void);
 
 /* Clock outputs (values are in Hz): */
 #define BOARD_BOOTCLOCKRUN_AHB_CLK_ROOT               600000000UL
-#define BOARD_BOOTCLOCKRUN_CAN_CLK_ROOT               40000000UL
+#define BOARD_BOOTCLOCKRUN_CAN_CLK_ROOT               20000000UL
 #define BOARD_BOOTCLOCKRUN_CKIL_SYNC_CLK_ROOT         32768UL
 #define BOARD_BOOTCLOCKRUN_CLKO1_CLK                  0UL
 #define BOARD_BOOTCLOCKRUN_CLKO2_CLK                  0UL
