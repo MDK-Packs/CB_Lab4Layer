@@ -11,7 +11,7 @@ The real-time operating system [Keil RTX5](https://arm-software.github.io/CMSIS_
 
 It is configured with the following settings:
 
-- [Global Dynamic Memory size](https://arm-software.github.io/CMSIS_5/RTOS2/html/config_rtx5.html#systemConfig): 24000 bytes
+- [Global Dynamic Memory size](https://arm-software.github.io/CMSIS_5/RTOS2/html/config_rtx5.html#systemConfig): 32768 bytes
 - [Default Thread Stack size](https://arm-software.github.io/CMSIS_5/RTOS2/html/config_rtx5.html#threadConfig): 3072 bytes
 - [Event Recorder Configuration](https://arm-software.github.io/CMSIS_5/RTOS2/html/config_rtx5.html#evtrecConfig)
   - [Global Initialization](https://arm-software.github.io/CMSIS_5/RTOS2/html/config_rtx5.html#evtrecConfigGlobIni): 1
@@ -22,7 +22,7 @@ Refer to [Configure RTX v5](https://arm-software.github.io/CMSIS_5/RTOS2/html/co
 Board: NXP MIMXRT1064-EVK
 -------------------------
 
-The tables below list the device configuration for this board. The board layer for the NXP MIMXRT1064-EVK is using the software component `::Board Support: SDK Project Template: project_template (Variant: evkmimxrt1064)` from `NXP.EVK-MIMXRT1064_BSP.12.3.0` pack.
+The tables below list the device configuration for this board. The board layer for the NXP MIMXRT1064-EVK is using the software component `::Board Support: SDK Project Template: project_template (Variant: evkmimxrt1064)` from `NXP.EVK-MIMXRT1064_BSP.15.0.0` pack.
 
 The heap/stack setup and the CMSIS-Driver assignment is in configuration files of related software components.
 
@@ -35,8 +35,8 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 | Device                  | MIMXRT1064DVL6A
 | Board                   | MIMXRT1064-EVK
 | SDK Version             | ksdk2_0
-| Heap                    | 64 kB (configured in linker script MIMXRT1064xxxxx.scf file)
-| Stack (MSP)             |  1 kB (configured in linker script MIMXRT1064xxxxx.scf file)
+| Heap                    | 64 kB (configured in linker script MIMXRT1064xxxxx_*.scf file)
+| Stack (MSP)             |  1 kB (configured in linker script MIMXRT1064xxxxx_*.scf file)
 
 ### Clock Configuration
 
@@ -70,6 +70,7 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 | BOARD_InitENET         | B12 | ENET       | TX_DATA, 0  | ENET_TXD0   | default                                             | Ethernet KSZ8081RNB pin TXD0 (GPIO_B1_07)
 | BOARD_InitENET         | A12 | ENET       | TX_DATA, 1  | ENET_TXD1   | default                                             | Ethernet KSZ8081RNB pin TXD1 (GPIO_B1_08)
 | BOARD_InitENET         | A13 | ENET       | TX_EN       | ENET_TXEN   | default                                             | Ethernet KSZ8081RNB pin TXEN (GPIO_B1_09)
+| BOARD_InitENET         | G13 | GPIO1      | gpio_io, 10 | ENET_INT    | Direction Output, GPIO initial state 1              | Ethernet KSZ8081RNB pin INTRP (GPIO_AD_B0_10)
 | BOARD_InitUSDHC        | J2  | USDHC1     | DATA, 3     | SD1_D3      | default                                             | SD Card pin D3 (GPIO_SD_B0_05)
 | BOARD_InitUSDHC        | H2  | USDHC1     | DATA, 2     | SD1_D2      | default                                             | SD Card pin D2 (GPIO_SD_B0_04)
 | BOARD_InitUSDHC        | K1  | USDHC1     | DATA, 1     | SD1_D1      | default                                             | SD Card pin D1 (GPIO_SD_B0_03)
@@ -84,8 +85,8 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 | BOARD_InitI2C          | K11 | LPI2C1     | SDA         | I2C1_SDA    | Software Input On, Open drain                       | I2C1 for FXOS8700CQ and WM8960 (GPIO_AD_B1_01)
 | BOARD_InitAudio        | H13 | GPIO1      | gpio_io, 24 | CSI_D9      | Direction Input, Rising Edge, mode PullUp           | Audio Codec WM8960 pin GPIO1 (GPIO_AD_B1_08)
 | BOARD_InitAudio        | M13 | SAI1       | MCLK        | CSI_D8      | Direction Output, Software Input On                 | Audio Codec WM8960 pin MCLK (GPIO_AD_B1_09)
-| BOARD_InitAudio        | H12 | SAI1       | RX_DATA0    | CSI_D5      | default                                             | Audio Codec WM8960 pin ADCDAT (GPIO_AD_B1_12)
-| BOARD_InitAudio        | H11 | SAI1       | TX_DATA0    | CSI_D4      | default                                             | Audio Codec WM8960 pin DACDAT (GPIO_AD_B1_13)
+| BOARD_InitAudio        | H12 | SAI1       | RX_DATA, 0  | CSI_D5      | default                                             | Audio Codec WM8960 pin ADCDAT (GPIO_AD_B1_12)
+| BOARD_InitAudio        | H11 | SAI1       | TX_DATA, 0  | CSI_D4      | default                                             | Audio Codec WM8960 pin DACDAT (GPIO_AD_B1_13)
 | BOARD_InitAudio        | G12 | SAI1       | TX_BCLK     | CSI_D3      | default                                             | Audio Codec WM8960 pin BCLK (GPIO_AD_B1_14)
 | BOARD_InitAudio        | J14 | SAI1       | TX_SYNC     | CSI_D2      | default                                             | Audio Codec WM8960 pin DACLRC (GPIO_AD_B1_15)
 
