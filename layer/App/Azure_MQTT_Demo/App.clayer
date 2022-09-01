@@ -32,7 +32,7 @@
 
   <packages>
     <package name="mbedTLS" vendor="ARM" version="1.7.0:1.7.0"/>
-    <package name="Azure_IoT" vendor="MDK-Packs"/>
+    <package name="Azure_IoT" vendor="MDK-Packs" version="1.0.3:1.0.3"/>
   </packages>
 
   <compilers>
