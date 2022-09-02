@@ -11,7 +11,7 @@ The real-time operating system [Keil RTX5](https://arm-software.github.io/CMSIS_
 
 It is configured with the following settings:
 
-- [Global Dynamic Memory size](https://arm-software.github.io/CMSIS_5/RTOS2/html/config_rtx5.html#systemConfig): 24000 bytes
+- [Global Dynamic Memory size](https://arm-software.github.io/CMSIS_5/RTOS2/html/config_rtx5.html#systemConfig): 32768 bytes
 - [Default Thread Stack size](https://arm-software.github.io/CMSIS_5/RTOS2/html/config_rtx5.html#threadConfig): 3072 bytes
 - [Event Recorder Configuration](https://arm-software.github.io/CMSIS_5/RTOS2/html/config_rtx5.html#evtrecConfig)
   - [Global Initialization](https://arm-software.github.io/CMSIS_5/RTOS2/html/config_rtx5.html#evtrecConfigGlobIni): 1
@@ -22,7 +22,7 @@ Refer to [Configure RTX v5](https://arm-software.github.io/CMSIS_5/RTOS2/html/co
 Board: STMicroelectronics 32F746GDISCOVERY
 ------------------------------------------
 
-The tables below list the device configuration for this board. This setup is configured using **STM32CubeMX**, 
+The tables below list the device configuration for this board. This setup is configured using **STM32CubeMX**,
 an interactive tool provided by ST for device configuration. Refer to ["Create Projects with STM32Cube HAL and STM32CubeMX"](https://www.keil.com/pack/doc/STM32Cube) for additional information.
 
 The heap/stack setup and the CMSIS-Driver assignment is in configuration files of related software components.
@@ -80,8 +80,8 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 | PB14        | SPI2_MISO      | Alternate Function, Speed=Very High           | Arduino UNO R3 pin D12 (MISO)
 | PB15        | SPI2_MOSI      | Alternate Function, Speed=Very High           | Arduino UNO R3 pin D11 (MOSI)
 | PI1         | SPI2_SCK       | Alternate Function, Speed=Very High           | Arduino UNO R3 pin D13 (SCK)
-| PA15        | ARDUINO_IO_D9  | Input mode                                    | Arduino UNO R3 pin D9
-| PI0         | ARDUINO_IO_D10 | Output Push Pull, Level=High, Speed=Very High | Arduino UNO R3 pin D10
+| PA15        | ARDUINO_IO_D9  | External interrupt Mode, Rissing edge trigger | Arduino UNO R3 pin D9
+| PA8         | ARDUINO_IO_D10 | Output Push Pull, Level=High, Speed=Very High | Arduino UNO R3 pin D10
 | PH0/OSC_IN  | RCC_OSC_IN     |                                               | External Oscillator (HSE)
 | PH1/OSC_OUT | RCC_OSC_OUT    |                                               | External Oscillator (HSE)
 | PI11        | vioBUTTON0     | not configured via CubeMX                     | Button USER
