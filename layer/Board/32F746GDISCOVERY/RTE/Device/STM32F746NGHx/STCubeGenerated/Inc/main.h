@@ -61,8 +61,8 @@ extern void app_initialize (void);
 #define ARDUINO_IO_D9_GPIO_Port GPIOA
 #define MemoryCard_CD0_Pin GPIO_PIN_13
 #define MemoryCard_CD0_GPIO_Port GPIOC
-#define ARDUINO_IO_D10_Pin GPIO_PIN_0
-#define ARDUINO_IO_D10_GPIO_Port GPIOI
+#define ARDUINO_IO_D10_Pin GPIO_PIN_8
+#define ARDUINO_IO_D10_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
 extern RNG_HandleTypeDef hrng;
 /* USER CODE END Private defines */
@@ -72,5 +72,3 @@ extern RNG_HandleTypeDef hrng;
 #endif
 
 #endif /* __MAIN_H */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

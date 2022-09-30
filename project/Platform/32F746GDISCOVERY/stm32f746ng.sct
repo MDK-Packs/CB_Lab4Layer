@@ -1,0 +1,25 @@
+; *************************************************************
+; *** Scatter-Loading Description File for STM32F746NG      ***
+; *************************************************************
+
+LR_IROM1 0x08000000 0x00100000  {    ; load region (1 MB)
+  ER_IROM1 0x08000000 0x00100000  {  ; load address = execution address
+    *.o (RESET, +First)
+    *(InRoot$$Sections)
+    .ANY (+RO)
+    .ANY (+XO)
+  }
+  RW_DTCM 0x20000000 0x0000F800 {    ; 62 kB
+    .ANY (+RW +ZI)                   ; RW data
+    * (STACK)                        ; Stack
+  }
+  RW_DTCM_NOINIT 0x2000F800 UNINIT 0x00000800 { ; 2 kB
+    EventRecorder.o (+ZI)                       ; EventRecorder data
+  }
+  RW_SRAM1 0x20010000 0x00003C000 {  ; 240 kB
+    * (HEAP)                         ; Heap
+    .ANY (+RW +ZI)                   ; RW data
+   *(.bss.driver.usart6)
+   *(.bss.driver.spi2)
+  }
+}

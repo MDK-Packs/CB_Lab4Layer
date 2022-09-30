@@ -36,8 +36,8 @@
     <package name="mbedTLS" vendor="ARM" version="1.6.1:1.6.1"/>
     <package name="ARM_Compiler" vendor="Keil"/>
     <package name="MDK-Middleware" vendor="Keil"/>
-    <package name="Paho_MQTT" vendor="MDK-Packs"/>
-    <package name="Watson_IoT_Device" vendor="MDK-Packs"/>
+    <package name="Paho_MQTT" vendor="MDK-Packs" version="1.0.3:1.0.3"/>
+    <package name="Watson_IoT_Device" vendor="MDK-Packs" version="1.0.3:1.0.3"/>
     <package name="cJSON" vendor="MDK-Packs"/>
   </packages>
 

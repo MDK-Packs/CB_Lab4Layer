@@ -32,7 +32,7 @@
 
   <packages>
     <package name="mbedTLS" vendor="ARM" version="1.7.0:1.7.0"/>
-    <package name="Paho_MQTT" vendor="MDK-Packs"/>
+    <package name="Paho_MQTT" vendor="MDK-Packs" version="1.0.3:1.0.3"/>
   </packages>
 
   <compilers>

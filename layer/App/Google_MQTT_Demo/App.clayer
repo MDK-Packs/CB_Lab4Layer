@@ -32,8 +32,8 @@
 
   <packages>
     <package name="mbedTLS" vendor="ARM" version="1.7.0:1.7.0"/>
-    <package name="Google_IoT_Device" vendor="MDK-Packs"/>
-    <package name="Paho_MQTT" vendor="MDK-Packs"/>
+    <package name="Google_IoT_Device" vendor="MDK-Packs" version="1.0.3:1.0.3"/>
+    <package name="Paho_MQTT" vendor="MDK-Packs" version="1.0.3:1.0.3"/>
   </packages>
 
   <compilers>
