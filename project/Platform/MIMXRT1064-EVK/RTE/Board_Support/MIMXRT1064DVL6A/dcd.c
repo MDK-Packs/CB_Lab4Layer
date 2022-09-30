@@ -24,7 +24,7 @@ product: DCDx v3.0
 processor: MIMXRT1064xxxxA
 package_id: MIMXRT1064DVL6A
 mcu_data: ksdk2_0
-processor_version: 12.0.0
+processor_version: 12.0.1
 board: MIMXRT1064-EVK
 output_format: c_array
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/

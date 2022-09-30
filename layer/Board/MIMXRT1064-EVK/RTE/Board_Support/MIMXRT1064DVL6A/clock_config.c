@@ -19,7 +19,7 @@ product: Clocks v10.0
 processor: MIMXRT1064xxxxA
 package_id: MIMXRT1064DVL6A
 mcu_data: ksdk2_0
-processor_version: 12.0.0
+processor_version: 12.0.1
 board: MIMXRT1064-EVK
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 
@@ -100,8 +100,7 @@ settings:
 - {id: CCM.LCDIF_PRED.scale, value: '2', locked: true}
 - {id: CCM.LPSPI_PODF.scale, value: '5', locked: true}
 - {id: CCM.PERCLK_PODF.scale, value: '2', locked: true}
-- {id: CCM.SAI1_CLK_PODF.scale, value: '64', locked: true}
-- {id: CCM.SAI1_CLK_PRED.scale, value: '1', locked: true}
+- {id: CCM.SAI1_CLK_PODF.scale, value: '16'}
 - {id: CCM.SAI1_CLK_SEL.sel, value: CCM_ANALOG.PLL4_MAIN_CLK}
 - {id: CCM.SEMC_PODF.scale, value: '8'}
 - {id: CCM.TRACE_CLK_SEL.sel, value: CCM_ANALOG.PLL2_MAIN_CLK}
@@ -311,9 +310,9 @@ void BOARD_BootClockRUN(void)
     /* Disable SAI1 clock gate. */
     CLOCK_DisableClock(kCLOCK_Sai1);
     /* Set SAI1_CLK_PRED. */
-    CLOCK_SetDiv(kCLOCK_Sai1PreDiv, 0);
+    CLOCK_SetDiv(kCLOCK_Sai1PreDiv, 3);
     /* Set SAI1_CLK_PODF. */
-    CLOCK_SetDiv(kCLOCK_Sai1Div, 63);
+    CLOCK_SetDiv(kCLOCK_Sai1Div, 15);
     /* Set Sai1 clock source. */
     CLOCK_SetMux(kCLOCK_Sai1Mux, 2);
     /* Disable SAI2 clock gate. */

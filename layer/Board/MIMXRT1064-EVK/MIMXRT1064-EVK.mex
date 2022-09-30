@@ -25,7 +25,7 @@
             <file path="RTE/Board_Support/MIMXRT1064DVL6A/pin_mux.h" update_enabled="true"/>
          </generated_project_files>
          <pins_profile>
-            <processor_version>12.0.0</processor_version>
+            <processor_version>12.0.1</processor_version>
             <pin_labels>
                <pin_label pin_num="F14" pin_signal="GPIO_AD_B0_09" label="JTAG_TDI/J21[5]/ENET_RST/J22[5]" identifier="USER_LED;ENET_RST"/>
                <pin_label pin_num="G13" pin_signal="GPIO_AD_B0_10" label="JTAG_TDO/J21[13]/INT1_COMBO/ENET_INT/J22[6]/U32[11]" identifier="INT1_COMBO;ENET_INT"/>
@@ -829,7 +829,7 @@
             <file path="RTE/Board_Support/MIMXRT1064DVL6A/clock_config.h" update_enabled="true"/>
          </generated_project_files>
          <clocks_profile>
-            <processor_version>12.0.0</processor_version>
+            <processor_version>12.0.1</processor_version>
          </clocks_profile>
          <clock_configurations>
             <clock_configuration name="BOARD_BootClockRUN" id_prefix="" prefix_user_defined="false">
@@ -942,8 +942,7 @@
                   <setting id="CCM.LCDIF_PRED.scale" value="2" locked="true"/>
                   <setting id="CCM.LPSPI_PODF.scale" value="5" locked="true"/>
                   <setting id="CCM.PERCLK_PODF.scale" value="2" locked="true"/>
-                  <setting id="CCM.SAI1_CLK_PODF.scale" value="64" locked="true"/>
-                  <setting id="CCM.SAI1_CLK_PRED.scale" value="1" locked="true"/>
+                  <setting id="CCM.SAI1_CLK_PODF.scale" value="16" locked="false"/>
                   <setting id="CCM.SAI1_CLK_SEL.sel" value="CCM_ANALOG.PLL4_MAIN_CLK" locked="false"/>
                   <setting id="CCM.SEMC_PODF.scale" value="8" locked="false"/>
                   <setting id="CCM.TRACE_CLK_SEL.sel" value="CCM_ANALOG.PLL2_MAIN_CLK" locked="false"/>
@@ -997,7 +996,7 @@
             <file path="RTE/Board_Support/MIMXRT1064DVL6A/dcd.h" update_enabled="true"/>
          </generated_project_files>
          <dcdx_profile>
-            <processor_version>12.0.0</processor_version>
+            <processor_version>12.0.1</processor_version>
             <output_format>c_array</output_format>
          </dcdx_profile>
          <dcdx_configurations>
