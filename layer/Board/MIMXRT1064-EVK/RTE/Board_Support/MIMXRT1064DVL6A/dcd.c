@@ -24,7 +24,7 @@ product: DCDx v3.0
 processor: MIMXRT1064xxxxA
 package_id: MIMXRT1064DVL6A
 mcu_data: ksdk2_0
-processor_version: 11.0.1
+processor_version: 12.0.1
 board: MIMXRT1064-EVK
 output_format: c_array
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
@@ -59,8 +59,8 @@ const uint8_t dcd_data[] = {
 	0x40, 0x0F, 0xC0, 0x80, 0xFF, 0xFF, 0xFF, 0xFF,
 	/* #1.8, command: write_value, address: CCM_ANALOG_PLL_SYS, value: 0x2001, size: 4 */
 	0x40, 0x0D, 0x80, 0x30, 0x00, 0x00, 0x20, 0x01,
-	/* #1.9, command: write_value, address: CCM_ANALOG_PFD_528, value: 0x1D0000, size: 4 */
-	0x40, 0x0D, 0x81, 0x00, 0x00, 0x1D, 0x00, 0x00,
+	/* #1.9, command: write_value, address: CCM_ANALOG_PFD_528, value: 0x101D101B, size: 4 */
+	0x40, 0x0D, 0x81, 0x00, 0x10, 0x1D, 0x10, 0x1B,
 	/* #1.10, command: write_value, address: CCM_CBCDR, value: 0x98D40, size: 4 */
 	0x40, 0x0F, 0xC0, 0x14, 0x00, 0x09, 0x8D, 0x40,
 	/* #1.11, command: write_value, address: IOMUXC_SW_MUX_CTL_PAD_GPIO_EMC_00, value: 0x00, size: 4 */
