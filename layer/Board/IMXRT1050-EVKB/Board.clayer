@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <cprj schemaVersion="0.0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CPRJ.xsd">
-  <created timestamp="2022-08-16T12:51:42" tool="cbuildgen 0.11.2">
-    <used file="Platform.IMXRT1050-EVKB.cprj" path="D:/GitHub/MDK-Packs/CB_Lab4Layer/project/Platform/IMXRT1050-EVKB/" timestamp="2022-08-16T09:17:13"/>
+  <created timestamp="2022-11-16T10:07:23" tool="cbuildgen 1.3.0">
+    <used file="Platform.IMXRT1050-EVKB.cprj" path="D:/GitHub/MDK-Packs/CB_Lab4Layer/project/Platform/IMXRT1050-EVKB/" timestamp="2022-10-12T14:41:59"/>
   </created>
 
   <info isLayer="true">
@@ -45,10 +45,10 @@
     <package name="CMSIS-Driver" vendor="ARM"/>
     <package name="CMSIS" vendor="ARM"/>
     <package name="ARM_Compiler" vendor="Keil"/>
-    <package name="IMXRT1050-EVKB_BSP" vendor="Keil" version="1.1.0:1.1.0"/>
-    <package name="iMXRT105x_MWP" vendor="Keil" version="1.5.0:1.5.0"/>
-    <package name="EVKB-IMXRT1050_BSP" vendor="NXP" version="15.0.0:15.0.0"/>
-    <package name="MIMXRT1052_DFP" vendor="NXP" version="15.0.0:15.0.0"/>
+    <package name="IMXRT1050-EVKB_BSP" vendor="Keil" version="1.1.1:1.1.1"/>
+    <package name="iMXRT105x_MWP" vendor="Keil" version="1.5.1:1.5.1"/>
+    <package name="EVKB-IMXRT1050_BSP" vendor="NXP" version="15.1.0:15.1.0"/>
+    <package name="MIMXRT1052_DFP" vendor="NXP" version="15.1.0:15.1.0"/>
   </packages>
 
   <compilers>
@@ -62,7 +62,7 @@
     <cxxflags add="-O1 -Wno-documentation -Wno-documentation-unknown-command -Wno-license-management -Wno-missing-noreturn -Wno-missing-prototypes -Wno-missing-variable-declarations -Wno-nonportable-include-path -Wno-packed -Wno-parentheses-equality -Wno-reserved-id-macro -Wno-sign-conversion -Wno-unused-macros -ffunction-sections -fno-exceptions -fno-rtti -fshort-enums -fshort-wchar -funsigned-char -gdwarf-4 -std=c++11" compiler="AC6"/>
     <asflags add="-gdwarf-4 -masm=auto" compiler="AC6"/>
     <includes>.;./Driver_Audio/include</includes>
-    <defines>CODEC_WM8960_ENABLE;FSL_SDK_ENABLE_DRIVER_CACHE_CONTROL=1;SKIP_SYSCLK_INIT;XIP_BOOT_HEADER_DCD_ENABLE=1;XIP_BOOT_HEADER_ENABLE=1;XIP_EXTERNAL_FLASH=1</defines>
+    <defines>CODEC_WM8960_ENABLE;FSL_SDK_ENABLE_DRIVER_CACHE_CONTROL=1;SDK_I2C_BASED_COMPONENT_USED;SKIP_SYSCLK_INIT;XIP_BOOT_HEADER_DCD_ENABLE=1;XIP_BOOT_HEADER_ENABLE=1;XIP_EXTERNAL_FLASH=1</defines>
   </target>
 
   <components>
@@ -87,9 +87,7 @@
     <component Cclass="CMSIS Driver" Cgroup="MCI" Cvendor="Keil" layer="Board"/>
     <component Cclass="CMSIS Driver" Cgroup="USART" Csub="Custom" Cvendor="ARM" layer="Board"/>
     <component Cclass="CMSIS Driver" Cgroup="USART" Csub="lpuart_cmsis" Cvendor="NXP" layer="Board"/>
-    <component Cclass="CMSIS Driver" Cgroup="VIO" Csub="Board" Cvariant="IMXRT1050-EVKB" Cvendor="Keil" layer="Board">
-      <cflags add="-DVIO_SENSOR_DISABLE" compiler="AC6"/>
-    </component>
+    <component Cclass="CMSIS Driver" Cgroup="VIO" Csub="Board" Cvariant="IMXRT1050-EVKB" Cvendor="Keil" layer="Board"/>
     <component Cclass="Device" Cgroup="CMSIS" Csub="MIMXRT1052_header" Cvendor="NXP" layer="Board"/>
     <component Cclass="Device" Cgroup="CMSIS" Csub="MIMXRT1052_system" Cvendor="NXP" layer="Board"/>
     <component Cclass="Device" Cgroup="SDK Drivers" Csub="cache" Cvendor="NXP" layer="Board"/>
