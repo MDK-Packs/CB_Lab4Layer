@@ -1,7 +1,7 @@
 Board: NXP MIMXRT1064-EVK
 -------------------------
 
-The tables below list the device configuration for this board. The board layer for the NXP MIMXRT1064-EVK is using the software component `::Board Support: SDK Project Template: project_template (Variant: evkmimxrt1064)` from `NXP.EVK-MIMXRT1064_BSP.15.0.0` pack.
+The tables below list the device configuration for this board. The board layer for the NXP MIMXRT1064-EVK is using the software component `::Board Support: SDK Project Template: project_template (Variant: evkmimxrt1064)` from `NXP.EVK-MIMXRT1064_BSP.15.1.0` pack.
 
 The heap/stack setup and the CMSIS-Driver assignment is in configuration files of related software components.
 
