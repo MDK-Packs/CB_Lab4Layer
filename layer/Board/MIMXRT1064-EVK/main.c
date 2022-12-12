@@ -28,6 +28,7 @@
 #endif
 
 #include "clock_config.h"
+#include "peripherals.h"
 #include "board.h"
 #include "pin_mux.h"
 #include "fsl_iomuxc.h"
@@ -49,6 +50,7 @@ int main (void) {
   edma_config_t DmaConfig;
 
   BOARD_ConfigMPU();
+  BOARD_InitBootPeripherals();
   BOARD_InitBootPins();
   BOARD_InitBootClocks();
   BOARD_InitDebugConsole();
