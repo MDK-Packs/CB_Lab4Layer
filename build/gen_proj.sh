@@ -200,8 +200,13 @@ pushd "${target}"
 echo "Output:  ${app}/${target}"
 echo "Project: ${app}.cprj"   
 
+# <name> is derived from "App" layer's title
+# <description> is derived from "App" layer's description
+name=$(sed -nr 's|.*<layer name="App" title="(.*)">|\1|p' "../../${layerpath}/App/${app}/App.clayer")
+description=$(sed -n '/<layer name="App"/,/<description>/p' "../../${layerpath}/App/${app}/App.clayer" | sed -nr 's|.*<description>(.*)</description>|\1|p')
+
 # compose project from layers
-cbuildgen compose "${app}.cprj" ${clayer}
+cbuildgen compose "${app}.cprj" ${clayer} --name="${name}" --description="${description}"
 
 # export layer defines
 export ARDUINO_USART_NUMBER=$(grep -o '<provides id="A_UART" value="."' "${app}.cprj" | grep -o 'value="."' | grep -o '\([0-9.]*\)')
@@ -253,13 +258,6 @@ do
   rm -f "layer.${item}.sh"
   rm -f "${item}.clayer"
 done
-
-# replace generated cprj description with <name> and <description>
-#  <name> is derived from "App" layer's title
-#  <description> is derived from "App" layer's description
-name=$(sed -nr 's|.*<layer name="App" title="(.*)">|<name>\1</name>|p' "${app}.cprj")
-description=$(sed -n '/<layer name="App"/,/<description>/p' "${app}.cprj" | sed -n '/<description>/p' | sed 's/^ */    /')
-sed -i "s|<description>Automatic generated project</description>|${name}\n${description}|" "${app}.cprj"
 
 popd
 
