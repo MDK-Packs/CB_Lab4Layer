@@ -202,8 +202,8 @@ echo "Project: ${app}.cprj"
 
 # <name> is derived from "App" layer's title
 # <description> is derived from "App" layer's description
-name=$(sed -nr 's|.*<layer name="App" title="(.*)">|\1|p' "${app}.cprj")
-description=$(sed -n '/<layer name="App"/,/<description>/p' "${app}.cprj" | sed -nr 's|.*<description>(.*)</description>|\1|p')
+name=$(sed -nr 's|.*<layer name="App" title="(.*)">|\1|p' "../../${layerpath}/App/${app}/App.clayer")
+description=$(sed -n '/<layer name="App"/,/<description>/p' "../../${layerpath}/App/${app}/App.clayer" | sed -nr 's|.*<description>(.*)</description>|\1|p')
 
 # compose project from layers
 cbuildgen compose "${app}.cprj" ${clayer} --name="${name}" --description="${description}"
